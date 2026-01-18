@@ -7,15 +7,12 @@ const LeapFooter = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-8 group">
+            <Link to="/" className="flex items-center mb-8 group">
               <img 
                 src={leapuxLogo} 
-                alt="LeapUX Logo" 
+                alt="LeapUX" 
                 className="h-8 w-auto"
               />
-              <span className="text-3xl font-black tracking-tighter text-leap-white">
-                LeapUX<span className="text-leap-orange">.</span>
-              </span>
             </Link>
             <p className="text-slate-400 max-w-sm mb-8 leading-relaxed text-lg font-light">
               Design digital services that people can use — and organizations can deliver with confidence.
