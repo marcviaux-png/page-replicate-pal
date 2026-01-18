@@ -35,18 +35,18 @@ const LeapNavbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center group relative">
+          <Link to="/" className="flex items-center group relative h-8 sm:h-10 w-32 sm:w-40">
             <img 
               src={leapuxLogo} 
               alt="LeapUX" 
-              className={`h-8 sm:h-10 w-auto transition-opacity duration-500 ${
+              className={`h-full w-full object-contain object-left transition-opacity duration-500 ${
                 scrolled ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <img 
               src={leapuxLogoDark} 
               alt="LeapUX" 
-              className={`h-8 sm:h-10 w-auto absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ${
+              className={`h-full w-full object-contain object-left absolute inset-0 transition-opacity duration-500 ${
                 scrolled ? 'opacity-100' : 'opacity-0'
               }`}
             />
