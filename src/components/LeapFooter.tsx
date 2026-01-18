@@ -9,13 +9,16 @@ const LeapFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
           {/* Logo & Contact Info */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center mb-8 group">
+            <Link to="/" className="flex items-center mb-6 group">
               <img 
                 src={leapuxLogo} 
                 alt="LeapUX" 
                 className="h-8 w-auto"
               />
             </Link>
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+              UX and service design for complex, real-world environments. Helping organizations design, build, and deliver digital services that work.
+            </p>
             <div className="space-y-4 text-slate-400">
               <a href="tel:1-888-553-2789" className="flex items-center gap-3 hover:text-leap-orange transition-colors">
                 <Phone className="w-4 h-4 text-leap-orange" />
