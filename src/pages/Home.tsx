@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket, Landmark, Cross, Building2, Heart } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 
@@ -197,6 +197,44 @@ const Home = () => {
               View all services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Work With */}
+      <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Work With</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              Partners in complex, high-impact delivery
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              We partner with organizations delivering complex, high-impact services, including governments, regulated industries, and mission-driven organizations.
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-12 md:gap-16 lg:gap-20">
+            <div className="flex items-center gap-3 text-slate-400">
+              <Landmark className="w-6 h-6" />
+              <span className="text-sm font-semibold uppercase tracking-widest">Federal</span>
+            </div>
+            <div className="flex items-center gap-3 text-slate-400">
+              <Cross className="w-6 h-6" />
+              <span className="text-sm font-semibold uppercase tracking-widest">Healthtech</span>
+            </div>
+            <div className="flex items-center gap-3 text-slate-400">
+              <Landmark className="w-6 h-6" />
+              <span className="text-sm font-semibold uppercase tracking-widest">Finserv</span>
+            </div>
+            <div className="flex items-center gap-3 text-slate-400">
+              <Building2 className="w-6 h-6" />
+              <span className="text-sm font-semibold uppercase tracking-widest">Enterprise</span>
+            </div>
+            <div className="flex items-center gap-3 text-slate-400">
+              <Heart className="w-6 h-6" />
+              <span className="text-sm font-semibold uppercase tracking-widest">Nonprofit</span>
+            </div>
           </div>
         </div>
       </section>
