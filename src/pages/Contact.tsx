@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -8,9 +8,10 @@ import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
+  lastName: z.string().trim().min(1, "Last name is required").max(50, "Last name must be less than 50 characters"),
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
+  organization: z.string().trim().max(100, "Organization name must be less than 100 characters").optional(),
   message: z.string().trim().min(1, "Message is required").max(2000, "Message must be less than 2000 characters")
 });
 
@@ -20,9 +21,10 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    company: '',
+    organization: '',
     message: ''
   });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
@@ -62,9 +64,15 @@ const Contact = () => {
       description: "We'll get back to you within 1-2 business days.",
     });
     
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ firstName: '', lastName: '', email: '', organization: '', message: '' });
     setIsSubmitting(false);
   };
+
+  const nextSteps = [
+    "We'll review your message and get back to you within 1-2 business days.",
+    "We'll schedule a call to understand your needs and context.",
+    "If there's a fit, we'll propose an approach tailored to your situation."
+  ];
 
   return (
     <div className="animate-in">
@@ -91,66 +99,81 @@ const Contact = () => {
       {/* Contact Form Section */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Form */}
-            <div>
-              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Get In Touch</h2>
-              <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-8 leading-tight">
-                Send us a message
-              </h3>
+            <div className="lg:col-span-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4 leading-tight">
+                Tell us about your project
+              </h2>
+              <p className="text-lg text-slate-600 mb-10">
+                Share a few details and we'll reach out to schedule a conversation.
+              </p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
+                    <Label htmlFor="firstName">First name</Label>
                     <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
                       onChange={handleChange}
-                      placeholder="Your name"
-                      className={errors.name ? 'border-red-500' : ''}
+                      placeholder="Your first name"
+                      className={`bg-white border-slate-200 ${errors.firstName ? 'border-red-500' : ''}`}
                     />
-                    {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+                    {errors.firstName && <p className="text-sm text-red-500">{errors.firstName}</p>}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="lastName">Last name</Label>
                     <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
                       onChange={handleChange}
-                      placeholder="you@company.com"
-                      className={errors.email ? 'border-red-500' : ''}
+                      placeholder="Your last name"
+                      className={`bg-white border-slate-200 ${errors.lastName ? 'border-red-500' : ''}`}
                     />
-                    {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+                    {errors.lastName && <p className="text-sm text-red-500">{errors.lastName}</p>}
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="company">Company</Label>
+                  <Label htmlFor="email">Email</Label>
                   <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
                     onChange={handleChange}
-                    placeholder="Your organization"
-                    className={errors.company ? 'border-red-500' : ''}
+                    placeholder="you@organization.com"
+                    className={`bg-white border-slate-200 ${errors.email ? 'border-red-500' : ''}`}
                   />
-                  {errors.company && <p className="text-sm text-red-500">{errors.company}</p>}
+                  {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="organization">Organization</Label>
+                  <Input
+                    id="organization"
+                    name="organization"
+                    value={formData.organization}
+                    onChange={handleChange}
+                    placeholder="Your organization name"
+                    className={`bg-white border-slate-200 ${errors.organization ? 'border-red-500' : ''}`}
+                  />
+                  {errors.organization && <p className="text-sm text-red-500">{errors.organization}</p>}
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="message">How can we help?</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your project or challenge..."
+                    placeholder="Tell us about your challenge, project, or question..."
                     rows={6}
-                    className={errors.message ? 'border-red-500' : ''}
+                    className={`bg-white border-slate-200 resize-y ${errors.message ? 'border-red-500' : ''}`}
                   />
                   {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
                 </div>
@@ -172,53 +195,36 @@ const Contact = () => {
               </form>
             </div>
             
-            {/* Contact Info */}
-            <div className="lg:pt-16">
-              <div className="bg-[#F6F7F9] p-10 rounded-3xl mb-8">
-                <h4 className="text-xl font-bold text-leap-black mb-6">Contact Information</h4>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-leap-orange" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-slate-500 mb-1">Email</p>
-                      <a href="mailto:hello@leapux.com" className="text-leap-black font-medium hover:text-leap-orange transition-colors">
-                        hello@leapux.com
-                      </a>
-                    </div>
+            {/* Sidebar */}
+            <div className="space-y-6">
+              {/* Other ways to reach us */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200">
+                <h4 className="text-xl font-bold text-leap-black mb-6">Other ways to reach us</h4>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-leap-orange" />
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-leap-orange" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-slate-500 mb-1">Phone</p>
-                      <a href="tel:+16135551234" className="text-leap-black font-medium hover:text-leap-orange transition-colors">
-                        +1 (613) 555-1234
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-leap-orange" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-slate-500 mb-1">Location</p>
-                      <p className="text-leap-black font-medium">
-                        Ottawa, Ontario, Canada
-                      </p>
-                    </div>
+                  <div>
+                    <p className="text-leap-black font-medium mb-1">Email us directly</p>
+                    <a href="mailto:hello@leapux.com" className="text-leap-orange hover:text-leap-red transition-colors font-medium">
+                      hello@leapux.com
+                    </a>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-leap-brand text-leap-white p-10 rounded-3xl">
-                <p className="text-xl font-bold leading-tight mb-4 italic">
-                  "We typically respond within 1-2 business days. For urgent inquiries, please call us directly."
-                </p>
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80">
-                  National Support • EN / FR
+              {/* What happens next */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200">
+                <h4 className="text-xl font-bold text-leap-black mb-6">What happens next?</h4>
+                <div className="space-y-5">
+                  {nextSteps.map((step, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="w-7 h-7 bg-leap-orange/10 rounded-lg flex items-center justify-center shrink-0">
+                        <span className="text-sm font-bold text-leap-orange">{i + 1}</span>
+                      </div>
+                      <p className="text-slate-600 leading-relaxed">{step}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
