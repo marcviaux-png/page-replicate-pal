@@ -54,7 +54,7 @@ const LeapNavbar = () => {
               </Link>
             ))}
             <Link
-              to="/services"
+              to="/contact"
               className="bg-leap-orange text-leap-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95"
             >
               Talk to LeapUX
@@ -86,7 +86,7 @@ const LeapNavbar = () => {
               </Link>
             ))}
             <Link 
-              to="/services" 
+              to="/contact" 
               onClick={() => setIsOpen(false)} 
               className="block w-full text-center bg-leap-orange text-leap-white py-5 rounded-full font-bold uppercase text-sm"
             >
