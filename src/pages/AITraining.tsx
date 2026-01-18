@@ -17,6 +17,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { z } from 'zod';
+import heroAiTraining from '@/assets/hero-ai-training.jpg';
 
 const leadSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
@@ -230,11 +231,12 @@ const AITraining = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-leap-black via-slate-900 to-leap-black pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-leap-orange rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-leap-red rounded-full blur-3xl" />
-        </div>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroAiTraining})` }}
+        />
+        <div className="absolute inset-0 bg-leap-black/75" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-leap-orange/10 border border-leap-orange/30 rounded-full px-4 py-2 mb-6">
