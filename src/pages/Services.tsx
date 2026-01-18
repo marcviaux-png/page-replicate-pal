@@ -1,3 +1,5 @@
+import { Lightbulb, TrendingUp, Target, Layers, Sparkles } from 'lucide-react';
+
 interface ServiceCardProps {
   title: string;
   tagline: string;
@@ -137,6 +139,65 @@ const Services = () => {
           {serviceAreas.map((service, i) => (
             <ServiceCard key={i} {...service} />
           ))}
+        </div>
+      </section>
+
+      {/* Our Delivery Model */}
+      <section className="py-32 bg-[#F6F7F9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Delivery Model</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              A disciplined, insight-driven progression
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Every engagement follows a proven approach that moves from understanding to action.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                icon: Lightbulb,
+                step: 1,
+                title: "Start with what's real",
+                description: "Understand users, constraints, systems, and context"
+              },
+              {
+                icon: TrendingUp,
+                step: 2,
+                title: "Let insights lead",
+                description: "Surface patterns, risks, and opportunities that inform decisions"
+              },
+              {
+                icon: Target,
+                step: 3,
+                title: "Strategize with intent",
+                description: "Align actions to goals, capacity, and governance"
+              },
+              {
+                icon: Layers,
+                step: 4,
+                title: "Design for reality",
+                description: "Build for how things actually work — technically, operationally, and humanly"
+              },
+              {
+                icon: Sparkles,
+                step: 5,
+                title: "Leave teams stronger",
+                description: "Deliver clarity, capability, and continuity beyond the engagement"
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200 text-center">
+                <div className="w-14 h-14 bg-leap-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <item.icon className="w-6 h-6 text-leap-orange" />
+                </div>
+                <span className="text-xs font-black text-leap-orange uppercase tracking-widest">Step {item.step}</span>
+                <h4 className="text-lg font-bold text-leap-black mt-3 mb-3">{item.title}</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
