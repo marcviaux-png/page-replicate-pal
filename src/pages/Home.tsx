@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import heroImage from '@/assets/hero-ux-design.jpg';
 
 const Home = () => {
   return (
@@ -7,8 +8,8 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-leap-black">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" 
-            alt="Corporate Architecture" 
+            src={heroImage} 
+            alt="UX Design Workspace" 
             className="w-full h-full object-cover hero-image"
           />
           <div className="absolute inset-0 image-overlay"></div>
