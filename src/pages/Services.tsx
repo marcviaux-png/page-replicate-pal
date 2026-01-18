@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Lightbulb, TrendingUp, Target, Layers, Sparkles, CheckCircle, Search, Building, Shield, Users, Rocket } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -267,12 +268,12 @@ const Services = () => {
       <section className="py-32 bg-leap-white text-center border-t border-border">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-leap-black mb-8">Ready to design a service that works?</h2>
-          <a
-            href="mailto:hello@leapux.com"
+          <Link
+            to="/contact"
             className="inline-flex justify-center items-center px-12 py-5 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:bg-leap-red transition-all shadow-xl"
           >
             Talk to LeapUX
-          </a>
+          </Link>
         </div>
       </section>
     </div>

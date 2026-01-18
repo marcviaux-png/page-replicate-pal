@@ -254,7 +254,7 @@ const Home = () => {
             Ready to improve how your service works in the real world?
           </h2>
           <Link
-            to="/services"
+            to="/contact"
             className="inline-flex justify-center items-center px-14 py-6 text-sm font-bold uppercase tracking-[0.3em] rounded-full bg-leap-black text-leap-white hover:brightness-125 transition-all shadow-[0_15px_35px_rgba(0,0,0,0.25)] active:scale-95"
           >
             Talk to LeapUX
