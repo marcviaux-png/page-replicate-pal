@@ -1,4 +1,4 @@
-import { Lightbulb, TrendingUp, Target, Layers, Sparkles, CheckCircle } from 'lucide-react';
+import { Lightbulb, TrendingUp, Target, Layers, Sparkles, CheckCircle, Search, Building, Shield, Users, Rocket } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -248,15 +248,15 @@ const Services = () => {
             </div>
             <div className="space-y-4">
               {[
-                "Research-driven by default — evidence before assumptions",
-                "Strategy and execution under one roof",
-                "Proven delivery in complex, high-stakes environments",
-                "Senior-led, cross-disciplinary teams",
-                "Focused on adoption and long-term impact"
+                { icon: Search, text: "Research-driven by default — evidence before assumptions" },
+                { icon: Building, text: "Strategy and execution under one roof" },
+                { icon: Shield, text: "Proven delivery in complex, high-stakes environments" },
+                { icon: Users, text: "Senior-led, cross-disciplinary teams" },
+                { icon: Rocket, text: "Focused on adoption and long-term impact" }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-200">
-                  <CheckCircle className="w-5 h-5 text-leap-orange shrink-0" />
-                  <span className="text-leap-black font-medium">{item}</span>
+                  <item.icon className="w-5 h-5 text-leap-orange shrink-0" />
+                  <span className="text-leap-black font-medium">{item.text}</span>
                 </div>
               ))}
             </div>
