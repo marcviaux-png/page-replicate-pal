@@ -38,7 +38,9 @@ const LeapNavbar = () => {
             <img 
               src={leapuxLogo} 
               alt="LeapUX" 
-              className="h-8 sm:h-10 w-auto"
+              className={`h-8 sm:h-10 w-auto transition-all duration-500 ${
+                scrolled ? 'brightness-0' : ''
+              }`}
             />
           </Link>
           
