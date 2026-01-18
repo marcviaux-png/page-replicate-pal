@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import leapuxLogo from '@/assets/leapux-logo.png';
 
 const LeapFooter = () => {
   return (
@@ -7,6 +8,11 @@ const LeapFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-8 group">
+              <img 
+                src={leapuxLogo} 
+                alt="LeapUX Logo" 
+                className="h-8 w-auto brightness-0 invert"
+              />
               <span className="text-3xl font-black tracking-tighter text-leap-white">
                 LeapUX<span className="text-leap-orange">.</span>
               </span>
