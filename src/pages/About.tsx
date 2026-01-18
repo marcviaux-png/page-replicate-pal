@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Users, Clock, Target, Languages, Award, CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
@@ -97,6 +98,76 @@ const About = () => {
           </aside>
         </div>
       </div>
+
+      {/* How We Work */}
+      <section className="py-32 bg-[#F6F7F9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How We Work</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              Rigor, transparency, and accountability
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            {[
+              {
+                icon: Users,
+                title: "Senior-Led, Hands-On Delivery",
+                description: "LeapUX is a senior-led team with deep expertise across delivery, UX, and architecture. The people you meet at the start stay involved through design, build, and adoption. We scale thoughtfully as needs evolve—filling capacity gaps without the overhead or handoffs of a traditional agency.",
+                points: ["Senior expertise from start to finish", "Proven delivery approach reduces rework", "Weekly demos, clear ownership, transparent communication"]
+              },
+              {
+                icon: Clock,
+                title: "Discipline, Transparency, and Follow-Through",
+                description: "We operate with rigor and transparency because trust is earned through execution. Time is tracked to tasks, shared regularly, and tied directly to delivered outputs. We work with agreed cadences, burn visibility, and clear change control.",
+                points: ["Time tracked to tasks and deliverables", "Risks raised early, decisions documented", "Issues followed through to closure with defined owners"]
+              },
+              {
+                icon: Target,
+                title: "Built for Complex Delivery",
+                description: "Our work spans discovery through implementation and long-term operation, with clear artifacts, defined acceptance criteria, and shared ownership at every stage. We align on outcomes first, define success metrics early, and revisit them throughout delivery.",
+                points: ["Clear artifacts and acceptance criteria", "Shared ownership at every stage", "Services move to adoption, not stall after launch"]
+              },
+              {
+                icon: Languages,
+                title: "Bilingual and National by Design",
+                description: "As a Canadian firm, LeapUX delivers fully bilingually in English and French, including stakeholder workshops, formal deliverables, and national program alignment. Our work reflects the linguistic, accessibility, and policy realities of delivering services for all Canadians.",
+                points: ["Full bilingual delivery in English and French", "Stakeholder workshops and formal deliverables", "Aligned with Canadian accessibility and policy requirements"]
+              },
+              {
+                icon: Award,
+                title: "Outcomes That Last",
+                description: "Above all, we care about outcomes—not just launches. We show this through thorough documentation, clear handover, operational support, and plans for post-launch evolution. We help organizations succeed after go-live, with services that are maintainable, adopted, and able to improve over time.",
+                points: ["Thorough documentation and clear handover", "Operational support post-launch", "Plans for continuous improvement"]
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 lg:p-10 rounded-2xl border border-slate-200">
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
+                    <item.icon className="w-6 h-6 text-leap-orange" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-leap-black mb-3">{item.title}</h4>
+                    <p className="text-slate-600 leading-relaxed mb-6">{item.description}</p>
+                    <ul className="space-y-3">
+                      {item.points.map((point, j) => (
+                        <li key={j} className="flex items-center gap-3">
+                          <CheckCircle className="w-5 h-5 text-leap-orange shrink-0" />
+                          <span className="text-slate-700 font-medium">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-32 bg-leap-light text-center border-t border-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
