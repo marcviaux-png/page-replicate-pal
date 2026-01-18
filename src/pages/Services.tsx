@@ -236,28 +236,30 @@ const Services = () => {
       {/* Why LeapUX */}
       <section className="py-32 bg-[#F6F7F9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why LeapUX</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black leading-tight">
-              Evidence, discipline, and real-world impact
-            </h3>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Research-driven by default — evidence before assumptions",
-              "Strategy and execution under one roof",
-              "Proven delivery in complex, high-stakes environments",
-              "Senior-led, cross-disciplinary teams",
-              "Focused on adoption and long-term impact"
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-200/50 p-8 rounded-2xl text-center">
-                <div className="w-12 h-12 border-2 border-leap-orange rounded-full flex items-center justify-center mx-auto mb-5">
-                  <CheckCircle className="w-5 h-5 text-leap-orange" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why LeapUX</h2>
+              <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+                Evidence, discipline, and real-world impact
+              </h3>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                We bring rigour and clarity to complex challenges, helping teams move from uncertainty to confident delivery.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                "Research-driven by default — evidence before assumptions",
+                "Strategy and execution under one roof",
+                "Proven delivery in complex, high-stakes environments",
+                "Senior-led, cross-disciplinary teams",
+                "Focused on adoption and long-term impact"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-200">
+                  <CheckCircle className="w-5 h-5 text-leap-orange shrink-0" />
+                  <span className="text-leap-black font-medium">{item}</span>
                 </div>
-                <p className="text-leap-black font-medium leading-relaxed">{item}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
