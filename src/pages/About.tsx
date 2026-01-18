@@ -105,7 +105,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How We Work</h2>
             <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-              Rigor, transparency, and accountability
+              Evidence-driven, senior-led, built for the real world
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
