@@ -127,6 +127,12 @@ const Services = () => {
       </section>
 
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Service Areas</h2>
+          <h3 className="text-3xl sm:text-4xl font-bold text-leap-black leading-tight">
+            Comprehensive support across the service lifecycle
+          </h3>
+        </div>
         <div className="space-y-12">
           {serviceAreas.map((service, i) => (
             <ServiceCard key={i} {...service} />
