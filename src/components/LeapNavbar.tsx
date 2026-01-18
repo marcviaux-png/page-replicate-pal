@@ -34,11 +34,11 @@ const LeapNavbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <img 
               src={leapuxLogo} 
               alt="LeapUX Logo" 
-              className={`h-8 sm:h-10 w-auto transition-all ${!scrolled ? 'brightness-0 invert' : ''}`}
+              className="h-8 sm:h-10 w-auto"
             />
             <span className={`text-2xl font-black tracking-tighter transition-colors ${scrolled ? 'text-leap-black' : 'text-leap-white'}`}>
               LeapUX<span className="text-leap-orange">.</span>
