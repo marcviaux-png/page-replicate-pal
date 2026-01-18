@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import leapuxLogo from '@/assets/leapux-logo.png';
+import leapuxLogoDark from '@/assets/leapux-logo-dark.png';
 
 const LeapNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,23 +35,20 @@ const LeapNavbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center group">
-            {/* Light logo for dark backgrounds */}
+          <Link to="/" className="flex items-center group relative">
             <img 
               src={leapuxLogo} 
               alt="LeapUX" 
               className={`h-8 sm:h-10 w-auto transition-opacity duration-500 ${
-                scrolled ? 'opacity-0 absolute' : 'opacity-100'
+                scrolled ? 'opacity-0' : 'opacity-100'
               }`}
             />
-            {/* Dark logo for light backgrounds - using brightness filter */}
             <img 
-              src={leapuxLogo} 
+              src={leapuxLogoDark} 
               alt="LeapUX" 
-              className={`h-8 sm:h-10 w-auto transition-opacity duration-500 ${
-                scrolled ? 'opacity-100' : 'opacity-0 absolute'
+              className={`h-8 sm:h-10 w-auto absolute left-0 transition-opacity duration-500 ${
+                scrolled ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ filter: 'brightness(0) saturate(100%)' }}
             />
           </Link>
           
