@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 
@@ -9,6 +9,39 @@ const Home = () => {
     "Accessibility as a baseline, not an add-on",
     "Collaboration across disciplines",
     "Decisions informed by real user insight"
+  ];
+
+  const services = [
+    {
+      icon: Compass,
+      title: "Strategy & Transformation",
+      description: "Define a clear vision for change and translate it into actionable, evidence-based plans."
+    },
+    {
+      icon: Users,
+      title: "User Research & Discovery",
+      description: "Uncover real user needs to help teams make informed decisions and de-risk initiatives."
+    },
+    {
+      icon: Paintbrush,
+      title: "UX & Service Design",
+      description: "Design end-to-end services that work across channels, systems, and organizational boundaries."
+    },
+    {
+      icon: Accessibility,
+      title: "Accessibility by Design",
+      description: "Embed inclusive design from the start to meet regulatory requirements and improve usability."
+    },
+    {
+      icon: Cpu,
+      title: "AI & Automation Readiness",
+      description: "Identify responsible, practical opportunities for automation and AI in your workflows."
+    },
+    {
+      icon: Rocket,
+      title: "Implementation Support",
+      description: "Ensure design vision is correctly translated into code alongside engineering teams."
+    }
   ];
 
   return (
@@ -124,6 +157,46 @@ const Home = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-32 bg-leap-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              End-to-end design and delivery support
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              From strategy through implementation, we partner with teams to build digital services that work in the real world.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, i) => (
+              <div 
+                key={i} 
+                className="group bg-background p-8 rounded-2xl border border-border hover:border-leap-orange/30 hover:shadow-lg transition-all"
+              >
+                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-leap-orange/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-leap-orange" />
+                </div>
+                <h4 className="text-xl font-bold text-leap-black mb-3">{service.title}</h4>
+                <p className="text-slate-600 leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-brand transition-colors group"
+            >
+              View all services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
