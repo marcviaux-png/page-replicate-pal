@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
+import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const Home = () => {
+  const approachPoints = [
+    "Evidence before opinions",
+    "Accessibility as a baseline, not an add-on",
+    "Collaboration across disciplines",
+    "Decisions informed by real user insight"
+  ];
+
   return (
     <div className="animate-in">
       {/* Hero Section */}
@@ -76,6 +85,43 @@ const Home = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach */}
+      <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div>
+              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Approach</h2>
+              <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-8 leading-tight">
+                Research, design, and validation — from discovery to delivery.
+              </h3>
+              <p className="text-lg text-slate-600 leading-relaxed mb-10">
+                We support teams from early discovery through delivery by combining research, design, and validation.
+              </p>
+              <ul className="space-y-5">
+                {approachPoints.map((point, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <CheckCircle className="w-6 h-6 text-leap-orange shrink-0" strokeWidth={2} />
+                    <span className="text-leap-black font-medium">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative">
+              <img 
+                src={teamCollaboration} 
+                alt="Team collaboration on UX design" 
+                className="rounded-3xl shadow-2xl w-full"
+              />
+              <div className="absolute bottom-6 right-6 left-6 sm:left-auto sm:max-w-xs bg-leap-white p-6 rounded-2xl shadow-xl">
+                <p className="text-leap-black font-medium leading-relaxed italic">
+                  "Good design is not about aesthetics — it's about clarity, risk reduction, and trust."
+                </p>
               </div>
             </div>
           </div>
