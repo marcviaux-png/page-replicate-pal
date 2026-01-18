@@ -162,14 +162,14 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-32 bg-leap-light">
+      <section className="py-32 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
               End-to-end design and delivery support
             </h3>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               From strategy through implementation, we partner with teams to build digital services that work in the real world.
             </p>
           </div>
@@ -178,13 +178,13 @@ const Home = () => {
             {services.map((service, i) => (
               <div 
                 key={i} 
-                className="group bg-background p-8 rounded-2xl border border-border hover:border-leap-orange/30 hover:shadow-lg transition-all"
+                className="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-leap-orange/30 hover:shadow-lg transition-all"
               >
                 <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-leap-orange/20 transition-colors">
                   <service.icon className="w-6 h-6 text-leap-orange" />
                 </div>
-                <h4 className="text-xl font-bold text-leap-black mb-3">{service.title}</h4>
-                <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                <h4 className="text-xl font-bold text-white mb-3">{service.title}</h4>
+                <p className="text-slate-400 leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
