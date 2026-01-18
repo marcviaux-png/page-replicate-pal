@@ -46,7 +46,7 @@ const LeapNavbar = () => {
             <img 
               src={leapuxLogoDark} 
               alt="LeapUX" 
-              className={`h-8 sm:h-10 w-auto absolute left-0 transition-opacity duration-500 ${
+              className={`h-8 sm:h-10 w-auto absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ${
                 scrolled ? 'opacity-100' : 'opacity-0'
               }`}
             />
