@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Send } from 'lucide-react';
+import { Mail, Send, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -200,15 +200,28 @@ const Contact = () => {
               {/* Other ways to reach us */}
               <div className="bg-white p-8 rounded-2xl border border-slate-200">
                 <h4 className="text-xl font-bold text-leap-black mb-6">Other ways to reach us</h4>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-leap-orange" />
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
+                      <Mail className="w-5 h-5 text-leap-orange" />
+                    </div>
+                    <div>
+                      <p className="text-leap-black font-medium mb-1">Email us directly</p>
+                      <a href="mailto:contact@leapux.com" className="text-leap-orange hover:text-leap-red transition-colors font-medium">
+                        contact@leapux.com
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-leap-black font-medium mb-1">Email us directly</p>
-                    <a href="mailto:hello@leapux.com" className="text-leap-orange hover:text-leap-red transition-colors font-medium">
-                      hello@leapux.com
-                    </a>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
+                      <Phone className="w-5 h-5 text-leap-orange" />
+                    </div>
+                    <div>
+                      <p className="text-leap-black font-medium mb-1">Call us</p>
+                      <a href="tel:1-888-553-2789" className="text-leap-orange hover:text-leap-red transition-colors font-medium">
+                        1-888-553-2789
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
