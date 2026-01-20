@@ -465,7 +465,7 @@ const AIServices = () => {
       </section>
 
       {/* Lead Generation Form */}
-      <section id="get-started" className="py-20 bg-slate-800">
+      <section id="get-started" className="py-20 bg-gradient-to-b from-[#1a1a1a] to-leap-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
