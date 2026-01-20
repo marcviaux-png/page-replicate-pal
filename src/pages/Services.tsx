@@ -272,7 +272,7 @@ const Services = () => {
             to="/contact"
             className="inline-flex justify-center items-center px-12 py-5 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:bg-leap-red transition-all shadow-xl"
           >
-            Talk to LeapUX
+            Contact Us
           </Link>
         </div>
       </section>
