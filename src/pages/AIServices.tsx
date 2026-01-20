@@ -267,7 +267,7 @@ const AIServices = () => {
               AI-Powered UX & Digital Transformation Services
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8">
-              Turn Complexity Into Clarity. Automate What Slows You Down.
+              Turn Complexity Into Clarity. Unlock Smarter Automation.
             </p>
             <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10">
               We help organizations improve usability, streamline workflows, and scale smarter using practical, human-centered AI—without hype or unnecessary complexity.
