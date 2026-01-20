@@ -249,32 +249,23 @@ const AIServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="animate-in bg-leap-light">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroAiServices})` }}
-        />
-        <div className="absolute inset-0 bg-leap-black/80" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-leap-orange/10 border border-leap-orange/30 rounded-full px-4 py-2 mb-6">
-              <Brain className="w-5 h-5 text-leap-orange" />
-              <span className="text-leap-orange font-medium">AI-Powered Services</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              AI-Powered UX & Digital Transformation Services
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
-              Turn Complexity Into Clarity. Unlock Smarter Automation.
+      <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroAiServices} 
+            alt="AI Services Background" 
+            className="w-full h-full object-cover hero-image"
+          />
+          <div className="absolute inset-0 image-overlay"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">AI-Powered UX & Digital Transformation</h1>
+            <p className="text-xl text-slate-300 leading-relaxed font-light">
+              Turn complexity into clarity. We help organizations improve usability, streamline workflows, and scale smarter using practical, human-centered AI.
             </p>
-            <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10">
-              We help organizations improve usability, streamline workflows, and scale smarter using practical, human-centered AI—without hype or unnecessary complexity.
-            </p>
-            <Button asChild size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-8 py-6 text-lg">
-              <a href="#get-started">Get Started</a>
-            </Button>
           </div>
         </div>
       </section>
