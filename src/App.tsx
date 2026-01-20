@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import AITraining from "./pages/AITraining";
+import AIServices from "./pages/AIServices";
 import NotFound from "./pages/NotFound";
 import LeapNavbar from "./components/LeapNavbar";
 import LeapFooter from "./components/LeapFooter";
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/ai-training" element={<AITraining />} />
+              <Route path="/ai-services" element={<AIServices />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
