@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import leapuxLogo from '@/assets/leapux-logo.png';
 import leapuxLogoDark from '@/assets/leapux-logo-dark.png';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const LeapNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +23,26 @@ const LeapNavbar = () => {
 
   const navLinks = [
     { name: 'Services', path: '/services' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'AI Training', path: '/ai-training' },
     { name: 'About', path: '/about' },
   ];
 
+  const aiLinks = [
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'AI Training & Enablement', path: '/ai-training' },
+  ];
+
   const isActive = (path: string) => location.pathname === path;
+  const isAiActive = aiLinks.some(link => isActive(link.path));
 
   const getLinkClasses = (path: string) => {
     const active = isActive(path);
     if (active) return 'text-leap-orange underline underline-offset-8 decoration-2';
+    if (scrolled) return 'text-leap-black hover:text-leap-orange opacity-80';
+    return 'text-leap-white hover:text-leap-orange opacity-90';
+  };
+
+  const getAiTriggerClasses = () => {
+    if (isAiActive) return 'text-leap-orange underline underline-offset-8 decoration-2';
     if (scrolled) return 'text-leap-black hover:text-leap-orange opacity-80';
     return 'text-leap-white hover:text-leap-orange opacity-90';
   };
@@ -55,6 +71,29 @@ const LeapNavbar = () => {
                 {link.name}
               </Link>
             ))}
+            
+            {/* AI Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 flex items-center gap-1 outline-none ${getAiTriggerClasses()}`}>
+                AI
+                <ChevronDown className="h-3 w-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-leap-white border border-gray-200 shadow-lg z-[100]">
+                {aiLinks.map((link) => (
+                  <DropdownMenuItem key={link.path} asChild>
+                    <Link
+                      to={link.path}
+                      className={`text-xs font-bold uppercase tracking-[0.15em] px-4 py-3 cursor-pointer ${
+                        isActive(link.path) ? 'text-leap-orange' : 'text-leap-black hover:text-leap-orange'
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link
               to="/contact"
               className="bg-leap-orange text-leap-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95"
@@ -87,6 +126,19 @@ const LeapNavbar = () => {
                 {link.name}
               </Link>
             ))}
+            <div className="pt-2">
+              <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">AI</p>
+              {aiLinks.map((link) => (
+                <Link 
+                  key={link.path} 
+                  to={link.path} 
+                  onClick={() => setIsOpen(false)} 
+                  className="block text-2xl font-bold text-leap-black pl-4 py-2"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
             <Link 
               to="/contact" 
               onClick={() => setIsOpen(false)} 
