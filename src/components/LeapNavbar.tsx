@@ -62,15 +62,13 @@ const LeapNavbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses(link.path)}`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {/* Services */}
+            <Link
+              to="/services"
+              className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses('/services')}`}
+            >
+              Services
+            </Link>
             
             {/* AI Dropdown */}
             <DropdownMenu>
@@ -93,6 +91,14 @@ const LeapNavbar = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {/* About */}
+            <Link
+              to="/about"
+              className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses('/about')}`}
+            >
+              About
+            </Link>
 
             <Link
               to="/contact"
