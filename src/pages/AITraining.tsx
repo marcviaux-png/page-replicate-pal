@@ -229,32 +229,23 @@ const AITraining = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="animate-in bg-leap-light">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroAiTraining})` }}
-        />
-        <div className="absolute inset-0 bg-leap-black/45" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-leap-orange/10 border border-leap-orange/30 rounded-full px-4 py-2 mb-6">
-              <Brain className="w-5 h-5 text-leap-orange" />
-              <span className="text-leap-orange font-medium">AI Training & Enablement</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Training & Enablement for Modern Organizations
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
-              Design, Strategy, and AI—Working Better Together
+      <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroAiTraining} 
+            alt="AI Training Background" 
+            className="w-full h-full object-cover hero-image"
+          />
+          <div className="absolute inset-0 image-overlay"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">AI Training & Enablement</h1>
+            <p className="text-xl text-slate-300 leading-relaxed font-light">
+              Design, Strategy, and AI—Working Better Together. We help businesses move beyond AI hype and into practical, human-centered AI adoption.
             </p>
-            <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10">
-              Artificial Intelligence is no longer a future concept—it's a present-day capability reshaping how organizations design services, make decisions, and deliver value. At LeapUX, we help businesses move beyond AI hype and into practical, human-centered AI adoption.
-            </p>
-            <Button asChild size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-8 py-6 text-lg">
-              <a href="#get-started">Talk to a Specialist</a>
-            </Button>
           </div>
         </div>
       </section>
