@@ -243,9 +243,15 @@ const AITraining = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">AI Training & Enablement</h1>
-            <p className="text-xl text-slate-300 leading-relaxed font-light">
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-8">
               Design, Strategy, and AI—Working Better Together. We help businesses move beyond AI hype and into practical, human-centered AI adoption.
             </p>
+            <a href="#get-started">
+              <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-8 py-6 text-lg">
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -285,9 +291,15 @@ const AITraining = () => {
               <p className="text-lg text-slate-700 mb-4">
                 Those that don't risk falling behind—not because AI replaces people, but because <strong>people using AI will outperform those who don't.</strong>
               </p>
-              <p className="text-xl font-bold text-leap-black">
+              <p className="text-xl font-bold text-leap-black mb-6">
                 AI training is no longer optional. It's a core digital competency.
               </p>
+              <a href="#get-started">
+                <Button className="bg-leap-orange hover:bg-leap-orange/90 text-white">
+                  Build Your Team's AI Capabilities
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -436,6 +448,19 @@ const AITraining = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* CTA after Programs */}
+              <div className="text-center pt-8">
+                <p className="text-lg text-slate-600 mb-6">
+                  Ready to explore which program is right for your organization?
+                </p>
+                <a href="#get-started">
+                  <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-8">
+                    Find the Right Program
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -458,9 +483,17 @@ const AITraining = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-slate-600 italic">
+            <p className="text-center text-slate-600 italic mb-8">
               Programs are customized for private sector, public sector, and non-profit organizations.
             </p>
+            <div className="text-center">
+              <a href="#get-started">
+                <Button className="bg-leap-black hover:bg-leap-black/90 text-white">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -482,9 +515,17 @@ const AITraining = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-xl text-white">
+            <p className="text-center text-xl text-white mb-10">
               AI success isn't about technology alone—it's about <strong className="text-leap-orange">people, processes, and experiences</strong> working together.
             </p>
+            <div className="text-center">
+              <a href="#get-started">
+                <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-8 py-6 text-lg">
+                  Start Your AI Journey
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
