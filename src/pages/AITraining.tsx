@@ -248,7 +248,7 @@ const AITraining = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#get-started">
-                <Button size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+                <Button size="lg" className="bg-leap-orange hover:brightness-110 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full shadow-lg transition-all">
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
