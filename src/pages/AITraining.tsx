@@ -248,7 +248,7 @@ const AITraining = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#get-started">
-                <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+                <Button size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -302,7 +302,7 @@ const AITraining = () => {
                 AI training is no longer optional. It's a core digital competency.
               </p>
               <a href="#get-started">
-                <Button className="bg-leap-orange hover:bg-leap-orange/90 text-white px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-full">
+                <Button className="bg-leap-orange hover:bg-leap-red text-white px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-full">
                   Build Your Team's AI Capabilities
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -462,7 +462,7 @@ const AITraining = () => {
                   Ready to explore which program is right for your organization?
                 </p>
                 <a href="#get-started">
-                  <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-10 py-5 text-sm font-bold uppercase tracking-widest rounded-full">
+                  <Button size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-10 py-5 text-sm font-bold uppercase tracking-widest rounded-full">
                     Find the Right Program
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
@@ -527,7 +527,7 @@ const AITraining = () => {
             </p>
             <div className="text-center">
               <a href="#get-started">
-                <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-14 py-6 text-sm font-bold uppercase tracking-[0.3em] rounded-full shadow-xl">
+                <Button size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-14 py-6 text-sm font-bold uppercase tracking-[0.3em] rounded-full shadow-xl">
                   Start Your AI Journey
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
