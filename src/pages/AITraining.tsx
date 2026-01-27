@@ -246,12 +246,19 @@ const AITraining = () => {
             <p className="text-xl text-slate-300 leading-relaxed font-light mb-8">
               Design, Strategy, and AI—Working Better Together. We help businesses move beyond AI hype and into practical, human-centered AI adoption.
             </p>
-            <a href="#get-started">
-              <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#get-started">
+                <Button size="lg" className="bg-leap-orange hover:bg-leap-orange/90 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+                  Get Started Today
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+              <a href="#programs">
+                <Button size="lg" className="border border-white/20 bg-transparent hover:bg-white/10 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+                  View Programs
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -337,7 +344,7 @@ const AITraining = () => {
       </section>
 
       {/* Programs */}
-      <section className="py-20 bg-white">
+      <section id="programs" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
