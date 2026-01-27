@@ -268,7 +268,7 @@ const AITraining = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl text-slate-700 leading-relaxed">
-              Our AI training programs are built at the intersection of <strong className="text-leap-black">UX, digital transformation, and applied AI</strong>—so your teams don't just learn tools, they learn how to think, design, and work differently.
+              Our AI training blends <strong className="text-leap-black">UX, digital transformation, and applied AI</strong> to help teams think, design, and work differently.
             </p>
           </div>
         </div>
