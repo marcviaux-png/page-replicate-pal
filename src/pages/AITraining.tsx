@@ -880,7 +880,7 @@ const AITraining = () => {
             <p className="text-lg text-slate-600 mb-8">
               AI is reshaping how organizations operate, design, and compete. With the right training, your teams can lead that change with confidence.
             </p>
-            <Button asChild size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-8">
+            <Button asChild size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
               <Link to="/contact">Contact LeapUX Today</Link>
             </Button>
           </div>
