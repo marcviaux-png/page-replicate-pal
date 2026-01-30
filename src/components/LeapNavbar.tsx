@@ -22,7 +22,8 @@ const LeapNavbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Capabilities', path: '/services' },
+    { name: 'Services', path: '/services' },
+    { name: 'Capabilities', path: '/capabilities' },
     { name: 'About', path: '/about' },
   ];
 
@@ -62,10 +63,18 @@ const LeapNavbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-10">
-            {/* Capabilities */}
+            {/* Services */}
             <Link
               to="/services"
               className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses('/services')}`}
+            >
+              Services
+            </Link>
+
+            {/* Capabilities */}
+            <Link
+              to="/capabilities"
+              className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses('/capabilities')}`}
             >
               Capabilities
             </Link>
