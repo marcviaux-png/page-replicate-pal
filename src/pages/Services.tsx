@@ -51,7 +51,6 @@ const Services = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-leap-orange font-bold text-sm uppercase tracking-[0.2em] mb-4">Services</p>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Strategic Consulting for Growth & Transformation</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
               We partner with teams to move from uncertainty to confident delivery — reducing risk, improving adoption, and building digital services that work in the real world.
@@ -60,40 +59,49 @@ const Services = () => {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* Core Areas - Merged with What We Do */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">What We Do</h2>
-            <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
-              <p>
+          <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">What We Do</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
                 At LeapUX, we partner with organizations to solve their most strategic challenges — from business model optimization and digital transformation to operational alignment and innovation strategy.
               </p>
-              <p>
-                Our approach is collaborative, data-driven, and tailored to your goals. We help leaders clarify direction, streamline execution, and build sustainable systems that accelerate growth and deliver measurable results.
-              </p>
-              <p>
-                Whether you're launching a new initiative, scaling an existing team, or navigating change, our consulting services are designed to drive impact where it matters most.
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Our approach is collaborative, data-driven, and tailored to your goals. Whether you're launching a new initiative, scaling an existing team, or navigating change, our consulting services are designed to drive impact where it matters most.
               </p>
             </div>
+            <div className="bg-leap-black text-leap-white p-10 rounded-3xl">
+              <h3 className="text-xs font-black uppercase tracking-[0.2em] text-leap-orange mb-6">Our Focus</h3>
+              <ul className="space-y-4">
+                {coreAreas.map((area, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <area.icon className="w-5 h-5 text-leap-orange shrink-0" />
+                    <span className="font-medium">{area.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Core Areas */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4">Core Areas of Consulting Support</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Core Areas Detail Cards */}
+          <div className="space-y-6">
             {coreAreas.map((area, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-leap-orange/10 rounded-xl flex items-center justify-center mb-6">
-                  <area.icon className="w-7 h-7 text-leap-orange" />
+              <div 
+                key={index} 
+                className="group relative bg-slate-50 hover:bg-leap-black rounded-2xl p-8 lg:p-10 transition-all duration-300 border border-slate-200 hover:border-leap-black"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                  <div className="w-16 h-16 bg-leap-orange rounded-xl flex items-center justify-center shrink-0">
+                    <area.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-leap-black group-hover:text-white mb-2 transition-colors">{area.title}</h3>
+                    <p className="text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">{area.description}</p>
+                  </div>
+                  <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-leap-orange shrink-0 transition-colors hidden lg:block" />
                 </div>
-                <h3 className="text-xl font-bold text-leap-black mb-4">{area.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{area.description}</p>
               </div>
             ))}
           </div>
