@@ -85,22 +85,16 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Core Areas Detail Cards */}
-          <div className="space-y-6">
+          {/* Core Areas Detail - Alternating Layout */}
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
             {coreAreas.map((area, index) => (
-              <div 
-                key={index} 
-                className="group relative bg-slate-50 hover:bg-leap-black rounded-2xl p-8 lg:p-10 transition-all duration-300 border border-slate-200 hover:border-leap-black"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                  <div className="w-16 h-16 bg-leap-orange rounded-xl flex items-center justify-center shrink-0">
-                    <area.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-leap-black group-hover:text-white mb-2 transition-colors">{area.title}</h3>
-                    <p className="text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">{area.description}</p>
-                  </div>
-                  <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-leap-orange shrink-0 transition-colors hidden lg:block" />
+              <div key={index} className="flex gap-5">
+                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="text-xl font-bold text-leap-orange">{index + 1}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-leap-black mb-3">{area.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{area.description}</p>
                 </div>
               </div>
             ))}
