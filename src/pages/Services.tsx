@@ -80,7 +80,7 @@ const Services = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Services</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              <span className="text-leap-orange font-semibold">Strategic Consulting for Growth & Transformation.</span> We partner with teams to move from uncertainty to confident delivery — reducing risk, improving adoption, and building digital services that work in the real world.
+              Strategic Consulting for Growth & Transformation. We partner with teams to move from uncertainty to confident delivery — reducing risk, improving adoption, and building digital services that work in the real world.
             </p>
           </div>
         </div>
