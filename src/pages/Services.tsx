@@ -2,33 +2,43 @@ import { Link } from 'react-router-dom';
 import { Target, Cpu, Settings, Lightbulb, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
+import sketchStrategicPlanning from '@/assets/sketch-strategic-planning.jpg';
+import sketchDigitalStrategy from '@/assets/sketch-digital-strategy.jpg';
+import sketchProcessOptimization from '@/assets/sketch-process-optimization.jpg';
+import sketchInnovationStrategy from '@/assets/sketch-innovation-strategy.jpg';
+import sketchChangeLeadership from '@/assets/sketch-change-leadership.jpg';
 
 const Services = () => {
   const coreAreas = [
     {
       icon: Target,
       title: "Strategic Advisory & Planning",
-      description: "We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities."
+      description: "We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities.",
+      image: sketchStrategicPlanning
     },
     {
       icon: Cpu,
       title: "Digital & Technology Strategy",
-      description: "From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency."
+      description: "From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency.",
+      image: sketchDigitalStrategy
     },
     {
       icon: Settings,
       title: "Business Process Optimization",
-      description: "Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow."
+      description: "Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow.",
+      image: sketchProcessOptimization
     },
     {
       icon: Lightbulb,
       title: "Innovation & Product Strategy",
-      description: "We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals."
+      description: "We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals.",
+      image: sketchInnovationStrategy
     },
     {
       icon: Users,
       title: "Change Leadership & Organizational Effectiveness",
-      description: "Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success."
+      description: "Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success.",
+      image: sketchChangeLeadership
     }
   ];
 
@@ -124,17 +134,11 @@ const Services = () => {
                   <p className="text-lg text-slate-600 leading-relaxed">{area.description}</p>
                 </div>
                 <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-200 to-slate-300">
+                  <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-white border border-slate-200 p-6">
                     <img 
-                      src={`https://images.unsplash.com/photo-${
-                        index === 0 ? '1552664730-d307ca884978' : 
-                        index === 1 ? '1551434678-e076c223a692' : 
-                        index === 2 ? '1454165804606-c3d57bc86b40' : 
-                        index === 3 ? '1531403009284-440f080d1e12' : 
-                        '1522071820081-009f0129c71c'
-                      }?auto=format&fit=crop&q=80&w=800`}
+                      src={area.image}
                       alt={area.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
