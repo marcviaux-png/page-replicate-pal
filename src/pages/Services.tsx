@@ -78,7 +78,8 @@ const Services = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Services - Strategic Consulting for Growth & Transformation</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Services</h1>
+            <p className="text-2xl sm:text-3xl text-leap-orange font-semibold mb-4">Strategic Consulting for Growth & Transformation</p>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
               We partner with teams to move from uncertainty to confident delivery — reducing risk, improving adoption, and building digital services that work in the real world.
             </p>
