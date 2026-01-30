@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import coreStrategicPlanning from '@/assets/core-strategic-planning.jpg';
@@ -7,6 +7,13 @@ import coreDigitalStrategy from '@/assets/core-digital-strategy.jpg';
 import coreProcessOptimization from '@/assets/core-process-optimization.jpg';
 import coreInnovationStrategy from '@/assets/core-innovation-strategy.jpg';
 import coreChangeLeadership from '@/assets/core-change-leadership.jpg';
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 const Services = () => {
   const coreAreas = [
@@ -108,46 +115,71 @@ const Services = () => {
 
       {/* Core Areas - Immersive Dark Sections */}
       <section>
-        <div className="text-center py-20 px-4 bg-leap-black">
+        <div id="core-intro" className="text-center py-20 px-4 bg-leap-black relative">
           <h2 className="text-3xl sm:text-4xl font-bold text-leap-white mb-4">Core Areas of Consulting Support</h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
             We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
           </p>
+          <button 
+            onClick={() => scrollToSection('core-0')}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-leap-white/60 hover:text-leap-orange transition-colors duration-300"
+            aria-label="Scroll to first section"
+          >
+            <ChevronDown className="w-10 h-10 animate-bounce" />
+          </button>
         </div>
 
         {/* Individual Core Area Sections - Full Bleed Dark Style */}
-        {coreAreas.map((area, index) => (
-          <div 
-            key={index} 
-            className="relative min-h-[80vh] flex items-center"
-          >
-            {/* Background Image */}
-            <div className="absolute inset-0">
-              <img 
-                src={area.image}
-                alt={area.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
-            </div>
-            
-            {/* Content Overlay */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-              <div className="max-w-xl">
-                <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-leap-white mb-6 leading-tight">
-                  {area.headline}
-                </h3>
-                <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-4">
-                  <span className="text-leap-orange font-semibold">{area.title}.</span> {area.description}
-                </p>
+        {coreAreas.map((area, index) => {
+          const isEven = index % 2 === 0;
+          const nextSectionId = index < coreAreas.length - 1 ? `core-${index + 1}` : 'how-we-work';
+          
+          return (
+            <div 
+              key={index}
+              id={`core-${index}`}
+              className="relative min-h-[80vh] flex items-center"
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src={area.image}
+                  alt={area.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className={`absolute inset-0 ${isEven 
+                  ? 'bg-gradient-to-r from-black/80 via-black/60 to-transparent' 
+                  : 'bg-gradient-to-l from-black/80 via-black/60 to-transparent'
+                }`}></div>
               </div>
+              
+              {/* Content Overlay */}
+              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+                <div className={`max-w-xl ${isEven ? '' : 'ml-auto text-right'}`}>
+                  <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-leap-white mb-6 leading-tight">
+                    {area.headline}
+                  </h3>
+                  <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-4">
+                    <span className="text-leap-orange font-semibold">{area.title}.</span> {area.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Scroll Arrow */}
+              <button 
+                onClick={() => scrollToSection(nextSectionId)}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-leap-white/60 hover:text-leap-orange transition-colors duration-300 z-20"
+                aria-label="Scroll to next section"
+              >
+                <ChevronDown className="w-10 h-10 animate-bounce" />
+              </button>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* How We Work - Visual Cards */}
-      <section className="py-24 bg-leap-black text-leap-white">
+      <section id="how-we-work" className="py-24 bg-leap-black text-leap-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
