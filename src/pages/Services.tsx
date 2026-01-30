@@ -121,9 +121,9 @@ const Services = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Designed for Complex Delivery</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Our Capabilities</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              We partner with teams to move from uncertainty to confident delivery — reducing risk, improving adoption, and building digital services that work in the real world.
+              From strategy to delivery, we bring the expertise your team needs to design and build services that work in the real world.
             </p>
           </div>
         </div>
