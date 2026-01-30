@@ -2,43 +2,43 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
-import deviceStrategicPlanning from '@/assets/device-strategic-planning.jpg';
-import deviceDigitalStrategy from '@/assets/device-digital-strategy.jpg';
-import deviceProcessOptimization from '@/assets/device-process-optimization.jpg';
-import deviceInnovationStrategy from '@/assets/device-innovation-strategy.jpg';
-import deviceChangeLeadership from '@/assets/device-change-leadership.jpg';
+import coreStrategicPlanning from '@/assets/core-strategic-planning.jpg';
+import coreDigitalStrategy from '@/assets/core-digital-strategy.jpg';
+import coreProcessOptimization from '@/assets/core-process-optimization.jpg';
+import coreInnovationStrategy from '@/assets/core-innovation-strategy.jpg';
+import coreChangeLeadership from '@/assets/core-change-leadership.jpg';
 
 const Services = () => {
   const coreAreas = [
     {
-      label: "Advisory",
+      headline: "Define the path forward.",
       title: "Strategic Advisory & Planning",
       description: "We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities.",
-      image: deviceStrategicPlanning
+      image: coreStrategicPlanning
     },
     {
-      label: "Technology",
+      headline: "Transform with purpose.",
       title: "Digital & Technology Strategy",
       description: "From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency.",
-      image: deviceDigitalStrategy
+      image: coreDigitalStrategy
     },
     {
-      label: "Operations",
+      headline: "Efficiency in motion.",
       title: "Business Process Optimization",
       description: "Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow.",
-      image: deviceProcessOptimization
+      image: coreProcessOptimization
     },
     {
-      label: "Innovation",
+      headline: "Ideas that scale.",
       title: "Innovation & Product Strategy",
       description: "We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals.",
-      image: deviceInnovationStrategy
+      image: coreInnovationStrategy
     },
     {
-      label: "Leadership",
+      headline: "Lead the change.",
       title: "Change Leadership & Organizational Effectiveness",
       description: "Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success.",
-      image: deviceChangeLeadership
+      image: coreChangeLeadership
     }
   ];
 
@@ -106,35 +106,40 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Areas - Apple-inspired Clean Layout */}
-      <section className="bg-slate-100">
-        <div className="text-center py-20 px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4">Core Areas of Consulting Support</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+      {/* Core Areas - Immersive Dark Sections */}
+      <section>
+        <div className="text-center py-20 px-4 bg-leap-black">
+          <h2 className="text-3xl sm:text-4xl font-bold text-leap-white mb-4">Core Areas of Consulting Support</h2>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
           </p>
         </div>
 
-        {/* Individual Core Area Sections */}
+        {/* Individual Core Area Sections - Full Bleed Dark Style */}
         {coreAreas.map((area, index) => (
           <div 
             key={index} 
-            className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
+            className="relative min-h-[80vh] flex items-center"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${index % 2 === 1 ? '' : ''}`}>
-                <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} max-w-lg ${index % 2 === 1 ? 'lg:ml-auto' : ''}`}>
-                  <p className="text-sm font-bold uppercase tracking-widest text-leap-orange mb-3">{area.label}</p>
-                  <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-5 leading-tight">{area.title}</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">{area.description}</p>
-                </div>
-                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <img 
-                    src={area.image}
-                    alt={area.title}
-                    className="w-full h-auto max-w-xl mx-auto"
-                  />
-                </div>
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <img 
+                src={area.image}
+                alt={area.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+            </div>
+            
+            {/* Content Overlay */}
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+              <div className="max-w-xl">
+                <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-leap-white mb-6 leading-tight">
+                  {area.headline}
+                </h3>
+                <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-4">
+                  <span className="text-leap-orange font-semibold">{area.title}.</span> {area.description}
+                </p>
               </div>
             </div>
           </div>
