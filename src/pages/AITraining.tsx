@@ -250,7 +250,7 @@ const AITraining = () => {
             alt="AI Training Background" 
             className="w-full h-full object-cover hero-image"
           />
-          <div className="absolute inset-0 bg-leap-black/25"></div>
+          <div className="absolute inset-0 bg-leap-black/15"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
