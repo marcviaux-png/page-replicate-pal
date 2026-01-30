@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Target, Cpu, Settings, Lightbulb, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const Services = () => {
   const coreAreas = [
@@ -32,9 +33,18 @@ const Services = () => {
   ];
 
   const howWeWork = [
-    "Client-centric engagement — we put your context first",
-    "Outcome-focused solutions — clear goals with measurable success criteria",
-    "Collaborative delivery — partnership throughout planning and execution"
+    {
+      title: "Client-centric engagement",
+      description: "We put your context first"
+    },
+    {
+      title: "Outcome-focused solutions",
+      description: "Clear goals with measurable success criteria"
+    },
+    {
+      title: "Collaborative delivery",
+      description: "Partnership throughout planning and execution"
+    }
   ];
 
   return (
@@ -59,10 +69,10 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Areas - Merged with What We Do */}
+      {/* Story Introduction - What We Do */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">What We Do</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
@@ -72,29 +82,61 @@ const Services = () => {
                 Our approach is collaborative, data-driven, and tailored to your goals. Whether you're launching a new initiative, scaling an existing team, or navigating change, our consulting services are designed to drive impact where it matters most.
               </p>
             </div>
-            <div className="bg-leap-black text-leap-white p-10 rounded-3xl">
-              <h3 className="text-xs font-black uppercase tracking-[0.2em] text-leap-orange mb-6">Our Focus</h3>
-              <ul className="space-y-4">
-                {coreAreas.map((area, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <area.icon className="w-5 h-5 text-leap-orange shrink-0" />
-                    <span className="font-medium">{area.title}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden">
+                <img 
+                  src={teamCollaboration}
+                  alt="Team collaboration and strategy session" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-leap-orange/20 rounded-2xl -z-10"></div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Core Areas Detail - Alternating Layout */}
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+      {/* Core Areas - Visual Journey */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Core Areas of Consulting Support</h2>
+            <p className="text-lg text-slate-600">
+              We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
+            </p>
+          </div>
+
+          {/* Alternating Layout for Core Areas */}
+          <div className="space-y-20">
             {coreAreas.map((area, index) => (
-              <div key={index} className="flex gap-5">
-                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="text-xl font-bold text-leap-orange">{index + 1}</span>
+              <div 
+                key={index} 
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+              >
+                <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 bg-leap-orange rounded-xl flex items-center justify-center">
+                      <area.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <span className="text-sm font-bold uppercase tracking-widest text-leap-orange">0{index + 1}</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-leap-black mb-4">{area.title}</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">{area.description}</p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-leap-black mb-3">{area.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{area.description}</p>
+                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-200 to-slate-300">
+                    <img 
+                      src={`https://images.unsplash.com/photo-${
+                        index === 0 ? '1552664730-d307ca884978' : 
+                        index === 1 ? '1551434678-e076c223a692' : 
+                        index === 2 ? '1454165804606-c3d57bc86b40' : 
+                        index === 3 ? '1531403009284-440f080d1e12' : 
+                        '1522071820081-009f0129c71c'
+                      }?auto=format&fit=crop&q=80&w=800`}
+                      alt={area.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -102,59 +144,87 @@ const Services = () => {
         </div>
       </section>
 
-      {/* How We Work */}
-      <section className="py-24 bg-white">
+      {/* How We Work - Visual Cards */}
+      <section className="py-24 bg-leap-black text-leap-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-10 text-center">How We Work</h2>
-            <div className="space-y-4 mb-10">
-              {howWeWork.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 bg-slate-50 p-5 rounded-xl">
-                  <CheckCircle className="w-6 h-6 text-leap-orange shrink-0 mt-0.5" />
-                  <span className="text-lg text-slate-700">{item}</span>
-                </div>
-              ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">How We Work</h2>
+              <p className="text-lg text-slate-300 leading-relaxed mb-10">
+                We start every engagement with discovery and analysis, then co-create approaches that fit your resources, timelines, and strategic priorities. Our aim is to build confidence, clarity, and capability inside your organization.
+              </p>
+              <div className="space-y-6">
+                {howWeWork.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-leap-orange flex items-center justify-center shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white mb-1">{item.title}</h4>
+                      <p className="text-slate-400">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="text-lg text-slate-600 leading-relaxed text-center">
-              We start every engagement with discovery and analysis, then co-create approaches that fit your resources, timelines, and strategic priorities. Our aim is to build confidence, clarity, and capability inside your organization.
-            </p>
+            <div className="relative">
+              <div className="aspect-square rounded-3xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" 
+                  alt="Collaborative team meeting" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 border-4 border-leap-orange rounded-2xl -z-10"></div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Explore Capabilities */}
-      <section className="py-24 bg-gradient-to-r from-leap-orange/10 to-leap-red/10">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Explore Our Detailed Capabilities</h2>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              For a deeper look at specific services, methodologies, and the full range of expertise we bring to engagements, explore our capabilities. This links you directly into tailored descriptions of how we deliver value in each domain.
-            </p>
-            <Link to="/capabilities">
-              <Button className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
-                View Our Capabilities
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" 
+                  alt="Team planning session" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Explore Our Detailed Capabilities</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                For a deeper look at specific services, methodologies, and the full range of expertise we bring to engagements, explore our capabilities. This links you directly into tailored descriptions of how we deliver value in each domain.
+              </p>
+              <Link to="/capabilities">
+                <Button className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+                  View Our Capabilities
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-leap-white text-center border-t border-border">
+      <section className="py-32 bg-gradient-to-br from-leap-orange to-leap-red text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Ready to Get Started?</h2>
-          <p className="text-lg text-slate-600 mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-white/90 mb-10">
             Whether you need a strategy session, a full consulting engagement, or targeted support, we're here to help you take the next step.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button className="bg-leap-orange hover:bg-leap-red text-white px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+              <Button className="bg-white hover:bg-slate-100 text-leap-black px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
                 Contact Us
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-2 border-leap-black text-leap-black hover:bg-leap-black hover:text-white px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-leap-black px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
                 Schedule a Consultation
               </Button>
             </Link>
