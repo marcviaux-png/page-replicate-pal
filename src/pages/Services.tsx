@@ -258,7 +258,7 @@ const Services = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-leap-black px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+              <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-leap-black px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
                 Schedule a Consultation
               </Button>
             </Link>
