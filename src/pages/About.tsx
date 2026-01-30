@@ -14,7 +14,7 @@ const About = () => {
           <div className="absolute inset-0 image-overlay"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Built for Trust & Complex Delivery</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">About Us</h1>
           <p className="text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
             LeapUX is a senior-led digital consultancy helping organizations design, build, and deliver end-to-end services that work in the real world.
           </p>
