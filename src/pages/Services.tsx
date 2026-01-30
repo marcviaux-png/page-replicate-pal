@@ -1,44 +1,44 @@
 import { Link } from 'react-router-dom';
-import { Target, Cpu, Settings, Lightbulb, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
-import sketchStrategicPlanning from '@/assets/sketch-strategic-planning.jpg';
-import sketchDigitalStrategy from '@/assets/sketch-digital-strategy.jpg';
-import sketchProcessOptimization from '@/assets/sketch-process-optimization.jpg';
-import sketchInnovationStrategy from '@/assets/sketch-innovation-strategy.jpg';
-import sketchChangeLeadership from '@/assets/sketch-change-leadership.jpg';
+import deviceStrategicPlanning from '@/assets/device-strategic-planning.jpg';
+import deviceDigitalStrategy from '@/assets/device-digital-strategy.jpg';
+import deviceProcessOptimization from '@/assets/device-process-optimization.jpg';
+import deviceInnovationStrategy from '@/assets/device-innovation-strategy.jpg';
+import deviceChangeLeadership from '@/assets/device-change-leadership.jpg';
 
 const Services = () => {
   const coreAreas = [
     {
-      icon: Target,
+      label: "Advisory",
       title: "Strategic Advisory & Planning",
       description: "We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities.",
-      image: sketchStrategicPlanning
+      image: deviceStrategicPlanning
     },
     {
-      icon: Cpu,
+      label: "Technology",
       title: "Digital & Technology Strategy",
       description: "From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency.",
-      image: sketchDigitalStrategy
+      image: deviceDigitalStrategy
     },
     {
-      icon: Settings,
+      label: "Operations",
       title: "Business Process Optimization",
       description: "Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow.",
-      image: sketchProcessOptimization
+      image: deviceProcessOptimization
     },
     {
-      icon: Lightbulb,
+      label: "Innovation",
       title: "Innovation & Product Strategy",
       description: "We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals.",
-      image: sketchInnovationStrategy
+      image: deviceInnovationStrategy
     },
     {
-      icon: Users,
+      label: "Leadership",
       title: "Change Leadership & Organizational Effectiveness",
       description: "Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success.",
-      image: sketchChangeLeadership
+      image: deviceChangeLeadership
     }
   ];
 
@@ -106,46 +106,39 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Areas - Visual Journey */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Core Areas of Consulting Support</h2>
-            <p className="text-lg text-slate-600">
-              We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
-            </p>
-          </div>
+      {/* Core Areas - Apple-inspired Clean Layout */}
+      <section className="bg-slate-100">
+        <div className="text-center py-20 px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4">Core Areas of Consulting Support</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
+          </p>
+        </div>
 
-          {/* Alternating Layout for Core Areas */}
-          <div className="space-y-20">
-            {coreAreas.map((area, index) => (
-              <div 
-                key={index} 
-                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
-              >
-                <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 bg-leap-orange rounded-xl flex items-center justify-center">
-                      <area.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <span className="text-sm font-bold uppercase tracking-widest text-leap-orange">0{index + 1}</span>
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-leap-black mb-4">{area.title}</h3>
+        {/* Individual Core Area Sections */}
+        {coreAreas.map((area, index) => (
+          <div 
+            key={index} 
+            className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${index % 2 === 1 ? '' : ''}`}>
+                <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} max-w-lg ${index % 2 === 1 ? 'lg:ml-auto' : ''}`}>
+                  <p className="text-sm font-bold uppercase tracking-widest text-leap-orange mb-3">{area.label}</p>
+                  <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-5 leading-tight">{area.title}</h3>
                   <p className="text-lg text-slate-600 leading-relaxed">{area.description}</p>
                 </div>
                 <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-white border border-slate-200 p-6">
-                    <img 
-                      src={area.image}
-                      alt={area.title}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
+                  <img 
+                    src={area.image}
+                    alt={area.title}
+                    className="w-full h-auto max-w-xl mx-auto"
+                  />
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        ))}
       </section>
 
       {/* How We Work - Visual Cards */}
