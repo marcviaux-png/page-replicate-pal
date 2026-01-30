@@ -19,6 +19,14 @@ import {
 import { z } from 'zod';
 import heroAiTraining from '@/assets/hero-ai-training.jpg';
 
+const programOptions = [
+  "AI Foundations: Understanding AI Today and Tomorrow",
+  "AI Strategy & Readiness Assessment",
+  "Applied AI Tools Training",
+  "Building Your Own AI-Powered Applications",
+  "Responsible & Ethical AI by Design"
+];
+
 const leadSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
   jobTitle: z.string().trim().min(1, "Job title is required").max(100),
@@ -31,6 +39,7 @@ const leadSchema = z.object({
   primaryChallenge: z.string().trim().min(1, "Primary challenge is required").max(1000),
   aiAdoptionLevel: z.string().min(1, "AI adoption level is required"),
   teamsToTrain: z.string().trim().min(1, "Teams to train is required").max(500),
+  selectedPrograms: z.array(z.string()).min(1, "Please select at least one program"),
   timeline: z.string().optional(),
   fundingInterest: z.string().min(1, "Please select an option"),
   budgetRange: z.string().optional(),
@@ -55,11 +64,13 @@ const AITraining = () => {
     primaryChallenge: '',
     aiAdoptionLevel: '',
     teamsToTrain: '',
+    selectedPrograms: [],
     timeline: '',
     fundingInterest: '',
     budgetRange: '',
     consent: false
   });
+  const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -110,6 +121,7 @@ const AITraining = () => {
       primaryChallenge: '',
       aiAdoptionLevel: '',
       teamsToTrain: '',
+      selectedPrograms: [],
       timeline: '',
       fundingInterest: '',
       budgetRange: '',
@@ -782,20 +794,68 @@ const AITraining = () => {
                       </select>
                     </div>
                   </div>
-                  <div>
-                    <label htmlFor="teamsToTrain" className="block text-sm font-medium text-leap-black mb-2">
-                      Teams or roles you want trained *
-                    </label>
-                    <input
-                      type="text"
-                      id="teamsToTrain"
-                      name="teamsToTrain"
-                      value={formData.teamsToTrain}
-                      onChange={handleChange}
-                      placeholder="e.g., Leadership, IT, Marketing, Product Design"
-                      className={`w-full px-4 py-3 rounded-lg border ${errors.teamsToTrain ? 'border-red-500' : 'border-slate-300'} focus:ring-2 focus:ring-leap-orange focus:border-transparent`}
-                    />
-                    {errors.teamsToTrain && <p className="text-red-500 text-sm mt-1">{errors.teamsToTrain}</p>}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="teamsToTrain" className="block text-sm font-medium text-leap-black mb-2">
+                        Teams or roles you want trained *
+                      </label>
+                      <input
+                        type="text"
+                        id="teamsToTrain"
+                        name="teamsToTrain"
+                        value={formData.teamsToTrain}
+                        onChange={handleChange}
+                        placeholder="e.g., Leadership, IT, Marketing, Product Design"
+                        className={`w-full px-4 py-3 rounded-lg border ${errors.teamsToTrain ? 'border-red-500' : 'border-slate-300'} focus:ring-2 focus:ring-leap-orange focus:border-transparent`}
+                      />
+                      {errors.teamsToTrain && <p className="text-red-500 text-sm mt-1">{errors.teamsToTrain}</p>}
+                    </div>
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-leap-black mb-2">
+                        AI Training Programs *
+                      </label>
+                      <button
+                        type="button"
+                        onClick={() => setProgramsDropdownOpen(!programsDropdownOpen)}
+                        className={`w-full px-4 py-3 rounded-lg border ${errors.selectedPrograms ? 'border-red-500' : 'border-slate-300'} focus:ring-2 focus:ring-leap-orange focus:border-transparent bg-white text-left flex items-center justify-between`}
+                      >
+                        <span className={formData.selectedPrograms.length === 0 ? 'text-slate-400' : 'text-leap-black'}>
+                          {formData.selectedPrograms.length === 0 
+                            ? 'Select programs' 
+                            : `${formData.selectedPrograms.length} program${formData.selectedPrograms.length > 1 ? 's' : ''} selected`}
+                        </span>
+                        <svg className={`w-4 h-4 transition-transform ${programsDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {programsDropdownOpen && (
+                        <div className="absolute z-50 w-full mt-1 bg-white border border-slate-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                          {programOptions.map((program, index) => (
+                            <label
+                              key={index}
+                              className="flex items-start gap-3 px-4 py-3 hover:bg-slate-50 cursor-pointer border-b border-slate-100 last:border-b-0"
+                            >
+                              <input
+                                type="checkbox"
+                                checked={formData.selectedPrograms.includes(program)}
+                                onChange={(e) => {
+                                  const newPrograms = e.target.checked
+                                    ? [...formData.selectedPrograms, program]
+                                    : formData.selectedPrograms.filter(p => p !== program);
+                                  setFormData(prev => ({ ...prev, selectedPrograms: newPrograms }));
+                                  if (errors.selectedPrograms) {
+                                    setErrors(prev => ({ ...prev, selectedPrograms: undefined }));
+                                  }
+                                }}
+                                className="mt-1 w-4 h-4 text-leap-orange border-slate-300 rounded focus:ring-leap-orange"
+                              />
+                              <span className="text-sm text-slate-700">{program}</span>
+                            </label>
+                          ))}
+                        </div>
+                      )}
+                      {errors.selectedPrograms && <p className="text-red-500 text-sm mt-1">{errors.selectedPrograms}</p>}
+                    </div>
                   </div>
                 </div>
               </div>
