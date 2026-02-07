@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Download } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import leapuxLogo from '@/assets/leapux-logo.png';
 import leapuxLogoDark from '@/assets/leapux-logo-dark.png';
 import {
@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { downloadWordPressTheme } from '@/utils/downloadTheme';
+
 
 const LeapNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,15 +110,6 @@ const LeapNavbar = () => {
               About
             </Link>
 
-            <button
-              onClick={() => downloadWordPressTheme()}
-              className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 flex items-center gap-1.5 ${
-                scrolled ? 'text-leap-black hover:text-leap-orange opacity-80' : 'text-leap-white hover:text-leap-orange opacity-90'
-              }`}
-            >
-              <Download className="h-3.5 w-3.5" />
-              WP Theme v3
-            </button>
 
             <Link
               to="/contact"
@@ -165,12 +156,6 @@ const LeapNavbar = () => {
                 </Link>
               ))}
             </div>
-            <button
-              onClick={() => { downloadWordPressTheme(); setIsOpen(false); }}
-              className="block text-2xl font-bold text-leap-black py-2"
-            >
-              ↓ Download WP Theme v3
-            </button>
             <Link
               to="/contact" 
               onClick={() => setIsOpen(false)} 
