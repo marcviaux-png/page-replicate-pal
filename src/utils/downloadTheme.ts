@@ -21,12 +21,21 @@ const TEXT_FILES = [
 const IMAGE_FILES = [
   'assets/images/leapux-logo.png',
   'assets/images/leapux-logo-dark.png',
+  'assets/images/hero-ux-design.jpg',
+  'assets/images/hero-ai-services.jpg',
+  'assets/images/hero-ai-training.jpg',
+  'assets/images/team-collaboration.jpg',
+  'assets/images/core-strategic-planning.jpg',
+  'assets/images/core-digital-strategy.jpg',
+  'assets/images/core-process-optimization.jpg',
+  'assets/images/core-innovation-strategy.jpg',
+  'assets/images/core-change-leadership.jpg',
   'screenshot.png',
 ];
 
 export async function downloadWordPressTheme() {
   const zip = new JSZip();
-  const themeFolder = zip.folder('leapux-theme-v1');
+  const themeFolder = zip.folder('leapux-themev2');
 
   if (!themeFolder) return;
 
@@ -63,7 +72,7 @@ export async function downloadWordPressTheme() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'leapux-theme-v1.zip';
+  a.download = 'leapux-themev2.zip';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

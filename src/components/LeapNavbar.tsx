@@ -117,7 +117,7 @@ const LeapNavbar = () => {
               }`}
             >
               <Download className="h-3.5 w-3.5" />
-              WP Theme
+              WP Theme v2
             </button>
 
             <Link
@@ -169,7 +169,7 @@ const LeapNavbar = () => {
               onClick={() => { downloadWordPressTheme(); setIsOpen(false); }}
               className="block text-2xl font-bold text-leap-black py-2"
             >
-              ↓ Download WP Theme
+              ↓ Download WP Theme v2
             </button>
             <Link 
               to="/contact" 

@@ -12,7 +12,7 @@ get_header(); ?>
     <!-- Hero -->
     <section class="hero hero-page">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=2000" alt="AI Training">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-ai-training.jpg" alt="AI Training">
             <div style="position:absolute;inset:0;background:rgba(0,0,0,0.5);"></div>
         </div>
         <div class="container hero-content">

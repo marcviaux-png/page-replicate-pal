@@ -38,7 +38,7 @@ get_header(); ?>
                 </div>
                 <div style="position: relative;">
                     <div class="image-rounded" style="aspect-ratio: 4/3;">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="Team collaboration" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/team-collaboration.jpg" alt="Team collaboration" style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div style="position:absolute;bottom:-1.5rem;left:-1.5rem;width:8rem;height:8rem;background:rgba(233,131,47,0.2);border-radius:var(--radius-2xl);z-index:-1;"></div>
                 </div>
@@ -65,31 +65,31 @@ get_header(); ?>
             'headline' => 'Define the path forward.',
             'title'    => 'Strategic Advisory & Planning',
             'desc'     => 'We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities.',
-            'image'    => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000',
+            'image'    => get_template_directory_uri() . '/assets/images/core-strategic-planning.jpg',
         ),
         array(
             'headline' => 'Transform with purpose.',
             'title'    => 'Digital & Technology Strategy',
             'desc'     => 'From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency.',
-            'image'    => 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000',
+            'image'    => get_template_directory_uri() . '/assets/images/core-digital-strategy.jpg',
         ),
         array(
             'headline' => 'Efficiency in motion.',
             'title'    => 'Business Process Optimization',
             'desc'     => 'Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow.',
-            'image'    => 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000',
+            'image'    => get_template_directory_uri() . '/assets/images/core-process-optimization.jpg',
         ),
         array(
             'headline' => 'Ideas that scale.',
             'title'    => 'Innovation & Product Strategy',
             'desc'     => 'We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals.',
-            'image'    => 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=2000',
+            'image'    => get_template_directory_uri() . '/assets/images/core-innovation-strategy.jpg',
         ),
         array(
             'headline' => 'Lead the change.',
             'title'    => 'Change Leadership & Organizational Effectiveness',
             'desc'     => 'Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success.',
-            'image'    => 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2000',
+            'image'    => get_template_directory_uri() . '/assets/images/core-change-leadership.jpg',
         ),
     );
 
