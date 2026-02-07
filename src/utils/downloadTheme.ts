@@ -1,6 +1,6 @@
 import JSZip from 'jszip';
 
-const THEME_FILES = [
+const TEXT_FILES = [
   'style.css',
   'functions.php',
   'index.php',
@@ -8,8 +8,19 @@ const THEME_FILES = [
   'footer.php',
   'front-page.php',
   'page.php',
+  'page-services.php',
+  'page-capabilities.php',
+  'page-about.php',
+  'page-contact.php',
+  'page-ai-services.php',
+  'page-ai-training.php',
   '404.php',
   'assets/js/navigation.js',
+];
+
+const IMAGE_FILES = [
+  'assets/images/leapux-logo.png',
+  'assets/images/leapux-logo-dark.png',
 ];
 
 export async function downloadWordPressTheme() {
@@ -18,18 +29,32 @@ export async function downloadWordPressTheme() {
 
   if (!themeFolder) return;
 
-  // Fetch all theme files in parallel
-  const results = await Promise.all(
-    THEME_FILES.map(async (filePath) => {
+  // Fetch all text files in parallel
+  const textResults = await Promise.all(
+    TEXT_FILES.map(async (filePath) => {
       const response = await fetch(`/wordpress-theme/leapux/${filePath}`);
       const content = await response.text();
       return { filePath, content };
     })
   );
 
-  // Add each file to the zip
-  results.forEach(({ filePath, content }) => {
+  // Fetch all image files as binary in parallel
+  const imageResults = await Promise.all(
+    IMAGE_FILES.map(async (filePath) => {
+      const response = await fetch(`/wordpress-theme/leapux/${filePath}`);
+      const blob = await response.blob();
+      return { filePath, blob };
+    })
+  );
+
+  // Add text files
+  textResults.forEach(({ filePath, content }) => {
     themeFolder.file(filePath, content);
+  });
+
+  // Add image files
+  imageResults.forEach(({ filePath, blob }) => {
+    themeFolder.file(filePath, blob);
   });
 
   // Generate and download
