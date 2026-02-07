@@ -21,6 +21,7 @@ const TEXT_FILES = [
 const IMAGE_FILES = [
   'assets/images/leapux-logo.png',
   'assets/images/leapux-logo-dark.png',
+  'screenshot.png',
 ];
 
 export async function downloadWordPressTheme() {
