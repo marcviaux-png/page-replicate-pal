@@ -1,0 +1,17 @@
+/*
+Theme Name: LeapUX
+Theme URI: https://leapux.com
+Author: LeapUX
+Author URI: https://leapux.com
+Description: A modern, lightweight WordPress block theme for LeapUX — a senior-led digital consultancy specializing in UX and service design.
+Version: 1.0.0
+Requires at least: 6.2
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: leapux
+Tags: full-site-editing, block-patterns, one-page, custom-colors, custom-logo
+*/
+
+/* All visual styling is handled via theme.json and assets/css/custom.css */

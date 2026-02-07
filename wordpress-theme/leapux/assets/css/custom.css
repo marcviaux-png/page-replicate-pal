@@ -1,0 +1,262 @@
+/**
+ * LeapUX Block Theme — Custom Styles
+ *
+ * CSS-first animations and micro-interactions to replicate
+ * the smooth, modern feel of the React reference site.
+ *
+ * @package LeapUX
+ * @since 1.0.0
+ */
+
+/* ==========================================================================
+   1. Smooth Scrolling
+   ========================================================================== */
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	.reveal-section,
+	.service-card,
+	.grayscale-hover img,
+	.hero-badge,
+	.quote-card,
+	.nav-cta a,
+	.site-header {
+		animation: none !important;
+		transition: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+		filter: none !important;
+	}
+}
+
+/* ==========================================================================
+   2. Sticky Header
+   ========================================================================== */
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.site-header.scrolled {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
+}
+
+/* ==========================================================================
+   3. Navigation
+   ========================================================================== */
+
+/* Nav link hover transitions */
+.wp-block-navigation a {
+	transition: color 0.2s ease, opacity 0.2s ease;
+	opacity: 0.85;
+}
+
+.wp-block-navigation a:hover,
+.wp-block-navigation a:focus-visible {
+	color: #e8812f !important;
+	opacity: 1;
+}
+
+/* Active nav link (set by scrollspy JS) */
+.wp-block-navigation a.active-section {
+	color: #e8812f !important;
+	opacity: 1;
+	text-decoration: underline;
+	text-underline-offset: 8px;
+	text-decoration-thickness: 2px;
+}
+
+/* Contact Us CTA button in nav */
+.nav-cta a {
+	background: #e8812f !important;
+	color: #ffffff !important;
+	border-radius: 9999px !important;
+	padding: 0.75rem 2rem !important;
+	transition: filter 0.2s ease, transform 0.15s ease;
+	opacity: 1 !important;
+}
+
+.nav-cta a:hover {
+	filter: brightness(1.1);
+}
+
+.nav-cta a:active {
+	transform: scale(0.97);
+}
+
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
+
+.hero-section .wp-block-cover__image-background {
+	filter: grayscale(1) contrast(1.1) brightness(0.65);
+}
+
+.hero-badge {
+	display: inline-block;
+	padding: 0.375rem 1rem;
+	border-color: rgba(232, 129, 47, 0.3) !important;
+	background: rgba(232, 129, 47, 0.1);
+}
+
+/* ==========================================================================
+   5. Reveal-on-Scroll Animations
+   ========================================================================== */
+
+.reveal-section {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal-section.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ==========================================================================
+   6. Service Cards
+   ========================================================================== */
+
+.service-card {
+	transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+	border-color: rgba(232, 129, 47, 0.3) !important;
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+	transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   7. Grayscale Image Hover Effect
+   ========================================================================== */
+
+.grayscale-hover img {
+	filter: grayscale(1);
+	transition: filter 1s ease;
+}
+
+.grayscale-hover:hover img {
+	filter: grayscale(0);
+}
+
+/* ==========================================================================
+   8. Quote Card (floating overlay)
+   ========================================================================== */
+
+.quote-card {
+	position: relative;
+	margin-top: -3rem;
+	margin-left: auto;
+	max-width: 20rem;
+	box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+	z-index: 2;
+}
+
+/* ==========================================================================
+   9. Button Transitions
+   ========================================================================== */
+
+.wp-element-button,
+.wp-block-button__link {
+	transition: background-color 0.2s ease, filter 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.wp-element-button:hover,
+.wp-block-button__link:hover {
+	filter: brightness(1.05);
+}
+
+.wp-element-button:active,
+.wp-block-button__link:active {
+	transform: scale(0.97);
+}
+
+/* ==========================================================================
+   10. Footer Link Styles
+   ========================================================================== */
+
+.footer-links {
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer-links li {
+	padding: 0;
+}
+
+.footer-links a {
+	color: #94a3b8;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+	color: #e8812f;
+}
+
+/* ==========================================================================
+   11. Approach Checklist
+   ========================================================================== */
+
+.approach-checklist {
+	list-style: none;
+	padding-left: 0;
+}
+
+.approach-checklist li {
+	padding: 0;
+	color: #000000;
+}
+
+.approach-checklist li::before {
+	content: none;
+}
+
+/* ==========================================================================
+   12. Focus States (Accessibility)
+   ========================================================================== */
+
+a:focus-visible,
+button:focus-visible,
+.wp-element-button:focus-visible {
+	outline: 2px solid #e8812f;
+	outline-offset: 3px;
+}
+
+/* ==========================================================================
+   13. Selection
+   ========================================================================== */
+
+::selection {
+	background: #e8812f;
+	color: #ffffff;
+}
+
+/* ==========================================================================
+   14. Social Links in Footer
+   ========================================================================== */
+
+.wp-block-social-links .wp-social-link {
+	background: rgba(255, 255, 255, 0.05) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0.5rem;
+	transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.wp-block-social-links .wp-social-link:hover {
+	background: #e8812f !important;
+	border-color: #e8812f;
+}
