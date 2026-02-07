@@ -35,7 +35,7 @@ const IMAGE_FILES = [
 
 export async function downloadWordPressTheme() {
   const zip = new JSZip();
-  const themeFolder = zip.folder('leapux-themev2');
+  const themeFolder = zip.folder('leapux-theme-v3');
 
   if (!themeFolder) return;
 
@@ -72,7 +72,7 @@ export async function downloadWordPressTheme() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'leapux-themev2.zip';
+  a.download = 'leapux-theme-v3.zip';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
