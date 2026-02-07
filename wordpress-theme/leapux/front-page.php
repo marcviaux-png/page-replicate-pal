@@ -15,7 +15,7 @@ get_header(); ?>
             <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail( 'leapux-hero', array( 'style' => 'width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(0.65);' ) ); ?>
             <?php else : ?>
-                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=2000" alt="UX Design Workspace">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-ux-design.jpg" alt="UX Design Workspace">
             <?php endif; ?>
             <div class="hero-overlay"></div>
         </div>
@@ -97,7 +97,7 @@ get_header(); ?>
                 </div>
                 <div style="position: relative;">
                     <div class="image-rounded" style="box-shadow: 0 25px 50px rgba(0,0,0,0.1);">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="Team collaboration on UX design" class="image-grayscale">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/team-collaboration.jpg" alt="Team collaboration on UX design" class="image-grayscale">
                     </div>
                     <div style="position: absolute; bottom: 1.5rem; right: 1.5rem; left: 1.5rem; max-width: 20rem; margin-left: auto; background: var(--leap-white); padding: 1.5rem; border-radius: var(--radius-2xl); box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
                         <p style="font-weight: 500; line-height: 1.6; font-style: italic;">

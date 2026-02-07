@@ -12,7 +12,7 @@ get_header(); ?>
     <!-- Hero -->
     <section class="hero hero-page">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000" alt="AI Services">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-ai-services.jpg" alt="AI Services">
             <div class="hero-overlay"></div>
         </div>
         <div class="container hero-content">
