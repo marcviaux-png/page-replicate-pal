@@ -263,9 +263,22 @@ const AIServices = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">AI-Powered UX & Digital Transformation</h1>
-            <p className="text-xl text-slate-300 leading-relaxed font-light">
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-8">
               Turn complexity into clarity. We help organizations improve usability, streamline workflows, and scale smarter using practical, human-centered AI.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#get-started">
+                <Button size="lg" className="bg-leap-orange hover:brightness-110 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full shadow-lg transition-all">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+              <a href="#offers">
+                <Button size="lg" className="border border-white/20 bg-transparent hover:bg-white/10 text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
+                  View Services
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -279,7 +292,7 @@ const AIServices = () => {
                 How We Help
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
               {howWeHelp.map((item, index) => (
                 <div key={index} className="flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
                   <CheckCircle className="w-6 h-6 text-leap-orange shrink-0 mt-0.5" />
@@ -287,12 +300,23 @@ const AIServices = () => {
                 </div>
               ))}
             </div>
+            <div className="bg-gradient-to-r from-leap-orange/10 to-leap-red/10 border border-leap-orange/20 rounded-2xl p-8 text-center">
+              <p className="text-lg text-slate-700 mb-4">
+                Ready to see how AI can transform your organization's digital experience?
+              </p>
+              <a href="#get-started">
+                <Button className="bg-leap-orange hover:bg-leap-red text-white px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-full">
+                  Explore Your AI Opportunity
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Productized AI Offers */}
-      <section className="py-20 bg-white">
+      <section id="offers" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -372,6 +396,19 @@ const AIServices = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* CTA after Offers */}
+              <div className="text-center pt-8">
+                <p className="text-lg text-slate-600 mb-6">
+                  Not sure which service is right for you? Let's find out together.
+                </p>
+                <a href="#get-started">
+                  <Button size="lg" className="bg-leap-orange hover:bg-leap-red text-white px-10 py-5 text-sm font-bold uppercase tracking-widest rounded-full">
+                    Find the Right Service
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -435,7 +472,7 @@ const AIServices = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
               <div>
                 <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why Work With Us</h2>
                 <h3 className="text-3xl md:text-4xl font-bold text-leap-black mb-6">
@@ -450,6 +487,14 @@ const AIServices = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="text-center">
+              <a href="#get-started">
+                <Button className="bg-leap-black hover:bg-leap-black/90 text-white px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-full">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
