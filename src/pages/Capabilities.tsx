@@ -157,10 +157,13 @@ const Services = () => {
 
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Service Areas</h2>
-          <h3 className="text-3xl sm:text-4xl font-bold text-leap-black leading-tight">
-            Comprehensive support across the service lifecycle
+          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Capabilities</h2>
+          <h3 className="text-3xl sm:text-4xl font-bold text-leap-black leading-tight mb-6">
+            How Our Capabilities Work Together
           </h3>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Our capabilities are applied in combination across every engagement. Discovery informs strategy, strategy guides design, and implementation ensures solutions deliver real-world impact. Together, these capabilities enable organizations to navigate complex transformation with confidence.
+          </p>
         </div>
         <div className="space-y-12">
           {serviceAreas.map((service, i) => (
