@@ -19,6 +19,7 @@ const coreAreas = [
       "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
     ],
     capabilities: ["CX & UX Design", "Discovery & Research", "Accessibility & Inclusive Design", "Implementation & Delivery"],
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Organizational Change & Adoption",
@@ -28,6 +29,7 @@ const coreAreas = [
       "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
     ],
     capabilities: ["Change & Adoption", "Strategy & Planning", "Marketing & Communications", "Implementation & Delivery"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Digital & Technology Transformation",
@@ -37,6 +39,7 @@ const coreAreas = [
       "Our approach ensures technology supports strategy—not the other way around."
     ],
     capabilities: ["AI & Automation", "Implementation & Delivery", "Discovery & Research", "Accessibility"],
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Strategy & Advisory",
@@ -46,6 +49,7 @@ const coreAreas = [
       "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
     ],
     capabilities: ["Strategy & Planning", "Discovery & Research", "Innovation", "Implementation & Delivery"],
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Innovation & Product Strategy",
@@ -54,6 +58,7 @@ const coreAreas = [
       "We help organizations explore emerging opportunities, validate concepts, and design products or services that deliver meaningful value to customers and stakeholders."
     ],
     capabilities: ["Discovery & Research", "CX & UX Design", "Strategy & Planning", "AI & Automation"],
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Operational & Procurement Optimization",
@@ -62,6 +67,7 @@ const coreAreas = [
       "We work with organizations to optimize processes, strengthen governance models, and implement procurement strategies that improve performance while reducing risk."
     ],
     capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
   }
 ];
 
@@ -131,59 +137,72 @@ const Services = () => {
       </section>
 
       {/* Core Areas of Consulting Support */}
-      <section className="py-24 bg-leap-black">
+      <section className="py-24 bg-[#F6F7F9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-20">
             <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Core Areas of Consulting Support</h2>
-            <p className="text-lg text-slate-400 max-w-3xl leading-relaxed">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-leap-black mb-6">Core Areas of Consulting Support</h2>
+            <p className="text-lg text-slate-500 max-w-3xl leading-relaxed">
               Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
             </p>
           </div>
 
-          <div className="space-y-0">
-            {coreAreas.map((area, index) => (
-              <div
-                key={index}
-                className="group relative grid lg:grid-cols-12 gap-8 lg:gap-12 py-12 lg:py-16 border-t border-white/10 first:border-t-0 first:pt-0 last:pb-0"
-              >
-                {/* Number */}
-                <div className="lg:col-span-1">
-                  <span className="text-5xl lg:text-6xl font-black text-white/10 group-hover:text-leap-orange/30 transition-colors duration-500">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                </div>
-
-                {/* Title & Headline */}
-                <div className="lg:col-span-4">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-leap-orange transition-colors duration-300">
-                    {area.title}
-                  </h3>
-                  <p className="text-lg text-leap-orange/80 font-medium leading-snug italic">
-                    {area.headline}
-                  </p>
-                </div>
-
-                {/* Description & Capabilities */}
-                <div className="lg:col-span-7">
-                  <div className="space-y-4 mb-6">
-                    {area.paragraphs.map((p, i) => (
-                      <p key={i} className="text-slate-400 leading-relaxed">{p}</p>
-                    ))}
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {area.capabilities.map((cap, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/60 border border-white/15 rounded-full group-hover:border-leap-orange/30 group-hover:text-leap-orange/80 transition-colors duration-300"
-                      >
-                        {cap}
+          <div className="space-y-8">
+            {coreAreas.map((area, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <div
+                  key={index}
+                  className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100"
+                >
+                  <div className={`grid lg:grid-cols-12 ${isEven ? '' : 'direction-rtl'}`}>
+                    {/* Image */}
+                    <div className={`lg:col-span-4 relative overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                      <div className="aspect-[4/3] lg:aspect-auto lg:absolute lg:inset-0">
+                        <img
+                          src={area.image}
+                          alt={area.title}
+                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-leap-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                      </div>
+                      {/* Number overlay */}
+                      <span className="absolute top-4 left-4 text-6xl font-black text-white/20 group-hover:text-leap-orange/40 transition-colors duration-500 select-none">
+                        {String(index + 1).padStart(2, '0')}
                       </span>
-                    ))}
+                    </div>
+
+                    {/* Content */}
+                    <div className={`lg:col-span-8 p-8 sm:p-10 lg:p-12 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                      <h3 className="text-xl sm:text-2xl font-bold text-leap-black mb-2 group-hover:text-leap-orange transition-colors duration-300">
+                        {area.title}
+                      </h3>
+                      <p className="text-leap-orange font-semibold mb-5 italic">
+                        {area.headline}
+                      </p>
+                      <div className="space-y-3 mb-6">
+                        {area.paragraphs.map((p, i) => (
+                          <p key={i} className="text-slate-600 leading-relaxed">{p}</p>
+                        ))}
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Supporting capabilities</p>
+                        <div className="flex flex-wrap gap-2">
+                          {area.capabilities.map((cap, i) => (
+                            <span
+                              key={i}
+                              className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full group-hover:bg-leap-orange/10 group-hover:text-leap-orange transition-colors duration-300"
+                            >
+                              {cap}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
