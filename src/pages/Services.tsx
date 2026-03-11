@@ -142,9 +142,6 @@ const Services = () => {
           <div className="mb-20">
             <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-leap-black mb-6">Core Areas of Consulting Support</h2>
-            <p className="text-lg text-slate-500 max-w-3xl leading-relaxed">
-              Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
-            </p>
           </div>
 
           <div className="space-y-8">
