@@ -10,6 +10,19 @@ const scrollToSection = (id: string) => {
   }
 };
 
+const capabilitySlugMap: Record<string, string> = {
+  "CX & UX Design": "cx--ux-design",
+  "Discovery & Research": "discovery--research",
+  "Accessibility & Inclusive Design": "accessibility--inclusive-design",
+  "Accessibility": "accessibility--inclusive-design",
+  "Implementation & Delivery": "implementation--delivery",
+  "Change & Adoption": "change--adoption",
+  "Strategy & Planning": "strategy--planning",
+  "Marketing & Communications": "marketing--communications",
+  "AI & Automation": "ai--automation",
+  "Innovation": "innovation--product-strategy",
+};
+
 const coreAreas = [
   {
     title: "Customer Experience & Service Design",
@@ -185,14 +198,25 @@ const Services = () => {
                       <div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Supporting capabilities</p>
                         <div className="flex flex-wrap gap-2">
-                          {area.capabilities.map((cap, i) => (
-                            <span
-                              key={i}
-                              className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full group-hover:bg-leap-orange/10 group-hover:text-leap-orange transition-colors duration-300"
-                            >
-                              {cap}
-                            </span>
-                          ))}
+                          {area.capabilities.map((cap, i) => {
+                            const slug = capabilitySlugMap[cap];
+                            return slug ? (
+                              <Link
+                                key={i}
+                                to={`/capabilities#${slug}`}
+                                className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full group-hover:bg-leap-orange/10 group-hover:text-leap-orange transition-colors duration-300 hover:!bg-leap-orange hover:!text-white"
+                              >
+                                {cap}
+                              </Link>
+                            ) : (
+                              <span
+                                key={i}
+                                className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full group-hover:bg-leap-orange/10 group-hover:text-leap-orange transition-colors duration-300"
+                              >
+                                {cap}
+                              </span>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>

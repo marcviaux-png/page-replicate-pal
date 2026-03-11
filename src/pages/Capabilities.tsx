@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Lightbulb, TrendingUp, Target, Layers, Sparkles, CheckCircle, Search, Building, Shield, Users, Rocket } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -8,10 +9,11 @@ interface ServiceCardProps {
   includes: string[];
   bestFor: string[];
   image: string;
+  id?: string;
 }
 
-const ServiceCard = ({ title, tagline, description, includes, bestFor, image }: ServiceCardProps) => (
-  <div className="group bg-leap-white border border-border rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all mb-16">
+const ServiceCard = ({ title, tagline, description, includes, bestFor, image, id }: ServiceCardProps) => (
+  <div id={id} className="group bg-leap-white border border-border rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all mb-16 scroll-mt-24">
     <div className="grid grid-cols-1 lg:grid-cols-12">
       <div className="lg:col-span-5 h-72 lg:h-auto relative overflow-hidden">
         <img 
@@ -59,6 +61,17 @@ const ServiceCard = ({ title, tagline, description, includes, bestFor, image }: 
 );
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.slice(1));
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location.hash]);
+
   const serviceAreas = [
     {
       title: "Discovery & Research",
@@ -165,9 +178,10 @@ const Services = () => {
           </p>
         </div>
         <div className="space-y-12">
-          {serviceAreas.map((service, i) => (
-            <ServiceCard key={i} {...service} />
-          ))}
+          {serviceAreas.map((service, i) => {
+            const slug = service.title.toLowerCase().replace(/[&]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+            return <ServiceCard key={i} {...service} id={slug} />;
+          })}
         </div>
       </section>
 
