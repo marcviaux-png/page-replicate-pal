@@ -24,6 +24,16 @@ const capabilitySlugMap: Record<string, string> = {
 
 const coreAreas = [
   {
+    title: "Strategy & Advisory",
+    headline: "Turn complexity into clarity.",
+    paragraphs: [
+      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation.",
+      "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
+    ],
+    capabilities: ["Discovery & Research", "Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
+  },
+  {
     title: "Customer Experience & Service Design",
     headline: "Design experiences that customers value and teams can deliver.",
     paragraphs: [
@@ -32,16 +42,6 @@ const coreAreas = [
     ],
     capabilities: ["Discovery & Research", "CX & UX Design", "Accessibility & Inclusive Design", "Implementation & Delivery", "Brand & Experience Identity"],
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    title: "Organizational Change & Adoption",
-    headline: "Transformation only succeeds when people adopt it.",
-    paragraphs: [
-      "We help organizations navigate change by aligning leadership, preparing teams, and implementing structured change management approaches that drive engagement and long-term success.",
-      "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
-    ],
-    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption", "Marketing & Communications"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Digital & Technology Transformation",
@@ -54,16 +54,6 @@ const coreAreas = [
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
   },
   {
-    title: "Strategy & Advisory",
-    headline: "Turn complexity into clarity.",
-    paragraphs: [
-      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation.",
-      "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
-    ],
-    capabilities: ["Discovery & Research", "Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
-  },
-  {
     title: "Innovation & Product Strategy",
     headline: "Identify opportunities and bring new ideas to life.",
     paragraphs: [
@@ -71,6 +61,16 @@ const coreAreas = [
     ],
     capabilities: ["Discovery & Research", "Strategy & Planning", "CX & UX Design", "AI & Automation"],
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
+  },
+  {
+    title: "Organizational Change & Adoption",
+    headline: "Transformation only succeeds when people adopt it.",
+    paragraphs: [
+      "We help organizations navigate change by aligning leadership, preparing teams, and implementing structured change management approaches that drive engagement and long-term success.",
+      "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
+    ],
+    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption", "Marketing & Communications"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Operational & Procurement Optimization",
