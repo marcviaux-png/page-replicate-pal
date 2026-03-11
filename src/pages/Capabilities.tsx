@@ -8,10 +8,11 @@ interface ServiceCardProps {
   includes: string[];
   bestFor: string[];
   image: string;
+  id?: string;
 }
 
-const ServiceCard = ({ title, tagline, description, includes, bestFor, image }: ServiceCardProps) => (
-  <div className="group bg-leap-white border border-border rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all mb-16">
+const ServiceCard = ({ title, tagline, description, includes, bestFor, image, id }: ServiceCardProps) => (
+  <div id={id} className="group bg-leap-white border border-border rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all mb-16 scroll-mt-24">
     <div className="grid grid-cols-1 lg:grid-cols-12">
       <div className="lg:col-span-5 h-72 lg:h-auto relative overflow-hidden">
         <img 
