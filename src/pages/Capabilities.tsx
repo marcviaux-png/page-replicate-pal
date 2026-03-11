@@ -25,7 +25,9 @@ const ServiceCard = ({ title, tagline, description, includes, bestFor, image }: 
         <div className="p-10 lg:p-14 border-b border-border flex-grow text-balance">
           <h3 className="text-2xl sm:text-3xl font-bold text-leap-black mb-3">{title}</h3>
           <p className="text-leap-brand font-black text-xs mb-8 uppercase tracking-[0.2em]">{tagline}</p>
-          <p className="text-slate-600 text-lg leading-relaxed">{description}</p>
+          {description.split('\n\n').map((para, i) => (
+            <p key={i} className="text-slate-600 text-lg leading-relaxed mb-3 last:mb-0">{para}</p>
+          ))}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 bg-slate-50/80">
           <div className="p-10 border-b sm:border-b-0 sm:border-r border-border">
