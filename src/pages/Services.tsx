@@ -258,9 +258,12 @@ const Services = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Explore Our Detailed Capabilities</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Explore Our Capabilities</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-4">
+                Our capabilities represent the tools, expertise, and methodologies we apply across every engagement.
+              </p>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                For a deeper look at specific services, methodologies, and the full range of expertise we bring to engagements, explore our capabilities. This links you directly into tailored descriptions of how we deliver value in each domain.
+                Explore how we deliver value across strategy, design, technology, and transformation.
               </p>
               <Link to="/capabilities">
                 <Button className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
