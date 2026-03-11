@@ -11,15 +11,15 @@ const scrollToSection = (id: string) => {
 };
 
 const capabilitySlugMap: Record<string, string> = {
-  "Discovery & Research": "discovery--research",
-  "Strategy & Planning": "strategy--planning",
-  "CX & UX Design": "cx--ux-design",
-  "Accessibility & Inclusive Design": "accessibility--inclusive-design",
-  "AI & Automation": "ai--automation",
-  "Implementation & Delivery": "implementation--delivery",
-  "Change & Adoption": "change--adoption",
-  "Marketing & Communications": "marketing--communications",
-  "Brand & Experience Identity": "brand--experience-identity",
+  "Discovery & Research": "discovery-research",
+  "Strategy & Planning": "strategy-planning",
+  "CX & UX Design": "cx-ux-design",
+  "Accessibility & Inclusive Design": "accessibility-inclusive-design",
+  "AI & Automation": "ai-automation",
+  "Implementation & Delivery": "implementation-delivery",
+  "Change & Adoption": "change-adoption",
+  "Marketing & Communications": "marketing-communications",
+  "Brand & Experience Identity": "brand-experience-identity",
 };
 
 const coreAreas = [
