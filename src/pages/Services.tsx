@@ -131,50 +131,55 @@ const Services = () => {
       </section>
 
       {/* Core Areas of Consulting Support */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-leap-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4">Core Areas of Consulting Support</h2>
-            <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+          <div className="mb-20">
+            <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Core Areas of Consulting Support</h2>
+            <p className="text-lg text-slate-400 max-w-3xl leading-relaxed">
               Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
             </p>
           </div>
 
-          <div className="space-y-6 mt-16">
+          <div className="space-y-0">
             {coreAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="group relative grid lg:grid-cols-12 gap-8 lg:gap-12 py-12 lg:py-16 border-t border-white/10 first:border-t-0 first:pt-0 last:pb-0"
               >
-                <div className="p-8 sm:p-10">
-                  <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-                    {/* Left: Title & Headline */}
-                    <div className="lg:w-2/5 lg:shrink-0">
-                      <h3 className="text-xl sm:text-2xl font-bold text-leap-black mb-3">{area.title}</h3>
-                      <p className="text-lg text-leap-orange font-semibold leading-snug">{area.headline}</p>
-                    </div>
+                {/* Number */}
+                <div className="lg:col-span-1">
+                  <span className="text-5xl lg:text-6xl font-black text-white/10 group-hover:text-leap-orange/30 transition-colors duration-500">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
 
-                    {/* Right: Description & Capabilities */}
-                    <div className="lg:w-3/5">
-                      <div className="space-y-3 mb-6">
-                        {area.paragraphs.map((p, i) => (
-                          <p key={i} className="text-slate-600 leading-relaxed">{p}</p>
-                        ))}
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Supporting capabilities</p>
-                        <div className="flex flex-wrap gap-2">
-                          {area.capabilities.map((cap, i) => (
-                            <span
-                              key={i}
-                              className="px-3 py-1.5 text-sm font-medium text-slate-700 bg-slate-100 rounded-full"
-                            >
-                              {cap}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                {/* Title & Headline */}
+                <div className="lg:col-span-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-leap-orange transition-colors duration-300">
+                    {area.title}
+                  </h3>
+                  <p className="text-lg text-leap-orange/80 font-medium leading-snug italic">
+                    {area.headline}
+                  </p>
+                </div>
+
+                {/* Description & Capabilities */}
+                <div className="lg:col-span-7">
+                  <div className="space-y-4 mb-6">
+                    {area.paragraphs.map((p, i) => (
+                      <p key={i} className="text-slate-400 leading-relaxed">{p}</p>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {area.capabilities.map((cap, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/60 border border-white/15 rounded-full group-hover:border-leap-orange/30 group-hover:text-leap-orange/80 transition-colors duration-300"
+                      >
+                        {cap}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
