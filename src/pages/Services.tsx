@@ -103,7 +103,7 @@ const Services = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Services</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              Strategic Consulting for Growth & Transformation. We partner with teams to move from uncertainty to confident delivery — reducing risk, improving adoption, and building digital services that work in the real world.
+              Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
             </p>
           </div>
         </div>
