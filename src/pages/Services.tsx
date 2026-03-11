@@ -2,11 +2,6 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
-import coreStrategicPlanning from '@/assets/core-strategic-planning.jpg';
-import coreDigitalStrategy from '@/assets/core-digital-strategy.jpg';
-import coreProcessOptimization from '@/assets/core-process-optimization.jpg';
-import coreInnovationStrategy from '@/assets/core-innovation-strategy.jpg';
-import coreChangeLeadership from '@/assets/core-change-leadership.jpg';
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
@@ -15,40 +10,62 @@ const scrollToSection = (id: string) => {
   }
 };
 
-const Services = () => {
-  const coreAreas = [
-    {
-      headline: "Define the path forward.",
-      title: "Strategic Advisory & Planning",
-      description: "We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities.",
-      image: coreStrategicPlanning
-    },
-    {
-      headline: "Transform with purpose.",
-      title: "Digital & Technology Strategy",
-      description: "From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency.",
-      image: coreDigitalStrategy
-    },
-    {
-      headline: "Efficiency in motion.",
-      title: "Business Process Optimization",
-      description: "Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow.",
-      image: coreProcessOptimization
-    },
-    {
-      headline: "Ideas that scale.",
-      title: "Innovation & Product Strategy",
-      description: "We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals.",
-      image: coreInnovationStrategy
-    },
-    {
-      headline: "Lead the change.",
-      title: "Change Leadership & Organizational Effectiveness",
-      description: "Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success.",
-      image: coreChangeLeadership
-    }
-  ];
+const coreAreas = [
+  {
+    title: "Customer Experience & Service Design",
+    headline: "Design experiences that customers value and teams can deliver.",
+    paragraphs: [
+      "We help organizations understand their customers, identify experience gaps, and design services that are intuitive, accessible, and effective across digital and physical channels.",
+      "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
+    ],
+    capabilities: ["CX & UX Design", "Discovery & Research", "Accessibility & Inclusive Design", "Implementation & Delivery"],
+  },
+  {
+    title: "Organizational Change & Adoption",
+    headline: "Transformation only succeeds when people adopt it.",
+    paragraphs: [
+      "We help organizations navigate change by aligning leadership, preparing teams, and implementing structured change management approaches that drive engagement and long-term success.",
+      "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
+    ],
+    capabilities: ["Change & Adoption", "Strategy & Planning", "Marketing & Communications", "Implementation & Delivery"],
+  },
+  {
+    title: "Digital & Technology Transformation",
+    headline: "Align technology investments with real business and customer outcomes.",
+    paragraphs: [
+      "We support organizations in evaluating digital opportunities, selecting the right technologies, and implementing scalable solutions that improve operations and experiences.",
+      "Our approach ensures technology supports strategy—not the other way around."
+    ],
+    capabilities: ["AI & Automation", "Implementation & Delivery", "Discovery & Research", "Accessibility"],
+  },
+  {
+    title: "Strategy & Advisory",
+    headline: "Turn complexity into clarity.",
+    paragraphs: [
+      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation.",
+      "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
+    ],
+    capabilities: ["Strategy & Planning", "Discovery & Research", "Innovation", "Implementation & Delivery"],
+  },
+  {
+    title: "Innovation & Product Strategy",
+    headline: "Identify opportunities and bring new ideas to life.",
+    paragraphs: [
+      "We help organizations explore emerging opportunities, validate concepts, and design products or services that deliver meaningful value to customers and stakeholders."
+    ],
+    capabilities: ["Discovery & Research", "CX & UX Design", "Strategy & Planning", "AI & Automation"],
+  },
+  {
+    title: "Operational & Procurement Optimization",
+    headline: "Improve efficiency, governance, and operational effectiveness.",
+    paragraphs: [
+      "We work with organizations to optimize processes, strengthen governance models, and implement procurement strategies that improve performance while reducing risk."
+    ],
+    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
+  }
+];
 
+const Services = () => {
   const howWeWork = [
     {
       title: "Client-centric engagement",
@@ -113,69 +130,57 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Areas - Immersive Dark Sections */}
-      <section>
-        <div id="core-intro" className="text-center py-20 px-4 bg-leap-black relative">
-          <h2 className="text-3xl sm:text-4xl font-bold text-leap-white mb-4">Core Areas of Consulting Support</h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
-            We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
-          </p>
-          <button 
-            onClick={() => scrollToSection('core-0')}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-leap-white/60 hover:text-leap-orange transition-colors duration-300"
-            aria-label="Scroll to first section"
-          >
-            <ChevronDown className="w-10 h-10 animate-bounce" />
-          </button>
-        </div>
+      {/* Core Areas of Consulting Support */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4">Core Areas of Consulting Support</h2>
+            <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
+            </p>
+          </div>
 
-        {/* Individual Core Area Sections - Full Bleed Dark Style */}
-        {coreAreas.map((area, index) => {
-          const isEven = index % 2 === 0;
-          const nextSectionId = index < coreAreas.length - 1 ? `core-${index + 1}` : 'how-we-work';
-          
-          return (
-            <div 
-              key={index}
-              id={`core-${index}`}
-              className="relative min-h-[80vh] flex items-center"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <img 
-                  src={area.image}
-                  alt={area.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className={`absolute inset-0 ${isEven 
-                  ? 'bg-gradient-to-r from-black/80 via-black/60 to-transparent' 
-                  : 'bg-gradient-to-l from-black/80 via-black/60 to-transparent'
-                }`}></div>
-              </div>
-              
-              {/* Content Overlay */}
-              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-                <div className={`max-w-xl ${isEven ? '' : 'ml-auto text-right'}`}>
-                  <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-leap-white mb-6 leading-tight">
-                    {area.headline}
-                  </h3>
-                  <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-4">
-                    <span className="text-leap-orange font-semibold">{area.title}.</span> {area.description}
-                  </p>
+          <div className="space-y-6 mt-16">
+            {coreAreas.map((area, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="p-8 sm:p-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                    {/* Left: Title & Headline */}
+                    <div className="lg:w-2/5 lg:shrink-0">
+                      <h3 className="text-xl sm:text-2xl font-bold text-leap-black mb-3">{area.title}</h3>
+                      <p className="text-lg text-leap-orange font-semibold leading-snug">{area.headline}</p>
+                    </div>
+
+                    {/* Right: Description & Capabilities */}
+                    <div className="lg:w-3/5">
+                      <div className="space-y-3 mb-6">
+                        {area.paragraphs.map((p, i) => (
+                          <p key={i} className="text-slate-600 leading-relaxed">{p}</p>
+                        ))}
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Supporting capabilities</p>
+                        <div className="flex flex-wrap gap-2">
+                          {area.capabilities.map((cap, i) => (
+                            <span
+                              key={i}
+                              className="px-3 py-1.5 text-sm font-medium text-slate-700 bg-slate-100 rounded-full"
+                            >
+                              {cap}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {/* Scroll Arrow */}
-              <button 
-                onClick={() => scrollToSection(nextSectionId)}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-leap-white/60 hover:text-leap-orange transition-colors duration-300 z-20"
-                aria-label="Scroll to next section"
-              >
-                <ChevronDown className="w-10 h-10 animate-bounce" />
-              </button>
-            </div>
-          );
-        })}
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* How We Work - Visual Cards */}
