@@ -166,9 +166,10 @@ const Services = () => {
           </p>
         </div>
         <div className="space-y-12">
-          {serviceAreas.map((service, i) => (
-            <ServiceCard key={i} {...service} />
-          ))}
+          {serviceAreas.map((service, i) => {
+            const slug = service.title.toLowerCase().replace(/[&]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+            return <ServiceCard key={i} {...service} id={slug} />;
+          })}
         </div>
       </section>
 
