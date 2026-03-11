@@ -161,7 +161,7 @@ const Services = () => {
             How Our Capabilities Work Together
           </h3>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Our capabilities are applied in combination across every engagement. Discovery informs strategy, strategy guides design, and implementation ensures solutions deliver real-world impact. Together, these capabilities enable organizations to navigate complex transformation with confidence.
+            Our capabilities work together across every engagement—linking discovery, strategy, design, and implementation to deliver meaningful, real-world impact.
           </p>
         </div>
         <div className="space-y-12">
