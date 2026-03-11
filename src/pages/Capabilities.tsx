@@ -161,7 +161,7 @@ const Services = () => {
             How Our Capabilities Work Together
           </h3>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Our capabilities work together across every engagement—linking discovery, strategy, design, and implementation to deliver meaningful, real-world impact.
+            Our capabilities work together to turn insight into strategy, design into solutions, and transformation into measurable impact.
           </p>
         </div>
         <div className="space-y-12">
