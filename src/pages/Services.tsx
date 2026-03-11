@@ -30,7 +30,7 @@ const coreAreas = [
       "We help organizations understand their customers, identify experience gaps, and design services that are intuitive, accessible, and effective across digital and physical channels.",
       "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
     ],
-    capabilities: ["Discovery & Research", "CX & UX Design", "Accessibility & Inclusive Design", "Implementation & Delivery"],
+    capabilities: ["Discovery & Research", "CX & UX Design", "Accessibility & Inclusive Design", "Implementation & Delivery", "Brand & Experience Identity"],
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
   },
   {
