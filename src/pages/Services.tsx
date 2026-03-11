@@ -10,6 +10,19 @@ const scrollToSection = (id: string) => {
   }
 };
 
+const capabilitySlugMap: Record<string, string> = {
+  "CX & UX Design": "cx--ux-design",
+  "Discovery & Research": "discovery--research",
+  "Accessibility & Inclusive Design": "accessibility--inclusive-design",
+  "Accessibility": "accessibility--inclusive-design",
+  "Implementation & Delivery": "implementation--delivery",
+  "Change & Adoption": "change--adoption",
+  "Strategy & Planning": "strategy--planning",
+  "Marketing & Communications": "marketing--communications",
+  "AI & Automation": "ai--automation",
+  "Innovation": "innovation--product-strategy",
+};
+
 const coreAreas = [
   {
     title: "Customer Experience & Service Design",
