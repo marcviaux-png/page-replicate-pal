@@ -19,6 +19,7 @@ const coreAreas = [
       "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
     ],
     capabilities: ["CX & UX Design", "Discovery & Research", "Accessibility & Inclusive Design", "Implementation & Delivery"],
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Organizational Change & Adoption",
@@ -28,6 +29,7 @@ const coreAreas = [
       "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
     ],
     capabilities: ["Change & Adoption", "Strategy & Planning", "Marketing & Communications", "Implementation & Delivery"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Digital & Technology Transformation",
@@ -37,6 +39,7 @@ const coreAreas = [
       "Our approach ensures technology supports strategy—not the other way around."
     ],
     capabilities: ["AI & Automation", "Implementation & Delivery", "Discovery & Research", "Accessibility"],
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Strategy & Advisory",
@@ -46,6 +49,7 @@ const coreAreas = [
       "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
     ],
     capabilities: ["Strategy & Planning", "Discovery & Research", "Innovation", "Implementation & Delivery"],
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Innovation & Product Strategy",
@@ -54,6 +58,7 @@ const coreAreas = [
       "We help organizations explore emerging opportunities, validate concepts, and design products or services that deliver meaningful value to customers and stakeholders."
     ],
     capabilities: ["Discovery & Research", "CX & UX Design", "Strategy & Planning", "AI & Automation"],
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
   },
   {
     title: "Operational & Procurement Optimization",
@@ -62,6 +67,7 @@ const coreAreas = [
       "We work with organizations to optimize processes, strengthen governance models, and implement procurement strategies that improve performance while reducing risk."
     ],
     capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
   }
 ];
 
