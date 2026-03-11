@@ -11,16 +11,15 @@ const scrollToSection = (id: string) => {
 };
 
 const capabilitySlugMap: Record<string, string> = {
-  "CX & UX Design": "cx--ux-design",
   "Discovery & Research": "discovery--research",
+  "Strategy & Planning": "strategy--planning",
+  "CX & UX Design": "cx--ux-design",
   "Accessibility & Inclusive Design": "accessibility--inclusive-design",
-  "Accessibility": "accessibility--inclusive-design",
+  "AI & Automation": "ai--automation",
   "Implementation & Delivery": "implementation--delivery",
   "Change & Adoption": "change--adoption",
-  "Strategy & Planning": "strategy--planning",
   "Marketing & Communications": "marketing--communications",
-  "AI & Automation": "ai--automation",
-  "Innovation": "innovation--product-strategy",
+  "Brand & Experience Identity": "brand--experience-identity",
 };
 
 const coreAreas = [
@@ -31,7 +30,7 @@ const coreAreas = [
       "We help organizations understand their customers, identify experience gaps, and design services that are intuitive, accessible, and effective across digital and physical channels.",
       "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
     ],
-    capabilities: ["CX & UX Design", "Discovery & Research", "Accessibility & Inclusive Design", "Implementation & Delivery"],
+    capabilities: ["Discovery & Research", "CX & UX Design", "Accessibility & Inclusive Design", "Implementation & Delivery"],
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
   },
   {
@@ -41,7 +40,7 @@ const coreAreas = [
       "We help organizations navigate change by aligning leadership, preparing teams, and implementing structured change management approaches that drive engagement and long-term success.",
       "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
     ],
-    capabilities: ["Change & Adoption", "Strategy & Planning", "Marketing & Communications", "Implementation & Delivery"],
+    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption", "Marketing & Communications"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
@@ -51,7 +50,7 @@ const coreAreas = [
       "We support organizations in evaluating digital opportunities, selecting the right technologies, and implementing scalable solutions that improve operations and experiences.",
       "Our approach ensures technology supports strategy—not the other way around."
     ],
-    capabilities: ["AI & Automation", "Implementation & Delivery", "Discovery & Research", "Accessibility"],
+    capabilities: ["Discovery & Research", "Strategy & Planning", "Accessibility & Inclusive Design", "AI & Automation", "Implementation & Delivery"],
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
   },
   {
@@ -61,7 +60,7 @@ const coreAreas = [
       "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation.",
       "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
     ],
-    capabilities: ["Strategy & Planning", "Discovery & Research", "Innovation", "Implementation & Delivery"],
+    capabilities: ["Discovery & Research", "Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
   },
   {
@@ -70,7 +69,7 @@ const coreAreas = [
     paragraphs: [
       "We help organizations explore emerging opportunities, validate concepts, and design products or services that deliver meaningful value to customers and stakeholders."
     ],
-    capabilities: ["Discovery & Research", "CX & UX Design", "Strategy & Planning", "AI & Automation"],
+    capabilities: ["Discovery & Research", "Strategy & Planning", "CX & UX Design", "AI & Automation"],
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
   },
   {
