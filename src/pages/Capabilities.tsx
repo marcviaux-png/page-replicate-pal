@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Lightbulb, TrendingUp, Target, Layers, Sparkles, CheckCircle, Search, Building, Shield, Users, Rocket } from 'lucide-react';
 
 interface ServiceCardProps {
