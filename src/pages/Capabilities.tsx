@@ -61,6 +61,17 @@ const ServiceCard = ({ title, tagline, description, includes, bestFor, image, id
 );
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.slice(1));
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location.hash]);
+
   const serviceAreas = [
     {
       title: "Discovery & Research",
