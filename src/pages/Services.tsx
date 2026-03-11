@@ -2,11 +2,6 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
-import coreStrategicPlanning from '@/assets/core-strategic-planning.jpg';
-import coreDigitalStrategy from '@/assets/core-digital-strategy.jpg';
-import coreProcessOptimization from '@/assets/core-process-optimization.jpg';
-import coreInnovationStrategy from '@/assets/core-innovation-strategy.jpg';
-import coreChangeLeadership from '@/assets/core-change-leadership.jpg';
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
@@ -15,40 +10,62 @@ const scrollToSection = (id: string) => {
   }
 };
 
-const Services = () => {
-  const coreAreas = [
-    {
-      headline: "Define the path forward.",
-      title: "Strategic Advisory & Planning",
-      description: "We work with leadership to define vision, refine strategic priorities, and develop execution roadmaps that align with business objectives and market realities.",
-      image: coreStrategicPlanning
-    },
-    {
-      headline: "Transform with purpose.",
-      title: "Digital & Technology Strategy",
-      description: "From digital transformation to technology alignment, we help you identify and leverage the right solutions that deliver value-driven outcomes with scalability and efficiency.",
-      image: coreDigitalStrategy
-    },
-    {
-      headline: "Efficiency in motion.",
-      title: "Business Process Optimization",
-      description: "Improve performance, reduce friction, and unlock operational excellence with optimized processes tailored to how your teams work and grow.",
-      image: coreProcessOptimization
-    },
-    {
-      headline: "Ideas that scale.",
-      title: "Innovation & Product Strategy",
-      description: "We guide organizations in identifying new opportunities, validating ideas, and aligning product strategies with customer needs and business goals.",
-      image: coreInnovationStrategy
-    },
-    {
-      headline: "Lead the change.",
-      title: "Change Leadership & Organizational Effectiveness",
-      description: "Transitions are complex. Our consulting supports cultural readiness, capability building, and change execution to ensure adoption and long-term success.",
-      image: coreChangeLeadership
-    }
-  ];
+const coreAreas = [
+  {
+    title: "Customer Experience & Service Design",
+    headline: "Design experiences that customers value and teams can deliver.",
+    paragraphs: [
+      "We help organizations understand their customers, identify experience gaps, and design services that are intuitive, accessible, and effective across digital and physical channels.",
+      "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
+    ],
+    capabilities: ["CX & UX Design", "Discovery & Research", "Accessibility & Inclusive Design", "Implementation & Delivery"],
+  },
+  {
+    title: "Organizational Change & Adoption",
+    headline: "Transformation only succeeds when people adopt it.",
+    paragraphs: [
+      "We help organizations navigate change by aligning leadership, preparing teams, and implementing structured change management approaches that drive engagement and long-term success.",
+      "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
+    ],
+    capabilities: ["Change & Adoption", "Strategy & Planning", "Marketing & Communications", "Implementation & Delivery"],
+  },
+  {
+    title: "Digital & Technology Transformation",
+    headline: "Align technology investments with real business and customer outcomes.",
+    paragraphs: [
+      "We support organizations in evaluating digital opportunities, selecting the right technologies, and implementing scalable solutions that improve operations and experiences.",
+      "Our approach ensures technology supports strategy—not the other way around."
+    ],
+    capabilities: ["AI & Automation", "Implementation & Delivery", "Discovery & Research", "Accessibility"],
+  },
+  {
+    title: "Strategy & Advisory",
+    headline: "Turn complexity into clarity.",
+    paragraphs: [
+      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation.",
+      "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
+    ],
+    capabilities: ["Strategy & Planning", "Discovery & Research", "Innovation", "Implementation & Delivery"],
+  },
+  {
+    title: "Innovation & Product Strategy",
+    headline: "Identify opportunities and bring new ideas to life.",
+    paragraphs: [
+      "We help organizations explore emerging opportunities, validate concepts, and design products or services that deliver meaningful value to customers and stakeholders."
+    ],
+    capabilities: ["Discovery & Research", "CX & UX Design", "Strategy & Planning", "AI & Automation"],
+  },
+  {
+    title: "Operational & Procurement Optimization",
+    headline: "Improve efficiency, governance, and operational effectiveness.",
+    paragraphs: [
+      "We work with organizations to optimize processes, strengthen governance models, and implement procurement strategies that improve performance while reducing risk."
+    ],
+    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
+  }
+];
 
+const Services = () => {
   const howWeWork = [
     {
       title: "Client-centric engagement",
