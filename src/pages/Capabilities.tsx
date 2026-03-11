@@ -65,12 +65,21 @@ const Services = () => {
 
   useEffect(() => {
     if (location.hash) {
-      setTimeout(() => {
+      const scrollToHash = () => {
         const el = document.getElementById(location.hash.slice(1));
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+      // Try immediately, then retry after images/layout settle
+      scrollToHash();
+      const t1 = setTimeout(scrollToHash, 300);
+      const t2 = setTimeout(scrollToHash, 800);
+      return () => { clearTimeout(t1); clearTimeout(t2); };
+    } else {
+      window.scrollTo(0, 0);
     }
-  }, [location.hash]);
+  }, [location.hash, location.key]);
 
   const serviceAreas = [
     {
