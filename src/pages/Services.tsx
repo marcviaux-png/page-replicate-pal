@@ -141,7 +141,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-20">
             <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-leap-black mb-6">Core Areas of Consulting Support</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-leap-black mb-6">Core Service Areas</h2>
           </div>
 
           <div className="space-y-8">
