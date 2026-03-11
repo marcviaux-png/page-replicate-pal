@@ -130,69 +130,57 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Areas - Immersive Dark Sections */}
-      <section>
-        <div id="core-intro" className="text-center py-20 px-4 bg-leap-black relative">
-          <h2 className="text-3xl sm:text-4xl font-bold text-leap-white mb-4">Core Areas of Consulting Support</h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
-            We bring expertise across five interconnected disciplines to help you navigate complexity and achieve sustainable growth.
-          </p>
-          <button 
-            onClick={() => scrollToSection('core-0')}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-leap-white/60 hover:text-leap-orange transition-colors duration-300"
-            aria-label="Scroll to first section"
-          >
-            <ChevronDown className="w-10 h-10 animate-bounce" />
-          </button>
-        </div>
+      {/* Core Areas of Consulting Support */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-4">Core Areas of Consulting Support</h2>
+            <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
+            </p>
+          </div>
 
-        {/* Individual Core Area Sections - Full Bleed Dark Style */}
-        {coreAreas.map((area, index) => {
-          const isEven = index % 2 === 0;
-          const nextSectionId = index < coreAreas.length - 1 ? `core-${index + 1}` : 'how-we-work';
-          
-          return (
-            <div 
-              key={index}
-              id={`core-${index}`}
-              className="relative min-h-[80vh] flex items-center"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <img 
-                  src={area.image}
-                  alt={area.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className={`absolute inset-0 ${isEven 
-                  ? 'bg-gradient-to-r from-black/80 via-black/60 to-transparent' 
-                  : 'bg-gradient-to-l from-black/80 via-black/60 to-transparent'
-                }`}></div>
-              </div>
-              
-              {/* Content Overlay */}
-              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-                <div className={`max-w-xl ${isEven ? '' : 'ml-auto text-right'}`}>
-                  <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-leap-white mb-6 leading-tight">
-                    {area.headline}
-                  </h3>
-                  <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-4">
-                    <span className="text-leap-orange font-semibold">{area.title}.</span> {area.description}
-                  </p>
+          <div className="space-y-6 mt-16">
+            {coreAreas.map((area, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="p-8 sm:p-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                    {/* Left: Title & Headline */}
+                    <div className="lg:w-2/5 lg:shrink-0">
+                      <h3 className="text-xl sm:text-2xl font-bold text-leap-black mb-3">{area.title}</h3>
+                      <p className="text-lg text-leap-orange font-semibold leading-snug">{area.headline}</p>
+                    </div>
+
+                    {/* Right: Description & Capabilities */}
+                    <div className="lg:w-3/5">
+                      <div className="space-y-3 mb-6">
+                        {area.paragraphs.map((p, i) => (
+                          <p key={i} className="text-slate-600 leading-relaxed">{p}</p>
+                        ))}
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Supporting capabilities</p>
+                        <div className="flex flex-wrap gap-2">
+                          {area.capabilities.map((cap, i) => (
+                            <span
+                              key={i}
+                              className="px-3 py-1.5 text-sm font-medium text-slate-700 bg-slate-100 rounded-full"
+                            >
+                              {cap}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {/* Scroll Arrow */}
-              <button 
-                onClick={() => scrollToSection(nextSectionId)}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-leap-white/60 hover:text-leap-orange transition-colors duration-300 z-20"
-                aria-label="Scroll to next section"
-              >
-                <ChevronDown className="w-10 h-10 animate-bounce" />
-              </button>
-            </div>
-          );
-        })}
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* How We Work - Visual Cards */}
