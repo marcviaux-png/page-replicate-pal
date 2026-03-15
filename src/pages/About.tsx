@@ -184,8 +184,40 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why LeapUX */}
+      {/* Sector Experience */}
       <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sector Experience</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              LeapUX supports organizations delivering complex services across Canada.
+            </h3>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Our work spans multiple sectors, including:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              { title: "Federal & Provincial Government", desc: "Modernizing services for citizens, businesses, and public sector teams." },
+              { title: "Municipal & Regional Government", desc: "Improving digital services, engagement, and operational efficiency." },
+              { title: "Crown Corporations", desc: "Supporting public mandates with modern platforms, data systems, and governance-aligned services." },
+              { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
+              { title: "Enterprise & Professional Services", desc: "Helping organizations improve operations, automation, and client experience." },
+            ].map((sector, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200">
+                <h4 className="text-lg font-bold text-leap-black mb-3">{sector.title}</h4>
+                <p className="text-slate-600 leading-relaxed">{sector.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-lg text-slate-600 text-center mt-12 max-w-3xl mx-auto">
+            Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.
+          </p>
+        </div>
+      </section>
+
+      {/* Why LeapUX */}
+      <section className="py-32 bg-[#F6F7F9]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why LeapUX</h2>
           <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
