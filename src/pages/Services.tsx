@@ -73,10 +73,10 @@ const coreAreas = [
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
-    title: "Operational & Procurement Optimization",
+    title: "Operations & Service Delivery",
     headline: "Improve efficiency, governance, and operational effectiveness.",
     paragraphs: [
-      "We work with organizations to optimize processes, strengthen governance models, and implement procurement strategies that improve performance while reducing risk."
+      "We help organizations streamline processes, strengthen governance models, and optimize how services and operations are delivered. This often includes improving procurement, vendor management, and sourcing practices as part of broader operational improvements that increase efficiency, transparency, and performance."
     ],
     capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
