@@ -46,14 +46,24 @@ const About = () => {
             <section>
               <h2 className="text-3xl font-bold text-leap-black mb-8 flex items-center gap-4">
                 <span className="w-12 h-1 bg-leap-orange"></span>
-                Senior-Led Delivery
+                Why We Do This
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  LeapUX is a senior-led team with deep expertise across delivery, UX, and architecture. The people you meet at the start stay involved through design, build, and adoption.
+                  We started LeapUX because too many important decisions were being made without evidence.
                 </p>
                 <p>
-                  Our proven delivery approach reduces rework, clarifies scope early, and keeps decisions moving. We ship consistently through weekly demos and transparent communication.
+                  Organizations were investing heavily in digital platforms, services, and transformation initiatives—yet too often those initiatives were built on assumptions instead of insight.
+                </p>
+                <p>The result was predictable:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>systems that didn't match real needs</li>
+                  <li>services that were difficult to adopt</li>
+                  <li>expensive projects that failed to deliver lasting value</li>
+                </ul>
+                <p>LeapUX exists to close that gap.</p>
+                <p>
+                  We help organizations replace uncertainty with evidence, and transform complex ideas into services that work in the real world.
                 </p>
               </div>
             </section>
