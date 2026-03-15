@@ -229,35 +229,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Sector Experience */}
-            <div className="bg-white p-8 lg:p-10 rounded-2xl border border-slate-200">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
-                  <Building2 className="w-6 h-6 text-leap-orange" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-bold text-leap-black mb-3">Sector Experience</h4>
-                  <p className="text-slate-600 leading-relaxed mb-6">LeapUX supports organizations delivering complex services across Canada.</p>
-                  <p className="text-slate-600 leading-relaxed mb-6">Our work spans multiple sectors, including:</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {[
-                      { title: "Federal & Provincial Government", desc: "Modernizing services for citizens, businesses, and public sector teams." },
-                      { title: "Municipal & Regional Government", desc: "Improving digital services, engagement, and operational efficiency." },
-                      { title: "Crown Corporations", desc: "Supporting public mandates with modern platforms, data systems, and governance-aligned services." },
-                      { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
-                      { title: "Enterprise & Professional Services", desc: "Helping organizations improve operations, automation, and client experience." },
-                    ].map((sector, j) => (
-                      <div key={j} className="space-y-1">
-                        <h5 className="font-bold text-leap-black">{sector.title}</h5>
-                        <p className="text-sm text-slate-500 leading-relaxed">{sector.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-slate-600 leading-relaxed mt-6 italic">Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.</p>
-                </div>
-              </div>
-            </div>
-
             {/* Bilingual and National by Design */}
             <div className="bg-white p-8 lg:p-10 rounded-2xl border border-slate-200">
               <div className="flex items-start gap-6">
@@ -274,6 +245,34 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Sector Experience */}
+      <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sector Experience</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              LeapUX supports organizations delivering complex services across Canada
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Our work spans multiple sectors, including:</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              { title: "Federal & Provincial Government", desc: "Modernizing services for citizens, businesses, and public sector teams." },
+              { title: "Municipal & Regional Government", desc: "Improving digital services, engagement, and operational efficiency." },
+              { title: "Crown Corporations", desc: "Supporting public mandates with modern platforms, data systems, and governance-aligned services." },
+              { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
+              { title: "Enterprise & Professional Services", desc: "Helping organizations improve operations, automation, and client experience." },
+            ].map((sector, j) => (
+              <div key={j} className="bg-white p-8 rounded-2xl border border-slate-200 space-y-2">
+                <h5 className="font-bold text-leap-black">{sector.title}</h5>
+                <p className="text-sm text-slate-500 leading-relaxed">{sector.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-600 leading-relaxed mt-12 italic max-w-2xl mx-auto">Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.</p>
         </div>
       </section>
 
