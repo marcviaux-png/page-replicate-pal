@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Users, Clock, Target, Languages, Award, CheckCircle, SearchCheck } from 'lucide-react';
+import { Users, Clock, Target, Languages, Award, CheckCircle, SearchCheck, Crosshair } from 'lucide-react';
 
 const About = () => {
   return (
@@ -132,6 +132,12 @@ const About = () => {
                 title: "Evidence Over Opinion",
                 description: "Many consulting and design engagements rely on opinion, hierarchy, or presentation-driven decisions. LeapUX takes a different approach. We ground decisions in evidence, through research, testing, operational data, and real user feedback.",
                 points: ["Reduce risk early", "Avoid costly rework", "Make confident decisions faster", "Deliver services that actually work"]
+              },
+              {
+                icon: Crosshair,
+                title: "Problem Solvers Who Follow Through",
+                description: "Complex projects rarely succeed through process alone. They succeed because teams stay persistent, address problems directly, and follow issues through to resolution. LeapUX works with organizations facing difficult delivery challenges, where constraints, policy, technology, and real-world operations intersect.",
+                points: ["Asking difficult questions early", "Navigating complexity with discipline", "Working collaboratively across teams", "Finishing what we start"]
               },
               {
                 icon: Users,
