@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Users, Clock, Target, Languages, Award, CheckCircle, SearchCheck } from 'lucide-react';
+import { Users, Clock, Target, Languages, Award, CheckCircle, SearchCheck, Crosshair } from 'lucide-react';
 
 const About = () => {
   return (
