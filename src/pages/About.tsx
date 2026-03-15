@@ -50,20 +50,10 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  We started LeapUX because too many important decisions were being made without evidence.
+                  Organizations invest heavily in digital platforms, services, and transformation, yet these efforts are often built on assumptions instead of real insight. The result is predictable: systems that don't match real needs, services that are difficult to adopt, and projects that fail to deliver lasting value. LeapUX exists to close that gap.
                 </p>
                 <p>
-                  Organizations were investing heavily in digital platforms, services, and transformation initiatives—yet too often those initiatives were built on assumptions instead of insight.
-                </p>
-                <p>The result was predictable:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>systems that didn't match real needs</li>
-                  <li>services that were difficult to adopt</li>
-                  <li>expensive projects that failed to deliver lasting value</li>
-                </ul>
-                <p>LeapUX exists to close that gap.</p>
-                <p>
-                  We help organizations replace uncertainty with evidence, and transform complex ideas into services that work in the real world.
+                  We care deeply about helping organizations get important services right. Our team is motivated by solving complex problems, grounding decisions in evidence, and turning ambitious ideas into services that work in the real world.
                 </p>
               </div>
             </section>
