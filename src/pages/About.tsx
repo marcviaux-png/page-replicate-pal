@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, Users, Wrench, Shield, Building2, CheckCircle } from 'lucide-react';
+import { Search, Users, Wrench, Shield, Building2, Languages, CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
@@ -254,6 +254,22 @@ const About = () => {
                     ))}
                   </div>
                   <p className="text-slate-600 leading-relaxed mt-6 italic">Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bilingual and National by Design */}
+            <div className="bg-white p-8 lg:p-10 rounded-2xl border border-slate-200">
+              <div className="flex items-start gap-6">
+                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center shrink-0">
+                  <Languages className="w-6 h-6 text-leap-orange" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-xl font-bold text-leap-black mb-3">Bilingual and National by Design</h4>
+                  <div className="text-slate-600 leading-relaxed space-y-4">
+                    <p>As a Canadian firm, LeapUX delivers fully bilingually in English and French, including stakeholder workshops, formal deliverables, and national program alignment.</p>
+                    <p>Our work reflects the linguistic, accessibility, and policy realities of delivering services for all Canadians.</p>
+                  </div>
                 </div>
               </div>
             </div>
