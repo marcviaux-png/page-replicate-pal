@@ -186,11 +186,11 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
+              { title: "Enterprise & Professional Services", desc: "Helping organizations improve operations, automation, and client experience." },
               { title: "Federal & Provincial Government", desc: "Modernizing services for citizens, businesses, and public sector teams." },
               { title: "Municipal & Regional Government", desc: "Improving digital services, engagement, and operational efficiency." },
               { title: "Crown Corporations", desc: "Supporting public mandates with modern platforms, data systems, and governance-aligned services." },
               { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
-              { title: "Enterprise & Professional Services", desc: "Helping organizations improve operations, automation, and client experience." },
             ].map((sector, i) => (
               <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200">
                 <h4 className="text-lg font-bold text-leap-black mb-3">{sector.title}</h4>
