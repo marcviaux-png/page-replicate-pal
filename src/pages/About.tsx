@@ -58,19 +58,6 @@ const About = () => {
               </div>
             </section>
 
-            <section className="bg-leap-light p-12 lg:p-16 rounded-3xl border-l-8 border-leap-brand shadow-sm">
-              <h2 className="text-3xl font-bold text-leap-black mb-6 italic">Discipline & Transparency</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                We operate with rigor because trust is earned through execution. Time is tracked to tasks, shared regularly, and tied directly to delivered outputs.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-leap-orange font-bold uppercase tracking-widest text-xs">
-                <div>• Risks raised early</div>
-                <div>• Decisions documented</div>
-                <div>• Issues followed to closure</div>
-                <div>• Clear owners and timelines</div>
-              </div>
-            </section>
-
           </div>
 
           <aside className="lg:col-span-4 space-y-10">
