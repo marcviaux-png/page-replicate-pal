@@ -134,6 +134,12 @@ const About = () => {
                 points: ["Reduce risk early", "Avoid costly rework", "Make confident decisions faster", "Deliver services that actually work"]
               },
               {
+                icon: Crosshair,
+                title: "Problem Solvers Who Follow Through",
+                description: "Complex projects rarely succeed through process alone. They succeed because teams stay persistent, address problems directly, and follow issues through to resolution. LeapUX works with organizations facing difficult delivery challenges, where constraints, policy, technology, and real-world operations intersect.",
+                points: ["Asking difficult questions early", "Navigating complexity with discipline", "Working collaboratively across teams", "Finishing what we start"]
+              },
+              {
                 icon: Users,
                 title: "Senior-Led, Hands-On Delivery",
                 description: "LeapUX is a senior-led team with deep expertise across delivery, UX, and architecture. The people you meet at the start stay involved through design, build, and adoption. We scale thoughtfully as needs evolve—filling capacity gaps without the overhead or handoffs of a traditional agency.",
