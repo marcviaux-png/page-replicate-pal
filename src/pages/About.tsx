@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, Users, Wrench, Shield, Building2, CheckCircle } from 'lucide-react';
+import { Search, Users, Wrench, Shield, Building2, Languages, CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
