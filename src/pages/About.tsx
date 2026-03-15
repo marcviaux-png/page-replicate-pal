@@ -32,10 +32,13 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  With over 15 years of industry experience and continuous operation since 2012, we deliver production work every year across government, enterprise, and regulated environments—where quality, security, and accountability are non‑negotiable.
+                  With over 15 years of industry experience and continuous operation since 2012, LeapUX delivers production work across government, enterprise, and regulated environments, where quality, security, and accountability are non-negotiable.
                 </p>
                 <p>
                   Our work spans discovery through implementation and long-term operation, with clear artifacts, defined acceptance criteria, and shared ownership at every stage. We align on outcomes first and define success metrics early.
+                </p>
+                <p>
+                  Complex environments require more than ideas, they require disciplined delivery.
                 </p>
               </div>
             </section>
