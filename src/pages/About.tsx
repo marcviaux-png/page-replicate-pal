@@ -81,7 +81,7 @@ const About = () => {
 
             <div className="bg-leap-brand text-leap-white p-10 rounded-3xl shadow-lg">
               <p className="text-xl font-bold leading-tight mb-6 italic">
-                "Because delivery matters. We combine evidence, discipline, and accountability."
+                Because delivery matters. We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
               </p>
               <div className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80">LeapUX Philosophy</div>
             </div>
