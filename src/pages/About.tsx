@@ -207,18 +207,14 @@ const About = () => {
             <h4 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-10">Select Clients</h4>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
-                "Innovation, Science & Economic Development Canada (ISED)",
-                "Transport Canada",
-                "Public Services and Procurement Canada (PSPC)",
-                "Employment and Social Development Canada (ESDC)",
-                "Financial Consumer Agency of Canada (FCAC)",
-                "Office of the Superintendent of Bankruptcy",
-                "International Joint Commission",
-                "Canada Gazette",
                 "Beneva",
                 "St. John Ambulance",
-                "Soldiers Helping Soldiers",
                 "Tereposky & DeRose",
+                "Soldiers Helping Soldiers",
+                "Innovation, Science & Economic Development Canada (ISED)",
+                "Public Services and Procurement Canada (PSPC)",
+                "Canada Gazette",
+                "International Joint Commission",
               ].map((client, i) => (
                 <div key={i} className="bg-white border border-slate-200 rounded-xl px-5 py-4 text-center flex items-center justify-center min-h-[72px]">
                   <span className="text-sm font-semibold text-leap-black leading-tight">{client}</span>
