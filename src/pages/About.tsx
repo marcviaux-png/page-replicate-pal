@@ -147,9 +147,9 @@ const About = () => {
               },
               {
                 icon: Clock,
-                title: "Discipline, Transparency, and Follow-Through",
-                description: "We operate with rigor and transparency because trust is earned through execution. Time is tracked to tasks, shared regularly, and tied directly to delivered outputs. We work with agreed cadences, burn visibility, and clear change control.",
-                points: ["Time tracked to tasks and deliverables", "Risks raised early, decisions documented", "Issues followed through to closure with defined owners"]
+                title: "Discipline & Transparency",
+                description: "Trust is earned through execution. We operate with rigor and transparency so partners always understand progress, risks, and outcomes. Time is tracked to tasks and tied directly to deliverables. Work is shared regularly through demos and documentation.",
+                points: ["Risks raised early", "Decisions documented", "Issues followed to closure", "Clear owners and timelines"]
               },
               {
                 icon: Target,
