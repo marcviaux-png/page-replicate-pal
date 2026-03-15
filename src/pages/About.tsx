@@ -171,18 +171,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Who We Work With */}
-      <section className="py-32 bg-[#F6F7F9]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Work With</h2>
-          <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-            Partners in complex, high-impact delivery
-          </h3>
-          <p className="text-lg text-slate-600">
-            We partner with organizations delivering complex, high-impact services, including governments, regulated industries, and mission-driven organizations.
-          </p>
-        </div>
-      </section>
 
       {/* Sector Experience */}
       <section className="py-32 bg-background">
@@ -216,18 +204,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why LeapUX */}
-      <section className="py-32 bg-[#F6F7F9]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why LeapUX</h2>
-          <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-            Because delivery matters
-          </h3>
-          <p className="text-lg text-slate-600">
-            We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
-          </p>
-        </div>
-      </section>
 
       <section className="py-32 bg-leap-light text-center border-t border-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
