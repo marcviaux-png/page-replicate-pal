@@ -128,6 +128,12 @@ const About = () => {
           <div className="space-y-6">
             {[
               {
+                icon: SearchCheck,
+                title: "Evidence Over Opinion",
+                description: "Many consulting and design engagements rely on opinion, hierarchy, or presentation-driven decisions. LeapUX takes a different approach. We ground decisions in evidence, through research, testing, operational data, and real user feedback.",
+                points: ["Reduce risk early", "Avoid costly rework", "Make confident decisions faster", "Deliver services that actually work"]
+              },
+              {
                 icon: Users,
                 title: "Senior-Led, Hands-On Delivery",
                 description: "LeapUX is a senior-led team with deep expertise across delivery, UX, and architecture. The people you meet at the start stay involved through design, build, and adoption. We scale thoughtfully as needs evolve—filling capacity gaps without the overhead or handoffs of a traditional agency.",
