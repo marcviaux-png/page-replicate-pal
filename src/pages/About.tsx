@@ -101,6 +101,59 @@ const About = () => {
               We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
             </p>
           </div>
+
+          {/* Sector Experience */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sector Experience</h2>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                LeapUX supports organizations delivering complex services across Canada.
+              </p>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto mt-2">
+                Our experience spans multiple sectors including:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  icon: Landmark,
+                  title: "Federal & Provincial Government",
+                  desc: "Supporting service modernization and digital delivery."
+                },
+                {
+                  icon: Building2,
+                  title: "Municipal & Regional Government",
+                  desc: "Improving platforms, engagement, and operational services."
+                },
+                {
+                  icon: Crown,
+                  title: "Crown Corporations",
+                  desc: "Delivering modern systems aligned with governance and public mandates."
+                },
+                {
+                  icon: Heart,
+                  title: "Non-Profit and Mission-Driven Organizations",
+                  desc: "Strengthening services that support communities and public impact."
+                },
+                {
+                  icon: Briefcase,
+                  title: "Enterprise & Professional Services",
+                  desc: "Improving digital platforms, internal tools, and operational workflows."
+                }
+              ].map((sector, i) => (
+                <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                  <sector.icon className="w-8 h-8 text-leap-orange mb-4" />
+                  <h4 className="text-lg font-bold text-leap-black mb-2">{sector.title}</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">{sector.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-lg text-slate-600 mt-10 font-medium">
+              Across sectors, our focus remains the same: delivering services that work.
+            </p>
+          </div>
           
           <div className="space-y-6">
             {[
