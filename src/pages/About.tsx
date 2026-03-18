@@ -117,7 +117,7 @@ const About = () => {
       </section>
 
       {/* Why We Do This — problem/solution tension layout */}
-      <section className="py-24 lg:py-32 bg-background overflow-hidden">
+      <section className="pt-12 lg:pt-16 pb-24 lg:pb-32 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-16 text-center">Why We Do This</h2>
 
