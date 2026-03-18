@@ -264,6 +264,39 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Who We Partner With */}
+      <section className="py-32 bg-leap-black text-leap-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Partner With</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold leading-tight mb-6">
+              Collaborative, adaptive, grounded in shared ownership
+            </h3>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+              We work alongside the teams responsible for setting direction, delivering change, and sustaining services.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-[2rem] overflow-hidden border border-white/10">
+            {[
+              { icon: Users, title: "Executive leadership", desc: "C-suite, directors, and senior decision-makers driving organizational vision" },
+              { icon: Shield, title: "Policy and regulatory teams", desc: "Teams navigating compliance, governance, and legislative requirements" },
+              { icon: Target, title: "Service owners and product leaders", desc: "Leaders accountable for service outcomes and product direction" },
+              { icon: Layers, title: "IT and digital delivery", desc: "Technical teams building, integrating, and maintaining platforms" },
+              { icon: Sparkles, title: "Communications and engagement", desc: "Teams shaping messaging, outreach, and stakeholder relationships" },
+              { icon: TrendingUp, title: "Operations and frontline staff", desc: "The people closest to service delivery and day-to-day impact" }
+            ].map((partner, i) => (
+              <div key={i} className="bg-leap-black p-10 flex flex-col gap-4 group hover:bg-white/5 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-leap-orange/15 flex items-center justify-center">
+                  <partner.icon className="w-5 h-5 text-leap-orange" />
+                </div>
+                <h4 className="text-lg font-bold">{partner.title}</h4>
+                <p className="text-sm text-slate-400 leading-relaxed">{partner.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Explore Capabilities */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
