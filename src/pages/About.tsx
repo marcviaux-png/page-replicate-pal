@@ -135,8 +135,9 @@ const About = () => {
       {/* How We Work — alternating layout with numbered steps and bold accent bars */}
       <section className="relative overflow-hidden">
         {/* Dark intro band */}
-        <div className="bg-leap-black text-leap-white py-24 lg:py-32">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Dark intro band + cards as one continuous section */}
+        <div className="bg-leap-black text-leap-white pt-24 lg:pt-32 pb-20 lg:pb-28">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How We Work</h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Evidence-driven, senior-led,<br className="hidden sm:block" /> built for the real world
@@ -145,10 +146,6 @@ const About = () => {
               We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
             </p>
           </div>
-        </div>
-
-        {/* Cards — alternating side accent */}
-        <div className="bg-[#F6F7F9] py-20 lg:py-28">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             {howWeWork.map((item, i) => {
               const isEven = i % 2 === 0;
