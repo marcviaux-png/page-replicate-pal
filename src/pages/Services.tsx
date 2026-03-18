@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, ChevronDown } from 'lucide-react';
+import { CheckCircle, ArrowRight, ChevronDown, Users, Shield, Target, Layers, Sparkles, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 
