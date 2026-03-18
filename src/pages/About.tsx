@@ -410,18 +410,11 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════════
           SELECT CLIENTS — agency-style logo showcase
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-24 lg:py-32 bg-muted overflow-hidden">
+      <section className="py-24 lg:py-32 bg-background overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Select Clients</h2>
-            <p className="text-muted-foreground text-lg">Organizations that trust LeapUX to deliver.</p>
-          </div>
+          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-16 text-center">Select Clients</h2>
 
-          {/* Divider */}
-          <div className="w-full h-px bg-border my-12" />
-
-          {/* Logo grid — clean, generous spacing */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-14 items-center justify-items-center">
             {[
               "Beneva",
               "St. John Ambulance",
@@ -432,21 +425,14 @@ const About = () => {
               "Canada Gazette",
               "International Joint Commission",
             ].map((client, i) => (
-              <div
-                key={i}
-                className="bg-background flex flex-col items-center justify-center p-8 lg:p-10 group hover:bg-leap-orange/[0.03] transition-colors duration-300"
-              >
-                {/* Logo placeholder */}
-                <div className="w-28 h-14 rounded-lg bg-muted border border-border flex items-center justify-center mb-4 group-hover:border-leap-orange/30 transition-colors duration-300">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">Logo</span>
+              <div key={i} className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <div className="w-32 h-16 rounded bg-muted flex items-center justify-center">
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/40">Logo</span>
                 </div>
-                <span className="text-sm font-medium text-foreground text-center leading-snug">{client}</span>
+                <span className="text-xs font-medium text-muted-foreground text-center leading-snug max-w-[140px]">{client}</span>
               </div>
             ))}
           </div>
-
-          {/* Divider */}
-          <div className="w-full h-px bg-border mt-0" />
         </div>
       </section>
 
