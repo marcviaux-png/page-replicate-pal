@@ -265,18 +265,18 @@ const Services = () => {
       </section>
 
       {/* Who We Partner With */}
-      <section className="py-32 bg-leap-black text-leap-white overflow-hidden">
+      <section className="py-32 bg-[#F6F7F9] text-foreground overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Partner With</h2>
             <h3 className="text-3xl sm:text-4xl font-bold leading-tight mb-6">
               Collaborative, adaptive, grounded in shared ownership
             </h3>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               We work alongside the teams responsible for setting direction, delivering change, and sustaining services.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-[2rem] overflow-hidden border border-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border border-slate-200">
             {[
               { icon: Users, title: "Executive leadership", desc: "C-suite, directors, and senior decision-makers driving organizational vision" },
               { icon: Shield, title: "Policy and regulatory teams", desc: "Teams navigating compliance, governance, and legislative requirements" },
@@ -285,12 +285,12 @@ const Services = () => {
               { icon: Sparkles, title: "Communications and engagement", desc: "Teams shaping messaging, outreach, and stakeholder relationships" },
               { icon: TrendingUp, title: "Operations and frontline staff", desc: "The people closest to service delivery and day-to-day impact" }
             ].map((partner, i) => (
-              <div key={i} className="bg-leap-black p-10 flex flex-col gap-4 group hover:bg-white/5 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-leap-orange/15 flex items-center justify-center">
+              <div key={i} className="bg-white p-10 flex flex-col gap-4 group hover:bg-leap-orange/[0.03] transition-colors">
+                <div className="w-12 h-12 rounded-full bg-leap-orange/10 flex items-center justify-center">
                   <partner.icon className="w-5 h-5 text-leap-orange" />
                 </div>
-                <h4 className="text-lg font-bold">{partner.title}</h4>
-                <p className="text-sm text-slate-400 leading-relaxed">{partner.desc}</p>
+                <h4 className="text-lg font-bold text-foreground">{partner.title}</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">{partner.desc}</p>
               </div>
             ))}
           </div>
