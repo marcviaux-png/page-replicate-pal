@@ -449,9 +449,9 @@ const About = () => {
             ].map((sector, i) => (
               <div
                 key={i}
-                className="rounded-xl bg-white/[0.04] border border-white/[0.08] p-8 hover:border-leap-orange/30 transition-colors duration-300"
+                className="rounded-xl bg-white/[0.04] border border-white/[0.08] p-8 hover:border-leap-orange/30 transition-colors duration-300 group"
               >
-                <div className="w-8 h-1 bg-leap-orange rounded-full mb-6" />
+                <div className="w-8 group-hover:w-14 h-1 bg-leap-orange rounded-full mb-6 transition-all duration-300" />
                 <h4 className="text-lg font-bold text-leap-white mb-3">{sector.title}</h4>
                 <p className="text-slate-400 leading-relaxed text-sm">{sector.desc}</p>
               </div>
