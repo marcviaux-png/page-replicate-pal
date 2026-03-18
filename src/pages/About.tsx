@@ -212,14 +212,14 @@ const About = () => {
               { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
               { title: "Education & Research", desc: "Modernizing learning platforms, research infrastructure, and institutional services." },
             ].map((sector, i) => (
-              <div key={i} className="group relative bg-background p-8 rounded-2xl border border-border hover:border-leap-orange/40 transition-colors duration-300">
+              <div key={i} className="group relative bg-white/10 p-8 rounded-2xl border border-white/10 hover:border-leap-orange/40 transition-colors duration-300">
                 <div className="w-8 h-1 bg-leap-orange mb-5 group-hover:w-12 transition-all duration-300" />
-                <h4 className="text-lg font-bold text-foreground mb-3">{sector.title}</h4>
-                <p className="text-muted-foreground leading-relaxed">{sector.desc}</p>
+                <h4 className="text-lg font-bold text-leap-white mb-3">{sector.title}</h4>
+                <p className="text-slate-400 leading-relaxed">{sector.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-lg text-muted-foreground text-center mt-12 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-400 text-center mt-12 max-w-3xl mx-auto">
             Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.
           </p>
 
