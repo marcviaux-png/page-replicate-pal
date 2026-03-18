@@ -408,12 +408,20 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          SELECT CLIENTS
+          SELECT CLIENTS — agency-style logo showcase
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-leap-black border-t border-white/[0.06] overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-12 text-center">Select Clients</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <section className="py-24 lg:py-32 bg-muted overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Select Clients</h2>
+            <p className="text-muted-foreground text-lg">Organizations that trust LeapUX to deliver.</p>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-border my-12" />
+
+          {/* Logo grid — clean, generous spacing */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
             {[
               "Beneva",
               "St. John Ambulance",
@@ -426,12 +434,19 @@ const About = () => {
             ].map((client, i) => (
               <div
                 key={i}
-                className="rounded-xl bg-white/[0.04] border border-white/[0.08] px-5 py-4 flex items-center justify-center text-center text-sm font-medium text-slate-300 min-h-[72px]"
+                className="bg-background flex flex-col items-center justify-center p-8 lg:p-10 group hover:bg-leap-orange/[0.03] transition-colors duration-300"
               >
-                {client}
+                {/* Logo placeholder */}
+                <div className="w-28 h-14 rounded-lg bg-muted border border-border flex items-center justify-center mb-4 group-hover:border-leap-orange/30 transition-colors duration-300">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">Logo</span>
+                </div>
+                <span className="text-sm font-medium text-foreground text-center leading-snug">{client}</span>
               </div>
             ))}
           </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-border mt-0" />
         </div>
       </section>
 
