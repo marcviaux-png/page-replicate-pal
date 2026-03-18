@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Heart, ArrowRight } from 'lucide-react';
+import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const About = () => {
   return (
@@ -25,7 +26,7 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          OUR STORY — cinematic two-column (user loves this design)
+          OUR STORY — cinematic two-column with image
       ═══════════════════════════════════════════════════════════ */}
       <section className="pt-24 lg:pt-32 pb-16 lg:pb-20 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,8 +54,18 @@ const About = () => {
               </div>
             </div>
 
-            {/* Right — stats */}
-            <div className="lg:col-span-5 flex flex-col gap-6">
+            {/* Right — image + stats stacked */}
+            <div className="lg:col-span-5 flex flex-col gap-8">
+              {/* Collaborative image with grayscale hover */}
+              <div className="relative rounded-2xl overflow-hidden group">
+                <img
+                  src={teamCollaboration}
+                  alt="Team collaborating on digital strategy"
+                  className="w-full h-56 lg:h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+              </div>
+
               {[
                 { value: "15+", label: "Years of Industry Experience", color: "border-leap-orange" },
                 { value: "2012", label: "Founded & Delivering Ever Since", color: "border-leap-brand" },
@@ -174,12 +185,25 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          HOW WE WORK — clean horizontal rhythm
+          EDITORIAL IMAGE BREAK — full-bleed cinematic divider
+      ═══════════════════════════════════════════════════════════ */}
+      <section className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000"
+          alt="Strategic planning and whiteboard collaboration"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+        <div className="absolute inset-0 bg-foreground/10" />
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          HOW WE WORK — with supporting image
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 lg:py-32 bg-muted overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — sticky-ish headline */}
+            {/* Left — sticky-ish headline + image */}
             <div className="lg:sticky lg:top-32">
               <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">How We Work</h2>
               <h3 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-6">
@@ -189,9 +213,18 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 With over 15 years of experience, our work spans from discovery through to long-term operation.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              <p className="text-lg text-muted-foreground leading-relaxed mt-4 mb-8">
                 We focus on clarity from the start.
               </p>
+
+              {/* Supporting image */}
+              <div className="rounded-xl overflow-hidden group hidden lg:block">
+                <img
+                  src="https://images.unsplash.com/photo-1531538606174-e1ed98789c4a?auto=format&fit=crop&q=80&w=800"
+                  alt="Focused delivery workshop"
+                  className="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                />
+              </div>
             </div>
 
             {/* Right — principles as clean list */}
@@ -238,15 +271,15 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          WHAT MAKES US DIFFERENT — personal, intimate tone
+          WHAT MAKES US DIFFERENT — with side image
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 lg:py-32 bg-background overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">What Makes Us Different</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left — empathy-led narrative */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-5">
               <p className="text-2xl sm:text-3xl font-black text-foreground leading-tight mb-8">
                 We care—about the work,<br />
                 and about the people<br />
@@ -262,8 +295,19 @@ const About = () => {
               </div>
             </div>
 
+            {/* Center — image */}
+            <div className="lg:col-span-3 hidden lg:flex items-center">
+              <div className="rounded-2xl overflow-hidden group w-full">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600"
+                  alt="Team working together on a project"
+                  className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                />
+              </div>
+            </div>
+
             {/* Right — commitments as vertical list */}
-            <div className="lg:col-span-2 flex flex-col justify-center">
+            <div className="lg:col-span-4 flex flex-col justify-center">
               <div className="space-y-6">
                 {[
                   "We're honest, even when it's uncomfortable.",
@@ -313,23 +357,36 @@ const About = () => {
               {
                 name: "Shelter Movers Ottawa",
                 mission: "Helping women and children safely leave violence.",
+                image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=600",
               },
               {
                 name: "Paint Jam Charity Events",
                 mission: "Supporting children's health and community initiatives.",
+                image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=600",
               },
               {
                 name: "St. John Ambulance",
                 mission: "Empowering Canadians to save lives through first aid.",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600",
               },
             ].map((org, i) => (
               <div
                 key={i}
-                className="relative bg-background rounded-2xl p-8 border border-border hover:border-leap-orange/40 transition-colors duration-300"
+                className="relative bg-background rounded-2xl overflow-hidden border border-border hover:border-leap-orange/40 transition-colors duration-300 group"
               >
-                <div className="w-10 h-1 bg-leap-orange mb-6 rounded-full" />
-                <h4 className="text-lg font-bold text-foreground mb-3">{org.name}</h4>
-                <p className="text-muted-foreground leading-relaxed">{org.mission}</p>
+                {/* Card image */}
+                <div className="h-40 overflow-hidden">
+                  <img
+                    src={org.image}
+                    alt={org.name}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="w-10 h-1 bg-leap-orange mb-6 rounded-full" />
+                  <h4 className="text-lg font-bold text-foreground mb-3">{org.name}</h4>
+                  <p className="text-muted-foreground leading-relaxed">{org.mission}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -369,7 +426,7 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          SECTOR EXPERIENCE — dark grid matching screenshot reference
+          SECTOR EXPERIENCE — dark grid
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 lg:py-32 bg-leap-black text-leap-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -437,10 +494,18 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          CTA
+          CTA — with background image
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-24 lg:py-32 bg-muted text-center">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 lg:py-32 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+            alt="Modern architecture"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/90" />
+        </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-10 leading-tight text-balance">
             Ready to work with a team that cares about getting it right?
           </h2>
