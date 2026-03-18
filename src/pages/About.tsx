@@ -75,66 +75,77 @@ const About = () => {
       </section>
 
       {/* Story — two columns with pull quote */}
-      <section className="py-24 lg:py-32 bg-background">
+      {/* Our Story — cinematic opening */}
+      <section className="py-24 lg:py-32 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Lead narrative — full width */}
-          <div className="max-w-3xl mb-20">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Story</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 leading-tight">
-              Built for Complexity
-            </h3>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                With over 15 years of industry experience and continuous operation since 2012, LeapUX delivers production work across government, enterprise, and regulated environments, where quality, security, and accountability are non-negotiable.
-              </p>
-              <p>
-                Our work spans discovery through implementation and long-term operation, with clear artifacts, defined acceptance criteria, and shared ownership at every stage. We align on outcomes first and define success metrics early.
-              </p>
-              <p>
-                Complex environments require more than ideas, they require disciplined delivery.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center">
+            {/* Left — big headline + story */}
+            <div className="lg:col-span-7 lg:pr-20">
+              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">Our Story</h2>
+              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-[1.1] mb-10">
+                Built for<br />
+                <span className="text-leap-orange">Complexity.</span>
+              </h3>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  With over 15 years of industry experience and continuous operation since 2012, LeapUX delivers production work across government, enterprise, and regulated environments, where quality, security, and accountability are non-negotiable.
+                </p>
+                <p>
+                  Our work spans discovery through implementation and long-term operation, with clear artifacts, defined acceptance criteria, and shared ownership at every stage. We align on outcomes first and define success metrics early.
+                </p>
+                <p className="font-semibold text-foreground">
+                  Complex environments require more than ideas, they require disciplined delivery.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Stats + Quote side by side */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-20">
-            {/* Stats — vertical stack */}
-            <div className="lg:col-span-2 grid grid-cols-3 lg:grid-cols-1 gap-0 border border-border rounded-2xl overflow-hidden bg-background">
+            {/* Right — stats as bold visual anchors */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
               {[
-                { value: "15+", label: "Years Experience" },
-                { value: "2012", label: "Founded" },
-                { value: "EN/FR", label: "Fully Bilingual" },
+                { value: "15+", label: "Years of Industry Experience", color: "border-leap-orange" },
+                { value: "2012", label: "Founded & Delivering Ever Since", color: "border-leap-brand" },
+                { value: "EN/FR", label: "Fully Bilingual Delivery", color: "border-leap-orange" },
               ].map((stat, i) => (
-                <div key={i} className={`flex flex-col items-center justify-center py-8 px-6 ${i < 2 ? "lg:border-b border-r lg:border-r-0 border-border" : ""}`}>
-                  <div className="text-3xl lg:text-5xl font-black text-leap-orange">{stat.value}</div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mt-2">{stat.label}</div>
+                <div key={i} className={`border-l-4 ${stat.color} pl-8 py-4`}>
+                  <div className="text-4xl lg:text-5xl font-black text-foreground">{stat.value}</div>
+                  <div className="text-sm font-medium text-muted-foreground mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>
-
-            {/* Quote card */}
-            <div className="lg:col-span-3 bg-leap-brand text-leap-white p-10 lg:p-14 rounded-3xl flex flex-col justify-center">
-              <p className="text-xl lg:text-2xl font-bold leading-snug mb-6 italic">
-                "Because delivery matters. We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results."
-              </p>
-              <div className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80">LeapUX Philosophy</div>
-            </div>
           </div>
+        </div>
+      </section>
 
-          {/* Why We Do This */}
-          <div className="max-w-3xl">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why We Do This</h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                Organizations invest heavily in digital platforms, services, and transformation, yet these efforts are often built on assumptions instead of real insight. The result is predictable: systems that don't match real needs, services that are difficult to adopt, and projects that fail to deliver lasting value. LeapUX exists to close that gap.
-              </p>
-              <p>
-                We care deeply about helping organizations get important services right. Our team is motivated by solving complex problems, grounding decisions in evidence, and turning ambitious ideas into services that work in the real world.
-              </p>
-            </div>
+      {/* Philosophy quote — full-bleed dramatic pause */}
+      <section className="bg-leap-brand">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="w-20 h-20 rounded-full border-2 border-leap-white/30 flex items-center justify-center shrink-0">
+            <span className="text-4xl font-black text-leap-white/50">"</span>
           </div>
+          <div>
+            <p className="text-xl lg:text-2xl font-bold text-leap-white leading-relaxed italic mb-4">
+              Because delivery matters. We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
+            </p>
+            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-leap-white/60">LeapUX Philosophy</div>
+          </div>
+        </div>
+      </section>
 
+      {/* Why We Do This — centered, breathing room */}
+      <section className="py-24 lg:py-32 bg-background">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">Why We Do This</h2>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Organizations invest heavily in digital platforms, services, and transformation, yet these efforts are often built on assumptions instead of real insight. The result is predictable: systems that don't match real needs, services that are difficult to adopt, and projects that fail to deliver lasting value.
+            </p>
+            <p className="text-2xl font-bold text-foreground leading-snug">
+              LeapUX exists to close that gap.
+            </p>
+            <p>
+              We care deeply about helping organizations get important services right. Our team is motivated by solving complex problems, grounding decisions in evidence, and turning ambitious ideas into services that work in the real world.
+            </p>
+          </div>
         </div>
       </section>
 
