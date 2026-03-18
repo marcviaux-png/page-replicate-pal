@@ -136,13 +136,13 @@ const About = () => {
       <section className="relative overflow-hidden">
         {/* Dark intro band */}
         {/* Dark intro band + cards as one continuous section */}
-        <div className="bg-leap-black text-leap-white pt-24 lg:pt-32 pb-20 lg:pb-28">
+        <div className="bg-[#F6F7F9] pt-24 lg:pt-32 pb-20 lg:pb-28">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How We Work</h2>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Evidence-driven, senior-led,<br className="hidden sm:block" /> built for the real world
             </h3>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
             </p>
           </div>
@@ -192,14 +192,14 @@ const About = () => {
       </section>
 
       {/* Sector Experience */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-24 lg:py-32 bg-leap-black text-leap-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sector Experience</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
+            <h3 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               LeapUX supports organizations delivering complex services across Canada.
             </h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto">
               Our work spans multiple sectors, including:
             </p>
           </div>
@@ -212,14 +212,14 @@ const About = () => {
               { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
               { title: "Education & Research", desc: "Modernizing learning platforms, research infrastructure, and institutional services." },
             ].map((sector, i) => (
-              <div key={i} className="group relative bg-background p-8 rounded-2xl border border-border hover:border-leap-orange/40 transition-colors duration-300">
+              <div key={i} className="group relative bg-white/10 p-8 rounded-2xl border border-white/10 hover:border-leap-orange/40 transition-colors duration-300">
                 <div className="w-8 h-1 bg-leap-orange mb-5 group-hover:w-12 transition-all duration-300" />
-                <h4 className="text-lg font-bold text-foreground mb-3">{sector.title}</h4>
-                <p className="text-muted-foreground leading-relaxed">{sector.desc}</p>
+                <h4 className="text-lg font-bold text-leap-white mb-3">{sector.title}</h4>
+                <p className="text-slate-400 leading-relaxed">{sector.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-lg text-muted-foreground text-center mt-12 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-400 text-center mt-12 max-w-3xl mx-auto">
             Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.
           </p>
 
@@ -237,8 +237,8 @@ const About = () => {
                 "Canada Gazette",
                 "International Joint Commission",
               ].map((client, i) => (
-                <div key={i} className="bg-background border border-border rounded-xl px-5 py-4 text-center flex items-center justify-center min-h-[72px] hover:border-leap-orange/40 transition-colors duration-300">
-                  <span className="text-sm font-semibold text-foreground leading-tight">{client}</span>
+                <div key={i} className="bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-center flex items-center justify-center min-h-[72px] hover:border-leap-orange/40 transition-colors duration-300">
+                  <span className="text-sm font-semibold text-leap-white leading-tight">{client}</span>
                 </div>
               ))}
             </div>
