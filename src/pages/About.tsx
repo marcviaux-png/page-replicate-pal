@@ -193,18 +193,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════
-          EDITORIAL IMAGE BREAK — full-bleed cinematic divider
-      ═══════════════════════════════════════════════════════════ */}
-      <section className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000"
-          alt="Strategic planning and whiteboard collaboration"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-        <div className="absolute inset-0 bg-foreground/10" />
-      </section>
+
+
 
       {/* ═══════════════════════════════════════════════════════════
           HOW WE WORK — with supporting image
