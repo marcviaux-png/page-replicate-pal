@@ -339,30 +339,31 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════════
           WHY IT MATTERS — closing cinematic statement
       ═══════════════════════════════════════════════════════════ */}
-      <section className="relative bg-leap-black text-leap-white py-28 lg:py-40 overflow-hidden">
-        {/* Subtle radial glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(27_79%_51%_/_0.06)_0%,_transparent_70%)]" />
+      <section className="relative py-28 lg:py-40 bg-background overflow-hidden">
+        {/* Large decorative orange accent */}
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-leap-orange via-leap-orange/60 to-transparent" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-leap-orange/[0.04] blur-3xl pointer-events-none" />
 
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-8">Why It Matters</h2>
-          <p className="text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.15] mb-8">
+          <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground leading-[1.15] mb-8">
             Because this work affects<br />
             <span className="text-leap-orange">real people.</span>
           </p>
-          <div className="max-w-2xl mx-auto space-y-6 text-lg text-slate-400 leading-relaxed">
+          <div className="max-w-2xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
               Organizations invest heavily in digital transformation. But too often, those efforts don't translate into meaningful outcomes.
             </p>
-            <p className="text-leap-white font-semibold">We believe they should.</p>
+            <p className="text-foreground font-semibold">We believe they should.</p>
             <p>
               By combining evidence, discipline, and accountability, we help turn complex initiatives into systems that actually work—for the people who rely on them.
             </p>
           </div>
 
           {/* Final two lines — typographic punch */}
-          <div className="mt-12 pt-10 border-t border-white/10 inline-block">
-            <p className="text-slate-500 text-lg">Not just in theory.</p>
-            <p className="text-2xl font-black text-leap-white mt-1">In practice.</p>
+          <div className="mt-12 pt-10 border-t border-border inline-block">
+            <p className="text-muted-foreground text-lg">Not just in theory.</p>
+            <p className="text-2xl font-black text-foreground mt-1">In practice.</p>
           </div>
         </div>
       </section>
