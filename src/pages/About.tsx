@@ -116,35 +116,54 @@ const About = () => {
         </div>
       </section>
 
-      {/* Philosophy quote — full-bleed dramatic pause */}
-      <section className="bg-leap-brand">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          <div className="w-20 h-20 rounded-full border-2 border-leap-white/30 flex items-center justify-center shrink-0">
-            <span className="text-4xl font-black text-leap-white/50">"</span>
-          </div>
-          <div>
-            <p className="text-xl lg:text-2xl font-bold text-leap-white leading-relaxed italic mb-4">
-              Because delivery matters. We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
-            </p>
-            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-leap-white/60">LeapUX Philosophy</div>
-          </div>
-        </div>
-      </section>
+      {/* Why We Do This — problem/solution tension layout */}
+      <section className="py-24 lg:py-32 bg-background overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-16 text-center">Why We Do This</h2>
 
-      {/* Why We Do This — centered, breathing room */}
-      <section className="py-24 lg:py-32 bg-background">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">Why We Do This</h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              Organizations invest heavily in digital platforms, services, and transformation, yet these efforts are often built on assumptions instead of real insight. The result is predictable: systems that don't match real needs, services that are difficult to adopt, and projects that fail to deliver lasting value.
-            </p>
-            <p className="text-2xl font-bold text-foreground leading-snug">
-              LeapUX exists to close that gap.
-            </p>
-            <p>
-              We care deeply about helping organizations get important services right. Our team is motivated by solving complex problems, grounding decisions in evidence, and turning ambitious ideas into services that work in the real world.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-border">
+            {/* The Problem — dark side */}
+            <div className="bg-leap-black text-leap-white p-10 lg:p-14 flex flex-col justify-center">
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-leap-orange mb-6">The Reality</div>
+              <p className="text-lg leading-relaxed text-slate-300 mb-8">
+                Organizations invest heavily in digital platforms, services, and transformation, yet these efforts are often built on assumptions instead of real insight.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Systems that don't match real needs",
+                  "Services that are difficult to adopt",
+                  "Projects that fail to deliver lasting value",
+                ].map((line, i) => (
+                  <div key={i} className="flex items-center gap-3 text-slate-400">
+                    <span className="w-1.5 h-1.5 rounded-full bg-leap-red shrink-0" />
+                    <span className="text-sm font-medium">{line}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* The Answer — bright side */}
+            <div className="bg-[#F6F7F9] p-10 lg:p-14 flex flex-col justify-center">
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-leap-brand mb-6">Our Response</div>
+              <p className="text-2xl lg:text-3xl font-black text-foreground leading-tight mb-8">
+                LeapUX exists to<br />close that gap.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                We care deeply about helping organizations get important services right. Our team is motivated by solving complex problems, grounding decisions in evidence, and turning ambitious ideas into services that work in the real world.
+              </p>
+              <div className="w-16 h-1 bg-leap-orange" />
+            </div>
+          </div>
+
+          {/* Philosophy — large typographic moment */}
+          <div className="mt-24 max-w-4xl mx-auto relative">
+            <div className="absolute -top-8 -left-4 text-[120px] lg:text-[180px] font-black text-leap-orange/[0.07] leading-none select-none pointer-events-none">"</div>
+            <div className="relative pl-8 lg:pl-12 border-l-4 border-leap-orange">
+              <p className="text-xl lg:text-2xl font-bold text-foreground leading-relaxed mb-4 italic">
+                Because delivery matters. We combine evidence, discipline, and accountability to help organizations move from uncertainty to real-world results.
+              </p>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">LeapUX Philosophy</div>
+            </div>
           </div>
         </div>
       </section>
