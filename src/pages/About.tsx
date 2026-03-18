@@ -237,8 +237,8 @@ const About = () => {
                 "Canada Gazette",
                 "International Joint Commission",
               ].map((client, i) => (
-                <div key={i} className="bg-background border border-border rounded-xl px-5 py-4 text-center flex items-center justify-center min-h-[72px] hover:border-leap-orange/40 transition-colors duration-300">
-                  <span className="text-sm font-semibold text-foreground leading-tight">{client}</span>
+                <div key={i} className="bg-white/10 border border-white/10 rounded-xl px-5 py-4 text-center flex items-center justify-center min-h-[72px] hover:border-leap-orange/40 transition-colors duration-300">
+                  <span className="text-sm font-semibold text-leap-white leading-tight">{client}</span>
                 </div>
               ))}
             </div>
