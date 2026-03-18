@@ -368,6 +368,73 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
+          SECTOR EXPERIENCE — dark grid matching screenshot reference
+      ═══════════════════════════════════════════════════════════ */}
+      <section className="py-24 lg:py-32 bg-leap-black text-leap-white overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">Sector Experience</h2>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-6 max-w-4xl mx-auto">
+              LeapUX supports organizations delivering complex services across Canada.
+            </h3>
+            <p className="text-lg text-slate-400">Our work spans multiple sectors, including:</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            {[
+              { title: "Enterprise & Professional Services", desc: "Helping organizations improve operations, automation, and client experience." },
+              { title: "Federal & Provincial Government", desc: "Modernizing services for citizens, businesses, and public sector teams." },
+              { title: "Municipal & Regional Government", desc: "Improving digital services, engagement, and operational efficiency." },
+              { title: "Crown Corporations", desc: "Supporting public mandates with modern platforms, data systems, and governance-aligned services." },
+              { title: "Non-Profit & Mission-Driven Organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
+              { title: "Education & Research", desc: "Modernizing learning platforms, research infrastructure, and institutional services." },
+            ].map((sector, i) => (
+              <div
+                key={i}
+                className="rounded-xl bg-white/[0.04] border border-white/[0.08] p-8 hover:border-leap-orange/30 transition-colors duration-300"
+              >
+                <div className="w-8 h-1 bg-leap-orange rounded-full mb-6" />
+                <h4 className="text-lg font-bold text-leap-white mb-3">{sector.title}</h4>
+                <p className="text-slate-400 leading-relaxed text-sm">{sector.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-slate-400 text-lg italic max-w-3xl mx-auto">
+            Across sectors, our focus remains the same: deliver services that are secure, accessible, and built to last.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          SELECT CLIENTS
+      ═══════════════════════════════════════════════════════════ */}
+      <section className="py-20 lg:py-28 bg-leap-black border-t border-white/[0.06] overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-12 text-center">Select Clients</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              "Beneva",
+              "St. John Ambulance",
+              "Tereposky & DeRose",
+              "Soldiers Helping Soldiers",
+              "Innovation, Science & Economic Development Canada (ISED)",
+              "Public Services and Procurement Canada (PSPC)",
+              "Canada Gazette",
+              "International Joint Commission",
+            ].map((client, i) => (
+              <div
+                key={i}
+                className="rounded-xl bg-white/[0.04] border border-white/[0.08] px-5 py-4 flex items-center justify-center text-center text-sm font-medium text-slate-300 min-h-[72px]"
+              >
+                {client}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
           CTA
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 lg:py-32 bg-muted text-center">
