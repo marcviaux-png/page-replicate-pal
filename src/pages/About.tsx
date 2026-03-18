@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heart, ArrowRight } from 'lucide-react';
+import { Heart, ArrowRight, Search, Users, Clock, Target, Crosshair, Languages, Award, CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
