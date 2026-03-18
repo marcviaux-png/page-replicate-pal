@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heart, ArrowRight } from 'lucide-react';
+import { Heart, ArrowRight, Search, Users, Clock, Target, Crosshair, Languages, Award, CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
@@ -174,65 +174,120 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          HOW WE WORK — clean horizontal rhythm
+          HOW WE WORK — expanded principle cards
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 lg:py-32 bg-muted overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — sticky-ish headline */}
-            <div className="lg:sticky lg:top-32">
-              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">How We Work</h2>
-              <h3 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-6">
-                Clear, accountable,<br />
-                and <span className="text-leap-orange">built to last.</span>
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                With over 15 years of experience, our work spans from discovery through to long-term operation.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                We focus on clarity from the start.
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">How We Work</h2>
+            <h3 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
+              Clear, accountable, and <span className="text-leap-orange">built to last.</span>
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              With over 15 years of experience, our work spans from discovery through to long-term operation. We focus on clarity from the start.
+            </p>
+          </div>
 
-            {/* Right — principles as clean list */}
-            <div className="space-y-0">
-              {[
-                {
-                  title: "Defining outcomes early",
-                  desc: "We align on what success looks like before the first sprint begins.",
-                },
-                {
-                  title: "Aligning on what success looks like",
-                  desc: "Shared understanding prevents misalignment and costly rework.",
-                },
-                {
-                  title: "Taking shared ownership throughout",
-                  desc: "Your project is our project. We stay accountable from start to finish.",
-                },
-              ].map((item, i) => (
-                <div key={i} className="group py-8 border-b border-border last:border-b-0">
-                  <div className="flex items-start gap-5">
-                    <span className="text-3xl font-black text-leap-orange/30 shrink-0 mt-[-4px]">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <div>
-                      <h4 className="text-lg font-bold text-foreground mb-2">{item.title}</h4>
-                      <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+          <div className="space-y-6">
+            {([
+              {
+                number: "01",
+                icon: Search,
+                title: "Evidence Over Opinion",
+                desc: "Many consulting and design engagements rely on opinion, hierarchy, or presentation-driven decisions. LeapUX takes a different approach. We ground decisions in evidence, through research, testing, operational data, and real user feedback.",
+                points: ["Reduce risk early", "Avoid costly rework", "Make confident decisions faster", "Deliver services that actually work"],
+                align: "left",
+              },
+              {
+                number: "02",
+                icon: Users,
+                title: "Senior-Led, Hands-On Delivery",
+                desc: "LeapUX is a senior-led team with deep expertise across delivery, UX, and architecture. The people you meet at the start stay involved through design, build, and adoption. We scale thoughtfully as needs evolve—filling capacity gaps without the overhead or handoffs of a traditional agency.",
+                points: ["Senior expertise from start to finish", "Proven delivery approach reduces rework", "Weekly demos, clear ownership, transparent communication"],
+                align: "right",
+              },
+              {
+                number: "03",
+                icon: Clock,
+                title: "Discipline & Transparency",
+                desc: "Trust is earned through execution. We operate with rigor and transparency so partners always understand progress, risks, and outcomes. Time is tracked to tasks and tied directly to deliverables. Work is shared regularly through demos and documentation.",
+                points: ["Risks raised early", "Decisions documented", "Issues followed to closure", "Clear owners and timelines"],
+                align: "left",
+              },
+              {
+                number: "04",
+                icon: Target,
+                title: "Built for Complex Delivery",
+                desc: "Our work spans discovery through implementation and long-term operation, with clear artifacts, defined acceptance criteria, and shared ownership at every stage. We align on outcomes first, define success metrics early, and revisit them throughout delivery.",
+                points: ["Clear artifacts and acceptance criteria", "Shared ownership at every stage", "Services move to adoption, not stall after launch"],
+                align: "right",
+              },
+              {
+                number: "05",
+                icon: Crosshair,
+                title: "Problem Solvers Who Follow Through",
+                desc: "Complex projects rarely succeed through process alone. They succeed because teams stay persistent, address problems directly, and follow issues through to resolution. LeapUX works with organizations facing difficult delivery challenges, where constraints, policy, technology, and real-world operations intersect.",
+                points: ["Asking difficult questions early", "Navigating complexity with discipline", "Working collaboratively across teams", "Finishing what we start"],
+                align: "left",
+              },
+              {
+                number: "06",
+                icon: Languages,
+                title: "Bilingual and National by Design",
+                desc: "As a Canadian firm, LeapUX delivers fully bilingually in English and French, including stakeholder workshops, formal deliverables, and national program alignment. Our work reflects the linguistic, accessibility, and policy realities of delivering services for all Canadians.",
+                points: ["Full bilingual delivery in English and French", "Stakeholder workshops and formal deliverables", "Aligned with Canadian accessibility and policy requirements"],
+                align: "right",
+              },
+              {
+                number: "07",
+                icon: Award,
+                title: "Outcomes That Last",
+                desc: "Above all, we care about outcomes—not just launches. We show this through thorough documentation, clear handover, operational support, and plans for post-launch evolution. We help organizations succeed after go-live, with services that are maintainable, adopted, and able to improve over time.",
+                points: ["Thorough documentation and clear handover", "Operational support post-launch", "Plans for continuous improvement"],
+                align: "left",
+              },
+            ] as const).map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={i}
+                  className="relative bg-background rounded-2xl border border-border p-8 lg:p-10 overflow-hidden"
+                >
+                  {/* Orange left accent bar */}
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-leap-orange rounded-l-2xl" />
+
+                  <div className={`flex flex-col lg:flex-row items-start gap-6 ${item.align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
+                    {/* Number + Icon column */}
+                    <div className={`flex flex-col items-start gap-3 shrink-0 ${item.align === 'right' ? 'lg:items-end' : ''}`}>
+                      <span className="text-6xl lg:text-7xl font-black text-leap-orange/15 leading-none">{item.number}</span>
+                      <div className="w-12 h-12 rounded-xl bg-leap-orange/10 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-leap-orange" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-xl lg:text-2xl font-black text-foreground mb-3 italic">{item.title}</h4>
+                      <p className="text-muted-foreground leading-relaxed mb-6">{item.desc}</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {item.points.map((point, j) => (
+                          <div key={j} className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-leap-orange shrink-0" />
+                            <span className="text-sm font-semibold text-foreground">{point}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              );
+            })}
+          </div>
 
-              {/* Emphatic close */}
-              <div className="pt-10">
-                <p className="text-lg font-bold text-foreground leading-relaxed">
-                  No ambiguity. No disappearing after delivery.
-                </p>
-                <p className="text-muted-foreground mt-1">
-                  Just work that holds up in the real world.
-                </p>
-              </div>
-            </div>
+          {/* Emphatic close */}
+          <div className="mt-12 text-center">
+            <p className="text-lg font-bold text-foreground">No ambiguity. No disappearing after delivery.</p>
+            <p className="text-muted-foreground mt-1">Just work that holds up in the real world.</p>
           </div>
         </div>
       </section>
