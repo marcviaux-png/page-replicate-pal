@@ -84,9 +84,18 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════════
           WHY WE EXIST — emotional tension, dark immersive
       ═══════════════════════════════════════════════════════════ */}
-      <section className="relative bg-leap-black text-leap-white py-24 lg:py-32 overflow-hidden">
+      <section className="relative text-leap-white py-24 lg:py-32 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+            alt="Modern office environment"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-leap-black/85" />
+        </div>
         {/* Decorative oversized text */}
-        <div className="absolute top-8 right-0 text-[12rem] lg:text-[20rem] font-black text-white/[0.02] leading-none select-none pointer-events-none tracking-tighter">
+        <div className="absolute top-8 right-0 text-[12rem] lg:text-[20rem] font-black text-white/[0.02] leading-none select-none pointer-events-none tracking-tighter z-[1]">
           WHY
         </div>
 
@@ -184,18 +193,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════
-          EDITORIAL IMAGE BREAK — full-bleed cinematic divider
-      ═══════════════════════════════════════════════════════════ */}
-      <section className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000"
-          alt="Strategic planning and whiteboard collaboration"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-        <div className="absolute inset-0 bg-foreground/10" />
-      </section>
+
+
 
       {/* ═══════════════════════════════════════════════════════════
           HOW WE WORK — with supporting image
