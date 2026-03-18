@@ -76,7 +76,7 @@ const About = () => {
 
       {/* Story — two columns with pull quote */}
       {/* Our Story — cinematic opening */}
-      <section className="py-24 lg:py-32 bg-background overflow-hidden">
+      <section className="pt-24 lg:pt-32 pb-12 lg:pb-16 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center">
             {/* Left — big headline + story */}
