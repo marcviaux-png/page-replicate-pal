@@ -247,9 +247,9 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-leap-brand text-leap-white text-center">
+      <section className="py-24 lg:py-32 bg-[#F6F7F9] text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-10 leading-tight text-balance">Ready to work with a partner built for complex delivery?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-10 leading-tight text-balance">Ready to work with a partner built for complex delivery?</h2>
           <Link
             to="/contact"
             className="inline-flex justify-center items-center px-12 py-5 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:bg-leap-red transition-all shadow-xl"
