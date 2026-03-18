@@ -265,7 +265,7 @@ const Services = () => {
       </section>
 
       {/* Who We Partner With */}
-      <section className="py-32 bg-leap-black text-leap-white overflow-hidden">
+      <section className="py-32 bg-[#F6F7F9] text-foreground overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Partner With</h2>
