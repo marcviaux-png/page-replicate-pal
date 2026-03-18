@@ -194,61 +194,82 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Our Delivery Model */}
-      <section className="py-32 bg-[#F6F7F9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Delivery Model</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-              A disciplined, insight-driven progression
+      {/* Our Delivery Model — immersive dark narrative */}
+      <section className="relative py-32 bg-leap-black text-leap-white overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+            alt=""
+            className="w-full h-full object-cover opacity-[0.07]"
+          />
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-6">Our Delivery Model</h2>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-6">
+              From understanding to<br /><span className="text-leap-orange">lasting impact.</span>
             </h3>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Every engagement follows a proven approach that moves from understanding to action.
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              Every engagement follows a proven progression — grounded in evidence, shaped by collaboration, and built to endure.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                icon: Lightbulb,
-                step: 1,
-                title: "Start with what's real",
-                description: "Understand users, constraints, systems, and context"
-              },
-              {
-                icon: TrendingUp,
-                step: 2,
-                title: "Let insights lead",
-                description: "Surface patterns, risks, and opportunities that inform decisions"
-              },
-              {
-                icon: Target,
-                step: 3,
-                title: "Strategize with intent",
-                description: "Align actions to goals, capacity, and governance"
-              },
-              {
-                icon: Layers,
-                step: 4,
-                title: "Design for reality",
-                description: "Build for how things actually work — technically, operationally, and humanly"
-              },
-              {
-                icon: Sparkles,
-                step: 5,
-                title: "Leave teams stronger",
-                description: "Deliver clarity, capability, and continuity beyond the engagement"
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200 text-center">
-                <div className="w-14 h-14 bg-leap-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <item.icon className="w-6 h-6 text-leap-orange" />
+
+          {/* Horizontal timeline-style progression */}
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="hidden lg:block absolute top-16 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-leap-orange/30 to-transparent" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+              {[
+                {
+                  icon: Lightbulb,
+                  step: 1,
+                  title: "Start with what's real",
+                  description: "Understand users, constraints, systems, and context before designing anything."
+                },
+                {
+                  icon: TrendingUp,
+                  step: 2,
+                  title: "Let insights lead",
+                  description: "Surface patterns, risks, and opportunities that inform every decision."
+                },
+                {
+                  icon: Target,
+                  step: 3,
+                  title: "Strategize with intent",
+                  description: "Align actions to goals, capacity, and governance frameworks."
+                },
+                {
+                  icon: Layers,
+                  step: 4,
+                  title: "Design for reality",
+                  description: "Build for how things actually work — technically, operationally, and humanly."
+                },
+                {
+                  icon: Sparkles,
+                  step: 5,
+                  title: "Leave teams stronger",
+                  description: "Deliver clarity, capability, and continuity beyond the engagement."
+                }
+              ].map((item, i) => (
+                <div key={i} className="group text-center flex flex-col items-center">
+                  {/* Step number node */}
+                  <div className="relative mb-8">
+                    <div className="w-14 h-14 rounded-full border-2 border-leap-orange/30 group-hover:border-leap-orange flex items-center justify-center transition-colors duration-500 bg-leap-black">
+                      <span className="text-lg font-black text-leap-orange">{String(item.step).padStart(2, '0')}</span>
+                    </div>
+                    {/* Glow on hover */}
+                    <div className="absolute inset-0 rounded-full bg-leap-orange/0 group-hover:bg-leap-orange/10 blur-xl transition-all duration-500 scale-150" />
+                  </div>
+
+                  <item.icon className="w-5 h-5 text-leap-orange/60 group-hover:text-leap-orange mb-4 transition-colors duration-300" />
+                  <h4 className="text-base font-bold text-leap-white mb-3 leading-tight">{item.title}</h4>
+                  <p className="text-sm text-slate-500 group-hover:text-slate-400 leading-relaxed transition-colors duration-300 max-w-[200px]">{item.description}</p>
                 </div>
-                <span className="text-xs font-black text-leap-orange uppercase tracking-widest">Step {item.step}</span>
-                <h4 className="text-lg font-bold text-leap-black mt-3 mb-3">{item.title}</h4>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
