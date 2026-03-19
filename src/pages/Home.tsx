@@ -5,10 +5,10 @@ import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const Home = () => {
   const approachPoints = [
-    "Evidence before opinions",
-    "Accessibility as a baseline, not an add-on",
-    "Collaboration across disciplines",
-    "Decisions informed by real user insight"
+    "Start with real user needs",
+    "Decisions informed by real user insight",
+    "Align teams around what matters",
+    "Test and prove what works"
   ];
 
   const services = [
@@ -131,10 +131,10 @@ const Home = () => {
             <div>
               <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Approach</h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-8 leading-tight">
-                Research, design, and validation — from discovery to delivery.
+                Research, design, and delivery — from discovery to real-world outcomes.
               </h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                We support teams from early discovery through delivery by combining research, design, and validation.
+                We support teams from early discovery through delivery by combining research, design, and continuous testing.
               </p>
               <ul className="space-y-5">
                 {approachPoints.map((point, i) => (
