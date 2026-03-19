@@ -294,6 +294,65 @@ const Services = () => {
               </div>
             ))}
           </div>
+
+          {/* Partners & Collaborators */}
+          <div className="mt-24 pt-20 border-t border-slate-200">
+            <div className="text-center mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Partners & Collaborators</h3>
+              <p className="text-base text-slate-500 max-w-xl mx-auto leading-relaxed">
+                Working with the right people to deliver the right outcomes. We collaborate with trusted partners across technology, talent, and innovation.
+              </p>
+            </div>
+
+            <div className="space-y-12 mt-14">
+              {/* Technology & Platforms */}
+              <div>
+                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Technology & Platforms</p>
+                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+                  {[
+                    { name: "Microsoft", logo: "https://logo.clearbit.com/microsoft.com" },
+                    { name: "Adobe", logo: "https://logo.clearbit.com/adobe.com" },
+                    { name: "Google", logo: "https://logo.clearbit.com/google.com" },
+                    { name: "Figma", logo: "https://logo.clearbit.com/figma.com" },
+                    { name: "Trymata", logo: "https://logo.clearbit.com/trymata.com" },
+                    { name: "Shopify", logo: "https://logo.clearbit.com/shopify.com" },
+                    { name: "AWS", logo: "https://logo.clearbit.com/aws.amazon.com" },
+                  ].map((p) => (
+                    <div key={p.name} className="flex items-center gap-2.5 group">
+                      <img src={p.logo} alt={p.name} className="w-7 h-7 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
+                      <span className="text-sm font-medium text-slate-500 group-hover:text-foreground transition-colors">{p.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Funding & Acceleration */}
+              <div>
+                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Funding & Acceleration</p>
+                <div className="flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-500">Arctech Accelerate</span>
+                </div>
+              </div>
+
+              {/* Talent & Delivery Partners */}
+              <div>
+                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Talent & Delivery Partners</p>
+                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+                  {[
+                    { name: "SI Systems", logo: "https://logo.clearbit.com/sisystems.com" },
+                    { name: "Altis Recruitment", logo: "https://logo.clearbit.com/altisrecruitment.com" },
+                    { name: "Deloitte", logo: "https://logo.clearbit.com/deloitte.com" },
+                    { name: "Procom", logo: "https://logo.clearbit.com/procom.ca" },
+                  ].map((p) => (
+                    <div key={p.name} className="flex items-center gap-2.5 group">
+                      <img src={p.logo} alt={p.name} className="w-7 h-7 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
+                      <span className="text-sm font-medium text-slate-500 group-hover:text-foreground transition-colors">{p.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
