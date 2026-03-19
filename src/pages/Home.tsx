@@ -5,10 +5,10 @@ import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const Home = () => {
   const approachPoints = [
-    "Evidence before opinions",
-    "Accessibility as a baseline, not an add-on",
-    "Collaboration across disciplines",
-    "Decisions informed by real user insight"
+    "Start with real user needs",
+    "Decisions informed by real user insight",
+    "Align teams around what matters",
+    "Test and prove what works"
   ];
 
   const services = [
