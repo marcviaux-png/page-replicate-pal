@@ -227,7 +227,109 @@ const Services = () => {
         </div>
       </section>
 
-      {/* How We Work - Visual Cards */}
+      {/* Accreditation, Certifications & Education */}
+      <section className="py-28 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header — editorial style */}
+          <div className="grid lg:grid-cols-5 gap-8 mb-20">
+            <div className="lg:col-span-2">
+              <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Credentials</p>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-leap-black leading-[1.1]">
+                Depth of expertise, grounded in practice.
+              </h2>
+            </div>
+            <div className="lg:col-span-3 flex items-end">
+              <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
+                Our team brings professional certifications, academic training, and real-world experience across user experience, digital strategy, development, and delivery.
+              </p>
+            </div>
+          </div>
+
+          {/* Three Pillars */}
+          <div className="grid md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-slate-200">
+            {/* Certifications */}
+            <div className="relative p-10 lg:p-12 bg-slate-50 group">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-full bg-leap-orange/10 flex items-center justify-center">
+                  <BadgeCheck className="w-5 h-5 text-leap-orange" />
+                </div>
+                <h3 className="text-lg font-bold text-leap-black">Certifications</h3>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "Akendi UX Certified",
+                  "Nielsen Norman Group UX Certified",
+                  "Google Certified Professionals",
+                  "UX Land Certified",
+                  "Hootsuite Social Media Certified",
+                  "Project Management Professional (PMP)®",
+                  "AWS Partner",
+                  "Google AI Professional Certificate",
+                ].map((cert, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-leap-orange shrink-0" />
+                    {cert}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Education */}
+            <div className="relative p-10 lg:p-12 bg-white border-x border-slate-200 group">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-full bg-leap-orange/10 flex items-center justify-center">
+                  <GraduationCap className="w-5 h-5 text-leap-orange" />
+                </div>
+                <h3 className="text-lg font-bold text-leap-black">Education</h3>
+              </div>
+              <p className="text-sm text-slate-500 mb-6 leading-relaxed">
+                Our team's backgrounds span design, technology, and business — a strong foundation for complex digital work.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "UX/UI Design & Digital Strategy",
+                  "Applied Arts & Interactive Media",
+                  "Commerce & Business Administration",
+                  "Computer Engineering & Software Development",
+                  "AI Certifications & Applied Experience",
+                ].map((edu, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-leap-orange shrink-0" />
+                    {edu}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Awards & Recognition */}
+            <div className="relative p-10 lg:p-12 bg-slate-50 group">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-full bg-leap-orange/10 flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-leap-orange" />
+                </div>
+                <h3 className="text-lg font-bold text-leap-black">Awards & Recognition</h3>
+              </div>
+              <div className="space-y-6">
+                <div className="pb-6 border-b border-slate-200">
+                  <p className="text-2xl font-bold text-leap-black mb-1">Top Consultant</p>
+                  <p className="text-sm text-slate-500">Ottawa, 2022</p>
+                </div>
+                <div className="pb-6 border-b border-slate-200">
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Featured in the <span className="font-semibold text-leap-black">Ottawa Business Journal</span> for digital transformation work with St. John Ambulance.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Ongoing contributions to UX research, design, and industry thought leadership.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="how-we-work" className="py-24 bg-leap-black text-leap-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
