@@ -102,7 +102,7 @@ const Home = () => {
               <h2 className="text-xs font-black text-leap-brand uppercase tracking-[0.2em] mb-4 italic">The Problem</h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-8 leading-tight">Digital services often struggle because they are designed around systems, not people.</h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                LeapUX helps organizations understand their users, align teams, and design services that work in practice, not just on paper. We prioritize clarity over marketing fluff.
+                We help organizations understand real needs, align teams, and deliver services that actually work—in the real world.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {[
