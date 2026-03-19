@@ -304,54 +304,37 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="space-y-12 mt-14">
-              {/* Technology & Platforms */}
-              <div>
-                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Technology & Platforms</p>
-                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                  {[
-                    { name: "Microsoft", logo: "https://logo.clearbit.com/microsoft.com" },
-                    { name: "Adobe", logo: "https://logo.clearbit.com/adobe.com" },
-                    { name: "Google", logo: "https://logo.clearbit.com/google.com" },
-                    { name: "Figma", logo: "https://logo.clearbit.com/figma.com" },
-                    { name: "Trymata", logo: "https://logo.clearbit.com/trymata.com" },
-                    { name: "Shopify", logo: "https://logo.clearbit.com/shopify.com" },
-                    { name: "AWS", logo: "https://logo.clearbit.com/aws.amazon.com" },
-                  ].map((p) => (
-                    <div key={p.name} className="flex items-center gap-2.5 group">
-                      <img src={p.logo} alt={p.name} className="w-7 h-7 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                      <span className="text-sm font-medium text-slate-500 group-hover:text-foreground transition-colors">{p.name}</span>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+              {[
+                {
+                  label: "Technology & Platforms",
+                  partners: ["Microsoft", "Adobe", "Google", "Figma", "Trymata", "Shopify", "AWS"],
+                },
+                {
+                  label: "Funding & Acceleration",
+                  partners: ["Arctech Accelerate"],
+                },
+                {
+                  label: "Talent & Delivery Partners",
+                  partners: ["SI Systems", "Altis Recruitment", "Deloitte", "Procom"],
+                },
+              ].map((group) => (
+                <div key={group.label} className="bg-white rounded-2xl p-8 border border-slate-200">
+                  <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-5">{group.label}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {group.partners.map((name) => (
+                      <span
+                        key={name}
+                        className="px-3 py-1.5 text-sm font-medium text-slate-600 bg-slate-50 rounded-full border border-slate-100"
+                      >
+                        {name}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              {/* Funding & Acceleration */}
-              <div>
-                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Funding & Acceleration</p>
-                <div className="flex items-center justify-center">
-                  <span className="text-sm font-medium text-slate-500">Arctech Accelerate</span>
-                </div>
-              </div>
-
-              {/* Talent & Delivery Partners */}
-              <div>
-                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Talent & Delivery Partners</p>
-                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                  {[
-                    { name: "SI Systems", logo: "https://logo.clearbit.com/sisystems.com" },
-                    { name: "Altis Recruitment", logo: "https://logo.clearbit.com/altisrecruitment.com" },
-                    { name: "Deloitte", logo: "https://logo.clearbit.com/deloitte.com" },
-                    { name: "Procom", logo: "https://logo.clearbit.com/procom.ca" },
-                  ].map((p) => (
-                    <div key={p.name} className="flex items-center gap-2.5 group">
-                      <img src={p.logo} alt={p.name} className="w-7 h-7 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                      <span className="text-sm font-medium text-slate-500 group-hover:text-foreground transition-colors">{p.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
           </div>
         </div>
       </section>
