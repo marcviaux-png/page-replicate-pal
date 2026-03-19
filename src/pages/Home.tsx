@@ -107,9 +107,9 @@ const Home = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {[
                   { label: "Evidence-Led", iconColor: "bg-leap-brand" },
-                  { label: "Accessibility", iconColor: "bg-leap-orange" },
-                  { label: "Collaborative", iconColor: "bg-leap-red" },
-                  { label: "Validated", iconColor: "bg-leap-black" }
+                  { label: "People-First", iconColor: "bg-leap-orange" },
+                  { label: "Accountable Delivery", iconColor: "bg-leap-red" },
+                  { label: "Built for Reality", iconColor: "bg-leap-black" }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className={`w-1.5 h-12 ${item.iconColor} shrink-0 rounded-full`}></div>
