@@ -9,6 +9,7 @@ interface CaseStudyProps {
   whatWeDid: string;
   impact: string;
   services: string[];
+  heroImage?: string;
   nextProject?: { name: string; path: string };
   prevProject?: { name: string; path: string };
 }
@@ -21,6 +22,7 @@ const CaseStudyLayout = ({
   whatWeDid,
   impact,
   services,
+  heroImage,
   nextProject,
   prevProject,
 }: CaseStudyProps) => {
@@ -42,8 +44,23 @@ const CaseStudyLayout = ({
         </div>
       </section>
 
+      {/* Hero Image */}
+      {heroImage && (
+        <section className="relative -mt-1">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-border">
+              <img
+                src={heroImage}
+                alt={`${client} project showcase`}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Intro */}
-      <section className="py-20 border-b border-border">
+      <section className={`py-20 border-b border-border ${heroImage ? 'pt-16' : ''}`}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">{intro}</p>
         </div>
