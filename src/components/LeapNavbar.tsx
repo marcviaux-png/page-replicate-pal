@@ -24,9 +24,9 @@ const LeapNavbar = () => {
 
   const navLinks = [
     { name: 'Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Capabilities', path: '/capabilities' },
     { name: 'About', path: '/about' },
+    { name: 'Our Work', path: '/portfolio' },
   ];
 
   const aiLinks = [
@@ -73,14 +73,6 @@ const LeapNavbar = () => {
               Services
             </Link>
 
-            {/* Portfolio */}
-            <Link
-              to="/portfolio"
-              className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses('/portfolio')}`}
-            >
-              Portfolio
-            </Link>
-
             {/* Capabilities */}
             <Link
               to="/capabilities"
@@ -110,6 +102,14 @@ const LeapNavbar = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {/* Our Work */}
+            <Link
+              to="/portfolio"
+              className={`text-xs font-bold uppercase tracking-[0.2em] transition-all py-2 ${getLinkClasses('/portfolio')}`}
+            >
+              Our Work
+            </Link>
 
             {/* About */}
             <Link
