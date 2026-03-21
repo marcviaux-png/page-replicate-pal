@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Landmark, Heart, Building2, Cross } from 'lucide-react';
 
+import pspcImg from '@/assets/portfolio/pspc-hero.jpg';
+import isedImg from '@/assets/portfolio/ised-hero.jpg';
+import sjaImg from '@/assets/portfolio/sja-hero.jpg';
+import ijcImg from '@/assets/portfolio/ijc-hero.jpg';
+import shsImg from '@/assets/portfolio/shs-hero.jpg';
+import benevaImg from '@/assets/portfolio/beneva-hero.jpg';
+
 type Category = 'all' | 'government' | 'nonprofit' | 'business' | 'health';
 
 interface FeaturedProject {
@@ -11,6 +18,7 @@ interface FeaturedProject {
   services: string[];
   path: string;
   category: Category;
+  image: string;
 }
 
 interface SecondaryProject {
@@ -18,6 +26,7 @@ interface SecondaryProject {
   description: string;
   category: Category;
   externalUrl?: string;
+  imageUrl?: string;
 }
 
 const featured: FeaturedProject[] = [
@@ -28,6 +37,7 @@ const featured: FeaturedProject[] = [
     services: ['UX strategy', 'Workflow design', 'Information architecture', 'Accessibility'],
     path: '/portfolio/pspc',
     category: 'government',
+    image: pspcImg,
   },
   {
     client: 'Innovation, Science and Economic Development Canada',
@@ -36,6 +46,7 @@ const featured: FeaturedProject[] = [
     services: ['UX research', 'Service design', 'Accessibility', 'Compliance support'],
     path: '/portfolio/ised',
     category: 'government',
+    image: isedImg,
   },
   {
     client: 'St. John Ambulance',
@@ -44,6 +55,7 @@ const featured: FeaturedProject[] = [
     services: ['Website strategy', 'UX design', 'SEO', 'System integration'],
     path: '/portfolio/st-john-ambulance',
     category: 'nonprofit',
+    image: sjaImg,
   },
   {
     client: 'International Joint Commission',
@@ -52,6 +64,7 @@ const featured: FeaturedProject[] = [
     services: ['UX research', 'Usability testing', 'Content audit', 'Accessibility strategy'],
     path: '/portfolio/ijc',
     category: 'government',
+    image: ijcImg,
   },
   {
     client: 'Soldiers Helping Soldiers',
@@ -60,6 +73,7 @@ const featured: FeaturedProject[] = [
     services: ['Website design', 'Bilingual UX', 'Accessibility', 'Content strategy'],
     path: '/portfolio/soldiers-helping-soldiers',
     category: 'nonprofit',
+    image: shsImg,
   },
   {
     client: 'Beneva',
@@ -68,35 +82,36 @@ const featured: FeaturedProject[] = [
     services: ['Design systems', 'Brand integration', 'Enterprise UX', 'Governance'],
     path: '/portfolio/beneva',
     category: 'business',
+    image: benevaImg,
   },
 ];
 
 const secondary: SecondaryProject[] = [
-  { client: 'Transport Canada', description: 'Transportation policy and program work, including drone registration and pilot certification systems.', category: 'government' },
-  { client: 'Financial Consumer Agency of Canada', description: 'Federal consumer protection and financial regulation digital services.', category: 'government' },
-  { client: 'Employment and Social Development Canada', description: 'Federal social programs and labour market initiatives.', category: 'government' },
-  { client: 'Office of the Superintendent of Bankruptcy', description: 'Federal regulatory and supervisory body within ISED.', category: 'government' },
-  { client: 'Canada Gazette', description: 'Official newspaper of the Government of Canada for regulations, board decisions, and public notices.', category: 'government' },
-  { client: 'Tereposky & DeRose', description: 'Law firm specializing in domestic and international trade law with federal government counsel experience.', category: 'business' },
-  { client: 'Omniscient Wellness', description: 'Healthcare and wellness organization offering a broad range of services and professional training.', category: 'health' },
-  { client: 'Arctech Accelerate', description: 'Grant writing, business development, and lobbying organization.', category: 'business' },
-  { client: 'Auto Agents', description: 'Online car dealership with personalized car-buying support.', category: 'business' },
-  { client: 'NorthLend Financial', description: 'Secured mortgage agreement management for partners.', category: 'business' },
-  { client: 'Drive Thru Finance', description: 'Vehicle financing support for Canadians with varied financial situations.', category: 'business' },
-  { client: 'Selmar Group', description: 'Ottawa real estate firm focused on military, RCMP, and government relocation.', category: 'business' },
-  { client: 'Rob\'s Quality Roofing', description: 'Residential roofing services.', category: 'business' },
-  { client: 'Tourangeau Mechanical', description: 'Commercial plumbing services in Ottawa.', category: 'business' },
-  { client: 'Co-Auto', description: 'Used car dealership and car loan financing in Ottawa.', category: 'business' },
-  { client: 'Franco Langues', description: 'French tutoring and federal public service language training.', category: 'business' },
-  { client: 'Wind Concerns Ontario', description: 'Information resource on industrial-scale wind power impacts.', category: 'nonprofit' },
+  { client: 'Transport Canada', description: 'Transportation policy and program work, including drone registration and pilot certification systems.', category: 'government', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/Transport-Canada-scaled-r82pyxlfgfpgu2h7ag0znwuav77nyrob7kr96up2ow.png' },
+  { client: 'Financial Consumer Agency of Canada', description: 'Federal consumer protection and financial regulation digital services.', category: 'government', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/FCAC-scaled-r82pyzh3u3s1haegzgu8swd81yyee5vrvu285emacg.png' },
+  { client: 'Employment and Social Development Canada', description: 'Federal social programs and labour market initiatives.', category: 'government', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/ESDC-scaled-r82pz0ey0xtbswd3tz8vde4onctrluzi7yppmokw68.png' },
+  { client: 'Office of the Superintendent of Bankruptcy', description: 'Federal regulatory and supervisory body within ISED.', category: 'government', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/f17271ad71c629aebbd5bc72db38a0a1-scaled-r82pyurwvxllv8laqwt3yfjx31lkbod476ssr0t97k.png' },
+  { client: 'Canada Gazette', description: 'Official newspaper of the Government of Canada for regulations, board decisions, and public notices.', category: 'government', imageUrl: 'https://leapux.com/wp-content/uploads/2021/12/CanadaGazette-scaled.png' },
+  { client: 'Tereposky & DeRose', description: 'Law firm specializing in domestic and international trade law with federal government counsel experience.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/2021/12/TD-scaled.png' },
+  { client: 'Omniscient Wellness', description: 'Healthcare and wellness organization offering a broad range of services and professional training.', category: 'health', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/OmniscientWellness-scaled-r82pz544z3zrey6a2ja07uxzma6loci5wlz512dxb4.png' },
+  { client: 'Arctech Accelerate', description: 'Grant writing, business development, and lobbying organization.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/2021/12/Arctech-scaled.png' },
+  { client: 'Auto Agents', description: 'Online car dealership with personalized car-buying support.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/AutoAgents-1-scaled-r82pz7xnjm3mds26m2hvxc8defspbftcwzxlgw9qsg.png' },
+  { client: 'NorthLend Financial', description: 'Secured mortgage agreement management for partners.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/Northlend-scaled-r82pz8vhqg4wpe0tgkwihtztzto2j4x394l2y68cm8.png' },
+  { client: 'Drive Thru Finance', description: 'Vehicle financing support for Canadians with varied financial situations.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/DTF-scaled-r82pzar6447hcly35lprmtir6lesyj4jxdw1wq5k9s.png' },
+  { client: 'Selmar Group', description: 'Ottawa real estate firm focused on military, RCMP, and government relocation.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/SelmarGroup-scaled-r82pzcmuhsa1ztvcumj0rt1odd5jdxc0ln70va2rxc.png' },
+  { client: 'Rob\'s Quality Roofing', description: 'Residential roofing services.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/RobsQualityRoofing-scaled-r82pzeiivgcmn1smjnc9wsklk4w9tbjh9whzttzzkw.png' },
+  { client: 'Tourangeau Mechanical', description: 'Commercial plumbing services in Ottawa.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/Tourangeau-1-scaled-r82pzge794f7a9pw8o5j1s3iqwn08pqxy5sysdx78g.png' },
+  { client: 'Co-Auto', description: 'Used car dealership and car loan financing in Ottawa.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/CoAuto-scaled-r82pzi9vmshrxhn5xoys6rmfxodqo3yemf3xqxuew0.png' },
+  { client: 'Franco Langues', description: 'French tutoring and federal public service language training.', category: 'business', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/FrancoLangues-scaled-r82pzj7ptmj293lss7der9dwj293vt24yjrf87t0ps.png' },
+  { client: 'Wind Concerns Ontario', description: 'Information resource on industrial-scale wind power impacts.', category: 'nonprofit', imageUrl: 'https://leapux.com/wp-content/uploads/elementor/thumbs/WCO-scaled-r82pzm18e4mx7xhpbqlagqoab7v7iwdbyxpvo1ou74.png' },
 ];
 
-const filters: { label: string; value: Category; icon: React.ElementType }[] = [
-  { label: 'All Work', value: 'all', icon: Building2 },
-  { label: 'Government', value: 'government', icon: Landmark },
-  { label: 'Nonprofit', value: 'nonprofit', icon: Heart },
-  { label: 'Business', value: 'business', icon: Building2 },
-  { label: 'Health & Wellness', value: 'health', icon: Cross },
+const filters: { label: string; value: Category }[] = [
+  { label: 'All Work', value: 'all' },
+  { label: 'Government', value: 'government' },
+  { label: 'Nonprofit', value: 'nonprofit' },
+  { label: 'Business', value: 'business' },
+  { label: 'Health & Wellness', value: 'health' },
 ];
 
 const Portfolio = () => {
@@ -167,7 +182,7 @@ const Portfolio = () => {
               <h2 className="text-3xl md:text-4xl font-black text-foreground">Case Studies</h2>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-10">
               {filteredFeatured.map((project, i) => (
                 <Link
                   key={project.client}
@@ -178,23 +193,34 @@ const Portfolio = () => {
                     i % 2 === 0 ? 'bg-background' : 'bg-muted/20'
                   }`}>
                     <div className="absolute top-0 left-0 w-1 h-full bg-leap-orange/0 group-hover:bg-leap-orange transition-all duration-500" />
-                    <div className="p-8 md:p-12">
-                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                        <div className="flex-1 max-w-2xl">
-                          <p className="text-xs font-bold uppercase tracking-[0.2em] text-leap-orange mb-4">{project.client}</p>
-                          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight group-hover:text-leap-orange transition-colors">
-                            {project.headline}
-                          </h3>
-                          <p className="text-muted-foreground leading-relaxed mb-6">{project.summary}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {project.services.map((s) => (
-                              <span key={s} className="px-3 py-1 text-xs font-medium bg-muted rounded-full text-muted-foreground">
-                                {s}
-                              </span>
-                            ))}
-                          </div>
+                    <div className="flex flex-col lg:flex-row">
+                      {/* Image */}
+                      <div className={`relative lg:w-[42%] shrink-0 overflow-hidden ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                        <div className="aspect-[16/10] lg:aspect-auto lg:absolute lg:inset-0">
+                          <img
+                            src={project.image}
+                            alt={`${project.client} project screenshot`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
                         </div>
-                        <div className="flex items-center gap-2 text-sm font-bold text-leap-orange group-hover:gap-3 transition-all self-start md:self-center shrink-0">
+                      </div>
+                      {/* Content */}
+                      <div className={`flex-1 p-8 md:p-10 lg:p-12 ${i % 2 !== 0 ? 'lg:order-1' : ''}`}>
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-leap-orange mb-4">{project.client}</p>
+                        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight group-hover:text-leap-orange transition-colors">
+                          {project.headline}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed mb-6">{project.summary}</p>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.services.map((s) => (
+                            <span key={s} className="px-3 py-1 text-xs font-medium bg-muted rounded-full text-muted-foreground">
+                              {s}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-2 text-sm font-bold text-leap-orange group-hover:gap-3 transition-all">
                           View case study
                           <ArrowRight className="h-4 w-4" />
                         </div>
@@ -224,21 +250,33 @@ const Portfolio = () => {
               {filteredSecondary.map((project) => (
                 <div
                   key={project.client}
-                  className="group bg-background rounded-xl border border-border p-6 hover:border-leap-orange/20 transition-all duration-300 hover:shadow-md"
+                  className="group bg-background rounded-xl border border-border overflow-hidden hover:border-leap-orange/20 transition-all duration-300 hover:shadow-md"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-foreground leading-snug">{project.client}</h3>
-                    {project.externalUrl && (
-                      <a href={project.externalUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-leap-orange transition-colors shrink-0 ml-2">
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    )}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-                  <div className="mt-4">
-                    <span className="inline-block px-3 py-1 text-[11px] font-semibold uppercase tracking-wider bg-muted rounded-full text-muted-foreground">
-                      {project.category === 'health' ? 'Health & Wellness' : project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                    </span>
+                  {project.imageUrl && (
+                    <div className="aspect-[16/9] overflow-hidden bg-muted">
+                      <img
+                        src={project.imageUrl}
+                        alt={`${project.client} screenshot`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-lg font-bold text-foreground leading-snug">{project.client}</h3>
+                      {project.externalUrl && (
+                        <a href={project.externalUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-leap-orange transition-colors shrink-0 ml-2">
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                    <div className="mt-4">
+                      <span className="inline-block px-3 py-1 text-[11px] font-semibold uppercase tracking-wider bg-muted rounded-full text-muted-foreground">
+                        {project.category === 'health' ? 'Health & Wellness' : project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
