@@ -1,5 +1,4 @@
 import CaseStudyLayout from './CaseStudyLayout';
-import heroImage from '@/assets/portfolio/beneva-hero.jpg';
 
 const Beneva = () => (
   <CaseStudyLayout
@@ -10,7 +9,7 @@ const Beneva = () => (
     whatWeDid="LeapUX helped establish alignment by developing a scalable design system and brand framework, standardizing templates and communication tools, reviewing digital touchpoints for consistency, supporting accessible documentation, and creating governance materials and onboarding resources for teams across the organization."
     impact="The work supported a more cohesive post-merger experience, reduced fragmentation, and helped teams across the organization apply the new brand with confidence and consistency."
     services={['Design systems', 'Brand integration', 'Enterprise UX', 'Accessibility', 'Governance', 'Template development']}
-    heroImage={heroImage}
+    heroImage="https://leapux.com/wp-content/uploads/2021/12/Beneva-1-scaled.png"
     prevProject={{ name: 'Soldiers Helping Soldiers', path: '/portfolio/soldiers-helping-soldiers' }}
   />
 );

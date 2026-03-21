@@ -1,5 +1,4 @@
 import CaseStudyLayout from './CaseStudyLayout';
-import heroImage from '@/assets/portfolio/pspc-hero.jpg';
 
 const PSPC = () => (
   <CaseStudyLayout
@@ -10,7 +9,7 @@ const PSPC = () => (
     whatWeDid="LeapUX helped PSPC redesign the workflows and digital structure supporting public engagement and research. We developed a more effective feedback process for legislative consultation, restructured public opinion research workflows, improved usability and content discoverability, and introduced tools and documentation to support long-term adoption across teams."
     impact="The new approach made research tools easier to use, improved access to key information, and supported more efficient handling of public input. It also helped strengthen transparency by making engagement more structured, accessible, and scalable."
     services={['UX strategy', 'Service design', 'Workflow modernization', 'Information architecture', 'Accessibility', 'Agile implementation', 'Training']}
-    heroImage={heroImage}
+    heroImage="https://leapux.com/wp-content/uploads/elementor/thumbs/PSPC-scaled-r82pyyj9n9qr5ofu4yfm8elrgl316gs1jpeqo4noio.png"
     nextProject={{ name: 'ISED', path: '/portfolio/ised' }}
   />
 );
