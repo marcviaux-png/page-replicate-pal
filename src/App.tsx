@@ -11,6 +11,13 @@ import Capabilities from "./pages/Capabilities";
 import Contact from "./pages/Contact";
 import AITraining from "./pages/AITraining";
 import AIServices from "./pages/AIServices";
+import Portfolio from "./pages/Portfolio";
+import PSPC from "./pages/portfolio/PSPC";
+import ISED from "./pages/portfolio/ISED";
+import StJohnAmbulance from "./pages/portfolio/StJohnAmbulance";
+import IJC from "./pages/portfolio/IJC";
+import SHS from "./pages/portfolio/SHS";
+import Beneva from "./pages/portfolio/Beneva";
 import NotFound from "./pages/NotFound";
 import LeapNavbar from "./components/LeapNavbar";
 import LeapFooter from "./components/LeapFooter";
@@ -43,6 +50,13 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/ai-training" element={<AITraining />} />
               <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolio/pspc" element={<PSPC />} />
+              <Route path="/portfolio/ised" element={<ISED />} />
+              <Route path="/portfolio/st-john-ambulance" element={<StJohnAmbulance />} />
+              <Route path="/portfolio/ijc" element={<IJC />} />
+              <Route path="/portfolio/soldiers-helping-soldiers" element={<SHS />} />
+              <Route path="/portfolio/beneva" element={<Beneva />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
