@@ -24,9 +24,9 @@ const LeapNavbar = () => {
 
   const navLinks = [
     { name: 'Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Capabilities', path: '/capabilities' },
     { name: 'About', path: '/about' },
+    { name: 'Our Work', path: '/portfolio' },
   ];
 
   const aiLinks = [
