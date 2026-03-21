@@ -65,7 +65,7 @@ const Home = () => {
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-leap-white mb-8 leading-[0.95] text-balance">
               Designing services for <span className="text-leap-orange">real-world delivery.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-400 mb-12 leading-relaxed font-light max-w-xl">
+            <p className="text-lg sm:text-xl text-slate-300 mb-12 leading-relaxed font-light max-w-xl">
               UX and service design for complex environments. We combine evidence, discipline, and accountability to deliver results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
