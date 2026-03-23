@@ -66,7 +66,7 @@ const Home = () => {
               Delivering services for <span className="text-leap-orange">the real world.</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-12 leading-relaxed font-light max-w-xl">
-              UX and service design for complex environments. We combine evidence, discipline, and accountability to deliver results.
+              We help organizations understand real needs and deliver services that work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
