@@ -154,7 +154,7 @@ const Home = () => {
               />
               <div className="absolute bottom-6 right-6 left-6 sm:left-auto sm:max-w-xs bg-leap-white p-6 rounded-2xl shadow-xl">
                 <p className="text-leap-black font-medium leading-relaxed italic">
-                  "Good design is not about aesthetics — it's about clarity, risk reduction, and trust."
+                  "Good strategy means nothing without the ability to deliver it in the real world."
                 </p>
               </div>
             </div>
