@@ -5,10 +5,11 @@ import teamCollaboration from '@/assets/team-collaboration.jpg';
 
 const Home = () => {
   const approachPoints = [
-    "Start with real user needs",
-    "Decisions informed by real user insight",
-    "Align teams around what matters",
-    "Test and prove what works"
+    "Start with what's real",
+    "Let insights lead",
+    "Strategize with intent",
+    "Design for reality",
+    "Leave teams stronger"
   ];
 
   const services = [
@@ -124,17 +125,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Our Approach */}
+      {/* How We Work */}
       <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
-              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Approach</h2>
+              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How We Work</h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-8 leading-tight">
-                Research, design, and delivery — from discovery to real-world outcomes.
+                From understanding to real-world outcomes.
               </h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                We support teams from early discovery through delivery by combining research, design, and continuous testing.
+                Our delivery model moves from insight to strategy, design, and execution — grounded in evidence, shaped by collaboration, and built to deliver lasting impact.
               </p>
               <ul className="space-y-5">
                 {approachPoints.map((point, i) => (
