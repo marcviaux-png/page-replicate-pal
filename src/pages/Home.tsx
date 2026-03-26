@@ -102,7 +102,7 @@ const Home = () => {
               <h2 className="text-xs font-black text-leap-brand uppercase tracking-[0.2em] mb-4 italic">How We Think</h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-8 leading-tight">Build it right. Build it for the right people.</h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                Great digital services balance business goals, technical realities, and real human needs. We bring these together so what gets built performs in the real world.
+                Great digital services balance business goals, technical realities, and real human needs. We help organizations bring those elements together, so services are effective, usable, and built to perform in the real world.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {[
