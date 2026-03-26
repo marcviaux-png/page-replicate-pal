@@ -135,7 +135,7 @@ const Home = () => {
                 From understanding to real-world outcomes.
               </h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                Our delivery model moves from insight to strategy, design, and execution — grounded in evidence, shaped by collaboration, and built to deliver lasting impact.
+                Our delivery model moves from insight to strategy, design, and execution, grounded in evidence, shaped by collaboration, and built to deliver lasting impact.
               </p>
               <ul className="space-y-5">
                 {approachPoints.map((point, i) => (
