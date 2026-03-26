@@ -110,7 +110,7 @@ const Home = () => {
                   { label: "Grounded in real user and organizational needs", iconColor: "bg-leap-brand" },
                   { label: "Driven by evidence, not assumptions", iconColor: "bg-leap-orange" },
                   { label: "Designed for real-world conditions", iconColor: "bg-leap-red" },
-                  { label: "Focused on adoption and measurable impact", iconColor: "bg-leap-black" }
+                  { label: "Focused on outcomes and measurable impact", iconColor: "bg-leap-black" }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className={`w-1.5 h-12 ${item.iconColor} shrink-0 rounded-full`}></div>
