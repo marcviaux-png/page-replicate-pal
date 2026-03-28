@@ -208,7 +208,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Work With</h2>
             <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-              Trusted by teams that deliver what matters
+              Built for the organizations that matter most
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We work with governments, regulated industries, and mission-driven organizations to design and deliver services people can count on.
