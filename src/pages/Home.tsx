@@ -168,10 +168,10 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</h2>
             <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-              End-to-end design and delivery support
+              Consulting services for every stage of transformation
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              From strategy through implementation, we partner with teams to build digital services that work in the real world.
+              From strategy and experience design to technology, operations, and change management — we help organizations deliver with clarity and confidence.
             </p>
           </div>
           
