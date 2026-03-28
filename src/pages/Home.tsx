@@ -16,12 +16,12 @@ const Home = () => {
     {
       icon: Compass,
       title: "Strategy & Advisory",
-      description: "Turn complexity into clarity with discovery-driven planning, strategic roadmaps, and actionable direction for growth and transformation."
+      description: "Turn complexity into clarity through design thinking, user-centered discovery, strategic roadmaps, and actionable direction for growth and transformation."
     },
     {
       icon: Paintbrush,
       title: "Customer Experience & Service Design",
-      description: "Research, design, and deliver intuitive services across channels — grounded in accessibility, brand identity, and real user needs."
+      description: "Research, design, and deliver intuitive UX across channels — grounded in accessibility, brand identity, and real user needs."
     },
     {
       icon: Cpu,
