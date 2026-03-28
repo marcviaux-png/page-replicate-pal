@@ -171,7 +171,7 @@ const Home = () => {
               Consulting services for every stage of transformation
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              From strategy and experience design to technology, operations, and change management — we help organizations deliver with clarity and confidence.
+              From strategy and user experience to technology, operations, and change management — we help organizations deliver with clarity and confidence.
             </p>
           </div>
           
