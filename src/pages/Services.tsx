@@ -27,7 +27,7 @@ const coreAreas = [
     title: "Strategy & Advisory",
     headline: "Turn complexity into clarity.",
     paragraphs: [
-      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation.",
+      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation — guided by design thinking and user-centered discovery.",
       "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
     ],
     capabilities: ["Discovery & Research", "Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
@@ -37,7 +37,7 @@ const coreAreas = [
     title: "Customer Experience & Service Design",
     headline: "Design experiences that customers value and teams can deliver.",
     paragraphs: [
-      "We help organizations understand their customers, identify experience gaps, and design services that are intuitive, accessible, and effective across digital and physical channels.",
+      "We help organizations understand their customers, identify experience gaps, and design services that deliver intuitive UX across digital and physical channels.",
       "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
     ],
     capabilities: ["Discovery & Research", "CX & UX Design", "Accessibility & Inclusive Design", "Implementation & Delivery", "Brand & Experience Identity"],
