@@ -211,7 +211,7 @@ const Home = () => {
               Helping Organizations Deliver Services That Work
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              We partner with governments, regulated industries, and mission-driven organizations to improve critical services for the people they serve.
+              We partner with governments, regulated industries, and mission-driven organizations to build and improve critical services for the people they serve.
             </p>
           </div>
           
