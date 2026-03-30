@@ -220,13 +220,13 @@ const Home = () => {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
-            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-10 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-16 md:h-20 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-16 md:h-20 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-16 md:h-20 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-14 md:h-16 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             <div className="flex items-center gap-3 text-slate-400">
-              <Building2 className="w-6 h-6" />
-              <span className="text-sm font-semibold uppercase tracking-widest">Enterprise</span>
+              <Building2 className="w-8 h-8" />
+              <span className="text-base font-semibold uppercase tracking-widest">Enterprise</span>
             </div>
           </div>
         </div>
