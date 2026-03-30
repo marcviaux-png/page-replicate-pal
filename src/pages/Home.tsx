@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket, Landmark, Building2 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket, Building2 } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import logoSJA from '@/assets/logo-sja.png';
 import logoIJC from '@/assets/logo-ijc.png';
 import logoBeneva from '@/assets/logo-beneva.png';
+import logoGoC from '@/assets/logo-goc.png';
 
 const Home = () => {
   const approachPoints = [
@@ -219,10 +220,7 @@ const Home = () => {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
-            <div className="flex items-center gap-3 text-slate-400">
-              <Landmark className="w-6 h-6" />
-              <span className="text-sm font-semibold uppercase tracking-widest">Federal</span>
-            </div>
+            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-10 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
