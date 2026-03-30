@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Heart, ArrowRight } from 'lucide-react';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
+import logoGoC from '@/assets/logo-goc.png';
+import logoSJA from '@/assets/logo-sja.png';
+import logoIJC from '@/assets/logo-ijc.png';
+import logoBeneva from '@/assets/logo-beneva.png';
+import logoSHS from '@/assets/logo-shs.png';
 
 const About = () => {
   return (
@@ -472,20 +477,24 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-14 items-center justify-items-center">
             {[
-              "Beneva",
-              "St. John Ambulance",
-              "Tereposky & DeRose",
-              "Soldiers Helping Soldiers",
-              "Innovation, Science & Economic Development Canada (ISED)",
-              "Public Services and Procurement Canada (PSPC)",
-              "Canada Gazette",
-              "International Joint Commission",
+              { name: "Government of Canada", logo: logoGoC },
+              { name: "St. John Ambulance", logo: logoSJA },
+              { name: "International Joint Commission", logo: logoIJC },
+              { name: "Beneva", logo: logoBeneva },
+              { name: "Soldiers Helping Soldiers", logo: logoSHS },
+              { name: "Tereposky & DeRose", logo: null },
+              { name: "Public Services and Procurement Canada (PSPC)", logo: null },
+              { name: "Canada Gazette", logo: null },
             ].map((client, i) => (
               <div key={i} className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300">
-                <div className="w-32 h-16 rounded bg-muted flex items-center justify-center">
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/40">Logo</span>
-                </div>
-                <span className="text-xs font-medium text-muted-foreground text-center leading-snug max-w-[140px]">{client}</span>
+                {client.logo ? (
+                  <img src={client.logo} alt={client.name} loading="lazy" className="h-16 md:h-20 w-auto grayscale hover:grayscale-0 transition-all duration-500" />
+                ) : (
+                  <div className="w-32 h-16 rounded bg-muted flex items-center justify-center">
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/40">Logo</span>
+                  </div>
+                )}
+                <span className="text-xs font-medium text-muted-foreground text-center leading-snug max-w-[140px]">{client.name}</span>
               </div>
             ))}
           </div>
