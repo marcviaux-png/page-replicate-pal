@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket, Building2 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import logoSJA from '@/assets/logo-sja.png';
 import logoIJC from '@/assets/logo-ijc.png';
 import logoBeneva from '@/assets/logo-beneva.png';
 import logoGoC from '@/assets/logo-goc.png';
+import logoSHS from '@/assets/logo-shs.png';
 
 const Home = () => {
   const approachPoints = [
@@ -224,10 +225,7 @@ const Home = () => {
             <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <div className="flex items-center gap-3 text-slate-400">
-              <Building2 className="w-8 h-8" />
-              <span className="text-base font-semibold uppercase tracking-widest">Enterprise</span>
-            </div>
+            <img src={logoSHS} alt="Soldiers Helping Soldiers" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
           </div>
         </div>
       </section>
