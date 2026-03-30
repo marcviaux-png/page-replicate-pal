@@ -475,28 +475,12 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-16 text-center">Select Clients</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-14 items-center justify-items-center">
-            {[
-              { name: "Government of Canada", logo: logoGoC },
-              { name: "St. John Ambulance", logo: logoSJA },
-              { name: "International Joint Commission", logo: logoIJC },
-              { name: "Beneva", logo: logoBeneva },
-              { name: "Soldiers Helping Soldiers", logo: logoSHS },
-              { name: "Tereposky & DeRose", logo: null },
-              { name: "Public Services and Procurement Canada (PSPC)", logo: null },
-              { name: "Canada Gazette", logo: null },
-            ].map((client, i) => (
-              <div key={i} className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300">
-                {client.logo ? (
-                  <img src={client.logo} alt={client.name} loading="lazy" className="h-16 md:h-20 w-auto grayscale hover:grayscale-0 transition-all duration-500" />
-                ) : (
-                  <div className="w-32 h-16 rounded bg-muted flex items-center justify-center">
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/40">Logo</span>
-                  </div>
-                )}
-                <span className="text-xs font-medium text-muted-foreground text-center leading-snug max-w-[140px]">{client.name}</span>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
+            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSHS} alt="Soldiers Helping Soldiers" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
           </div>
         </div>
       </section>
