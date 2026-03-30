@@ -354,10 +354,13 @@ const Services = () => {
                   </div>
                 ))}
               </div>
-              <a href="/capabilities#delivery-model" className="inline-flex items-center gap-2 text-leap-orange hover:text-white transition-colors mt-8 font-semibold group">
+              <Link
+                to="/capabilities#delivery-model"
+                className="inline-flex items-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-brand transition-colors group mt-8"
+              >
                 Explore our delivery model
-                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden">
