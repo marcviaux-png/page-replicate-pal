@@ -336,10 +336,10 @@ const Services = () => {
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">How We Work</h2>
               <p className="text-lg text-slate-300 leading-relaxed mb-4">
-                Every service follows a proven delivery model, grounded in evidence, shaped by collaboration, and built for lasting impact.
+                Every service follows a proven delivery model, grounded in evidence and shaped by collaboration.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed mb-10">
-                We start with discovery, then co-create solutions aligned to your goals, capacity, and constraints, leaving your team with greater clarity, confidence, and capability.
+                We start with discovery, then co-create solutions aligned to your goals, building clarity, confidence, and capability along the way.
               </p>
               <div className="space-y-6">
                 {howWeWork.map((item, index) => (
