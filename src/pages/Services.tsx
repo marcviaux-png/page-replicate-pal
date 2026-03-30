@@ -87,15 +87,15 @@ const Services = () => {
   const howWeWork = [
     {
       title: "Client-centric engagement",
-      description: "We put your context first"
+      description: "We put your context, systems, and realities first"
     },
     {
       title: "Outcome-focused solutions",
-      description: "Clear goals with measurable success criteria"
+      description: "Clear goals, measurable outcomes, and decisions guided by evidence."
     },
     {
       title: "Collaborative delivery",
-      description: "Partnership throughout planning and execution"
+      description: "A true partnership from planning through execution, working with your team, not around it."
     }
   ];
 
@@ -335,6 +335,9 @@ const Services = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">How We Work</h2>
+              <p className="text-lg text-slate-300 leading-relaxed mb-4">
+                Every service we offer follows a proven delivery model, grounded in evidence, shaped by collaboration, and built for lasting impact.
+              </p>
               <p className="text-lg text-slate-300 leading-relaxed mb-10">
                 We start every engagement with discovery and analysis, then co-create approaches that fit your resources, timelines, and strategic priorities. Our aim is to build confidence, clarity, and capability inside your organization.
               </p>
@@ -351,6 +354,10 @@ const Services = () => {
                   </div>
                 ))}
               </div>
+              <a href="/capabilities#delivery-model" className="inline-flex items-center gap-2 text-leap-orange hover:text-white transition-colors mt-8 font-semibold group">
+                <span>→</span> Explore our delivery model
+                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
             </div>
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden">
