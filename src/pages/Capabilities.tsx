@@ -195,7 +195,7 @@ const Services = () => {
       </section>
 
       {/* Our Delivery Model — immersive dark narrative */}
-      <section className="relative py-32 bg-leap-black text-leap-white overflow-hidden">
+      <section id="delivery-model" className="relative py-32 bg-leap-black text-leap-white overflow-hidden">
         {/* Subtle background texture */}
         <div className="absolute inset-0">
           <img
