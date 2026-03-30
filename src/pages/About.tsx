@@ -475,12 +475,12 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-16 text-center">Select Clients</h2>
 
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
-            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSHS} alt="Soldiers Helping Soldiers" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+          <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16">
+            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-20 md:h-24 lg:h-28 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-20 md:h-24 lg:h-28 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-20 md:h-24 lg:h-28 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-16 md:h-20 lg:h-24 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSHS} alt="Soldiers Helping Soldiers" loading="lazy" className="h-16 md:h-20 lg:h-24 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
           </div>
         </div>
       </section>
