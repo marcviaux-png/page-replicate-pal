@@ -7,6 +7,7 @@ import logoIJC from '@/assets/logo-ijc.png';
 import logoBeneva from '@/assets/logo-beneva.png';
 import logoGoC from '@/assets/logo-goc.png';
 import logoSHS from '@/assets/logo-shs.png';
+import GeoFeatureSection from '@/components/home/GeoFeatureSection';
 
 const Home = () => {
   const approachPoints = [
