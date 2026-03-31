@@ -1,15 +1,20 @@
 import { ArrowRight, Search, Bot, Target, BarChart3, Shield, Zap, CheckCircle, Eye, TrendingUp, Award, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+import heroGeo from '@/assets/hero-geo.jpg';
 
 const GEO = () => {
   return (
     <div>
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-leap-black overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--leap-orange)) 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroGeo}
+            alt="AI Search & Data Visualization"
+            className="w-full h-full object-cover hero-image"
+          />
+          <div className="absolute inset-0 image-overlay"></div>
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-20">
           <ScrollReveal>
