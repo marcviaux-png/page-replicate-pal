@@ -18,6 +18,7 @@ import StJohnAmbulance from "./pages/portfolio/StJohnAmbulance";
 import IJC from "./pages/portfolio/IJC";
 import SHS from "./pages/portfolio/SHS";
 import Beneva from "./pages/portfolio/Beneva";
+import GEO from "./pages/GEO";
 import NotFound from "./pages/NotFound";
 import LeapNavbar from "./components/LeapNavbar";
 import LeapFooter from "./components/LeapFooter";
@@ -50,6 +51,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/ai-training" element={<AITraining />} />
               <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/geo" element={<GEO />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/portfolio/pspc" element={<PSPC />} />
               <Route path="/portfolio/ised" element={<ISED />} />

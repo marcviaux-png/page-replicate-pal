@@ -7,6 +7,7 @@ import logoIJC from '@/assets/logo-ijc.png';
 import logoBeneva from '@/assets/logo-beneva.png';
 import logoGoC from '@/assets/logo-goc.png';
 import logoSHS from '@/assets/logo-shs.png';
+import GeoFeatureSection from '@/components/home/GeoFeatureSection';
 
 const Home = () => {
   const approachPoints = [
@@ -206,6 +207,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* GEO Feature Section */}
+      <GeoFeatureSection />
 
       {/* Who We Work With */}
       <section className="py-32 bg-background">
