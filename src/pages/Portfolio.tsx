@@ -50,7 +50,7 @@ const featured: FeaturedProject[] = [
   },
   {
     client: 'International Joint Commission',
-    headline: 'Creating a roadmap for a more usable and accessible research platform',
+    headline: 'Creating a roadmap for a more usable and accessible platform',
     summary: 'Through stakeholder engagement, user research, and content analysis, we developed a clear roadmap to improve discoverability of environmental and regulatory content.',
     services: ['UX research', 'Usability testing', 'Content audit', 'Accessibility strategy'],
     path: '/portfolio/ijc',
