@@ -208,6 +208,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* GEO Feature Section */}
+      <GeoFeatureSection />
+
       {/* Who We Work With */}
       <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
