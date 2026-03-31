@@ -18,6 +18,7 @@ import StJohnAmbulance from "./pages/portfolio/StJohnAmbulance";
 import IJC from "./pages/portfolio/IJC";
 import SHS from "./pages/portfolio/SHS";
 import Beneva from "./pages/portfolio/Beneva";
+import GEO from "./pages/GEO";
 import NotFound from "./pages/NotFound";
 import LeapNavbar from "./components/LeapNavbar";
 import LeapFooter from "./components/LeapFooter";
