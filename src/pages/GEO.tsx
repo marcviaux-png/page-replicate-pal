@@ -14,7 +14,6 @@ const GEO = () => {
             className="w-full h-full object-cover"
             style={{ filter: 'grayscale(1) contrast(1.1) brightness(0.45)' }}
           />
-          />
           <div className="absolute inset-0 image-overlay"></div>
         </div>
 
