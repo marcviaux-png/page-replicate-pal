@@ -10,8 +10,9 @@ const GEO = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroGeo}
-            alt="AI Search & Data Visualization"
-            className="w-full h-full object-cover hero-image"
+            alt="Person searching with AI on laptop"
+            className="w-full h-full object-cover"
+            style={{ filter: 'grayscale(1) contrast(1.1) brightness(0.45)' }}
           />
           <div className="absolute inset-0 image-overlay"></div>
         </div>
