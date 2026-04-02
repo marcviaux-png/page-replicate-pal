@@ -95,7 +95,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
-              Services that work in the real world.
+              Services
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
               We help governments and mission-driven organizations understand real needs, navigate complexity, and deliver services that actually work, for the people using them and the teams responsible for them.
