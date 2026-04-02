@@ -232,7 +232,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-32 bg-leap-white text-center border-t border-border">
+      <section className="py-32 bg-[#F6F7F9] text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-leap-black mb-8">Ready to design a service that works?</h2>
           <Link
