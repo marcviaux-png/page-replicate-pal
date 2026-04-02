@@ -125,10 +125,8 @@ const Portfolio = () => {
           }} />
         </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <p className="text-leap-orange text-sm font-bold uppercase tracking-[0.3em] mb-6">Our Work</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight max-w-4xl mb-8">
-            Work that moves <br className="hidden md:block" />
-            <span className="text-leap-orange">organizations forward</span>
+            Our Work
           </h1>
           <p className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed mb-10">
             We help organizations modernize how they serve, communicate, and grow through accessible, bilingual, and scalable digital experiences.
