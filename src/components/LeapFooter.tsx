@@ -39,6 +39,7 @@ const LeapFooter = () => {
               <li><Link to="/" className="hover:text-leap-orange transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-leap-orange transition-colors">About Us</Link></li>
               <li><Link to="/services" className="hover:text-leap-orange transition-colors">Services</Link></li>
+              <li><Link to="/portfolio" className="hover:text-leap-orange transition-colors">Our Work</Link></li>
               <li><Link to="/contact" className="hover:text-leap-orange transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -47,10 +48,10 @@ const LeapFooter = () => {
           <div>
             <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-slate-500">Services</h4>
             <ul className="space-y-5 text-slate-400 font-medium">
-              <li><Link to="/services" className="hover:text-leap-orange transition-colors">Strategy & Transformation</Link></li>
-              <li><Link to="/services" className="hover:text-leap-orange transition-colors">User Research</Link></li>
-              <li><Link to="/services" className="hover:text-leap-orange transition-colors">UX & Service Design</Link></li>
-              <li><Link to="/services" className="hover:text-leap-orange transition-colors">Accessibility</Link></li>
+              <li><Link to="/services#strategic-advisory" className="hover:text-leap-orange transition-colors">Strategic Advisory</Link></li>
+              <li><Link to="/services#service-experience-design" className="hover:text-leap-orange transition-colors">Service & Experience Design</Link></li>
+              <li><Link to="/services#digital-technology-transformation" className="hover:text-leap-orange transition-colors">Digital & Technology Transformation</Link></li>
+              <li><Link to="/services#delivery-adoption" className="hover:text-leap-orange transition-colors">Delivery & Adoption</Link></li>
             </ul>
           </div>
           

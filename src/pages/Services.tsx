@@ -119,7 +119,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {whatWeDoItems.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden h-full flex flex-col">
+                <div id={item.label.toLowerCase().replace(/[&]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')} className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden h-full flex flex-col">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img
