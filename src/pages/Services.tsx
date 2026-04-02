@@ -61,7 +61,7 @@ const Services = () => {
       num: "04",
       title: "Design for reality",
       body: "We build for how things actually work, technically, operationally, and humanly. Solutions that don't account for real-world constraints don't survive contact with them.",
-      image: "https://images.unsplash.com/photo-1581291518633-83b4eef1d2fa?auto=format&fit=crop&q=80&w=800",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "05",
