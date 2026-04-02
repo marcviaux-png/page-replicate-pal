@@ -43,26 +43,31 @@ const Services = () => {
       num: "01",
       title: "Start with what's real",
       body: "We take time to understand your users, constraints, systems, and organizational context before designing anything. Assumptions get tested early. Evidence drives what comes next.",
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "02",
       title: "Let insights lead",
       body: "We surface the patterns, risks, and opportunities buried in what we find. Every strategic and design decision that follows is more confident because of this work.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "03",
       title: "Strategize with intent",
       body: "We align actions to your goals, governance frameworks, and organizational capacity, not just to industry best practice. Direction is only useful if it's achievable in your context.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "04",
       title: "Design for reality",
       body: "We build for how things actually work, technically, operationally, and humanly. Solutions that don't account for real-world constraints don't survive contact with them.",
+      image: "https://images.unsplash.com/photo-1581291518633-83b4eef1d2fa?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "05",
       title: "Leave teams stronger",
       body: "We deliver capability and continuity, not just deliverables. Every project is structured so your team finishes with more clarity, confidence, and ownership than when we started.",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
