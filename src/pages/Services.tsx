@@ -111,29 +111,30 @@ const Services = () => {
             </div>
           </ScrollReveal>
 
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {whatWeDoItems.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.08}>
-                <div className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden">
-                  {/* Orange left accent */}
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-slate-200 group-hover:bg-leap-orange transition-colors duration-500" />
-
-                  <div className="grid lg:grid-cols-12 items-start">
-                    {/* Left: Icon + number */}
-                    <div className="lg:col-span-4 p-8 lg:p-10 flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl bg-leap-orange/[0.07] group-hover:bg-leap-orange/[0.12] flex items-center justify-center shrink-0 transition-colors duration-500">
-                        <item.icon className="w-6 h-6 text-leap-orange" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-leap-orange transition-colors duration-300">{item.label}</h3>
-                        <p className="text-sm font-semibold text-leap-orange/80 italic">{item.headline}</p>
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden h-full flex flex-col">
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-leap-orange" />
                       </div>
                     </div>
+                  </div>
 
-                    {/* Right: Body */}
-                    <div className="lg:col-span-8 p-8 lg:p-10 lg:pl-0 pt-0 lg:pt-10">
-                      <p className="text-slate-600 leading-relaxed lg:text-[17px]">{item.body}</p>
-                    </div>
+                  {/* Content */}
+                  <div className="p-8 flex flex-col flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-leap-orange transition-colors duration-300">{item.label}</h3>
+                    <p className="text-sm font-semibold text-leap-orange/80 italic mb-4">{item.headline}</p>
+                    <p className="text-slate-600 leading-relaxed text-[15px]">{item.body}</p>
                   </div>
                 </div>
               </ScrollReveal>
