@@ -1,25 +1,33 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, Landmark, MapPin, Building, Heart, BookOpen, BadgeCheck, GraduationCap, Trophy } from 'lucide-react';
+import { ArrowRight, Building2, Landmark, MapPin, Building, Heart, BookOpen, BadgeCheck, GraduationCap, Trophy, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Services = () => {
+  const [activeStep, setActiveStep] = useState(0);
+
   const whatWeDoItems = [
     {
+      icon: Compass,
       label: "Strategic advisory",
       headline: "Set direction before you build.",
       body: "We work with leadership teams to make sense of complexity, align stakeholders, and build a clear case for change. This is the work that happens before a solution is designed: understanding the landscape, defining the right problem, and establishing a shared direction that holds up under scrutiny.",
     },
     {
+      icon: Palette,
       label: "Service & experience design",
       headline: "Design services that work for people.",
       body: "We research, design, and validate services that meet real user needs and that your team can actually deliver. Our work blends evidence-based discovery with human-centred design to create experiences that are intuitive, accessible, and built around how people actually behave, not how we assume they do.",
     },
     {
+      icon: Monitor,
       label: "Digital & technology transformation",
       headline: "Align technology with real outcomes.",
       body: "We help organizations evaluate digital opportunities, modernize legacy systems, and make technology investments that serve a clear strategic purpose. Our role is to ensure technology supports your service and organizational goals, not the other way around.",
     },
     {
+      icon: Rocket,
       label: "Delivery & adoption",
       headline: "Make change stick.",
       body: "Transformation only succeeds when people understand, trust, and adopt what's been built. We support organizations through implementation, change management, and stakeholder engagement, and we stay focused on building your team's capability to sustain the work long after we're gone.",
@@ -90,37 +98,55 @@ const Services = () => {
       {/* What We Do */}
       <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20">
-            <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What we do</p>
-            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl">
-              Whether you need strategic direction, hands-on design, technology guidance, or help managing change, we scope our work around what you actually need to move forward.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="mb-20">
+              <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What we do</p>
+              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl">
+                Whether you need strategic direction, hands-on design, technology guidance, or help managing change, we scope our work around what you actually need to move forward.
+              </p>
+            </div>
+          </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-16">
+          <div className="space-y-6">
             {whatWeDoItems.map((item, i) => (
-              <div key={i} className="group">
-                <div className="flex items-baseline gap-4 mb-4">
-                  <span className="text-5xl font-black text-slate-100 select-none leading-none group-hover:text-leap-orange/20 transition-colors duration-300">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h3 className="text-xl font-bold text-foreground">{item.label}</h3>
+              <ScrollReveal key={i} delay={i * 0.08}>
+                <div className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden">
+                  {/* Orange left accent */}
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-slate-200 group-hover:bg-leap-orange transition-colors duration-500" />
+
+                  <div className="grid lg:grid-cols-12 items-start">
+                    {/* Left: Icon + number */}
+                    <div className="lg:col-span-4 p-8 lg:p-10 flex items-start gap-5">
+                      <div className="w-14 h-14 rounded-2xl bg-leap-orange/[0.07] group-hover:bg-leap-orange/[0.12] flex items-center justify-center shrink-0 transition-colors duration-500">
+                        <item.icon className="w-6 h-6 text-leap-orange" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-leap-orange transition-colors duration-300">{item.label}</h3>
+                        <p className="text-sm font-semibold text-leap-orange/80 italic">{item.headline}</p>
+                      </div>
+                    </div>
+
+                    {/* Right: Body */}
+                    <div className="lg:col-span-8 p-8 lg:p-10 lg:pl-0 pt-0 lg:pt-10">
+                      <p className="text-slate-600 leading-relaxed lg:text-[17px]">{item.body}</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-leap-orange font-semibold mb-3 italic">{item.headline}</p>
-                <p className="text-slate-600 leading-relaxed">{item.body}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
-          <div className="mt-16">
-            <Link
-              to="/capabilities"
-              className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-red transition-colors group"
-            >
-              See our full capabilities
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+          <ScrollReveal delay={0.3}>
+            <div className="mt-16">
+              <Link
+                to="/capabilities"
+                className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-red transition-colors group"
+              >
+                See our full capabilities
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -128,39 +154,82 @@ const Services = () => {
       <section id="how-we-work" className="py-32 bg-leap-black text-leap-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="max-w-3xl mb-20">
-            <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How we work</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8">
-              We don't start by designing. We start by understanding.
-            </h2>
-            <p className="text-lg text-slate-300 leading-relaxed">
-              Every project follows the same progression, grounded in evidence, shaped by collaboration, and built so your team can sustain it long after we're gone. We bring rigour to complex problems without losing sight of what has to work in practice.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mb-24">
+              <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How we work</p>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8">
+                We don't start by designing. We start by understanding.
+              </h2>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                Every project follows the same progression, grounded in evidence, shaped by collaboration, and built so your team can sustain it long after we're gone. We bring rigour to complex problems without losing sight of what has to work in practice.
+              </p>
+            </div>
+          </ScrollReveal>
 
-          {/* Steps */}
-          <div className="space-y-0">
-            {howWeWorkSteps.map((step, i) => (
-              <div
-                key={i}
-                className="group grid lg:grid-cols-12 gap-6 lg:gap-12 py-10 border-t border-white/10 last:border-b"
-              >
-                <div className="lg:col-span-1">
-                  <span className="text-3xl font-black text-leap-orange/60 group-hover:text-leap-orange transition-colors duration-300">
+          {/* Interactive Steps — Desktop: tabs + detail panel */}
+          <div className="hidden lg:grid lg:grid-cols-12 gap-0">
+            {/* Left: step selector */}
+            <div className="lg:col-span-5 border-r border-white/10">
+              {howWeWorkSteps.map((step, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveStep(i)}
+                  className={`w-full text-left px-8 py-7 flex items-center gap-6 border-b border-white/[0.06] transition-all duration-300 group cursor-pointer ${
+                    activeStep === i
+                      ? 'bg-white/[0.05]'
+                      : 'hover:bg-white/[0.03]'
+                  }`}
+                >
+                  <span className={`text-2xl font-black transition-colors duration-300 ${
+                    activeStep === i ? 'text-leap-orange' : 'text-white/20 group-hover:text-white/40'
+                  }`}>
                     {step.num}
                   </span>
-                </div>
-                <div className="lg:col-span-3">
-                  <h3 className="text-xl font-bold text-white group-hover:text-leap-orange transition-colors duration-300">
+                  <span className={`text-lg font-bold transition-colors duration-300 ${
+                    activeStep === i ? 'text-white' : 'text-white/50 group-hover:text-white/70'
+                  }`}>
                     {step.title}
-                  </h3>
+                  </span>
+                  <ArrowRight className={`w-4 h-4 ml-auto transition-all duration-300 ${
+                    activeStep === i ? 'text-leap-orange opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
+                  }`} />
+                </button>
+              ))}
+            </div>
+
+            {/* Right: detail panel */}
+            <div className="lg:col-span-7 flex items-center">
+              <div className="p-12 lg:p-16">
+                <div className="mb-6">
+                  <span className="text-[7rem] font-black leading-none text-leap-orange/10 select-none">
+                    {howWeWorkSteps[activeStep].num}
+                  </span>
                 </div>
-                <div className="lg:col-span-8">
-                  <p className="text-slate-400 leading-relaxed text-lg">
-                    {step.body}
-                  </p>
-                </div>
+                <h3 className="text-3xl font-bold text-white mb-6">
+                  {howWeWorkSteps[activeStep].title}
+                </h3>
+                <p className="text-xl text-slate-300 leading-relaxed">
+                  {howWeWorkSteps[activeStep].body}
+                </p>
               </div>
+            </div>
+          </div>
+
+          {/* Mobile: stacked cards */}
+          <div className="lg:hidden space-y-4">
+            {howWeWorkSteps.map((step, i) => (
+              <ScrollReveal key={i} delay={i * 0.08}>
+                <div className="relative p-8 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+                  <span className="text-5xl font-black text-leap-orange/15 select-none absolute top-4 right-6">
+                    {step.num}
+                  </span>
+                  <div className="relative">
+                    <span className="text-sm font-black text-leap-orange mb-2 block">{step.num}</span>
+                    <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                    <p className="text-slate-400 leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -270,21 +339,25 @@ const Services = () => {
       {/* Sectors We Work In */}
       <section className="py-32 bg-[#F6F7F9] text-foreground overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sectors we work in</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              We work in environments where the stakes are high, the constraints are real, and the margin for error is low.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sectors we work in</h2>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                We work in environments where the stakes are high, the constraints are real, and the margin for error is low.
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border border-slate-200">
             {sectors.map((sector, i) => (
-              <div key={i} className="bg-white p-10 flex flex-col gap-4 group hover:bg-leap-orange/[0.03] transition-colors">
-                <div className="w-12 h-12 rounded-full bg-leap-orange/10 flex items-center justify-center">
-                  <sector.icon className="w-5 h-5 text-leap-orange" />
+              <ScrollReveal key={i} delay={i * 0.06}>
+                <div className="bg-white p-10 flex flex-col gap-4 group hover:bg-leap-orange/[0.03] transition-colors h-full">
+                  <div className="w-12 h-12 rounded-full bg-leap-orange/10 flex items-center justify-center">
+                    <sector.icon className="w-5 h-5 text-leap-orange" />
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground">{sector.title}</h4>
+                  <p className="text-sm text-slate-500 leading-relaxed">{sector.desc}</p>
                 </div>
-                <h4 className="text-lg font-bold text-foreground">{sector.title}</h4>
-                <p className="text-sm text-slate-500 leading-relaxed">{sector.desc}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
