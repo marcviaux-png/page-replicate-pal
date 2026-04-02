@@ -117,7 +117,7 @@ const Services = () => {
     {
       title: "Findability & Growth",
       tagline: "Help the right people find you and understand what you offer.",
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
+      image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=800",
       description: "A great website only creates value if people can find it. We improve how your organization shows up across search engines and AI-driven platforms, through technical SEO, content structure, and generative search optimization (GEO), so your digital presence attracts the right traffic, not just more of it.",
       includes: ["Technical SEO", "Content and information architecture", "On-page and metadata strategy", "Generative search optimization (GEO)", "Analytics and performance tracking"],
       bestFor: ["Launching or redesigning a site", "Improving search visibility and traffic quality", "Reaching new markets or audiences", "Aligning content with business growth goals"]
