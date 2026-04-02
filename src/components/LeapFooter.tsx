@@ -60,7 +60,7 @@ const LeapFooter = () => {
             <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-slate-500">Follow Us</h4>
             <div className="flex gap-4 mb-8">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/leapux" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-leap-orange hover:border-leap-orange transition-all"
