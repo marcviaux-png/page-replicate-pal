@@ -189,9 +189,9 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-brand transition-colors group"
+              className="inline-flex items-center gap-3 px-12 py-5 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:bg-leap-red transition-colors group"
             >
-              View all services
+              View services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
