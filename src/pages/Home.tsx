@@ -225,25 +225,29 @@ const Home = () => {
       </section>
 
       {/* Footer CTA */}
-      <section className="relative py-40 bg-leap-orange text-leap-white text-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10 grayscale mix-blend-multiply">
-          <img 
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-12 leading-tight text-balance tracking-tight">
+      <section className="py-32 bg-gradient-to-br from-leap-orange to-leap-red text-leap-white text-center overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-white/70 mb-4">Work with us</p>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight text-balance tracking-tight">
             Ready to improve how your service works in the real world?
           </h2>
-          <Link
-            to="/contact"
-            className="inline-flex justify-center items-center px-14 py-6 text-sm font-bold uppercase tracking-[0.3em] rounded-full bg-leap-black text-leap-white hover:brightness-125 transition-all shadow-[0_15px_35px_rgba(0,0,0,0.25)] active:scale-95"
-          >
-            Contact Us
-          </Link>
+          <p className="text-lg text-white/90 mb-10">
+            Tell us about your challenge and we'll set up a conversation about how we can help.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex justify-center items-center px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full bg-white text-leap-black hover:bg-slate-100 transition-all"
+            >
+              Book a Consultation
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex justify-center items-center px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full border-2 border-white text-white hover:bg-white hover:text-leap-black transition-all"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
     </div>
