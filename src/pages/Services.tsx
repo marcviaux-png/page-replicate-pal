@@ -171,17 +171,17 @@ const Services = () => {
             </div>
           </ScrollReveal>
 
-          {/* Interactive Steps — Desktop: tabs + detail panel */}
-          <div className="hidden lg:grid lg:grid-cols-12 gap-0">
+          {/* Interactive Steps — Desktop: tabs + detail panel with image */}
+          <div className="hidden lg:grid lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden border border-white/[0.08]">
             {/* Left: step selector */}
-            <div className="lg:col-span-5 border-r border-white/10">
+            <div className="lg:col-span-5 bg-white/[0.02]">
               {howWeWorkSteps.map((step, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveStep(i)}
                   className={`w-full text-left px-8 py-7 flex items-center gap-6 border-b border-white/[0.06] transition-all duration-300 group cursor-pointer ${
                     activeStep === i
-                      ? 'bg-white/[0.05]'
+                      ? 'bg-white/[0.06]'
                       : 'hover:bg-white/[0.03]'
                   }`}
                 >
@@ -202,14 +202,20 @@ const Services = () => {
               ))}
             </div>
 
-            {/* Right: detail panel */}
-            <div className="lg:col-span-7 flex items-center">
-              <div className="p-12 lg:p-16">
-                <div className="mb-6">
-                  <span className="text-[7rem] font-black leading-none text-leap-orange/10 select-none">
-                    {howWeWorkSteps[activeStep].num}
-                  </span>
-                </div>
+            {/* Right: detail panel with contextual image */}
+            <div className="lg:col-span-7 flex flex-col">
+              <div className="relative h-56 overflow-hidden">
+                <img
+                  src={howWeWorkSteps[activeStep].image}
+                  alt={howWeWorkSteps[activeStep].title}
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-leap-black via-leap-black/40 to-transparent" />
+                <span className="absolute bottom-4 right-6 text-[5rem] font-black leading-none text-white/[0.08] select-none">
+                  {howWeWorkSteps[activeStep].num}
+                </span>
+              </div>
+              <div className="p-12 flex-1 flex flex-col justify-center">
                 <h3 className="text-3xl font-bold text-white mb-6">
                   {howWeWorkSteps[activeStep].title}
                 </h3>
