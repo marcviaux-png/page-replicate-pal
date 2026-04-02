@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Compass, Palette, Monitor, Rocket } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import logoSJA from '@/assets/logo-sja.png';
