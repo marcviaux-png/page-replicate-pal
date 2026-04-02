@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import logoSJA from '@/assets/logo-sja.png';
@@ -21,34 +21,28 @@ const Home = () => {
   const services = [
     {
       icon: Compass,
-      title: "Strategy & Advisory",
-      description: "Turn complexity into clarity through design thinking, user-centered discovery, strategic roadmaps, and actionable direction for growth and transformation."
+      title: "Strategic advisory",
+      description: "We help leadership teams make sense of complexity, align stakeholders, and build a clear case for change.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
     },
     {
-      icon: Paintbrush,
-      title: "Customer Experience & Service Design",
-      description: "Research, design, and deliver intuitive UX across channels — grounded in accessibility, brand identity, and real user needs."
+      icon: Palette,
+      title: "Service & experience design",
+      description: "We research, design, and validate services that meet real user needs and that your team can actually deliver.",
+      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=800",
     },
     {
-      icon: Cpu,
-      title: "Digital & Technology Transformation",
-      description: "Align technology investments with business outcomes through AI readiness, scalable implementation, and inclusive digital solutions."
+      icon: Monitor,
+      title: "Digital & technology transformation",
+      description: "We help organizations make technology investments that serve a clear strategic purpose.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     },
     {
       icon: Rocket,
-      title: "Innovation & Product Strategy",
-      description: "Explore emerging opportunities, validate concepts, and shape products that deliver meaningful value to customers and stakeholders."
+      title: "Delivery & adoption",
+      description: "We support organizations through implementation, change management, and stakeholder engagement.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
     },
-    {
-      icon: Users,
-      title: "Organizational Change & Adoption",
-      description: "Drive adoption through structured change management, communications strategy, and leadership alignment that makes transformation stick."
-    },
-    {
-      icon: Accessibility,
-      title: "Operations & Service Delivery",
-      description: "Streamline processes, strengthen governance, and optimize how services are delivered for greater efficiency and performance."
-    }
   ];
 
   return (
@@ -181,17 +175,29 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, i) => (
               <div 
                 key={i} 
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-leap-orange/30 hover:shadow-lg transition-all"
+                className="group bg-white rounded-2xl border border-slate-200 hover:border-leap-orange/30 hover:shadow-lg transition-all overflow-hidden flex flex-col"
               >
-                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-leap-orange/20 transition-colors">
-                  <service.icon className="w-6 h-6 text-leap-orange" />
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-leap-orange" />
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold text-leap-black mb-3">{service.title}</h4>
-                <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                <div className="p-7 flex flex-col flex-1">
+                  <h4 className="text-lg font-bold text-leap-black mb-2 group-hover:text-leap-orange transition-colors duration-300">{service.title}</h4>
+                  <p className="text-slate-600 leading-relaxed text-[15px]">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>
