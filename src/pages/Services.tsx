@@ -149,7 +149,7 @@ const Services = () => {
           <ScrollReveal delay={0.3}>
             <div className="mt-16 text-center">
               <Link to="/capabilities">
-                <Button className="bg-leap-black hover:bg-leap-orange text-white px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full transition-colors duration-300 group">
+                <Button className="bg-leap-orange hover:bg-leap-red text-white px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full transition-colors duration-300 group">
                   See our full capabilities
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
