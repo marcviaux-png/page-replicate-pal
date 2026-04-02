@@ -114,30 +114,24 @@ const Portfolio = () => {
   return (
     <div className="bg-background">
       {/* Hero */}
-      <section className="relative bg-leap-black text-leap-white pt-40 pb-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.06]">
-          <div className="absolute inset-0" style={{
-            background: 'radial-gradient(ellipse at 70% 30%, hsl(27 81% 55% / 0.4), transparent 60%)'
-          }} />
+      <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
+            alt="Team collaboration background"
+            className="w-full h-full object-cover hero-image"
+          />
+          <div className="absolute inset-0 image-overlay"></div>
         </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
-            Our Work
-          </h1>
-          <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
-            We help organizations modernize how they serve, communicate, and grow through accessible, bilingual, and scalable digital experiences.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 bg-leap-orange text-leap-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all"
-          >
-            Let's talk
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
+              Our Work
+            </h1>
+            <p className="text-xl text-slate-300 leading-relaxed font-light">
+              We help organizations modernize how they serve, communicate, and grow through accessible, bilingual, and scalable digital experiences.
+            </p>
+          </div>
         </div>
       </section>
 
