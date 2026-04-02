@@ -13,24 +13,28 @@ const Services = () => {
       label: "Strategic advisory",
       headline: "Set direction before you build.",
       body: "We work with leadership teams to make sense of complexity, align stakeholders, and build a clear case for change. This is the work that happens before a solution is designed: understanding the landscape, defining the right problem, and establishing a shared direction that holds up under scrutiny.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
     },
     {
       icon: Palette,
       label: "Service & experience design",
       headline: "Design services that work for people.",
       body: "We research, design, and validate services that meet real user needs and that your team can actually deliver. Our work blends evidence-based discovery with human-centred design to create experiences that are intuitive, accessible, and built around how people actually behave, not how we assume they do.",
+      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=800",
     },
     {
       icon: Monitor,
       label: "Digital & technology transformation",
       headline: "Align technology with real outcomes.",
       body: "We help organizations evaluate digital opportunities, modernize legacy systems, and make technology investments that serve a clear strategic purpose. Our role is to ensure technology supports your service and organizational goals, not the other way around.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     },
     {
       icon: Rocket,
       label: "Delivery & adoption",
       headline: "Make change stick.",
       body: "Transformation only succeeds when people understand, trust, and adopt what's been built. We support organizations through implementation, change management, and stakeholder engagement, and we stay focused on building your team's capability to sustain the work long after we're gone.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
@@ -39,26 +43,31 @@ const Services = () => {
       num: "01",
       title: "Start with what's real",
       body: "We take time to understand your users, constraints, systems, and organizational context before designing anything. Assumptions get tested early. Evidence drives what comes next.",
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "02",
       title: "Let insights lead",
       body: "We surface the patterns, risks, and opportunities buried in what we find. Every strategic and design decision that follows is more confident because of this work.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "03",
       title: "Strategize with intent",
       body: "We align actions to your goals, governance frameworks, and organizational capacity, not just to industry best practice. Direction is only useful if it's achievable in your context.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "04",
       title: "Design for reality",
       body: "We build for how things actually work, technically, operationally, and humanly. Solutions that don't account for real-world constraints don't survive contact with them.",
+      image: "https://images.unsplash.com/photo-1581291518633-83b4eef1d2fa?auto=format&fit=crop&q=80&w=800",
     },
     {
       num: "05",
       title: "Leave teams stronger",
       body: "We deliver capability and continuity, not just deliverables. Every project is structured so your team finishes with more clarity, confidence, and ownership than when we started.",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
@@ -107,29 +116,30 @@ const Services = () => {
             </div>
           </ScrollReveal>
 
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {whatWeDoItems.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.08}>
-                <div className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden">
-                  {/* Orange left accent */}
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-slate-200 group-hover:bg-leap-orange transition-colors duration-500" />
-
-                  <div className="grid lg:grid-cols-12 items-start">
-                    {/* Left: Icon + number */}
-                    <div className="lg:col-span-4 p-8 lg:p-10 flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl bg-leap-orange/[0.07] group-hover:bg-leap-orange/[0.12] flex items-center justify-center shrink-0 transition-colors duration-500">
-                        <item.icon className="w-6 h-6 text-leap-orange" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-leap-orange transition-colors duration-300">{item.label}</h3>
-                        <p className="text-sm font-semibold text-leap-orange/80 italic">{item.headline}</p>
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="group relative rounded-2xl border border-border bg-white hover:border-leap-orange/30 transition-all duration-500 overflow-hidden h-full flex flex-col">
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-leap-orange" />
                       </div>
                     </div>
+                  </div>
 
-                    {/* Right: Body */}
-                    <div className="lg:col-span-8 p-8 lg:p-10 lg:pl-0 pt-0 lg:pt-10">
-                      <p className="text-slate-600 leading-relaxed lg:text-[17px]">{item.body}</p>
-                    </div>
+                  {/* Content */}
+                  <div className="p-8 flex flex-col flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-leap-orange transition-colors duration-300">{item.label}</h3>
+                    <p className="text-sm font-semibold text-leap-orange/80 italic mb-4">{item.headline}</p>
+                    <p className="text-slate-600 leading-relaxed text-[15px]">{item.body}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -166,17 +176,17 @@ const Services = () => {
             </div>
           </ScrollReveal>
 
-          {/* Interactive Steps — Desktop: tabs + detail panel */}
-          <div className="hidden lg:grid lg:grid-cols-12 gap-0">
+          {/* Interactive Steps — Desktop: tabs + detail panel with image */}
+          <div className="hidden lg:grid lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden border border-white/[0.08]">
             {/* Left: step selector */}
-            <div className="lg:col-span-5 border-r border-white/10">
+            <div className="lg:col-span-5 bg-white/[0.02]">
               {howWeWorkSteps.map((step, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveStep(i)}
                   className={`w-full text-left px-8 py-7 flex items-center gap-6 border-b border-white/[0.06] transition-all duration-300 group cursor-pointer ${
                     activeStep === i
-                      ? 'bg-white/[0.05]'
+                      ? 'bg-white/[0.06]'
                       : 'hover:bg-white/[0.03]'
                   }`}
                 >
@@ -197,14 +207,20 @@ const Services = () => {
               ))}
             </div>
 
-            {/* Right: detail panel */}
-            <div className="lg:col-span-7 flex items-center">
-              <div className="p-12 lg:p-16">
-                <div className="mb-6">
-                  <span className="text-[7rem] font-black leading-none text-leap-orange/10 select-none">
-                    {howWeWorkSteps[activeStep].num}
-                  </span>
-                </div>
+            {/* Right: detail panel with contextual image */}
+            <div className="lg:col-span-7 flex flex-col">
+              <div className="relative h-56 overflow-hidden">
+                <img
+                  src={howWeWorkSteps[activeStep].image}
+                  alt={howWeWorkSteps[activeStep].title}
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-leap-black via-leap-black/40 to-transparent" />
+                <span className="absolute bottom-4 right-6 text-[5rem] font-black leading-none text-white/[0.08] select-none">
+                  {howWeWorkSteps[activeStep].num}
+                </span>
+              </div>
+              <div className="p-12 flex-1 flex flex-col justify-center">
                 <h3 className="text-3xl font-bold text-white mb-6">
                   {howWeWorkSteps[activeStep].title}
                 </h3>
