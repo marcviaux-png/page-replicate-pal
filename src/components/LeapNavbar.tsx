@@ -32,6 +32,7 @@ const LeapNavbar = () => {
   const aiLinks = [
     { name: 'AI Services', path: '/ai-services' },
     { name: 'AI Training & Enablement', path: '/ai-training' },
+    { name: 'Generative Engine Optimization', path: '/geo' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
