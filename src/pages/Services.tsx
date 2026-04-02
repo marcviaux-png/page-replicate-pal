@@ -1,236 +1,174 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, ChevronDown, Users, Shield, Target, Layers, Sparkles, TrendingUp, Award, GraduationCap, BadgeCheck, Trophy } from 'lucide-react';
+import { ArrowRight, Building2, Landmark, MapPin, Building, Heart, BookOpen, BadgeCheck, GraduationCap, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import teamCollaboration from '@/assets/team-collaboration.jpg';
-
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-const capabilitySlugMap: Record<string, string> = {
-  "Discovery & Research": "discovery-research",
-  "Strategy & Planning": "strategy-planning",
-  "CX & UX Design": "cx-ux-design",
-  "Accessibility & Inclusive Design": "accessibility-inclusive-design",
-  "AI & Automation": "ai-automation",
-  "Implementation & Delivery": "implementation-delivery",
-  "Change & Adoption": "change-adoption",
-  "Marketing & Communications": "marketing-communications",
-  "Brand & Experience Identity": "brand-experience-identity",
-};
-
-const coreAreas = [
-  {
-    title: "Strategy & Advisory",
-    headline: "Turn complexity into clarity.",
-    paragraphs: [
-      "We work with leadership teams to define vision, prioritize investments, and develop actionable roadmaps for growth and transformation — guided by design thinking and user-centered discovery.",
-      "Our advisory services ensure organizations move forward with clear direction and measurable outcomes."
-    ],
-    capabilities: ["Discovery & Research", "Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    title: "Customer Experience & Service Design",
-    headline: "Design experiences that customers value and teams can deliver.",
-    paragraphs: [
-      "We help organizations understand their customers, identify experience gaps, and design services that deliver intuitive UX across digital and physical channels.",
-      "Our work blends research, strategy, and human-centered design to create experiences that drive engagement, satisfaction, and long-term loyalty."
-    ],
-    capabilities: ["Discovery & Research", "CX & UX Design", "Accessibility & Inclusive Design", "Implementation & Delivery", "Brand & Experience Identity"],
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    title: "Digital & Technology Transformation",
-    headline: "Align technology investments with real business and customer outcomes.",
-    paragraphs: [
-      "We support organizations in evaluating digital opportunities, selecting the right technologies, and implementing scalable solutions that improve operations and experiences.",
-      "Our approach ensures technology supports strategy—not the other way around."
-    ],
-    capabilities: ["Discovery & Research", "Strategy & Planning", "Accessibility & Inclusive Design", "AI & Automation", "Implementation & Delivery"],
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    title: "Innovation & Product Strategy",
-    headline: "Identify opportunities and bring new ideas to life.",
-    paragraphs: [
-      "We help organizations explore emerging opportunities, validate concepts, and design products or services that deliver meaningful value to customers and stakeholders."
-    ],
-    capabilities: ["Discovery & Research", "Strategy & Planning", "CX & UX Design", "AI & Automation"],
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    title: "Organizational Change & Adoption",
-    headline: "Transformation only succeeds when people adopt it.",
-    paragraphs: [
-      "We help organizations navigate change by aligning leadership, preparing teams, and implementing structured change management approaches that drive engagement and long-term success.",
-      "From transformation programs to technology implementations, we ensure initiatives are understood, embraced, and sustained."
-    ],
-    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption", "Marketing & Communications"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    title: "Operations & Service Delivery",
-    headline: "Improve efficiency, governance, and operational effectiveness.",
-    paragraphs: [
-      "We help organizations streamline processes, strengthen governance models, and optimize how services and operations are delivered. This often includes improving procurement, vendor management, and sourcing practices as part of broader operational improvements that increase efficiency, transparency, and performance."
-    ],
-    capabilities: ["Strategy & Planning", "Implementation & Delivery", "Change & Adoption"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-  }
-];
 
 const Services = () => {
-  const howWeWork = [
+  const whatWeDoItems = [
     {
-      title: "Client-centric engagement",
-      description: "We put your context, systems, and realities first"
+      label: "Strategic advisory",
+      headline: "Set direction before you build.",
+      body: "We work with leadership teams to make sense of complexity, align stakeholders, and build a clear case for change. This is the work that happens before a solution is designed: understanding the landscape, defining the right problem, and establishing a shared direction that holds up under scrutiny.",
     },
     {
-      title: "Outcome-focused solutions",
-      description: "Clear goals, measurable outcomes, and decisions guided by evidence."
+      label: "Service & experience design",
+      headline: "Design services that work for people.",
+      body: "We research, design, and validate services that meet real user needs and that your team can actually deliver. Our work blends evidence-based discovery with human-centred design to create experiences that are intuitive, accessible, and built around how people actually behave, not how we assume they do.",
     },
     {
-      title: "Collaborative delivery",
-      description: "A true partnership from planning through execution, working with your team, not around it."
-    }
+      label: "Digital & technology transformation",
+      headline: "Align technology with real outcomes.",
+      body: "We help organizations evaluate digital opportunities, modernize legacy systems, and make technology investments that serve a clear strategic purpose. Our role is to ensure technology supports your service and organizational goals, not the other way around.",
+    },
+    {
+      label: "Delivery & adoption",
+      headline: "Make change stick.",
+      body: "Transformation only succeeds when people understand, trust, and adopt what's been built. We support organizations through implementation, change management, and stakeholder engagement, and we stay focused on building your team's capability to sustain the work long after we're gone.",
+    },
+  ];
+
+  const howWeWorkSteps = [
+    {
+      num: "01",
+      title: "Start with what's real",
+      body: "We take time to understand your users, constraints, systems, and organizational context before designing anything. Assumptions get tested early. Evidence drives what comes next.",
+    },
+    {
+      num: "02",
+      title: "Let insights lead",
+      body: "We surface the patterns, risks, and opportunities buried in what we find. Every strategic and design decision that follows is more confident because of this work.",
+    },
+    {
+      num: "03",
+      title: "Strategize with intent",
+      body: "We align actions to your goals, governance frameworks, and organizational capacity, not just to industry best practice. Direction is only useful if it's achievable in your context.",
+    },
+    {
+      num: "04",
+      title: "Design for reality",
+      body: "We build for how things actually work, technically, operationally, and humanly. Solutions that don't account for real-world constraints don't survive contact with them.",
+    },
+    {
+      num: "05",
+      title: "Leave teams stronger",
+      body: "We deliver capability and continuity, not just deliverables. Every project is structured so your team finishes with more clarity, confidence, and ownership than when we started.",
+    },
+  ];
+
+  const sectors = [
+    { icon: Building2, title: "Enterprise & professional services", desc: "Helping organizations improve operations, automation, and client experience." },
+    { icon: Landmark, title: "Federal & provincial government", desc: "Modernizing services for citizens, businesses, and public sector teams." },
+    { icon: MapPin, title: "Municipal & regional government", desc: "Improving digital services, engagement, and operational efficiency." },
+    { icon: Building, title: "Crown corporations", desc: "Supporting public mandates with modern platforms, data systems, and governance-aligned services." },
+    { icon: Heart, title: "Non-profit & mission-driven organizations", desc: "Strengthening platforms and tools that support communities and social impact." },
+    { icon: BookOpen, title: "Education & research", desc: "Modernizing learning platforms, research infrastructure, and institutional services." },
   ];
 
   return (
     <div className="animate-in bg-leap-light">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000" 
-            alt="Strategic Consulting Background" 
+          <img
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000"
+            alt="Strategic Consulting Background"
             className="w-full h-full object-cover hero-image"
           />
           <div className="absolute inset-0 image-overlay"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Services</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
+              Services that work in the real world.
+            </h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              Our services are structured around the most common transformation challenges organizations face today—from improving customer experiences to navigating complex organizational change.
+              We help governments and mission-driven organizations understand real needs, navigate complexity, and deliver services that actually work, for the people using them and the teams responsible for them.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Story Introduction - What We Do */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">What We Do</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                At LeapUX, we partner with organizations to solve their most strategic challenges — from business model optimization and digital transformation to operational alignment and innovation strategy.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Our approach is collaborative, data-driven, and tailored to your goals. Whether you're launching a new initiative, scaling an existing team, or navigating change, our consulting services are designed to drive impact where it matters most.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden">
-                <img 
-                  src={teamCollaboration}
-                  alt="Team collaboration and strategy session" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-leap-orange/20 rounded-2xl -z-10"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Areas of Consulting Support */}
-      <section className="py-24 bg-[#F6F7F9]">
+      {/* What We Do */}
+      <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-20">
-            <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What We Do</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-leap-black mb-6">Core Service Areas</h2>
+            <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">What we do</p>
+            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl">
+              Whether you need strategic direction, hands-on design, technology guidance, or help managing change, we scope our work around what you actually need to move forward.
+            </p>
           </div>
 
-          <div className="space-y-8">
-            {coreAreas.map((area, index) => {
-              const isEven = index % 2 === 0;
-              return (
-                <div
-                  key={index}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100"
-                >
-                  <div className={`grid lg:grid-cols-12 ${isEven ? '' : 'direction-rtl'}`}>
-                    {/* Image */}
-                    <div className={`lg:col-span-4 relative overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                      <div className="aspect-[4/3] lg:aspect-auto lg:absolute lg:inset-0">
-                        <img
-                          src={area.image}
-                          alt={area.title}
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-leap-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                      </div>
-                      {/* Number overlay */}
-                      <span className="absolute top-4 left-4 text-6xl font-black text-white/20 group-hover:text-leap-orange/40 transition-colors duration-500 select-none">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                    </div>
-
-                    {/* Content */}
-                    <div className={`lg:col-span-8 p-8 sm:p-10 lg:p-12 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                      <h3 className="text-xl sm:text-2xl font-bold text-leap-black mb-2 group-hover:text-leap-orange transition-colors duration-300">
-                        {area.title}
-                      </h3>
-                      <p className="text-leap-orange font-semibold mb-5 italic">
-                        {area.headline}
-                      </p>
-                      <div className="space-y-3 mb-6">
-                        {area.paragraphs.map((p, i) => (
-                          <p key={i} className="text-slate-600 leading-relaxed">{p}</p>
-                        ))}
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Supporting capabilities</p>
-                        <div className="flex flex-wrap gap-2">
-                          {area.capabilities.map((cap, i) => {
-                            const slug = capabilitySlugMap[cap];
-                            return slug ? (
-                              <Link
-                                key={i}
-                                to={`/capabilities#${slug}`}
-                                className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full group-hover:bg-leap-orange/10 group-hover:text-leap-orange transition-colors duration-300 hover:!bg-leap-orange hover:!text-white"
-                              >
-                                {cap}
-                              </Link>
-                            ) : (
-                              <span
-                                key={i}
-                                className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full group-hover:bg-leap-orange/10 group-hover:text-leap-orange transition-colors duration-300"
-                              >
-                                {cap}
-                              </span>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-16">
+            {whatWeDoItems.map((item, i) => (
+              <div key={i} className="group">
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="text-5xl font-black text-slate-100 select-none leading-none group-hover:text-leap-orange/20 transition-colors duration-300">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="text-xl font-bold text-foreground">{item.label}</h3>
                 </div>
-              );
-            })}
+                <p className="text-leap-orange font-semibold mb-3 italic">{item.headline}</p>
+                <p className="text-slate-600 leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16">
+            <Link
+              to="/capabilities"
+              className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-red transition-colors group"
+            >
+              See our full capabilities
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Accreditation, Certifications & Education */}
+      {/* How We Work */}
+      <section id="how-we-work" className="py-32 bg-leap-black text-leap-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="max-w-3xl mb-20">
+            <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">How we work</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8">
+              We don't start by designing. We start by understanding.
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Every project follows the same progression, grounded in evidence, shaped by collaboration, and built so your team can sustain it long after we're gone. We bring rigour to complex problems without losing sight of what has to work in practice.
+            </p>
+          </div>
+
+          {/* Steps */}
+          <div className="space-y-0">
+            {howWeWorkSteps.map((step, i) => (
+              <div
+                key={i}
+                className="group grid lg:grid-cols-12 gap-6 lg:gap-12 py-10 border-t border-white/10 last:border-b"
+              >
+                <div className="lg:col-span-1">
+                  <span className="text-3xl font-black text-leap-orange/60 group-hover:text-leap-orange transition-colors duration-300">
+                    {step.num}
+                  </span>
+                </div>
+                <div className="lg:col-span-3">
+                  <h3 className="text-xl font-bold text-white group-hover:text-leap-orange transition-colors duration-300">
+                    {step.title}
+                  </h3>
+                </div>
+                <div className="lg:col-span-8">
+                  <p className="text-slate-400 leading-relaxed text-lg">
+                    {step.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Credentials — preserved exactly */}
       <section className="py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header — editorial style */}
           <div className="grid lg:grid-cols-5 gap-8 mb-20">
             <div className="lg:col-span-2">
               <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Our Credentials</p>
@@ -245,7 +183,6 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Three Pillars */}
           <div className="grid md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-slate-200">
             {/* Certifications */}
             <div className="relative p-10 lg:p-12 bg-slate-50 group">
@@ -330,169 +267,25 @@ const Services = () => {
         </div>
       </section>
 
-      <section id="how-we-work" className="py-24 bg-leap-black text-leap-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">How We Work</h2>
-              <p className="text-lg text-slate-300 leading-relaxed mb-10">
-                Every service follows a proven delivery model, grounded in evidence and shaped by collaboration. We start with discovery, then co-create solutions aligned to your goals, building clarity, confidence, and capability along the way.
-              </p>
-              <div className="space-y-6">
-                {howWeWork.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-leap-orange flex items-center justify-center shrink-0 mt-1">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-slate-400">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <Link
-                to="/capabilities#delivery-model"
-                className="inline-flex items-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-widest text-leap-orange hover:text-leap-brand transition-colors group mt-8"
-              >
-                Explore our delivery model
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" 
-                  alt="Collaborative team meeting" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -top-6 -right-6 w-24 h-24 border-4 border-leap-orange rounded-2xl -z-10"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Partner With */}
+      {/* Sectors We Work In */}
       <section className="py-32 bg-[#F6F7F9] text-foreground overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Who We Partner With</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold leading-tight mb-6">
-              Collaborative, adaptive, grounded in shared ownership
-            </h3>
+            <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Sectors we work in</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              We work alongside the teams responsible for setting direction, delivering change, and sustaining services.
+              We work in environments where the stakes are high, the constraints are real, and the margin for error is low.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border border-slate-200">
-            {[
-              { icon: Users, title: "Executive leadership", desc: "C-suite, directors, and senior decision-makers driving organizational vision" },
-              { icon: Shield, title: "Policy and regulatory teams", desc: "Teams navigating compliance, governance, and legislative requirements" },
-              { icon: Target, title: "Service owners and product leaders", desc: "Leaders accountable for service outcomes and product direction" },
-              { icon: Layers, title: "IT and digital delivery", desc: "Technical teams building, integrating, and maintaining platforms" },
-              { icon: Sparkles, title: "Communications and engagement", desc: "Teams shaping messaging, outreach, and stakeholder relationships" },
-              { icon: TrendingUp, title: "Operations and frontline staff", desc: "The people closest to service delivery and day-to-day impact" }
-            ].map((partner, i) => (
+            {sectors.map((sector, i) => (
               <div key={i} className="bg-white p-10 flex flex-col gap-4 group hover:bg-leap-orange/[0.03] transition-colors">
                 <div className="w-12 h-12 rounded-full bg-leap-orange/10 flex items-center justify-center">
-                  <partner.icon className="w-5 h-5 text-leap-orange" />
+                  <sector.icon className="w-5 h-5 text-leap-orange" />
                 </div>
-                <h4 className="text-lg font-bold text-foreground">{partner.title}</h4>
-                <p className="text-sm text-slate-500 leading-relaxed">{partner.desc}</p>
+                <h4 className="text-lg font-bold text-foreground">{sector.title}</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">{sector.desc}</p>
               </div>
             ))}
-          </div>
-
-          {/* Partners & Collaborators */}
-          <div className="mt-24 pt-20 border-t border-slate-200">
-            <div className="text-center mb-4">
-              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Partners & Collaborators</h3>
-              <p className="text-base text-slate-500 max-w-xl mx-auto leading-relaxed">
-                Working with the right people to deliver the right outcomes. We collaborate with trusted partners across technology, talent, and innovation.
-              </p>
-            </div>
-
-            <div className="space-y-12 mt-14">
-              {/* Technology & Platforms */}
-              <div>
-                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Technology & Platforms</p>
-                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                  {[
-                    { name: "Microsoft", logo: "https://logo.clearbit.com/microsoft.com" },
-                    { name: "Adobe", logo: "https://logo.clearbit.com/adobe.com" },
-                    { name: "Google", logo: "https://logo.clearbit.com/google.com" },
-                    { name: "Figma", logo: "https://logo.clearbit.com/figma.com" },
-                    { name: "Trymata", logo: "https://logo.clearbit.com/trymata.com" },
-                    { name: "Shopify", logo: "https://logo.clearbit.com/shopify.com" },
-                    { name: "AWS", logo: "https://logo.clearbit.com/aws.amazon.com" },
-                  ].map((p) => (
-                    <div key={p.name} className="flex items-center gap-2.5 group">
-                      <img src={p.logo} alt={p.name} className="w-7 h-7 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                      <span className="text-sm font-medium text-slate-500 group-hover:text-foreground transition-colors">{p.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Funding & Acceleration */}
-              <div>
-                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Funding & Acceleration</p>
-                <div className="flex items-center justify-center">
-                  <span className="text-sm font-medium text-slate-500">Arctech Accelerate</span>
-                </div>
-              </div>
-
-              {/* Talent & Delivery Partners */}
-              <div>
-                <p className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] text-center mb-6">Talent & Delivery Partners</p>
-                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                  {[
-                    { name: "SI Systems", logo: "https://logo.clearbit.com/sisystems.com" },
-                    { name: "Altis Recruitment", logo: "https://logo.clearbit.com/altisrecruitment.com" },
-                    { name: "Deloitte", logo: "https://logo.clearbit.com/deloitte.com" },
-                    { name: "Procom", logo: "https://logo.clearbit.com/procom.ca" },
-                  ].map((p) => (
-                    <div key={p.name} className="flex items-center gap-2.5 group">
-                      <img src={p.logo} alt={p.name} className="w-7 h-7 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                      <span className="text-sm font-medium text-slate-500 group-hover:text-foreground transition-colors">{p.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Explore Capabilities */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" 
-                  alt="Team planning session" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6">Explore Our Capabilities</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-4">
-                Our capabilities represent the tools, expertise, and methodologies we apply across every engagement.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Explore how we deliver value across strategy, design, technology, and transformation.
-              </p>
-              <Link to="/capabilities">
-                <Button className="bg-leap-orange hover:bg-leap-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
-                  View Our Capabilities
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -500,19 +293,20 @@ const Services = () => {
       {/* CTA */}
       <section className="py-32 bg-gradient-to-br from-leap-orange to-leap-red text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-white/70 mb-4">Work with us</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to get started?</h2>
           <p className="text-lg text-white/90 mb-10">
-            Whether you need a strategy session, a full consulting engagement, or targeted support, we're here to help you take the next step.
+            Tell us about your challenge and we'll set up a conversation about how we can help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button className="bg-white hover:bg-slate-100 text-leap-black px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
-                Contact Us
+                Book a Consultation
               </Button>
             </Link>
             <Link to="/contact">
               <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-leap-black px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full">
-                Schedule a Consultation
+                Contact Us
               </Button>
             </Link>
           </div>
