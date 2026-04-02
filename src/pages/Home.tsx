@@ -21,34 +21,28 @@ const Home = () => {
   const services = [
     {
       icon: Compass,
-      title: "Strategy & Advisory",
-      description: "Turn complexity into clarity through design thinking, user-centered discovery, strategic roadmaps, and actionable direction for growth and transformation."
+      title: "Strategic advisory",
+      description: "We help leadership teams make sense of complexity, align stakeholders, and build a clear case for change.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
     },
     {
-      icon: Paintbrush,
-      title: "Customer Experience & Service Design",
-      description: "Research, design, and deliver intuitive UX across channels — grounded in accessibility, brand identity, and real user needs."
+      icon: Palette,
+      title: "Service & experience design",
+      description: "We research, design, and validate services that meet real user needs and that your team can actually deliver.",
+      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=800",
     },
     {
-      icon: Cpu,
-      title: "Digital & Technology Transformation",
-      description: "Align technology investments with business outcomes through AI readiness, scalable implementation, and inclusive digital solutions."
+      icon: Monitor,
+      title: "Digital & technology transformation",
+      description: "We help organizations make technology investments that serve a clear strategic purpose.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     },
     {
       icon: Rocket,
-      title: "Innovation & Product Strategy",
-      description: "Explore emerging opportunities, validate concepts, and shape products that deliver meaningful value to customers and stakeholders."
+      title: "Delivery & adoption",
+      description: "We support organizations through implementation, change management, and stakeholder engagement.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
     },
-    {
-      icon: Users,
-      title: "Organizational Change & Adoption",
-      description: "Drive adoption through structured change management, communications strategy, and leadership alignment that makes transformation stick."
-    },
-    {
-      icon: Accessibility,
-      title: "Operations & Service Delivery",
-      description: "Streamline processes, strengthen governance, and optimize how services are delivered for greater efficiency and performance."
-    }
   ];
 
   return (
