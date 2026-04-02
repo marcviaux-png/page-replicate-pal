@@ -147,13 +147,9 @@ const Services = () => {
           </div>
 
           <ScrollReveal delay={0.3}>
-            <div className="mt-16 p-8 rounded-2xl bg-slate-50 border border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-              <div>
-                <p className="text-lg font-bold text-foreground mb-1">Want the full picture?</p>
-                <p className="text-sm text-slate-500">Explore all ten capability areas we bring to every engagement.</p>
-              </div>
+            <div className="mt-16 text-center">
               <Link to="/capabilities">
-                <Button className="bg-leap-orange hover:bg-leap-red text-white px-8 py-5 text-sm font-bold uppercase tracking-widest rounded-full whitespace-nowrap group">
+                <Button className="bg-leap-black hover:bg-leap-orange text-white px-12 py-6 text-sm font-bold uppercase tracking-widest rounded-full transition-colors duration-300 group">
                   See our full capabilities
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
