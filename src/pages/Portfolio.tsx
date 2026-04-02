@@ -128,9 +128,16 @@ const Portfolio = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
               Our Work
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed font-light">
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
               We help organizations modernize how they serve, communicate, and grow through accessible, bilingual, and scalable digital experiences.
             </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-leap-orange text-leap-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all"
+            >
+              Let's talk
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
