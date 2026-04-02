@@ -202,15 +202,15 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-32 bg-[#F6F7F9]">
+      <section className="py-32 bg-leap-black text-leap-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Why LeapUX</h2>
-              <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
+              <h3 className="text-3xl sm:text-4xl font-bold text-leap-white mb-6 leading-tight">
                 Evidence, discipline, and real-world impact
               </h3>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed">
                 We bring rigour and clarity to complex challenges, helping teams move from uncertainty to confident delivery.
               </p>
             </div>
@@ -222,9 +222,9 @@ const Services = () => {
                 { icon: Users, text: "Senior-led, cross-disciplinary teams" },
                 { icon: Rocket, text: "Focused on adoption and long-term impact" }
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-200">
+                <div key={i} className="flex items-center gap-4 bg-white/[0.05] p-5 rounded-xl border border-white/[0.08]">
                   <item.icon className="w-5 h-5 text-leap-orange shrink-0" />
-                  <span className="text-leap-black font-medium">{item.text}</span>
+                  <span className="text-leap-white font-medium">{item.text}</span>
                 </div>
               ))}
             </div>
