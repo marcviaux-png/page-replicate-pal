@@ -175,17 +175,29 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, i) => (
               <div 
                 key={i} 
-                className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-leap-orange/30 hover:shadow-lg transition-all"
+                className="group bg-white rounded-2xl border border-slate-200 hover:border-leap-orange/30 hover:shadow-lg transition-all overflow-hidden flex flex-col"
               >
-                <div className="w-12 h-12 bg-leap-orange/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-leap-orange/20 transition-colors">
-                  <service.icon className="w-6 h-6 text-leap-orange" />
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-leap-orange" />
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold text-leap-black mb-3">{service.title}</h4>
-                <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                <div className="p-7 flex flex-col flex-1">
+                  <h4 className="text-lg font-bold text-leap-black mb-2 group-hover:text-leap-orange transition-colors duration-300">{service.title}</h4>
+                  <p className="text-slate-600 leading-relaxed text-[15px]">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>
