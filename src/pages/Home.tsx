@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Compass, Users, Paintbrush, Accessibility, Cpu, Rocket } from 'lucide-react';
+import { CheckCircle, ArrowRight, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import logoSJA from '@/assets/logo-sja.png';
@@ -21,33 +21,23 @@ const Home = () => {
   const services = [
     {
       icon: Compass,
-      title: "Strategy & Advisory",
-      description: "Turn complexity into clarity through design thinking, user-centered discovery, strategic roadmaps, and actionable direction for growth and transformation."
+      title: "Strategic Advisory",
+      description: "We work with leadership to make sense of complexity, align stakeholders, and build a clear case for change before solutions are designed."
     },
     {
-      icon: Paintbrush,
-      title: "Customer Experience & Service Design",
-      description: "Research, design, and deliver intuitive UX across channels — grounded in accessibility, brand identity, and real user needs."
+      icon: Palette,
+      title: "Service & Experience Design",
+      description: "We research, design, and validate services that meet real user needs — grounded in accessibility, evidence-based discovery, and human-centred design."
     },
     {
-      icon: Cpu,
+      icon: Monitor,
       title: "Digital & Technology Transformation",
-      description: "Align technology investments with business outcomes through AI readiness, scalable implementation, and inclusive digital solutions."
+      description: "We help organizations evaluate digital opportunities, modernize systems, and align technology investments with clear strategic outcomes."
     },
     {
       icon: Rocket,
-      title: "Innovation & Product Strategy",
-      description: "Explore emerging opportunities, validate concepts, and shape products that deliver meaningful value to customers and stakeholders."
-    },
-    {
-      icon: Users,
-      title: "Organizational Change & Adoption",
-      description: "Drive adoption through structured change management, communications strategy, and leadership alignment that makes transformation stick."
-    },
-    {
-      icon: Accessibility,
-      title: "Operations & Service Delivery",
-      description: "Streamline processes, strengthen governance, and optimize how services are delivered for greater efficiency and performance."
+      title: "Delivery & Adoption",
+      description: "We support implementation, change management, and stakeholder engagement — building your team's capability to sustain transformation."
     }
   ];
 
