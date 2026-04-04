@@ -90,7 +90,7 @@ const Contact = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Let's Talk</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              Ready to design a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.
+              Ready to deliver a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.
             </p>
           </div>
         </div>
