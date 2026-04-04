@@ -11,7 +11,7 @@ get_header();
 $next_steps = array(
     "We'll review your message and get back to you within 1-2 business days.",
     "We'll schedule a call to understand your needs and context.",
-    "If there's a fit, we'll propose an approach tailored to your situation.",
+    "We'll work with you to define an approach that fits your needs.",
 );
 ?>
 
@@ -26,7 +26,7 @@ $next_steps = array(
         <div class="container">
             <div style="max-width: 48rem;">
                 <h1>Let's Talk</h1>
-                <p>Ready to design a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.</p>
+                <p>Ready to deliver a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.</p>
             </div>
         </div>
     </div>

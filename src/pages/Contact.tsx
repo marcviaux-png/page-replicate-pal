@@ -71,7 +71,7 @@ const Contact = () => {
   const nextSteps = [
     "We'll review your message and get back to you within 1-2 business days.",
     "We'll schedule a call to understand your needs and context.",
-    "If there's a fit, we'll propose an approach tailored to your situation."
+    "We'll work with you to define an approach that fits your needs."
   ];
 
   return (
@@ -90,7 +90,7 @@ const Contact = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">Let's Talk</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              Ready to design a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.
+              Ready to deliver a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.
             </p>
           </div>
         </div>
