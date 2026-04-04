@@ -26,7 +26,7 @@ $next_steps = array(
         <div class="container">
             <div style="max-width: 48rem;">
                 <h1>Let's Talk</h1>
-                <p>Ready to design a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.</p>
+                <p>Ready to deliver a service that works? Get in touch and let's discuss how we can help your organization deliver with confidence.</p>
             </div>
         </div>
     </div>
