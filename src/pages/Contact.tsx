@@ -71,7 +71,7 @@ const Contact = () => {
   const nextSteps = [
     "We'll review your message and get back to you within 1-2 business days.",
     "We'll schedule a call to understand your needs and context.",
-    "If there's a fit, we'll propose an approach tailored to your situation."
+    "We'll work with you to define an approach that fits your needs."
   ];
 
   return (
