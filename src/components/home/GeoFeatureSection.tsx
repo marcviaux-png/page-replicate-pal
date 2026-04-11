@@ -80,7 +80,7 @@ const GeoFeatureSection = () => {
                 {
                   icon: Zap,
                   title: 'CiteAI',
-                  description: 'Our tactical tool that audits, monitors, and optimizes your AI presence.',
+                  description: 'Audit your AI presence across platforms and instantly understand your AI Visibility health.',
                   isMicro: true
                 },
               ].map((feature, i) => (
