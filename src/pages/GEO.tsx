@@ -285,14 +285,14 @@ const GEO = () => {
               <div className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] p-10 rounded-3xl border border-white/10 shadow-2xl">
                 <div className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/[0.08]">
                   <div className="flex flex-col sm:flex-row items-stretch gap-4">
-                    <div className="flex-1 bg-[#161616] rounded-xl border border-white/[0.06] px-5 py-4 flex items-center">
+                    <div className="flex-[3] bg-[#161616] rounded-xl border border-white/[0.06] px-5 py-4 flex items-center min-h-[56px]">
                       <span className="text-slate-500 text-sm">Enter your website URL</span>
                     </div>
                     <a
                       href="https://cite-prime-ai.lovable.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex justify-center items-center px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-xl bg-leap-orange text-leap-white hover:brightness-110 transition-all whitespace-nowrap"
+                      className="flex-[1.2] inline-flex justify-center items-center px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-xl bg-leap-orange text-leap-white hover:brightness-110 transition-all whitespace-nowrap"
                     >
                       Get Free Assessment
                     </a>
