@@ -264,7 +264,7 @@ const GEO = () => {
                   Micro-Service
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-                  Cite Prime AI — your AI visibility command centre.
+                  Cite Prime AI — checking your AI visibility.
                 </h3>
                 <p className="text-lg text-slate-600 leading-relaxed mb-8">
                   Cite Prime AI is the tactical engine behind our GEO service. It audits your current AI presence, monitors citations across platforms, and provides the intelligence you need to stay ahead.
