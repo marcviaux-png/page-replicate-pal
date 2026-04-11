@@ -282,37 +282,20 @@ const GEO = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} direction="right">
-              <div className="bg-leap-black p-8 rounded-2xl border border-white/10">
-                <div className="text-xs text-slate-500 uppercase tracking-widest mb-6 font-bold">AI Visibility Dashboard</div>
-                <div className="space-y-6">
-                  {[
-                    { platform: 'ChatGPT', score: 78, color: 'bg-leap-orange' },
-                    { platform: 'Google AI Overviews', score: 62, color: 'bg-leap-brand' },
-                    { platform: 'Perplexity', score: 71, color: 'bg-leap-orange' },
-                    { platform: 'Gemini', score: 45, color: 'bg-leap-red' },
-                  ].map((item, i) => (
-                    <div key={i}>
-                      <div className="flex justify-between text-sm mb-2">
-                        <span className="text-slate-400">{item.platform}</span>
-                        <span className="text-leap-white font-bold">{item.score}/100</span>
-                      </div>
-                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                        <div
-                          className={`h-full ${item.color} rounded-full transition-all duration-1000`}
-                          style={{ width: `${item.score}%` }}
-                        />
-                      </div>
+              <div className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] p-10 rounded-3xl border border-white/10 shadow-2xl">
+                <div className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/[0.08]">
+                  <div className="flex flex-col sm:flex-row items-stretch gap-4">
+                    <div className="flex-1 bg-[#161616] rounded-xl border border-white/[0.06] px-5 py-4 flex items-center">
+                      <span className="text-slate-500 text-sm">Enter your website URL</span>
                     </div>
-                  ))}
-                </div>
-                <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-leap-orange">34</div>
-                    <div className="text-xs text-slate-500 mt-1">Total Citations</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-leap-white">+12</div>
-                    <div className="text-xs text-slate-500 mt-1">This Month</div>
+                    <a
+                      href="https://cite-prime-ai.lovable.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex justify-center items-center px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-xl bg-leap-orange text-leap-white hover:brightness-110 transition-all whitespace-nowrap"
+                    >
+                      Get Free Assessment
+                    </a>
                   </div>
                 </div>
               </div>
