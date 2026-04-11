@@ -370,64 +370,6 @@ const GEO = () => {
         </div>
       </section>
 
-      {/* Proof / Scenarios */}
-      <section className="py-32 bg-leap-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-xs font-black text-leap-orange uppercase tracking-[0.2em] mb-4">Results</h2>
-              <h3 className="text-3xl sm:text-4xl font-bold text-leap-white mb-6 leading-tight">
-                Real visibility. Real impact.
-              </h3>
-              <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                Businesses using GEO strategies are seeing measurable jumps in AI citations and discovery within 60 days.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                before: 12,
-                after: 78,
-                quote: 'We went from zero AI mentions to being the top-recommended business in our category on ChatGPT.',
-                name: 'Restaurant Owner',
-                location: 'Austin, TX',
-              },
-              {
-                before: 8,
-                after: 71,
-                quote: 'My competitors were getting all the Perplexity recommendations. Now I\'m the first name that comes up.',
-                name: 'Real Estate Professional',
-                location: 'Denver, CO',
-              },
-              {
-                before: 5,
-                after: 82,
-                quote: 'Within 60 days, we were being cited in Google AI Overviews for our core practice area.',
-                name: 'Law Firm Partner',
-                location: 'Chicago, IL',
-              },
-            ].map((result, i) => (
-              <ScrollReveal key={i} delay={i * 0.15} direction="up">
-                <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] h-full">
-                  <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-4xl font-bold text-slate-500">{result.before}</span>
-                    <ArrowRight className="w-5 h-5 text-leap-orange" />
-                    <span className="text-4xl font-bold text-leap-orange">{result.after}</span>
-                    <span className="text-xs text-slate-500 uppercase tracking-wider">in 60 days</span>
-                  </div>
-                  <p className="text-slate-300 leading-relaxed italic mb-6">"{result.quote}"</p>
-                  <div className="text-sm">
-                    <div className="text-leap-white font-medium">{result.name}</div>
-                    <div className="text-slate-500">{result.location}</div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Lead Generation CTA */}
       <section id="contact" className="py-32 bg-[#F6F7F9]">
