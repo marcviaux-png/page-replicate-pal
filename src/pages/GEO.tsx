@@ -266,22 +266,9 @@ const GEO = () => {
                 <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
                   Cite Prime AI — checking your AI visibility.
                 </h3>
-                <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                  Cite Prime AI is the tactical engine behind our GEO service. It audits your current AI presence, monitors citations across platforms, and provides the intelligence you need to stay ahead.
+                <p className="text-lg text-slate-600 leading-relaxed mb-10">
+                  Cite Prime AI is the tactical engine behind our GEO service. It audits your current AI presence, monitors citations across platforms, and provides your AI Visibility Score across ChatGPT, Gemini, Perplexity, and Google AI — giving you the intelligence you need to stay ahead.
                 </p>
-                <ul className="space-y-4 mb-10">
-                  {[
-                    'AI Visibility Score across ChatGPT, Gemini, Perplexity, and Google AI',
-                    'Competitor gap analysis — see who\'s being recommended instead of you',
-                    'Ongoing monitoring and citation tracking',
-                    'Structured content recommendations that make you citable',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-leap-orange shrink-0 mt-0.5" strokeWidth={2} />
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
                 <a
                   href="https://cite-prime-ai.lovable.app/"
                   target="_blank"
