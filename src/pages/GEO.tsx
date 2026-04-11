@@ -288,14 +288,9 @@ const GEO = () => {
                     <div className="flex-[3] bg-[#161616] rounded-xl border border-white/[0.06] px-5 py-4 flex items-center min-h-[56px]">
                       <span className="text-slate-500 text-sm">Enter your website URL</span>
                     </div>
-                    <a
-                      href="https://cite-prime-ai.lovable.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-[1.2] inline-flex justify-center items-center px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-xl bg-leap-orange text-leap-white hover:brightness-110 transition-all whitespace-nowrap"
-                    >
+                    <div className="flex-[1.2] inline-flex justify-center items-center px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-xl bg-leap-orange text-leap-white whitespace-nowrap">
                       Get Free Assessment
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
