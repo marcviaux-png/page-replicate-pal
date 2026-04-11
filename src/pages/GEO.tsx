@@ -267,7 +267,7 @@ const GEO = () => {
                   CiteAI — checking your AI visibility.
                 </h3>
                 <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                  CiteAI is the tactical engine behind our GEO service. It audits your current AI presence, monitors citations across platforms, and provides your AI Visibility Score across ChatGPT, Gemini, Perplexity, and Google AI — giving you the intelligence you need to stay ahead.
+                  CiteAI is the tactical engine behind our GEO service. It audits your current AI presence across platforms, and provides your AI Visibility Score across ChatGPT, Gemini, Perplexity, and Google AI — giving you the intelligence you need to stay ahead.
                 </p>
                 <a
                   href="https://cite-prime-ai.lovable.app/"
