@@ -79,7 +79,7 @@ const GeoFeatureSection = () => {
                 },
                 {
                   icon: Zap,
-                  title: 'Cite Prime AI',
+                  title: 'CiteAI',
                   description: 'Our tactical tool that audits, monitors, and optimizes your AI presence.',
                   isMicro: true
                 },
