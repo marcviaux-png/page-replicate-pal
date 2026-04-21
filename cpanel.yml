@@ -1,5 +1,7 @@
----
-deployment:
+---deployment:
   tasks:
     - export DEPLOYPATH=/home/leapux/public_html/dev1
-    - /bin/cp -r * $DEPLOYPATH
+    - /bin/cp .env.example .env
+    - /usr/bin/npm install
+    - /usr/bin/npm run build
+    - /bin/cp -r build/* $DEPLOYPATH
