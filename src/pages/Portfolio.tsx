@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Landmark, Heart, Building2, Cross } from 'lucide-react';
+import Seo from '@/components/Seo';
 
 const pspcImg = 'https://leapux.com/wp-content/uploads/elementor/thumbs/PSPC-scaled-r82pyyj9n9qr5ofu4yfm8elrgl316gs1jpeqo4noio.png';
 const isedImg = 'https://leapux.com/wp-content/uploads/elementor/thumbs/ISED-1-scaled-r82pytu2p3kbjmmnweehdxsghnq73z9dv25b9qunds.png';
@@ -113,6 +114,7 @@ const Portfolio = () => {
 
   return (
     <div className="bg-background">
+      <Seo title='Portfolio | LeapUX Case Studies' description='Selected case studies from LeapUX engagements with public-sector and private-sector clients across Canada.' path='/portfolio' />
       {/* Hero */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CheckCircle, Search, Building, Shield, Users, Rocket } from 'lucide-react';
+import Seo from '@/components/Seo';
 
 interface ServiceCardProps {
   title: string;
@@ -166,6 +167,7 @@ const Services = () => {
 
   return (
     <div className="animate-in bg-leap-light">
+      <Seo title='Capabilities | LeapUX' description='Research, design, accessibility, delivery, and AI capabilities — the disciplines LeapUX brings to every engagement.' path='/capabilities' />
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 

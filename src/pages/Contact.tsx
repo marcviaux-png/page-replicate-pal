@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import Seo from '@/components/Seo';
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
@@ -76,6 +77,7 @@ const Contact = () => {
 
   return (
     <div className="animate-in">
+      <Seo title='Contact LeapUX | Start a conversation' description='Tell us about your project. LeapUX partners with organizations on UX, service design, and digital transformation engagements.' path='/contact' />
       {/* Hero Section */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
