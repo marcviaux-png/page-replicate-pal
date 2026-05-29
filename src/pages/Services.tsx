@@ -339,7 +339,16 @@ const Services = () => {
                 </div>
                 <div className="pb-6 border-b border-slate-200">
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Featured in the <span className="font-semibold text-leap-black">Ottawa Business Journal</span> for digital transformation work with St. John Ambulance.
+                    Featured in the{" "}
+                    <a
+                      href="https://obj.ca/ottawa-digital-agency-opin-driving-st-john-ambulance-into-the-digital-age/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-leap-black underline decoration-leap-orange/40 underline-offset-4 hover:decoration-leap-orange transition-colors"
+                    >
+                      Ottawa Business Journal
+                    </a>{" "}
+                    for digital transformation work with St. John Ambulance.
                   </p>
                 </div>
                 <div>
