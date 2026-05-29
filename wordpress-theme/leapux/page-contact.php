@@ -40,7 +40,7 @@ $next_steps = array(
                     <h2 style="margin-bottom: 1rem;">Tell us about your project</h2>
                     <p style="font-size: 1.125rem; color: var(--slate-600); margin-bottom: 2.5rem;">Share a few details and we'll reach out to schedule a conversation.</p>
 
-                    <form method="post" action="#">
+                    <form method="post" action="mailto:contact@leapux.com" enctype="text/plain">
                         <div class="form-row" style="margin-bottom: 1.5rem;">
                             <div class="form-group">
                                 <label class="form-label" for="firstName">First name</label>
