@@ -1,17 +1,24 @@
 import { Head } from "vite-react-ssg";
 
-const SITE_URL = "https://page-replicate-pal.lovable.app";
+const SITE_URL = "https://leapux.com";
 const SITE_NAME = "LeapUX";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 interface SeoProps {
   title: string;
   description: string;
   path: string;
   ogType?: "website" | "article";
+  image?: string;
 }
 
-const Seo = ({ title, description, path, ogType = "website" }: SeoProps) => {
+const Seo = ({ title, description, path, ogType = "website", image }: SeoProps) => {
   const url = `${SITE_URL}${path}`;
+  const imageUrl = image
+    ? image.startsWith("http")
+      ? image
+      : `${SITE_URL}${image}`
+    : DEFAULT_OG_IMAGE;
   return (
     <Head>
       <title>{title}</title>
@@ -22,9 +29,14 @@ const Seo = ({ title, description, path, ogType = "website" }: SeoProps) => {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${SITE_NAME} — ${title}`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
     </Head>
   );
 };
