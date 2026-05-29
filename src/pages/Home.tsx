@@ -8,6 +8,7 @@ import logoBeneva from '@/assets/logo-beneva.png';
 import logoGoC from '@/assets/logo-goc.png';
 import logoSHS from '@/assets/logo-shs.png';
 import GeoFeatureSection from '@/components/home/GeoFeatureSection';
+import Seo from '@/components/Seo';
 
 const Home = () => {
   const approachPoints = [
@@ -43,6 +44,7 @@ const Home = () => {
 
   return (
     <div className="animate-in">
+      <Seo title='LeapUX | Design digital services that work in the real world' description='Senior-led digital consultancy for UX, service design, and complex delivery. We combine evidence, discipline, and accountability to deliver results.' path='/' />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-leap-black">
         <div className="absolute inset-0 z-0">

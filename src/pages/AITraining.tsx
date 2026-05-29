@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { z } from 'zod';
 import heroAiTraining from '@/assets/hero-ai-training.jpg';
+import Seo from '@/components/Seo';
 
 const programOptions = [
   "AI Foundations: Understanding AI Today and Tomorrow",
@@ -242,6 +243,7 @@ const AITraining = () => {
 
   return (
     <div className="animate-in bg-leap-light">
+      <Seo title='AI Training for Teams | LeapUX' description='Practical, hands-on AI training that helps teams use AI safely and effectively in their day-to-day work.' path='/ai-training' />
       {/* Hero Section */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, Landmark, MapPin, Building, Heart, BookOpen, BadgeCheck, GraduationCap, Trophy, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from '@/components/ScrollReveal';
+import Seo from '@/components/Seo';
 
 const Services = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -82,6 +83,7 @@ const Services = () => {
 
   return (
     <div className="animate-in bg-leap-light">
+      <Seo title='Services | LeapUX' description='Strategic advisory, service and experience design, digital transformation, and delivery. End-to-end services for organizations tackling complex problems.' path='/services' />
       {/* Hero */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">

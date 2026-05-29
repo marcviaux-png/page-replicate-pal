@@ -6,10 +6,12 @@ import logoSJA from '@/assets/logo-sja.png';
 import logoIJC from '@/assets/logo-ijc.png';
 import logoBeneva from '@/assets/logo-beneva.png';
 import logoSHS from '@/assets/logo-shs.png';
+import Seo from '@/components/Seo';
 
 const About = () => {
   return (
     <div className="animate-in">
+      <Seo title='About LeapUX | Senior-led digital consultancy' description='Meet the team behind LeapUX. We bring senior-led expertise to UX, service design, and digital transformation for organizations that need real-world results.' path='/about' />
       {/* ═══════════════════════════════════════════════════════════
           HERO
       ═══════════════════════════════════════════════════════════ */}

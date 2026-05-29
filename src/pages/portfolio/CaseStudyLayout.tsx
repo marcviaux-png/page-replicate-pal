@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Seo from '@/components/Seo';
+
 
 interface CaseStudyProps {
   client: string;
@@ -26,9 +28,17 @@ const CaseStudyLayout = ({
   nextProject,
   prevProject,
 }: CaseStudyProps) => {
+  const { pathname } = useLocation();
   return (
     <div className="bg-background">
+      <Seo
+        title={`${client} — Case Study | LeapUX`}
+        description={intro.length > 160 ? intro.slice(0, 157) + '...' : intro}
+        path={pathname}
+        ogType="article"
+      />
       {/* Hero */}
+
       <section className="relative bg-leap-black text-leap-white pt-40 pb-24 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',

@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { z } from 'zod';
 import heroAiServices from '@/assets/hero-ai-services.jpg';
+import Seo from '@/components/Seo';
 
 const leadSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
@@ -250,6 +251,7 @@ const AIServices = () => {
 
   return (
     <div className="animate-in bg-leap-light">
+      <Seo title='AI Services | LeapUX' description='From AI strategy to implementation — LeapUX helps organizations design and deliver AI-powered services that work in the real world.' path='/ai-services' />
       {/* Hero Section */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
