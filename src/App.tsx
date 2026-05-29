@@ -1,9 +1,5 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import type { RouteRecord } from "vite-react-ssg";
+import Layout from "./Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -20,61 +16,31 @@ import SHS from "./pages/portfolio/SHS";
 import Beneva from "./pages/portfolio/Beneva";
 import GEO from "./pages/GEO";
 import NotFound from "./pages/NotFound";
-import LeapNavbar from "./components/LeapNavbar";
-import LeapFooter from "./components/LeapFooter";
 
-const queryClient = new QueryClient();
+export const routes: RouteRecord[] = [
+  {
+    path: "/",
+    element: <Layout />,
+    entry: "src/Layout.tsx",
+    children: [
+      { index: true, element: <Home />, entry: "src/pages/Home.tsx" },
+      { path: "about", element: <About />, entry: "src/pages/About.tsx" },
+      { path: "services", element: <Services />, entry: "src/pages/Services.tsx" },
+      { path: "capabilities", element: <Capabilities />, entry: "src/pages/Capabilities.tsx" },
+      { path: "contact", element: <Contact />, entry: "src/pages/Contact.tsx" },
+      { path: "ai-training", element: <AITraining />, entry: "src/pages/AITraining.tsx" },
+      { path: "ai-services", element: <AIServices />, entry: "src/pages/AIServices.tsx" },
+      { path: "geo", element: <GEO />, entry: "src/pages/GEO.tsx" },
+      { path: "portfolio", element: <Portfolio />, entry: "src/pages/Portfolio.tsx" },
+      { path: "portfolio/pspc", element: <PSPC />, entry: "src/pages/portfolio/PSPC.tsx" },
+      { path: "portfolio/ised", element: <ISED />, entry: "src/pages/portfolio/ISED.tsx" },
+      { path: "portfolio/st-john-ambulance", element: <StJohnAmbulance />, entry: "src/pages/portfolio/StJohnAmbulance.tsx" },
+      { path: "portfolio/ijc", element: <IJC />, entry: "src/pages/portfolio/IJC.tsx" },
+      { path: "portfolio/soldiers-helping-soldiers", element: <SHS />, entry: "src/pages/portfolio/SHS.tsx" },
+      { path: "portfolio/beneva", element: <Beneva />, entry: "src/pages/portfolio/Beneva.tsx" },
+      { path: "*", element: <NotFound />, entry: "src/pages/NotFound.tsx" },
+    ],
+  },
+];
 
-const ScrollToTop = () => {
-  const { pathname, hash } = useLocation();
-  useEffect(() => {
-    if (hash) {
-      setTimeout(() => {
-        const el = document.querySelector(hash);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [pathname, hash]);
-  return null;
-};
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
-          <LeapNavbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/capabilities" element={<Capabilities />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/ai-training" element={<AITraining />} />
-              <Route path="/ai-services" element={<AIServices />} />
-              <Route path="/geo" element={<GEO />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/portfolio/pspc" element={<PSPC />} />
-              <Route path="/portfolio/ised" element={<ISED />} />
-              <Route path="/portfolio/st-john-ambulance" element={<StJohnAmbulance />} />
-              <Route path="/portfolio/ijc" element={<IJC />} />
-              <Route path="/portfolio/soldiers-helping-soldiers" element={<SHS />} />
-              <Route path="/portfolio/beneva" element={<Beneva />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <LeapFooter />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+export default routes;
