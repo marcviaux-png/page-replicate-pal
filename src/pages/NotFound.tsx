@@ -11,7 +11,7 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
-      <Seo title='Page not found | LeapUX' description='The page you were looking for doesn\'t exist. Head back to the LeapUX home page.' path='/404' />
+      <Seo title='Page not found | LeapUX' description='The page you were looking for doesn&rsquo;t exist. Head back to the LeapUX home page.' path='/404' />
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">404</h1>
         <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
