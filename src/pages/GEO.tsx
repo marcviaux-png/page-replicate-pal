@@ -255,51 +255,6 @@ const GEO = () => {
         </div>
       </section>
 
-      {/* Cite Prime AI Micro-Service */}
-      <section className="py-32 bg-[#F6F7F9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <ScrollReveal direction="left">
-              <div>
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-leap-orange/10 border border-leap-orange/30 text-leap-orange text-[10px] font-black uppercase tracking-[0.3em] mb-8 rounded-full">
-                  <Zap className="w-3.5 h-3.5" />
-                  Micro-Service
-                </div>
-                <h3 className="text-3xl sm:text-4xl font-bold text-leap-black mb-6 leading-tight">
-                  CiteAI — checking your AI visibility.
-                </h3>
-                <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                  CiteAI is the tactical engine behind our GEO service. It audits your current AI presence across platforms, and provides your AI Visibility Score across ChatGPT, Gemini, Perplexity, and Google AI — giving you the intelligence you need to stay ahead.
-                </p>
-                <a
-                  href="https://cite-prime-ai.lovable.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex justify-center items-center gap-3 px-10 py-5 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:brightness-110 transition-all shadow-xl group"
-                >
-                  Check Your AI Visibility
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2} direction="right">
-              <div className="bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] p-10 rounded-3xl border border-white/10 shadow-2xl">
-                <div className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/[0.08]">
-                  <div className="flex flex-col sm:flex-row items-stretch gap-4">
-                    <div className="flex-[3] bg-[#161616] rounded-xl border border-white/[0.06] px-5 py-4 flex items-center min-h-[56px]">
-                      <span className="text-slate-500 text-sm">Enter your website URL</span>
-                    </div>
-                    <div className="flex-[1.2] inline-flex justify-center items-center px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-xl bg-leap-orange text-leap-white whitespace-nowrap">
-                      Get Free Assessment
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
 
       {/* Benefits */}
       <section className="py-32 bg-background">

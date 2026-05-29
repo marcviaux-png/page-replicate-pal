@@ -37,14 +37,6 @@ const GeoFeatureSection = () => {
                 Explore GEO
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a
-                href="https://cite-prime-ai.lovable.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-10 py-5 text-sm font-bold uppercase tracking-widest rounded-full border border-leap-white/20 text-leap-white hover:bg-leap-white/10 transition-all"
-              >
-                Check AI Visibility
-              </a>
             </div>
           </div>
 
@@ -77,25 +69,13 @@ const GeoFeatureSection = () => {
                   title: 'Competitive Advantage',
                   description: 'Be the authority AI recommends — before your competitors are.'
                 },
-                {
-                  icon: Zap,
-                  title: 'CiteAI',
-                  description: 'Audit your AI presence across platforms and instantly understand your AI Visibility health.',
-                  isMicro: true
-                },
               ].map((feature, i) => (
                 <div
                   key={i}
-                  className={`group flex items-start gap-5 p-5 rounded-2xl border transition-all ${
-                    feature.isMicro
-                      ? 'border-leap-orange/20 bg-leap-orange/5 hover:border-leap-orange/40'
-                      : 'border-white/5 bg-white/[0.02] hover:border-white/10'
-                  }`}
+                  className="group flex items-start gap-5 p-5 rounded-2xl border transition-all border-white/5 bg-white/[0.02] hover:border-white/10"
                 >
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
-                    feature.isMicro ? 'bg-leap-orange/20' : 'bg-white/5'
-                  }`}>
-                    <feature.icon className={`w-5 h-5 ${feature.isMicro ? 'text-leap-orange' : 'text-slate-400'}`} />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-white/5">
+                    <feature.icon className="w-5 h-5 text-slate-400" />
                   </div>
                   <div>
                     <h4 className="font-bold text-leap-white mb-1">{feature.title}</h4>
