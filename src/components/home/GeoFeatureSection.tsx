@@ -37,14 +37,6 @@ const GeoFeatureSection = () => {
                 Explore GEO
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a
-                href="https://cite-prime-ai.lovable.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-10 py-5 text-sm font-bold uppercase tracking-widest rounded-full border border-leap-white/20 text-leap-white hover:bg-leap-white/10 transition-all"
-              >
-                Check AI Visibility
-              </a>
             </div>
           </div>
 
@@ -76,12 +68,6 @@ const GeoFeatureSection = () => {
                   icon: TrendingUp,
                   title: 'Competitive Advantage',
                   description: 'Be the authority AI recommends — before your competitors are.'
-                },
-                {
-                  icon: Zap,
-                  title: 'CiteAI',
-                  description: 'Audit your AI presence across platforms and instantly understand your AI Visibility health.',
-                  isMicro: true
                 },
               ].map((feature, i) => (
                 <div
