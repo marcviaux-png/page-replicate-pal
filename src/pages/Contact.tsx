@@ -57,14 +57,25 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    // Open user's email client with a pre-filled message to contact@leapux.com
+    const { firstName, lastName, email, organization, message } = result.data;
+    const subject = `New enquiry from ${firstName} ${lastName}${organization ? ` (${organization})` : ''}`;
+    const body = [
+      `Name: ${firstName} ${lastName}`,
+      `Email: ${email}`,
+      `Organization: ${organization || '—'}`,
+      '',
+      'Message:',
+      message,
+    ].join('\n');
+
+    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 1-2 business days.",
+      title: "Opening your email app…",
+      description: "Your message is pre-filled and ready to send to contact@leapux.com.",
     });
-    
+
     setFormData({ firstName: '', lastName: '', email: '', organization: '', message: '' });
     setIsSubmitting(false);
   };
