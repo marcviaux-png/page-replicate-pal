@@ -278,7 +278,7 @@ const Portfolio = () => {
       )}
 
       {/* Bottom CTA */}
-      <section className="relative py-28 bg-leap-black text-leap-white text-center overflow-hidden">
+      <section className="relative py-16 md:py-28 bg-leap-black text-leap-white text-center overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]" style={{
           backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
           backgroundSize: '32px 32px'
