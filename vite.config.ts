@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   ssgOptions: {
-    dirStyle: 'directory',
+    
     script: "async",
     formatting: "minify",
     crittersOptions: false,
