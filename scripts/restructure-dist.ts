@@ -1,4 +1,4 @@
-import { readdirSync, statSync, mkdirSync, renameSync, existsSync } from "node:fs";
+import { readdirSync, statSync, mkdirSync, renameSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const SKIP = new Set(["index.html", "404.html"]);
@@ -23,5 +23,42 @@ function restructure(dir: string) {
 const dist = join(process.cwd(), "dist");
 restructure(dist);
 restructure(join(dist, "portfolio"));
+
+// Old WordPress URL redirects
+const redirects: { path: string; target: string }[] = [
+  { path: "about-us", target: "/about" },
+  { path: "contact-us", target: "/contact" },
+  { path: "services-2", target: "/services" },
+  { path: "search-engine-optimization", target: "/services" },
+  { path: "sectors", target: "/services" },
+  { path: "ai-training", target: "/geo" },
+  { path: "shop", target: "/" },
+  { path: "category/resources", target: "/" },
+  { path: "web-modernization-for-mission-driven-organizations", target: "/portfolio" },
+  {
+    path: "improving-identity-verification-for-organizations-that-service-the-public",
+    target: "/portfolio",
+  },
+];
+
+for (const { path, target } of redirects) {
+  const folder = join(dist, path);
+  const file = join(folder, "index.html");
+  if (existsSync(file)) {
+    console.log(`Skip redirect (already exists): ${file}`);
+    continue;
+  }
+  mkdirSync(folder, { recursive: true });
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=${target}">
+<link rel="canonical" href="https://leapux.com${target}">
+</head>
+<body>Redirecting...</body>
+</html>`;
+  writeFileSync(file, html);
+  console.log(`Created redirect: ${file} -> ${target}`);
+}
 
 console.log("Dist restructure complete.");
