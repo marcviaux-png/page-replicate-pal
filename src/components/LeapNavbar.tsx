@@ -23,6 +23,10 @@ const LeapNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isOpen) setAiExpanded(false);
+  }, [isOpen]);
+
   const navLinks = [
     { name: 'Services', path: '/services' },
     { name: 'Capabilities', path: '/capabilities' },
