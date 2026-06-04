@@ -388,10 +388,6 @@ const AIServices = () => {
                       <Clock className="w-5 h-5 text-slate-400" />
                       <span className="text-slate-700 font-medium">{offer.timeline}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-leap-orange" />
-                      <span className="text-leap-black font-bold text-lg">{offer.investment}</span>
-                    </div>
                     <Button asChild className="ml-auto bg-leap-orange hover:bg-leap-red text-white">
                       <a href="#get-started">👉 {offer.cta}</a>
                     </Button>
