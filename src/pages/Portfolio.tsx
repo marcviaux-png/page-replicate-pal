@@ -199,7 +199,7 @@ const Portfolio = () => {
                         </div>
                       </div>
                       {/* Content */}
-                      <div className={`flex-1 p-8 md:p-10 lg:p-12 ${i % 2 !== 0 ? 'lg:order-1' : ''}`}>
+                      <div className={`flex-1 p-6 md:p-10 lg:p-12 ${i % 2 !== 0 ? 'lg:order-1' : ''}`}>
                         <p className="text-xs font-bold uppercase tracking-[0.2em] text-leap-orange mb-4">{project.client}</p>
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight group-hover:text-leap-orange transition-colors">
                           {project.headline}
