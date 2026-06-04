@@ -116,7 +116,7 @@ const Portfolio = () => {
     <div className="bg-background">
       <Seo title='Portfolio | LeapUX Case Studies' description='Selected case studies from LeapUX engagements with public-sector and private-sector clients across Canada.' path='/portfolio' />
       {/* Hero */}
-      <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
+      <section className="relative bg-leap-black text-leap-white pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
