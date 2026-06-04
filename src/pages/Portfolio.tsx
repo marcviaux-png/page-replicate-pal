@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Landmark, Heart, Building2, Cross } from 'lucide-react';
 import Seo from '@/components/Seo';
 
-const pspcImg = 'https://leapux.com/wp-content/uploads/elementor/thumbs/PSPC-scaled-r82pyyj9n9qr5ofu4yfm8elrgl316gs1jpeqo4noio.png';
-const isedImg = 'https://leapux.com/wp-content/uploads/elementor/thumbs/ISED-1-scaled-r82pytu2p3kbjmmnweehdxsghnq73z9dv25b9qunds.png';
-const sjaImg = 'https://leapux.com/wp-content/uploads/2021/09/SJA-scaled.png';
-const ijcImg = 'https://leapux.com/wp-content/uploads/elementor/thumbs/IJC-scaled-r82pywnl9lo6igikfxmd3f2u9tcar2kkvg3rpkqgv4.png';
-const shsImg = 'https://leapux.com/wp-content/uploads/elementor/thumbs/SHS-scaled-r82pz46as9yh3c7n80vdnd6j0wb8gnefkhbnjsfbhc.png';
-const benevaImg = 'https://leapux.com/wp-content/uploads/2021/12/Beneva-1-scaled.png';
+import pspcImg from '@/assets/portfolio/pspc-hero.jpg';
+import isedImg from '@/assets/portfolio/ised-hero.jpg';
+import sjaImg from '@/assets/portfolio/sja-hero.jpg';
+import ijcImg from '@/assets/portfolio/ijc-hero.jpg';
+import shsImg from '@/assets/portfolio/shs-hero.jpg';
+import benevaImg from '@/assets/portfolio/beneva-hero.jpg';
 
 type Category = 'all' | 'government' | 'nonprofit' | 'business' | 'health';
 
