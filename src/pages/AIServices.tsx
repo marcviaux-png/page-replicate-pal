@@ -98,11 +98,25 @@ const AIServices = () => {
       return;
     }
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
+    const d = result.data;
+    const subject = `AI Services enquiry from ${d.fullName}${d.organization ? ` (${d.organization})` : ''}`;
+    const body = [
+      `Name: ${d.fullName}`,
+      `Work email: ${d.workEmail}`,
+      `Organization: ${d.organization}`,
+      `Role: ${d.role}`,
+      `Organization type: ${d.organizationType}`,
+      `Primary goals: ${d.primaryGoals.join(', ')}`,
+      `Service interest: ${d.serviceInterest}`,
+      '',
+      'Challenge:',
+      d.challenge || '—',
+    ].join('\n');
+    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     toast({
-      title: "Request submitted successfully!",
-      description: "We'll review your needs and recommend the right next step within 1-2 business days.",
+      title: "Opening your email app…",
+      description: "Your request is pre-filled and ready to send to contact@leapux.com.",
     });
     
     setFormData({
@@ -387,10 +401,6 @@ const AIServices = () => {
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-slate-400" />
                       <span className="text-slate-700 font-medium">{offer.timeline}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-leap-orange" />
-                      <span className="text-leap-black font-bold text-lg">{offer.investment}</span>
                     </div>
                     <Button asChild className="ml-auto bg-leap-orange hover:bg-leap-red text-white">
                       <a href="#get-started">👉 {offer.cta}</a>
