@@ -98,11 +98,25 @@ const AIServices = () => {
       return;
     }
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
+    const d = result.data;
+    const subject = `AI Services enquiry from ${d.fullName}${d.organization ? ` (${d.organization})` : ''}`;
+    const body = [
+      `Name: ${d.fullName}`,
+      `Work email: ${d.workEmail}`,
+      `Organization: ${d.organization}`,
+      `Role: ${d.role}`,
+      `Organization type: ${d.organizationType}`,
+      `Primary goals: ${d.primaryGoals.join(', ')}`,
+      `Service interest: ${d.serviceInterest}`,
+      '',
+      'Challenge:',
+      d.challenge || '—',
+    ].join('\n');
+    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     toast({
-      title: "Request submitted successfully!",
-      description: "We'll review your needs and recommend the right next step within 1-2 business days.",
+      title: "Opening your email app…",
+      description: "Your request is pre-filled and ready to send to contact@leapux.com.",
     });
     
     setFormData({
