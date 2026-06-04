@@ -1,4 +1,4 @@
-import { readdirSync, statSync, mkdirSync, renameSync, existsSync } from "node:fs";
+import { readdirSync, statSync, mkdirSync, renameSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const SKIP = new Set(["index.html", "404.html"]);
