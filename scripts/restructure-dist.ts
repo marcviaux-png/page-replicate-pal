@@ -39,6 +39,9 @@ const redirects: { path: string; target: string }[] = [
     path: "improving-identity-verification-for-organizations-that-service-the-public",
     target: "/portfolio",
   },
+  { path: "portfolio/canada-gazette", target: "/portfolio" },
+  { path: "portfolio/tereposky-derose", target: "/portfolio" },
+  { path: "portfolio/omniscient-wellness", target: "/portfolio" },
 ];
 
 console.log(`\nCreating ${redirects.length} WordPress redirect file(s)...`);
