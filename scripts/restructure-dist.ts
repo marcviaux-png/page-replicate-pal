@@ -41,14 +41,16 @@ const redirects: { path: string; target: string }[] = [
   },
 ];
 
+console.log(`\nCreating ${redirects.length} WordPress redirect file(s)...`);
 for (const { path, target } of redirects) {
   const folder = join(dist, path);
   const file = join(folder, "index.html");
   if (existsSync(file)) {
-    console.log(`Skip redirect (already exists): ${file}`);
+    console.log(`  [skip] already exists: ${file}`);
     continue;
   }
   mkdirSync(folder, { recursive: true });
+  console.log(`  [mkdir] ${folder}`);
   const html = `<!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +60,7 @@ for (const { path, target } of redirects) {
 <body>Redirecting...</body>
 </html>`;
   writeFileSync(file, html);
-  console.log(`Created redirect: ${file} -> ${target}`);
+  console.log(`  [write] ${file} -> ${target}`);
 }
 
 console.log("Dist restructure complete.");
