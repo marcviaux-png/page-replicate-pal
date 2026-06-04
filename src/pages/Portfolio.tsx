@@ -228,9 +228,9 @@ const Portfolio = () => {
 
       {/* Additional Experience */}
       {filteredSecondary.length > 0 && (
-        <section className="py-24 bg-muted/30 border-t border-border">
+        <section className="py-14 md:py-24 bg-muted/30 border-t border-border">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-16">
+            <div className="mb-10 md:mb-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-leap-orange mb-3">Additional Experience</p>
               <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4">More Organizations We've Worked With</h2>
               <p className="text-muted-foreground max-w-2xl">
