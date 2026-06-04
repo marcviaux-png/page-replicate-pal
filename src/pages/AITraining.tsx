@@ -103,11 +103,32 @@ const AITraining = () => {
       return;
     }
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
+    const d = result.data;
+    const subject = `AI Training enquiry from ${d.fullName}${d.organizationName ? ` (${d.organizationName})` : ''}`;
+    const body = [
+      `Name: ${d.fullName}`,
+      `Job title: ${d.jobTitle}`,
+      `Work email: ${d.workEmail}`,
+      `Phone: ${d.phone || '—'}`,
+      `Organization: ${d.organizationName}`,
+      `Industry: ${d.industry}`,
+      `Organization size: ${d.organizationSize}`,
+      `Location: ${d.location}`,
+      `AI adoption level: ${d.aiAdoptionLevel}`,
+      `Teams to train: ${d.teamsToTrain}`,
+      `Selected programs: ${d.selectedPrograms.join(', ')}`,
+      `Timeline: ${d.timeline || '—'}`,
+      `Funding interest: ${d.fundingInterest}`,
+      `Budget range: ${d.budgetRange || '—'}`,
+      '',
+      'Primary challenge:',
+      d.primaryChallenge,
+    ].join('\n');
+    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     toast({
-      title: "Request submitted successfully!",
-      description: "An AI training specialist will contact you within 1-2 business days.",
+      title: "Opening your email app…",
+      description: "Your request is pre-filled and ready to send to contact@leapux.com.",
     });
     
     setFormData({
