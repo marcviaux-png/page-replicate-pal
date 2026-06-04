@@ -167,14 +167,14 @@ const Portfolio = () => {
 
       {/* Featured Case Studies */}
       {filteredFeatured.length > 0 && (
-        <section className="py-24">
+        <section className="py-14 md:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-16">
+            <div className="mb-10 md:mb-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-leap-orange mb-3">Featured Work</p>
               <h2 className="text-3xl md:text-4xl font-black text-foreground">Case Studies</h2>
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-6 md:space-y-10">
               {filteredFeatured.map((project, i) => (
                 <Link
                   key={project.client}
