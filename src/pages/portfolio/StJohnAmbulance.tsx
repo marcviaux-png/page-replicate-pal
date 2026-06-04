@@ -1,4 +1,5 @@
 import CaseStudyLayout from './CaseStudyLayout';
+import sjaImg from '@/assets/portfolio/sja-hero.jpg';
 
 const StJohnAmbulance = () => (
   <CaseStudyLayout
@@ -9,7 +10,7 @@ const StJohnAmbulance = () => (
     whatWeDid="LeapUX supported St. John Ambulance through website and user experience improvements, SEO and content optimization, analytics dashboards and performance reporting, digital campaign support for training and community programs, workflow automation, and key system integrations that improved efficiency behind the scenes."
     impact="The organization gained a stronger digital foundation, improved discoverability, and more efficient internal workflows. Users could more easily find resources and training, while teams benefited from better tools, better data, and better support for future growth."
     services={['Website strategy', 'UX design', 'SEO', 'Analytics', 'Digital campaigns', 'System integration', 'Automation']}
-    heroImage="https://leapux.com/wp-content/uploads/2021/09/SJA-scaled.png"
+    heroImage={sjaImg}
     prevProject={{ name: 'ISED', path: '/portfolio/ised' }}
     nextProject={{ name: 'IJC', path: '/portfolio/ijc' }}
   />

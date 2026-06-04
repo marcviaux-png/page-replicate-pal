@@ -1,4 +1,5 @@
 import CaseStudyLayout from './CaseStudyLayout';
+import ijcImg from '@/assets/portfolio/ijc-hero.jpg';
 
 const IJC = () => (
   <CaseStudyLayout
@@ -9,7 +10,7 @@ const IJC = () => (
     whatWeDid="LeapUX conducted a comprehensive discovery and planning engagement that included stakeholder interviews, usability testing, navigation and search analysis, content audits, accessibility recommendations, technical guidance, and a phased roadmap to support redesign and vendor selection."
     impact="The engagement gave IJC a clear strategic foundation for modernization. It improved understanding of user needs, highlighted opportunities for better information access, and equipped the organization to move confidently into implementation."
     services={['UX research', 'Usability testing', 'Information architecture', 'Accessibility strategy', 'Content audit', 'Digital roadmap']}
-    heroImage="https://leapux.com/wp-content/uploads/elementor/thumbs/IJC-scaled-r82pywnl9lo6igikfxmd3f2u9tcar2kkvg3rpkqgv4.png"
+    heroImage={ijcImg}
     prevProject={{ name: 'St. John Ambulance', path: '/portfolio/st-john-ambulance' }}
     nextProject={{ name: 'Soldiers Helping Soldiers', path: '/portfolio/soldiers-helping-soldiers' }}
   />
