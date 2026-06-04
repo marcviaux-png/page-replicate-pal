@@ -13,6 +13,7 @@ import {
 
 const LeapNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [aiExpanded, setAiExpanded] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -21,6 +22,10 @@ const LeapNavbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) setAiExpanded(false);
+  }, [isOpen]);
 
   const navLinks = [
     { name: 'Services', path: '/services' },
@@ -154,20 +159,28 @@ const LeapNavbar = () => {
                 <span className="text-leap-orange opacity-60">→</span>
               </Link>
             ))}
-            <div className="pt-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 mb-1">AI</p>
-              {aiLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between text-sm font-bold uppercase tracking-[0.2em] text-leap-black py-4 border-b border-gray-100 hover:text-leap-orange transition-colors"
-                >
-                  <span>{link.name}</span>
-                  <span className="text-leap-orange opacity-60">→</span>
-                </Link>
-              ))}
-            </div>
+            <button
+              onClick={() => setAiExpanded(!aiExpanded)}
+              className="flex items-center justify-between w-full text-sm font-bold uppercase tracking-[0.2em] text-leap-black py-4 border-b border-gray-100 hover:text-leap-orange transition-colors"
+            >
+              <span>AI</span>
+              <ChevronDown className={`h-4 w-4 text-leap-orange opacity-60 transition-transform ${aiExpanded ? 'rotate-180' : ''}`} />
+            </button>
+            {aiExpanded && (
+              <div className="bg-gray-50">
+                {aiLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-between text-sm font-bold uppercase tracking-[0.2em] text-leap-black py-3 px-4 border-b border-gray-100 hover:text-leap-orange transition-colors"
+                  >
+                    <span>{link.name}</span>
+                    <span className="text-leap-orange opacity-60">→</span>
+                  </Link>
+                ))}
+              </div>
+            )}
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
