@@ -142,34 +142,36 @@ const LeapNavbar = () => {
 
       {isOpen && (
         <div className="md:hidden fixed inset-x-0 top-[64px] bottom-0 bg-leap-white shadow-2xl animate-slide-in-from-top overflow-y-auto overscroll-contain">
-          <div className="px-6 py-6 pb-12">
+          <div className="px-6 py-4 pb-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="block text-2xl font-bold text-leap-black py-3 border-b border-gray-100"
+                className="flex items-center justify-between text-sm font-bold uppercase tracking-[0.2em] text-leap-black py-4 border-b border-gray-100 hover:text-leap-orange transition-colors"
               >
-                {link.name}
+                <span>{link.name}</span>
+                <span className="text-leap-orange opacity-60">→</span>
               </Link>
             ))}
-            <div className="pt-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 px-1">AI</p>
+            <div className="pt-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 mb-1">AI</p>
               {aiLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="block text-lg font-semibold text-leap-black py-2.5 pl-3 border-b border-gray-100"
+                  className="flex items-center justify-between text-sm font-bold uppercase tracking-[0.2em] text-leap-black py-4 border-b border-gray-100 hover:text-leap-orange transition-colors"
                 >
-                  {link.name}
+                  <span>{link.name}</span>
+                  <span className="text-leap-orange opacity-60">→</span>
                 </Link>
               ))}
             </div>
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-leap-orange text-leap-white py-4 rounded-full font-bold uppercase text-sm tracking-widest mt-8"
+              className="block w-full text-center bg-leap-orange text-leap-white py-4 rounded-full font-bold uppercase text-xs tracking-[0.2em] mt-8 shadow-lg active:scale-95 transition-transform"
             >
               Contact Us
             </Link>
