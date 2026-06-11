@@ -46,7 +46,7 @@ const Home = () => {
     <div className="animate-in">
       <Seo title='LeapUX | Design digital services that work in the real world' description='Senior-led digital consultancy for UX, service design, and complex delivery. We combine evidence, discipline, and accountability to deliver results.' path='/' />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-leap-black">
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-leap-black">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
@@ -56,7 +56,7 @@ const Home = () => {
           <div className="absolute inset-0 image-overlay"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 sm:pt-20 pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 sm:pt-20 pb-12">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-leap-orange/10 border border-leap-orange/30 text-leap-orange text-[10px] font-black uppercase tracking-[0.3em] mb-6 sm:mb-12 rounded-full">
               Senior-Led Digital Consultancy
