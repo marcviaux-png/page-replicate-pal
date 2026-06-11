@@ -56,15 +56,15 @@ const Home = () => {
           <div className="absolute inset-0 image-overlay"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 sm:pt-20 pb-12">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-leap-orange/10 border border-leap-orange/30 text-leap-orange text-[10px] font-black uppercase tracking-[0.3em] mb-12 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-leap-orange/10 border border-leap-orange/30 text-leap-orange text-[10px] font-black uppercase tracking-[0.3em] mb-6 sm:mb-12 rounded-full">
               Senior-Led Digital Consultancy
             </div>
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-leap-white mb-8 leading-[0.95] text-balance">
+            <h1 className="text-4xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-leap-white mb-6 sm:mb-8 leading-[0.95] text-balance">
               Delivering services for <span className="text-leap-orange">the real world.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-300 mb-12 leading-relaxed font-light max-w-xl">
+            <p className="text-base sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-light max-w-xl">
               We help organizations understand real needs and deliver services that work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
