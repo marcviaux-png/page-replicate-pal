@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, Landmark, MapPin, Building, Heart, BookOpen, BadgeCheck, GraduationCap, Trophy, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
