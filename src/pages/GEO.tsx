@@ -392,21 +392,34 @@ const GEO = () => {
                 <h4 className="text-xl font-bold text-leap-black mb-2">Request Your Free Audit</h4>
                 <p className="text-sm text-slate-500 mb-8">Takes 30 seconds. No obligation.</p>
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
                     const form = e.currentTarget;
                     const name = (form.elements.namedItem('geo-name') as HTMLInputElement)?.value || '';
                     const email = (form.elements.namedItem('geo-email') as HTMLInputElement)?.value || '';
                     const website = (form.elements.namedItem('geo-website') as HTMLInputElement)?.value || '';
-                    const subject = `Free GEO Audit Request from ${name}`;
-                    const body = [
-                      `Name: ${name}`,
-                      `Email: ${email}`,
-                      `Website: ${website}`,
-                      '',
-                      'Requesting a free GEO audit.',
-                    ].join('\n');
-                    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    setGeoSubmitting(true);
+                    try {
+                      await sendFormSubmission('Free GEO Audit request', [
+                        { label: 'Name', value: name },
+                        { label: 'Email', value: email },
+                        { label: 'Website', value: website },
+                      ]);
+                      toast({
+                        title: 'Request received',
+                        description: "Thanks! We'll deliver your audit within 48 hours.",
+                      });
+                      form.reset();
+                    } catch (err) {
+                      console.error('GEO form submission failed', err);
+                      toast({
+                        title: 'Something went wrong',
+                        description: 'Please try again or email contact@leapux.com directly.',
+                        variant: 'destructive',
+                      });
+                    } finally {
+                      setGeoSubmitting(false);
+                    }
                   }}
                   className="space-y-5"
                 >
@@ -443,9 +456,10 @@ const GEO = () => {
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-10 py-4 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:brightness-110 transition-all shadow-xl"
+                    disabled={geoSubmitting}
+                    className="w-full px-10 py-4 text-sm font-bold uppercase tracking-widest rounded-full bg-leap-orange text-leap-white hover:brightness-110 transition-all shadow-xl disabled:opacity-70"
                   >
-                    Get My Free Audit
+                    {geoSubmitting ? 'Sending…' : 'Get My Free Audit'}
                   </button>
                   <p className="text-xs text-slate-400 text-center">No credit card required. Results within 48 hours.</p>
                 </form>
