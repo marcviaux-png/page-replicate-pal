@@ -99,9 +99,12 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="order-2 lg:order-1 relative">
               <div className="absolute -inset-4 bg-leap-brand/5 rounded-3xl -z-10"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" 
-                alt="Strategy Planning" 
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
+                alt="Strategy Planning"
+                width={1200}
+                height={800}
+                loading="lazy"
                 className="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
