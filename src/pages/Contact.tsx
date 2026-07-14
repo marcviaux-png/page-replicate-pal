@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Mail, Send, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -95,6 +96,22 @@ const Contact = () => {
         ogTitle='Contact LeapUX | Ottawa Digital Consulting & Service Design'
         ogDescription='Ready to improve how your service works? Contact LeapUX to book a consultation on service design, digital transformation, or GEO services.'
       />
+      <Helmet>
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact LeapUX",
+  "url": "https://leapux.com/contact",
+  "description": "Contact LeapUX to book a consultation on service design, digital transformation, or GEO services.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "1-888-553-2789",
+    "email": "contact@leapux.com",
+    "contactType": "customer service",
+    "availableLanguage": ["English", "French"]
+  }
+}`}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
