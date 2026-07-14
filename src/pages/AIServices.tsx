@@ -100,38 +100,44 @@ const AIServices = () => {
     }
 
     const d = result.data;
-    const subject = `AI Services enquiry from ${d.fullName}${d.organization ? ` (${d.organization})` : ''}`;
-    const body = [
-      `Name: ${d.fullName}`,
-      `Work email: ${d.workEmail}`,
-      `Organization: ${d.organization}`,
-      `Role: ${d.role}`,
-      `Organization type: ${d.organizationType}`,
-      `Primary goals: ${d.primaryGoals.join(', ')}`,
-      `Service interest: ${d.serviceInterest}`,
-      '',
-      'Challenge:',
-      d.challenge || '—',
-    ].join('\n');
-    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      await sendFormSubmission('AI Services enquiry', [
+        { label: 'Name', value: d.fullName },
+        { label: 'Work email', value: d.workEmail },
+        { label: 'Organization', value: d.organization },
+        { label: 'Role', value: d.role },
+        { label: 'Organization type', value: d.organizationType },
+        { label: 'Primary goals', value: d.primaryGoals.join(', ') },
+        { label: 'Service interest', value: d.serviceInterest },
+        { label: 'Challenge', value: d.challenge || '—' },
+      ]);
 
-    toast({
-      title: "Opening your email app…",
-      description: "Your request is pre-filled and ready to send to contact@leapux.com.",
-    });
-    
-    setFormData({
-      fullName: '',
-      workEmail: '',
-      organization: '',
-      role: '',
-      organizationType: '',
-      primaryGoals: [],
-      serviceInterest: '',
-      challenge: '',
-      consent: false
-    });
-    setIsSubmitting(false);
+      toast({
+        title: 'Request sent',
+        description: "Thanks! We'll be in touch shortly.",
+      });
+
+      setFormData({
+        fullName: '',
+        workEmail: '',
+        organization: '',
+        role: '',
+        organizationType: '',
+        primaryGoals: [],
+        serviceInterest: '',
+        challenge: '',
+        consent: false,
+      });
+    } catch (err) {
+      console.error('AI Services form submission failed', err);
+      toast({
+        title: 'Something went wrong',
+        description: 'Please try again or email contact@leapux.com directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const howWeHelp = [
