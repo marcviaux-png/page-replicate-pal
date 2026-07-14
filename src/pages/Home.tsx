@@ -231,11 +231,11 @@ const Home = () => {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
-            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSHS} alt="Soldiers Helping Soldiers" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoGoC} alt="Government of Canada — LeapUX client" width={200} height={128} loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSJA} alt="St. John Ambulance — LeapUX client" width={200} height={128} loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoIJC} alt="International Joint Commission — LeapUX client" width={200} height={128} loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoBeneva} alt="Beneva — LeapUX client" width={200} height={112} loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSHS} alt="Soldiers Helping Soldiers — LeapUX client" width={200} height={112} loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
           </div>
         </div>
       </section>
