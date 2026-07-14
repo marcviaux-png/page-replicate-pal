@@ -6,7 +6,13 @@ import Seo from '@/components/Seo';
 const GEO = () => {
   return (
     <div>
-      <Seo title='GEO — Generative Engine Optimization | LeapUX' description='Get found by AI. LeapUX&rsquo;s GEO service audits, monitors, and optimizes your presence across ChatGPT, Gemini, Perplexity, and Google AI.' path='/geo' />
+      <Seo
+        title='Generative Engine Optimization (GEO) Services Canada | LeapUX'
+        description='LeapUX GEO services help Canadian organizations get cited by ChatGPT, Perplexity, and Gemini. AI visibility strategy, structured data, and content optimization for AI search.'
+        path='/geo'
+        ogTitle='GEO Services Canada — Get Cited by ChatGPT, Perplexity & Gemini | LeapUX'
+        ogDescription='LeapUX helps Canadian businesses and government organizations appear in AI-generated answers. Structured data, AI visibility files, and content strategy for AI search.'
+      />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-leap-black overflow-hidden">
         <div className="absolute inset-0 z-0">
