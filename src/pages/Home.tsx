@@ -95,7 +95,7 @@ const Home = () => {
               Senior-Led Digital Consultancy
             </div>
             <h1 className="text-4xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-leap-white mb-6 sm:mb-8 leading-[0.95] text-balance">
-              Senior-Led Service Design & <span className="text-leap-orange">Digital Transformation Consulting</span>
+              Delivering services for the real world.
             </h1>
             <p className="text-base sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-light max-w-xl">
               We help organizations understand real needs and deliver services that work.
