@@ -14,6 +14,46 @@ const GEO = () => {
         ogTitle='GEO Services Canada — Get Cited by ChatGPT, Perplexity & Gemini | LeapUX'
         ogDescription='LeapUX helps Canadian businesses and government organizations appear in AI-generated answers. Structured data, AI visibility files, and content strategy for AI search.'
       />
+      <Helmet>
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Generative Engine Optimization (GEO)",
+      "provider": { "@type": "Organization", "name": "LeapUX", "url": "https://leapux.com" },
+      "description": "GEO services to make Canadian organizations visible and citable in AI search engines including ChatGPT, Perplexity, and Gemini.",
+      "areaServed": "Canada",
+      "url": "https://leapux.com/geo"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Generative Engine Optimization (GEO)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Generative Engine Optimization (GEO) is the practice of structuring website content so AI engines like ChatGPT, Perplexity, and Gemini cite your brand when answering questions in your industry." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is GEO different from SEO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Traditional SEO optimizes for Google rankings and click-throughs. GEO optimizes for AI citation — ensuring your brand appears in AI-generated answers, not just search result lists." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who offers GEO services in Canada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "LeapUX is a Canadian consultancy in Ottawa offering Generative Engine Optimization services for government, public sector, and mission-driven organizations across Canada." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does GEO take to show results?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most organizations see measurable AI citation improvements within 60 to 90 days of implementing GEO content and structured data changes." }
+        }
+      ]
+    }
+  ]
+}`}</script>
+      </Helmet>
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-leap-black overflow-hidden">
         <div className="absolute inset-0 z-0">
