@@ -19,6 +19,7 @@ import {
 import { z } from 'zod';
 import heroAiTraining from '@/assets/hero-ai-training.jpg';
 import Seo from '@/components/Seo';
+import { sendFormSubmission } from '@/lib/sendFormSubmission';
 
 const programOptions = [
   "AI Foundations: Understanding AI Today and Tomorrow",
@@ -104,52 +105,58 @@ const AITraining = () => {
     }
 
     const d = result.data;
-    const subject = `AI Training enquiry from ${d.fullName}${d.organizationName ? ` (${d.organizationName})` : ''}`;
-    const body = [
-      `Name: ${d.fullName}`,
-      `Job title: ${d.jobTitle}`,
-      `Work email: ${d.workEmail}`,
-      `Phone: ${d.phone || '—'}`,
-      `Organization: ${d.organizationName}`,
-      `Industry: ${d.industry}`,
-      `Organization size: ${d.organizationSize}`,
-      `Location: ${d.location}`,
-      `AI adoption level: ${d.aiAdoptionLevel}`,
-      `Teams to train: ${d.teamsToTrain}`,
-      `Selected programs: ${d.selectedPrograms.join(', ')}`,
-      `Timeline: ${d.timeline || '—'}`,
-      `Funding interest: ${d.fundingInterest}`,
-      `Budget range: ${d.budgetRange || '—'}`,
-      '',
-      'Primary challenge:',
-      d.primaryChallenge,
-    ].join('\n');
-    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      await sendFormSubmission('AI Training enquiry', [
+        { label: 'Name', value: d.fullName },
+        { label: 'Job title', value: d.jobTitle },
+        { label: 'Work email', value: d.workEmail },
+        { label: 'Phone', value: d.phone || '—' },
+        { label: 'Organization', value: d.organizationName },
+        { label: 'Industry', value: d.industry },
+        { label: 'Organization size', value: d.organizationSize },
+        { label: 'Location', value: d.location },
+        { label: 'AI adoption level', value: d.aiAdoptionLevel },
+        { label: 'Teams to train', value: d.teamsToTrain },
+        { label: 'Selected programs', value: d.selectedPrograms.join(', ') },
+        { label: 'Timeline', value: d.timeline || '—' },
+        { label: 'Funding interest', value: d.fundingInterest },
+        { label: 'Budget range', value: d.budgetRange || '—' },
+        { label: 'Primary challenge', value: d.primaryChallenge },
+      ]);
 
-    toast({
-      title: "Opening your email app…",
-      description: "Your request is pre-filled and ready to send to contact@leapux.com.",
-    });
-    
-    setFormData({
-      fullName: '',
-      jobTitle: '',
-      workEmail: '',
-      phone: '',
-      organizationName: '',
-      industry: '',
-      organizationSize: '',
-      location: '',
-      primaryChallenge: '',
-      aiAdoptionLevel: '',
-      teamsToTrain: '',
-      selectedPrograms: [],
-      timeline: '',
-      fundingInterest: '',
-      budgetRange: '',
-      consent: false
-    });
-    setIsSubmitting(false);
+      toast({
+        title: 'Request sent',
+        description: "Thanks! We'll be in touch shortly.",
+      });
+
+      setFormData({
+        fullName: '',
+        jobTitle: '',
+        workEmail: '',
+        phone: '',
+        organizationName: '',
+        industry: '',
+        organizationSize: '',
+        location: '',
+        primaryChallenge: '',
+        aiAdoptionLevel: '',
+        teamsToTrain: '',
+        selectedPrograms: [],
+        timeline: '',
+        fundingInterest: '',
+        budgetRange: '',
+        consent: false,
+      });
+    } catch (err) {
+      console.error('AI Training form submission failed', err);
+      toast({
+        title: 'Something went wrong',
+        description: 'Please try again or email contact@leapux.com directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const programs = [

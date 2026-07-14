@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import Seo from '@/components/Seo';
+import { sendFormSubmission } from '@/lib/sendFormSubmission';
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
@@ -58,27 +59,32 @@ const Contact = () => {
       return;
     }
 
-    // Open user's email client with a pre-filled message to contact@leapux.com
     const { firstName, lastName, email, organization, message } = result.data;
-    const subject = `New enquiry from ${firstName} ${lastName}${organization ? ` (${organization})` : ''}`;
-    const body = [
-      `Name: ${firstName} ${lastName}`,
-      `Email: ${email}`,
-      `Organization: ${organization || '—'}`,
-      '',
-      'Message:',
-      message,
-    ].join('\n');
 
-    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      await sendFormSubmission('Contact', [
+        { label: 'Name', value: `${firstName} ${lastName}` },
+        { label: 'Email', value: email },
+        { label: 'Organization', value: organization || '—' },
+        { label: 'Message', value: message },
+      ]);
 
-    toast({
-      title: "Opening your email app…",
-      description: "Your message is pre-filled and ready to send to contact@leapux.com.",
-    });
+      toast({
+        title: 'Message sent',
+        description: "Thanks! We'll get back to you within 1–2 business days.",
+      });
 
-    setFormData({ firstName: '', lastName: '', email: '', organization: '', message: '' });
-    setIsSubmitting(false);
+      setFormData({ firstName: '', lastName: '', email: '', organization: '', message: '' });
+    } catch (err) {
+      console.error('Contact form submission failed', err);
+      toast({
+        title: 'Something went wrong',
+        description: 'Please try again or email contact@leapux.com directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const nextSteps = [

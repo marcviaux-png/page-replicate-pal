@@ -15,6 +15,7 @@ import IJC from "./pages/portfolio/IJC";
 import SHS from "./pages/portfolio/SHS";
 import Beneva from "./pages/portfolio/Beneva";
 import GEO from "./pages/GEO";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 export const routes: RouteRecord[] = [
@@ -38,6 +39,7 @@ export const routes: RouteRecord[] = [
       { path: "portfolio/ijc", element: <IJC />, entry: "src/pages/portfolio/IJC.tsx" },
       { path: "portfolio/soldiers-helping-soldiers", element: <SHS />, entry: "src/pages/portfolio/SHS.tsx" },
       { path: "portfolio/beneva", element: <Beneva />, entry: "src/pages/portfolio/Beneva.tsx" },
+      { path: "unsubscribe", element: <Unsubscribe />, entry: "src/pages/Unsubscribe.tsx" },
       { path: "*", element: <NotFound />, entry: "src/pages/NotFound.tsx" },
     ],
   },
