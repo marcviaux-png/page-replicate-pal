@@ -114,7 +114,13 @@ const Portfolio = () => {
 
   return (
     <div className="bg-background">
-      <Seo title='Portfolio | LeapUX Case Studies' description='Selected case studies from LeapUX engagements with public-sector and private-sector clients across Canada.' path='/portfolio' />
+      <Seo
+        title='Service Design & Digital Transformation Case Studies | LeapUX Ottawa'
+        description='LeapUX case studies: Government of Canada UX transformation, St. John Ambulance digital service redesign, Beneva insurance CX, and mission-driven organization digital delivery.'
+        path='/portfolio'
+        ogTitle='LeapUX Portfolio — Government & Mission-Driven Digital Case Studies'
+        ogDescription='Explore how LeapUX has delivered UX research, service design, and digital transformation for the Government of Canada, St. John Ambulance, Beneva, and more.'
+      />
       {/* Hero */}
       <section className="relative bg-leap-black text-leap-white pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
