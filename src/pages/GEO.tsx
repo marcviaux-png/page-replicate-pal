@@ -3,6 +3,9 @@ import { ArrowRight, Search, Bot, Target, BarChart3, Shield, Zap, CheckCircle, E
 import ScrollReveal from '@/components/ScrollReveal';
 import heroGeo from '@/assets/hero-geo.jpg';
 import Seo from '@/components/Seo';
+import { sendFormSubmission } from '@/lib/sendFormSubmission';
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
 
 const GEO = () => {
   return (
