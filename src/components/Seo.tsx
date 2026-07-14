@@ -10,9 +10,13 @@ interface SeoProps {
   path: string;
   ogType?: "website" | "article";
   image?: string;
+  ogTitle?: string;
+  ogDescription?: string;
 }
 
-const Seo = ({ title, description, path, ogType = "website", image }: SeoProps) => {
+const Seo = ({ title, description, path, ogType = "website", image, ogTitle, ogDescription }: SeoProps) => {
+  const finalOgTitle = ogTitle ?? title;
+  const finalOgDescription = ogDescription ?? description;
   const url = `${SITE_URL}${path}`;
   const imageUrl = image
     ? image.startsWith("http")
