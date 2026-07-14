@@ -15,6 +15,7 @@ import IJC from "./pages/portfolio/IJC";
 import SHS from "./pages/portfolio/SHS";
 import Beneva from "./pages/portfolio/Beneva";
 import GEO from "./pages/GEO";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 export const routes: RouteRecord[] = [
