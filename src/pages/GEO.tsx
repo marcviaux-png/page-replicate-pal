@@ -8,6 +8,8 @@ import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
 
 const GEO = () => {
+  const { toast } = useToast();
+  const [geoSubmitting, setGeoSubmitting] = useState(false);
   return (
     <div>
       <Seo
