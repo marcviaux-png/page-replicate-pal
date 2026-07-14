@@ -429,10 +429,11 @@ const GEO = () => {
                     <label htmlFor="geo-website" className="block text-sm font-medium text-leap-black mb-1.5">Website URL</label>
                     <input
                       id="geo-website"
-                      type="url"
+                      type="text"
+                      inputMode="url"
                       required
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-background text-foreground focus:ring-2 focus:ring-leap-orange focus:border-transparent outline-none transition-all text-sm"
-                      placeholder="https://yourcompany.com"
+                      placeholder="yourcompany.com"
                     />
                   </div>
                   <button
