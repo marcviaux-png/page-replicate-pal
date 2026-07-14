@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, Landmark, MapPin, Building, Heart, BookOpen, BadgeCheck, GraduationCap, Trophy, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -90,6 +91,65 @@ const Services = () => {
         ogTitle='Digital Transformation & Service Design Services | LeapUX'
         ogDescription='From strategic advisory to hands-on delivery — LeapUX consulting services help governments and public organizations transform how they design and deliver services.'
       />
+      <Helmet>
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "LeapUX Consulting Services",
+  "description": "Consulting services for government, public agencies, and mission-driven organizations in Canada.",
+  "provider": {
+    "@type": "Organization",
+    "name": "LeapUX",
+    "url": "https://leapux.com"
+  },
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Strategic Advisory",
+        "description": "We work with leadership teams to make sense of complexity, align stakeholders, and build a clear case for change before solutions are designed.",
+        "provider": { "@type": "Organization", "name": "LeapUX" },
+        "areaServed": "Canada"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Service & Experience Design",
+        "description": "We research, design, and validate services that meet real user needs — grounded in accessibility, evidence-based discovery, and human-centred design.",
+        "provider": { "@type": "Organization", "name": "LeapUX" },
+        "areaServed": "Canada"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Digital & Technology Transformation",
+        "description": "We help organizations evaluate digital opportunities, modernize systems, and align technology investments with clear strategic outcomes.",
+        "provider": { "@type": "Organization", "name": "LeapUX" },
+        "areaServed": "Canada"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Delivery & Adoption",
+        "description": "We support implementation, change management, and stakeholder engagement — building your team's capability to sustain transformation.",
+        "provider": { "@type": "Organization", "name": "LeapUX" },
+        "areaServed": "Canada"
+      }
+    }
+  ]
+}`}</script>
+      </Helmet>
       {/* Hero */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
