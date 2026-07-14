@@ -39,6 +39,7 @@ export const routes: RouteRecord[] = [
       { path: "portfolio/ijc", element: <IJC />, entry: "src/pages/portfolio/IJC.tsx" },
       { path: "portfolio/soldiers-helping-soldiers", element: <SHS />, entry: "src/pages/portfolio/SHS.tsx" },
       { path: "portfolio/beneva", element: <Beneva />, entry: "src/pages/portfolio/Beneva.tsx" },
+      { path: "unsubscribe", element: <Unsubscribe />, entry: "src/pages/Unsubscribe.tsx" },
       { path: "*", element: <NotFound />, entry: "src/pages/NotFound.tsx" },
     ],
   },
