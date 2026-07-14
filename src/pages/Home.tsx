@@ -156,9 +156,12 @@ const Home = () => {
               </ul>
             </div>
             <div className="relative group">
-              <img 
-                src={teamCollaboration} 
-                alt="Team collaboration on UX design" 
+              <img
+                src={teamCollaboration}
+                alt="LeapUX team collaborating on a service design strategy session for a Canadian government client"
+                width={1200}
+                height={800}
+                loading="lazy"
                 className="rounded-3xl shadow-2xl w-full grayscale group-hover:grayscale-0 transition-all duration-1000"
               />
               <div className="absolute bottom-6 right-6 left-6 sm:left-auto sm:max-w-xs bg-leap-white p-6 rounded-2xl shadow-xl">
