@@ -19,6 +19,7 @@ import {
 import { z } from 'zod';
 import heroAiTraining from '@/assets/hero-ai-training.jpg';
 import Seo from '@/components/Seo';
+import { sendFormSubmission } from '@/lib/sendFormSubmission';
 
 const programOptions = [
   "AI Foundations: Understanding AI Today and Tomorrow",
