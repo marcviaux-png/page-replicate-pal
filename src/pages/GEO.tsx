@@ -389,7 +389,19 @@ const GEO = () => {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    window.location.href = '/contact';
+                    const form = e.currentTarget;
+                    const name = (form.elements.namedItem('geo-name') as HTMLInputElement)?.value || '';
+                    const email = (form.elements.namedItem('geo-email') as HTMLInputElement)?.value || '';
+                    const website = (form.elements.namedItem('geo-website') as HTMLInputElement)?.value || '';
+                    const subject = `Free GEO Audit Request from ${name}`;
+                    const body = [
+                      `Name: ${name}`,
+                      `Email: ${email}`,
+                      `Website: ${website}`,
+                      '',
+                      'Requesting a free GEO audit.',
+                    ].join('\n');
+                    window.location.href = `mailto:contact@leapux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                   }}
                   className="space-y-5"
                 >
