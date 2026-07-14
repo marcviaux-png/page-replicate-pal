@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Compass, Palette, Monitor, Rocket } from 'lucide-react';
 import heroImage from '@/assets/hero-ux-design.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
@@ -50,6 +51,30 @@ const Home = () => {
         path='/'
         ogDescription='Senior-led consultancy delivering UX, service design, and complex digital delivery for governments and mission-driven organizations across Canada.'
       />
+      <Helmet>
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@type": ["ProfessionalService", "Organization"],
+  "name": "LeapUX",
+  "url": "https://leapux.com",
+  "logo": "https://leapux.com/og-image.jpg",
+  "description": "Senior-led service design and digital transformation consultancy in Ottawa, Canada, serving government, crown corporations, and mission-driven organizations.",
+  "telephone": "1-888-553-2789",
+  "email": "contact@leapux.com",
+  "foundingDate": "2012",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1554 Carling Ave, Unit 42",
+    "addressLocality": "Ottawa",
+    "addressRegion": "ON",
+    "postalCode": "K1Z 7M4",
+    "addressCountry": "CA"
+  },
+  "areaServed": "Canada",
+  "knowsAbout": ["service design", "UX research", "digital transformation", "government consulting", "generative engine optimization", "AI consulting", "human-centred design", "change management"],
+  "sameAs": ["https://www.linkedin.com/company/leapux/", "https://www.facebook.com/leapux", "https://www.instagram.com/leapux/"]
+}`}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-leap-black">
         <div className="absolute inset-0 z-0">
