@@ -25,6 +25,7 @@ import {
 import { z } from 'zod';
 import heroAiServices from '@/assets/hero-ai-services.jpg';
 import Seo from '@/components/Seo';
+import { sendFormSubmission } from '@/lib/sendFormSubmission';
 
 const leadSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
