@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Search, Bot, Target, BarChart3, Shield, Zap, CheckCircle, Eye, TrendingUp, Award, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import heroGeo from '@/assets/hero-geo.jpg';
