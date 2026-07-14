@@ -53,6 +53,7 @@ type LeadFormData = z.infer<typeof leadSchema>;
 const AITraining = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
   const [errors, setErrors] = useState<Partial<Record<keyof LeadFormData, string>>>({});
   const [formData, setFormData] = useState<LeadFormData>({
     fullName: '',
@@ -86,9 +87,10 @@ const AITraining = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
     setErrors({});
 
     const result = leadSchema.safeParse(formData);
@@ -128,6 +130,7 @@ const AITraining = () => {
         title: 'Request sent',
         description: "Thanks! We'll be in touch shortly.",
       });
+      setSubmitMessage("Request sent. Thanks! We'll be in touch shortly.");
 
       setFormData({
         fullName: '',
@@ -949,12 +952,18 @@ const AITraining = () => {
               </div>
 
               <Button
-                type="submit"
+                type="button"
+                onClick={handleSubmit}
                 disabled={isSubmitting}
                 className="w-full bg-leap-orange hover:bg-leap-red text-white py-4 text-lg font-semibold"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit Request'}
               </Button>
+              {submitMessage && (
+                <p className="text-center text-sm font-medium text-leap-black mt-4" role="status" aria-live="polite">
+                  {submitMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>
