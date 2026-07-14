@@ -88,7 +88,13 @@ const Contact = () => {
 
   return (
     <div className="animate-in">
-      <Seo title='Contact LeapUX | Start a conversation' description='Tell us about your project. LeapUX partners with organizations on UX, service design, and digital transformation engagements.' path='/contact' />
+      <Seo
+        title='Contact LeapUX — Ottawa Service Design & Digital Consulting'
+        description='Get in touch with LeapUX to discuss your service design, digital transformation, or AI consulting needs. Based in Ottawa. Serving government and mission-driven organizations across Canada.'
+        path='/contact'
+        ogTitle='Contact LeapUX | Ottawa Digital Consulting & Service Design'
+        ogDescription='Ready to improve how your service works? Contact LeapUX to book a consultation on service design, digital transformation, or GEO services.'
+      />
       {/* Hero Section */}
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -44,13 +44,21 @@ const Home = () => {
 
   return (
     <div className="animate-in">
-      <Seo title='LeapUX | Design digital services that work in the real world' description='Senior-led digital consultancy for UX, service design, and complex delivery. We combine evidence, discipline, and accountability to deliver results.' path='/' />
+      <Seo
+        title='Service Design & Digital Transformation Consulting Ottawa | LeapUX'
+        description='LeapUX is a senior-led consultancy delivering service design, UX, and digital transformation for governments, public agencies, and mission-driven organizations across Canada.'
+        path='/'
+        ogDescription='Senior-led consultancy delivering UX, service design, and complex digital delivery for governments and mission-driven organizations across Canada.'
+      />
       {/* Hero Section */}
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-leap-black">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="UX Design Workspace" 
+          <img
+            src={heroImage}
+            alt="Senior LeapUX consultants collaborating on a government service design project in Ottawa, Canada"
+            width={1920}
+            height={1080}
+            loading="eager"
             className="w-full h-full object-cover hero-image"
           />
           <div className="absolute inset-0 image-overlay"></div>
@@ -62,7 +70,7 @@ const Home = () => {
               Senior-Led Digital Consultancy
             </div>
             <h1 className="text-4xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-leap-white mb-6 sm:mb-8 leading-[0.95] text-balance">
-              Delivering services for <span className="text-leap-orange">the real world.</span>
+              Senior-Led Service Design & <span className="text-leap-orange">Digital Transformation Consulting</span>
             </h1>
             <p className="text-base sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-light max-w-xl">
               We help organizations understand real needs and deliver services that work.
@@ -91,9 +99,12 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="order-2 lg:order-1 relative">
               <div className="absolute -inset-4 bg-leap-brand/5 rounded-3xl -z-10"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" 
-                alt="Strategy Planning" 
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
+                alt="Strategy Planning"
+                width={1200}
+                height={800}
+                loading="lazy"
                 className="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
@@ -145,9 +156,12 @@ const Home = () => {
               </ul>
             </div>
             <div className="relative group">
-              <img 
-                src={teamCollaboration} 
-                alt="Team collaboration on UX design" 
+              <img
+                src={teamCollaboration}
+                alt="LeapUX team collaborating on a service design strategy session for a Canadian government client"
+                width={1200}
+                height={800}
+                loading="lazy"
                 className="rounded-3xl shadow-2xl w-full grayscale group-hover:grayscale-0 transition-all duration-1000"
               />
               <div className="absolute bottom-6 right-6 left-6 sm:left-auto sm:max-w-xs bg-leap-white p-6 rounded-2xl shadow-xl">
@@ -217,11 +231,11 @@ const Home = () => {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
-            <img src={logoGoC} alt="Government of Canada" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSJA} alt="St. John Ambulance" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoIJC} alt="International Joint Commission" loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoBeneva} alt="Beneva" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-            <img src={logoSHS} alt="Soldiers Helping Soldiers" loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoGoC} alt="Government of Canada — LeapUX client" width={200} height={128} loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSJA} alt="St. John Ambulance — LeapUX client" width={200} height={128} loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoIJC} alt="International Joint Commission — LeapUX client" width={200} height={128} loading="lazy" className="h-32 md:h-40 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoBeneva} alt="Beneva — LeapUX client" width={200} height={112} loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <img src={logoSHS} alt="Soldiers Helping Soldiers — LeapUX client" width={200} height={112} loading="lazy" className="h-28 md:h-32 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
           </div>
         </div>
       </section>

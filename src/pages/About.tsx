@@ -11,7 +11,13 @@ import Seo from '@/components/Seo';
 const About = () => {
   return (
     <div className="animate-in">
-      <Seo title='About LeapUX | Senior-led digital consultancy' description='Meet the team behind LeapUX. We bring senior-led expertise to UX, service design, and digital transformation for organizations that need real-world results.' path='/about' />
+      <Seo
+        title='About LeapUX — Senior-Led Digital Consultancy in Ottawa, Canada'
+        description='Meet the LeapUX team — senior practitioners with 12+ years delivering UX, service design, and digital transformation for federal government, crown corporations, and nonprofits across Canada.'
+        path='/about'
+        ogTitle="About LeapUX — Ottawa's Senior-Led Service Design Consultancy"
+        ogDescription='LeapUX has delivered evidence-based UX and digital transformation for the Government of Canada, St. John Ambulance, Beneva, and mission-driven organizations since 2012.'
+      />
       {/* ═══════════════════════════════════════════════════════════
           HERO
       ═══════════════════════════════════════════════════════════ */}

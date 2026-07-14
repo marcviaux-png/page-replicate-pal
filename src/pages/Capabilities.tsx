@@ -167,7 +167,13 @@ const Services = () => {
 
   return (
     <div className="animate-in bg-leap-light">
-      <Seo title='Capabilities | LeapUX' description='Research, design, accessibility, delivery, and AI capabilities — the disciplines LeapUX brings to every engagement.' path='/capabilities' />
+      <Seo
+        title='Digital Consulting Capabilities for Government & Public Sector | LeapUX'
+        description='LeapUX capabilities span UX research, service blueprinting, AI readiness, accessibility, change management, and evidence-based delivery for complex government mandates in Canada.'
+        path='/capabilities'
+        ogTitle='LeapUX Capabilities — UX, AI Readiness & Government Service Design'
+        ogDescription="From research and service blueprinting to AI integration and change management — explore LeapUX's full range of consulting capabilities for public sector mandates."
+      />
       <section className="relative bg-leap-black text-leap-white pt-48 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
