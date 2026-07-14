@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import Seo from '@/components/Seo';
+import { sendFormSubmission } from '@/lib/sendFormSubmission';
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
