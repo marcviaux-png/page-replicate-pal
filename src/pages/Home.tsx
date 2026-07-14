@@ -44,13 +44,21 @@ const Home = () => {
 
   return (
     <div className="animate-in">
-      <Seo title='LeapUX | Design digital services that work in the real world' description='Senior-led digital consultancy for UX, service design, and complex delivery. We combine evidence, discipline, and accountability to deliver results.' path='/' />
+      <Seo
+        title='Service Design & Digital Transformation Consulting Ottawa | LeapUX'
+        description='LeapUX is a senior-led consultancy delivering service design, UX, and digital transformation for governments, public agencies, and mission-driven organizations across Canada.'
+        path='/'
+        ogDescription='Senior-led consultancy delivering UX, service design, and complex digital delivery for governments and mission-driven organizations across Canada.'
+      />
       {/* Hero Section */}
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-leap-black">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="UX Design Workspace" 
+          <img
+            src={heroImage}
+            alt="Senior LeapUX consultants collaborating on a government service design project in Ottawa, Canada"
+            width={1920}
+            height={1080}
+            loading="eager"
             className="w-full h-full object-cover hero-image"
           />
           <div className="absolute inset-0 image-overlay"></div>
