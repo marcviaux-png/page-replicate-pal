@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://leapux.com/sitemap.xml
-LLMs: /llms.txt
-LLMs-Full: /llms-full.txt
-AI: /ai.txt
