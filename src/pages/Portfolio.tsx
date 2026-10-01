@@ -79,6 +79,7 @@ const featured: FeaturedProject[] = [
 ];
 
 const secondary: SecondaryProject[] = [
+  { client: 'Hébergement BB', description: 'Chalets, lodge, and group auberge in the Vallée-de-la-Gatineau — four seasonal properties near Lac Blue-Sea, under two hours from Ottawa and Gatineau.', category: 'business', externalUrl: 'https://hebergementbb.com/' },
   { client: 'Transport Canada', description: 'Transportation policy and program work, including drone registration and pilot certification systems.', category: 'government' },
   { client: 'Financial Consumer Agency of Canada', description: 'Federal consumer protection and financial regulation digital services.', category: 'government' },
   { client: 'Employment and Social Development Canada', description: 'Federal social programs and labour market initiatives.', category: 'government' },
