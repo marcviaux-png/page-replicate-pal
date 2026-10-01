@@ -13,7 +13,7 @@ export async function sendFormSubmission(
   formName: string,
   fields: FormField[],
 ): Promise<void> {
-  const { error } = await supabase.functions.invoke('send-transactional-email', {
+  const { error } = await supabase.functions.invoke('submit-website-form', {
     body: {
       templateName: 'form-submission',
       idempotencyKey: `${formName.toLowerCase().replace(/\s+/g, '-')}-${crypto.randomUUID()}`,
