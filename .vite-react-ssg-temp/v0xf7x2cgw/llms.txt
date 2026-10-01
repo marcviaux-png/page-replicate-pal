@@ -1,0 +1,29 @@
+# LeapUX
+
+LeapUX is a senior-led service design and digital transformation consultancy based in Ottawa, Canada. We help government departments, crown corporations, regulated industries, and mission-driven organizations design and deliver digital services that work in the real world. Founded in 2012, LeapUX combines evidence-based UX research, strategic advisory, and hands-on delivery to produce measurable outcomes.
+
+## Pages
+- https://leapux.com/: Homepage — senior-led digital consultancy overview
+- https://leapux.com/about: About LeapUX — our team, story, and approach
+- https://leapux.com/services: Consulting services — strategic advisory, service design, digital transformation, delivery & adoption
+- https://leapux.com/capabilities: Consulting capabilities — UX research, service blueprinting, AI readiness, accessibility, change management
+- https://leapux.com/geo: Generative Engine Optimization (GEO) — AI visibility services for Canadian organizations
+- https://leapux.com/portfolio: Case studies — Government of Canada, St. John Ambulance, Beneva, and more
+- https://leapux.com/ai-services: AI consulting — readiness assessments, strategy, governance, and integration
+- https://leapux.com/ai-training: AI training and workshops for government teams and nonprofits in Canada
+- https://leapux.com/contact: Contact and consultation booking
+
+## What we do
+- Service design and UX research for government and public sector organizations
+- Strategic advisory and digital transformation for complex mandates
+- Generative Engine Optimization (GEO) and AI visibility consulting
+- AI integration, readiness assessment, and responsible AI governance
+- AI training and workshops for public servants and nonprofit staff
+- Delivery and adoption support including change management
+
+## Contact
+LeapUX — Ottawa, Ontario, Canada
+1554 Carling Ave, Unit 42, Ottawa, ON K1Z 7M4
+Phone: 1-888-553-2789
+Email: contact@leapux.com
+Website: https://leapux.com

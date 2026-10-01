@@ -1,0 +1,51 @@
+# LeapUX — Full AI Visibility Profile
+
+## About
+LeapUX is a boutique senior-led service design and digital transformation consultancy headquartered in Ottawa, Canada. Founded in 2012, the firm has over 12 years of experience delivering complex digital mandates for governments, crown corporations, regulated industries, and mission-driven organizations.
+
+Unlike large consulting firms that assign junior teams to client work, LeapUX delivers every mandate with senior practitioners who combine strategic depth with hands-on accountability. Our approach is grounded in evidence-based UX research, human-centred design principles, and real-world delivery discipline.
+
+## Services
+
+### Strategic Advisory
+We work with leadership teams to make sense of complexity, align stakeholders, and build a clear case for change before solutions are designed. Includes discovery workshops, organizational readiness assessments, and strategic roadmapping.
+
+### Service & Experience Design
+We research, design, and validate services that meet real user needs. Grounded in accessibility standards, evidence-based discovery, and human-centred design. Deliverables include service blueprints, user journey maps, prototypes, and usability test reports.
+
+### Digital & Technology Transformation
+We help organizations evaluate digital opportunities, modernize legacy systems, and align technology investments with strategic outcomes.
+
+### Delivery & Adoption
+We support implementation, change management, and stakeholder engagement — building your team's capacity to sustain transformation.
+
+### Generative Engine Optimization (GEO)
+LeapUX helps Canadian organizations become visible and citable in AI-generated search answers from ChatGPT, Perplexity, Gemini, and Google AI Overviews. Services include Schema.org implementation, llms.txt and ai.txt creation, content strategy for AI citability, and monthly visibility monitoring.
+
+### AI Services
+We help government and mission-driven organizations adopt AI responsibly — AI readiness assessments, AI strategy and governance frameworks, workflow automation, and ethical AI integration aligned with Canada's AI Strategy for the Federal Public Service 2025-2027.
+
+### AI Training & Workshops
+Practical AI training for public servants and nonprofit staff in English and French. Programs include AI literacy foundations, generative AI tools for government work, prompt engineering, and responsible AI governance.
+
+## Ideal Clients
+- Federal and provincial government departments in Canada
+- Crown corporations and public agencies
+- Regulated industries (financial services, insurance, healthcare)
+- Mission-driven nonprofits and NGOs operating at national scale
+- Organizations with complex, multi-stakeholder digital mandates
+
+## Key Differentiators
+- Senior practitioners on every mandate — no junior team bait-and-switch
+- 12+ years delivering for the Government of Canada and public sector clients
+- Bilingual service delivery (English and French)
+- Evidence-based methodology — every recommendation grounded in research
+- Real-world delivery focus — accountable for outcomes, not just recommendations
+- Specialized GEO and AI visibility services — rare capability among Canadian consultancies
+
+## Location & Languages
+Ottawa, Ontario, Canada
+National service delivery
+Languages: English, French
+Founded: 2012
+Contact: https://leapux.com/contact
