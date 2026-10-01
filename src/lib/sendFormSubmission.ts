@@ -6,14 +6,14 @@ export interface FormField {
 }
 
 /**
- * Sends a form submission via the send-transactional-email edge function.
+ * Sends a form submission via the submit-website-form edge function.
  * The template has a fixed `to` recipient (contact@leapux.com).
  */
 export async function sendFormSubmission(
   formName: string,
   fields: FormField[],
 ): Promise<void> {
-  const { error } = await supabase.functions.invoke('send-transactional-email', {
+  const { error } = await supabase.functions.invoke('submit-website-form', {
     body: {
       templateName: 'form-submission',
       idempotencyKey: `${formName.toLowerCase().replace(/\s+/g, '-')}-${crypto.randomUUID()}`,
