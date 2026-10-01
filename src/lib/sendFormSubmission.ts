@@ -6,7 +6,7 @@ export interface FormField {
 }
 
 /**
- * Sends a form submission via the send-transactional-email edge function.
+ * Sends a form submission via the submit-website-form edge function.
  * The template has a fixed `to` recipient (contact@leapux.com).
  */
 export async function sendFormSubmission(
