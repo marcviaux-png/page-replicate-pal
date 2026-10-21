@@ -7,7 +7,7 @@ export default function AnalyticsTracker() {
 
   useEffect(() => {
     // Allow the destination page's head metadata to update before tracking it.
-    const timer = window.setTimeout(() => trackPageView(pathname + search), 0);
+    const timer = window.setTimeout(() => trackPageView(pathname + search), 100);
     return () => window.clearTimeout(timer);
   }, [pathname, search]);
 
