@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import LeapNavbar from "./components/LeapNavbar";
 import LeapFooter from "./components/LeapFooter";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const Layout = () => (
       <Toaster />
       <Sonner />
       <ScrollToTop />
+      <AnalyticsTracker />
       <div className="flex flex-col min-h-screen">
         <LeapNavbar />
         <main className="flex-grow">
