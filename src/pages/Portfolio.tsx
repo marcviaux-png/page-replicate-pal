@@ -9,9 +9,9 @@ import sjaImg from '@/assets/portfolio/sja-hero.jpg';
 import ijcImg from '@/assets/portfolio/ijc-hero.jpg';
 import shsImg from '@/assets/portfolio/shs-hero.jpg';
 import benevaImg from '@/assets/portfolio/beneva-hero.jpg';
-import hebergementBbAsset from '@/assets/portfolio/hebergement-bb.jpg.asset.json';
-import robsRoofingAsset from '@/assets/portfolio/robs-quality-roofing.jpg.asset.json';
-import tourangeauAsset from '@/assets/portfolio/tourangeau-mechanical.jpg.asset.json';
+import hebergementBbImg from '@/assets/portfolio/hebergement-bb.jpg';
+import robsRoofingImg from '@/assets/portfolio/robs-quality-roofing.jpg';
+import tourangeauImg from '@/assets/portfolio/tourangeau-mechanical.jpg';
 
 type Category = 'all' | 'government' | 'nonprofit' | 'business' | 'health';
 
@@ -106,7 +106,7 @@ const featured: FeaturedProject[] = [
     services: ['Website design', 'Bilingual content', 'Mobile experience'],
     path: 'https://hebergementbb.com/',
     category: 'business',
-    image: hebergementBbAsset.url,
+    image: hebergementBbImg,
     external: true,
   },
   {
@@ -116,7 +116,7 @@ const featured: FeaturedProject[] = [
     services: ['Website design', 'Reviews and trust', 'Mobile experience'],
     path: 'https://robsqualityroofing.com/',
     category: 'business',
-    image: robsRoofingAsset.url,
+    image: robsRoofingImg,
     external: true,
   },
   {
@@ -126,7 +126,7 @@ const featured: FeaturedProject[] = [
     services: ['Website design', 'Service content', 'Mobile experience'],
     path: 'https://tourangeaumechanical.ca/',
     category: 'business',
-    image: tourangeauAsset.url,
+    image: tourangeauImg,
     external: true,
   },
 ];
