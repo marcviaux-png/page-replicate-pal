@@ -79,7 +79,6 @@ const featured: FeaturedProject[] = [
 ];
 
 const secondary: SecondaryProject[] = [
-  { client: 'Hébergement BB', description: 'Chalets, lodge, and group auberge in the Vallée-de-la-Gatineau — four seasonal properties near Lac Blue-Sea, under two hours from Ottawa and Gatineau.', category: 'business', externalUrl: 'https://hebergementbb.com/' },
   { client: 'Transport Canada', description: 'Transportation policy and program work, including drone registration and pilot certification systems.', category: 'government' },
   { client: 'Financial Consumer Agency of Canada', description: 'Federal consumer protection and financial regulation digital services.', category: 'government' },
   { client: 'Employment and Social Development Canada', description: 'Federal social programs and labour market initiatives.', category: 'government' },
@@ -92,8 +91,6 @@ const secondary: SecondaryProject[] = [
   { client: 'NorthLend Financial', description: 'Secured mortgage agreement management for partners.', category: 'business' },
   { client: 'Drive Thru Finance', description: 'Vehicle financing support for Canadians with varied financial situations.', category: 'business' },
   { client: 'Selmar Group', description: 'Ottawa real estate firm focused on military, RCMP, and government relocation.', category: 'business' },
-  { client: 'Rob\'s Quality Roofing', description: 'Residential roofing services.', category: 'business' },
-  { client: 'Tourangeau Mechanical', description: 'Commercial plumbing services in Ottawa.', category: 'business' },
   { client: 'Co-Auto', description: 'Used car dealership and car loan financing in Ottawa.', category: 'business' },
   { client: 'Franco Langues', description: 'French tutoring and federal public service language training.', category: 'business' },
   { client: 'Wind Concerns Ontario', description: 'Information resource on industrial-scale wind power impacts.', category: 'nonprofit' },
@@ -183,9 +180,9 @@ const Portfolio = () => {
 
             <div className="space-y-6 md:space-y-10">
               {filteredFeatured.map((project, i) => (
-                <Link
+                <FeaturedCardLink
                   key={project.client}
-                  to={project.path}
+                  project={project}
                   className="group block"
                 >
                   <div className={`relative rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:border-leap-orange/30 hover:shadow-xl hover:shadow-leap-orange/5 ${
@@ -220,13 +217,13 @@ const Portfolio = () => {
                           ))}
                         </div>
                         <div className="flex items-center gap-2 text-sm font-bold text-leap-orange group-hover:gap-3 transition-all">
-                          View case study
-                          <ArrowRight className="h-4 w-4" />
+                          {project.external ? 'Visit website' : 'View case study'}
+                          {project.external ? <ExternalLink className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
                         </div>
                       </div>
                     </div>
                   </div>
-                </Link>
+                </FeaturedCardLink>
               ))}
             </div>
           </div>
