@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Landmark, Heart, Building2, Cross } from 'lucide-react';
 import Seo from '@/components/Seo';
@@ -9,6 +9,9 @@ import sjaImg from '@/assets/portfolio/sja-hero.jpg';
 import ijcImg from '@/assets/portfolio/ijc-hero.jpg';
 import shsImg from '@/assets/portfolio/shs-hero.jpg';
 import benevaImg from '@/assets/portfolio/beneva-hero.jpg';
+import hebergementBbImg from '@/assets/portfolio/hebergement-bb.jpg';
+import robsRoofingImg from '@/assets/portfolio/robs-quality-roofing.jpg';
+import tourangeauImg from '@/assets/portfolio/tourangeau-mechanical.jpg';
 
 type Category = 'all' | 'government' | 'nonprofit' | 'business' | 'health';
 
@@ -20,6 +23,8 @@ interface FeaturedProject {
   path: string;
   category: Category;
   image: string;
+  external?: boolean;
+  fit?: 'cover' | 'contain';
 }
 
 interface SecondaryProject {
@@ -29,6 +34,25 @@ interface SecondaryProject {
   externalUrl?: string;
   imageUrl?: string;
 }
+
+const FeaturedCardLink = ({
+  project,
+  className,
+  children,
+}: {
+  project: FeaturedProject;
+  className: string;
+  children: ReactNode;
+}) =>
+  project.external ? (
+    <a href={project.path} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </a>
+  ) : (
+    <Link to={project.path} className={className}>
+      {children}
+    </Link>
+  );
 
 const featured: FeaturedProject[] = [
   {
@@ -76,10 +100,42 @@ const featured: FeaturedProject[] = [
     category: 'government',
     image: pspcImg,
   },
+  {
+    client: 'Hébergement BB',
+    headline: 'Four seasonal properties, one easy place to book',
+    summary: 'Chalets, a lodge, and a group auberge in the Vallée-de-la-Gatineau — four seasonal properties near Lac Blue-Sea brought together in one bilingual site that makes finding and booking a stay simple.',
+    services: ['Website design', 'Bilingual content', 'Mobile experience'],
+    path: 'https://hebergementbb.com/',
+    category: 'business',
+    image: hebergementBbImg,
+    external: true,
+    fit: 'contain',
+  },
+  {
+    client: 'Rob\'s Quality Roofing',
+    headline: 'A roofing site that leads with the owner\'s name',
+    summary: 'Residential shingle roofing in Ottawa — a website built around clear estimates, verified reviews, and the promise that the owner is on your roof for every job.',
+    services: ['Website design', 'Reviews and trust', 'Mobile experience'],
+    path: 'https://robsqualityroofing.com/',
+    category: 'business',
+    image: robsRoofingImg,
+    external: true,
+    fit: 'contain',
+  },
+  {
+    client: 'Tourangeau Mechanical',
+    headline: 'Specialized mechanical services, made easy to find',
+    summary: 'Commercial plumbing and backflow prevention in Ottawa — a site that presents specialist services plainly and gets visitors to a quote request without the runaround.',
+    services: ['Website design', 'Service content', 'Mobile experience'],
+    path: 'https://tourangeaumechanical.ca/',
+    category: 'business',
+    image: tourangeauImg,
+    external: true,
+    fit: 'contain',
+  },
 ];
 
 const secondary: SecondaryProject[] = [
-  { client: 'Hébergement BB', description: 'Chalets, lodge, and group auberge in the Vallée-de-la-Gatineau — four seasonal properties near Lac Blue-Sea, under two hours from Ottawa and Gatineau.', category: 'business', externalUrl: 'https://hebergementbb.com/' },
   { client: 'Transport Canada', description: 'Transportation policy and program work, including drone registration and pilot certification systems.', category: 'government' },
   { client: 'Financial Consumer Agency of Canada', description: 'Federal consumer protection and financial regulation digital services.', category: 'government' },
   { client: 'Employment and Social Development Canada', description: 'Federal social programs and labour market initiatives.', category: 'government' },
@@ -92,8 +148,6 @@ const secondary: SecondaryProject[] = [
   { client: 'NorthLend Financial', description: 'Secured mortgage agreement management for partners.', category: 'business' },
   { client: 'Drive Thru Finance', description: 'Vehicle financing support for Canadians with varied financial situations.', category: 'business' },
   { client: 'Selmar Group', description: 'Ottawa real estate firm focused on military, RCMP, and government relocation.', category: 'business' },
-  { client: 'Rob\'s Quality Roofing', description: 'Residential roofing services.', category: 'business' },
-  { client: 'Tourangeau Mechanical', description: 'Commercial plumbing services in Ottawa.', category: 'business' },
   { client: 'Co-Auto', description: 'Used car dealership and car loan financing in Ottawa.', category: 'business' },
   { client: 'Franco Langues', description: 'French tutoring and federal public service language training.', category: 'business' },
   { client: 'Wind Concerns Ontario', description: 'Information resource on industrial-scale wind power impacts.', category: 'nonprofit' },
@@ -183,9 +237,9 @@ const Portfolio = () => {
 
             <div className="space-y-6 md:space-y-10">
               {filteredFeatured.map((project, i) => (
-                <Link
+                <FeaturedCardLink
                   key={project.client}
-                  to={project.path}
+                  project={project}
                   className="group block"
                 >
                   <div className={`relative rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:border-leap-orange/30 hover:shadow-xl hover:shadow-leap-orange/5 ${
@@ -195,11 +249,11 @@ const Portfolio = () => {
                     <div className="flex flex-col lg:flex-row">
                       {/* Image */}
                       <div className={`relative lg:w-[42%] shrink-0 overflow-hidden ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                        <div className="aspect-[16/10] lg:aspect-auto lg:absolute lg:inset-0">
+                        <div className={`aspect-[16/10] lg:aspect-auto lg:absolute lg:inset-0 ${project.fit === "contain" ? "bg-muted" : ""}`}>
                           <img
                             src={project.image}
                             alt={`${project.client} project screenshot`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${project.fit === 'contain' ? 'object-contain p-3' : 'object-cover'}`}
                             loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
@@ -220,13 +274,13 @@ const Portfolio = () => {
                           ))}
                         </div>
                         <div className="flex items-center gap-2 text-sm font-bold text-leap-orange group-hover:gap-3 transition-all">
-                          View case study
-                          <ArrowRight className="h-4 w-4" />
+                          {project.external ? 'Visit website' : 'View case study'}
+                          {project.external ? <ExternalLink className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
                         </div>
                       </div>
                     </div>
                   </div>
-                </Link>
+                </FeaturedCardLink>
               ))}
             </div>
           </div>
