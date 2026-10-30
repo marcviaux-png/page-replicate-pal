@@ -108,6 +108,7 @@ const featured: FeaturedProject[] = [
     category: 'business',
     image: hebergementBbImg,
     external: true,
+    fit: 'contain',
   },
   {
     client: 'Rob\'s Quality Roofing',
@@ -118,6 +119,7 @@ const featured: FeaturedProject[] = [
     category: 'business',
     image: robsRoofingImg,
     external: true,
+    fit: 'contain',
   },
   {
     client: 'Tourangeau Mechanical',
@@ -128,6 +130,7 @@ const featured: FeaturedProject[] = [
     category: 'business',
     image: tourangeauImg,
     external: true,
+    fit: 'contain',
   },
 ];
 
