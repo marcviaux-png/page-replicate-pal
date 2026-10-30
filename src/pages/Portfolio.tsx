@@ -249,7 +249,7 @@ const Portfolio = () => {
                     <div className="flex flex-col lg:flex-row">
                       {/* Image */}
                       <div className={`relative lg:w-[42%] shrink-0 overflow-hidden ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                        <div className="aspect-[16/10] lg:aspect-auto lg:absolute lg:inset-0">
+                        <div className={`aspect-[16/10] lg:aspect-auto lg:absolute lg:inset-0 ${project.fit === "contain" ? "bg-muted" : ""}`}>
                           <img
                             src={project.image}
                             alt={`${project.client} project screenshot`}
