@@ -24,6 +24,7 @@ interface FeaturedProject {
   category: Category;
   image: string;
   external?: boolean;
+  fit?: 'cover' | 'contain';
 }
 
 interface SecondaryProject {
@@ -252,7 +253,7 @@ const Portfolio = () => {
                           <img
                             src={project.image}
                             alt={`${project.client} project screenshot`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${project.fit === 'contain' ? 'object-contain p-3' : 'object-cover'}`}
                             loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
