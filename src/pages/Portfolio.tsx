@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Landmark, Heart, Building2, Cross } from 'lucide-react';
 import Seo from '@/components/Seo';
@@ -9,6 +9,9 @@ import sjaImg from '@/assets/portfolio/sja-hero.jpg';
 import ijcImg from '@/assets/portfolio/ijc-hero.jpg';
 import shsImg from '@/assets/portfolio/shs-hero.jpg';
 import benevaImg from '@/assets/portfolio/beneva-hero.jpg';
+import hebergementBbAsset from '@/assets/portfolio/hebergement-bb.jpg.asset.json';
+import robsRoofingAsset from '@/assets/portfolio/robs-quality-roofing.jpg.asset.json';
+import tourangeauAsset from '@/assets/portfolio/tourangeau-mechanical.jpg.asset.json';
 
 type Category = 'all' | 'government' | 'nonprofit' | 'business' | 'health';
 
@@ -20,6 +23,7 @@ interface FeaturedProject {
   path: string;
   category: Category;
   image: string;
+  external?: boolean;
 }
 
 interface SecondaryProject {
@@ -29,6 +33,25 @@ interface SecondaryProject {
   externalUrl?: string;
   imageUrl?: string;
 }
+
+const FeaturedCardLink = ({
+  project,
+  className,
+  children,
+}: {
+  project: FeaturedProject;
+  className: string;
+  children: ReactNode;
+}) =>
+  project.external ? (
+    <a href={project.path} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </a>
+  ) : (
+    <Link to={project.path} className={className}>
+      {children}
+    </Link>
+  );
 
 const featured: FeaturedProject[] = [
   {
@@ -75,6 +98,36 @@ const featured: FeaturedProject[] = [
     path: '/portfolio/pspc',
     category: 'government',
     image: pspcImg,
+  },
+  {
+    client: 'Hébergement BB',
+    headline: 'Four seasonal properties, one easy place to book',
+    summary: 'Chalets, a lodge, and a group auberge in the Vallée-de-la-Gatineau — four seasonal properties near Lac Blue-Sea brought together in one bilingual site that makes finding and booking a stay simple.',
+    services: ['Website design', 'Bilingual content', 'Mobile experience'],
+    path: 'https://hebergementbb.com/',
+    category: 'business',
+    image: hebergementBbAsset.url,
+    external: true,
+  },
+  {
+    client: 'Rob\'s Quality Roofing',
+    headline: 'A roofing site that leads with the owner\'s name',
+    summary: 'Residential shingle roofing in Ottawa — a website built around clear estimates, verified reviews, and the promise that the owner is on your roof for every job.',
+    services: ['Website design', 'Reviews and trust', 'Mobile experience'],
+    path: 'https://robsqualityroofing.com/',
+    category: 'business',
+    image: robsRoofingAsset.url,
+    external: true,
+  },
+  {
+    client: 'Tourangeau Mechanical',
+    headline: 'Specialized mechanical services, made easy to find',
+    summary: 'Commercial plumbing and backflow prevention in Ottawa — a site that presents specialist services plainly and gets visitors to a quote request without the runaround.',
+    services: ['Website design', 'Service content', 'Mobile experience'],
+    path: 'https://tourangeaumechanical.ca/',
+    category: 'business',
+    image: tourangeauAsset.url,
+    external: true,
   },
 ];
 
